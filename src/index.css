@@ -1,9 +1,147 @@
+html,
 body {
+  font-family: Helvetica;
+  height: 100%;
   margin: 0;
   padding: 0;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-weight: 300;
-  padding:0;
-  margin:0;
-  text-align: center;
+  font-size: 16px;
 }
+
+#app {
+  box-sizing: border-box;
+  min-height: 100%;
+  padding: 0 0 250px;
+  position: relative;
+}
+
+h1,h2,h3,h4,h5,h6,
+p,ul,ol,li,
+button,input,
+strong,small,em {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+b {
+  font-weight: inherit;
+}
+
+i {
+  font-style: inherit;
+}
+
+ul,ol,li {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* button, input, textarea {
+  border: none;
+  background: none;
+  outline: none;
+} */
+
+img {
+  max-width: 100%;
+}
+
+*, :before, :after {
+  box-sizing: border-box;
+}
+
+/* 
+  rgb(38, 50, 56) nav
+  rgb(62, 69, 81) footer lite
+  rgba(0, 0, 0, 0.2) footer dark
+  rgb(55, 71, 79) side
+*/
+
+header {
+  height: 70px;
+  background-color: rgba(38, 50, 56, 1);
+}
+
+aside {
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  min-width: 16rem;
+  max-width: 20rem;
+  width: 30vw;
+  background-color: rgba(55, 71, 79, 1);
+}
+
+main {
+  width: 80vw;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+footer {
+  background-color: rgba(62, 69, 81, 1);
+  bottom: 0;
+  height: 250px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+}
+
+
+/* Portrait and Landscape */
+@media only screen and (max-device-width: 320px)  {
+  h1 {
+    font-size: 1.6rem;
+  }
+  
+  h2 {
+    font-size: 1.4rem;
+  }
+  
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  header {
+    height: 50px;
+  }
+
+  aside {
+    padding: 0;
+    margin: 0;
+  }
+
+  main {
+    padding: 25px 0;
+  }
+}
+
+/* Portrait */
+/* @media only screen and (min-device-width: 320px) and (orientation: portrait) {
+} */
+
+/* Landscape */
+/* @media only screen and (min-device-width: 320px) and (orientation: landscape) {
+
+} */

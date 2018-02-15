@@ -1,0 +1,36 @@
+/* .abilityScores {
+  width: 5rem;
+} */
+
+/* Portrait and Landscape */
+@media only screen and (max-device-width: 320px)  {
+  form {
+    margin: 0.7rem 0;
+  }
+
+  form label {
+    width: 100%;
+  }
+
+  .input {
+    margin-bottom: 0.7rem;
+    width: 100%;
+  }
+
+  form button {
+    width: 100%;
+    margin: 0.7rem 0;
+    padding: 0.3rem 0;
+  }
+
+  .abilityContainer {
+    display: grid;
+    grid-template-columns: 6rem 6rem 6rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .ability {
+    width: 5rem;
+    /* justify-self: left; */
+  }
+}

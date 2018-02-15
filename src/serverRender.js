@@ -2,7 +2,7 @@ import React from 'react'
 import {renderToString, renderToStaticMarkup} from 'react-dom/server'
 import {Provider} from 'react-redux'
 import {StaticRouter} from 'react-router-dom'
-import App from './containers/App'
+import App from './app'
 
 export function render(req, store, context){
   return renderToString(
