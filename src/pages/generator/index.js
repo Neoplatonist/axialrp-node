@@ -24,6 +24,7 @@ import {
   // setAbility,
   selectAbilityMod,
   // setAbilityMod,
+  selectAlignment,
   setAlignment,
   selectDice,
   setDice,
@@ -65,19 +66,6 @@ class Generator extends Component {
       return <SavingThrows key={k} label={v} mod={this.props.savingThrows[k]} />
     });
   }
-
-  // updateAbility = e => {
-  //   const r = raceDB.find(v => v.name === this.props.race);
-  //   const sr = r.sub_races.find(v => v.name === this.props.subrace);
-  //   const ability = abilityMap.reduce((o, k, i) => (
-  //     {
-  //       ...o,
-  //       [k]: this.props.dice[i] + r.ability_bonus[i] + sr.ability_bonus[i],
-  //     }), {}
-  //   );
-
-  //   this.props.setAbility(ability);
-  // }
 
   render() {
     // console.log('render', { state: this.state, subraces });
@@ -152,8 +140,7 @@ class Generator extends Component {
 const mapStateToProps = state => ({
   ability: selectAbility(state),
   abilityMod: selectAbilityMod(state),
-  alignment: state.generator.alignment,
-  class: state.generator.class,
+  alignment: selectAlignment(state),
   dice: selectDice(state),
   race: selectRace(state),
   speed: state.generator.speed,
@@ -162,8 +149,6 @@ const mapStateToProps = state => ({
 });
 
 const boundActions = {
-  // setAbility,
-  // setAbilityMod,
   setAlignment,
   setDice,
   setHP

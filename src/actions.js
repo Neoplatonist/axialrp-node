@@ -48,22 +48,25 @@ export const selectAbility = createSelector(
   (ability, race, subrace) => {
     const r = raceDB.find(v => v.name === race);
     const sr = r.sub_races.find(v => v.name === subrace);
-    const stats = AbilityMap.reduce((v, k, i) =>
+    return AbilityMap.reduce((v, k, i) =>
       [...v, ability[i] + r.ability_bonus[i] + sr.ability_bonus[i]], []);
-
-    return stats;
   }
 );
 
 export const selectAbilityMod = createSelector(
   selectAbility,
-  (ability) => {
-    const mod = AbilityMap.reduce((v, k, i) => 
+  ability => {
+    return AbilityMap.reduce((v, k, i) => 
       [...v, AbilityModifier(ability[i])], []);
-
-    return mod;
   }
 );
+
+export const selectAlignment = createSelector(
+  selectRace,
+  race => {
+    return raceDB.find( e => e.name === race ).alignment.main;
+  }
+)
 
 export const selectHP = createSelector(
   selectAbilityMod,
@@ -79,13 +82,12 @@ export const selectSavingThrows = createSelector(
   selectClass,
   (abilityMod, clas) => {
     const saves = classDB.find(v => v.name === clas).saving_throws;
-    const calc = AbilityMap.reduce((v, k, i) => [
-      ...v,
-      saves.some(s => s.name.toLowerCase() === k.toLowerCase()) ? 
-        abilityMod[i] : 0
-    ], []);
-
-    return calc
+    return AbilityMap.reduce((v, k, i) => 
+      [
+        ...v,
+        saves.some(s => s.name.toLowerCase() === k.toLowerCase()) ? 
+          abilityMod[i] : 0
+      ], []);
   }
 );
 
