@@ -42,18 +42,16 @@ export const selectSubRace = state => state.generator.subrace;
 export const selectClass = state => state.generator.class;
 
 export const selectAbility = createSelector(
-  selectDice,
+  state => state.generator.ability,
   selectRace,
   selectSubRace,
-  (dice, race, subrace) => {
+  (ability, race, subrace) => {
     const r = raceDB.find(v => v.name === race);
     const sr = r.sub_races.find(v => v.name === subrace);
-    const ability = AbilityMap.reduce((v, k, i) =>
-      [...v, dice[i] + r.ability_bonus[i] + sr.ability_bonus[i]], []);
+    const stats = AbilityMap.reduce((v, k, i) =>
+      [...v, ability[i] + r.ability_bonus[i] + sr.ability_bonus[i]], []);
 
-      console.log(ability)
-
-    return ability;
+    return stats;
   }
 );
 
@@ -98,12 +96,9 @@ export const selectSavingThrows = createSelector(
 
 // export const selectAbility = state => state.generator.ability;
 export const setAbility = (index, ability) => {
-  console.log({index, ability})
   return (dispatch, getState) => {
-    console.log(getState().generator.ability)
     const state = [...getState().generator.ability];
     state[index] = ability;
-    console.log(state)
     return dispatch({ type: SET_ABILITY, payload: state });
   }
 };
@@ -130,7 +125,10 @@ export const setClass = char_class => {
 };
 
 export const setDice = dice => {
-  return { type: SET_DICE, payload: dice };
+  return (dispatch, getState) => {
+    dispatch({ type: SET_DICE, payload: dice });
+    dispatch({ type: SET_ABILITY, payload: [...dice] });
+  };
 };
 
 export const setHP = hp => {

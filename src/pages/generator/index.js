@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Dice } from './utils';
+import { AbilityMap, Dice } from './utils';
 import './styles.css';
 
 // Mock Database
@@ -29,7 +29,8 @@ import {
   setDice,
   setHP,
   selectRace,
-  selectSubRace
+  selectSubRace,
+  selectSavingThrows
 } from '../../actions';
 
 const Option = ({ name }) => <option value={name}>{name}</option>;
@@ -56,6 +57,12 @@ class Generator extends Component {
   renderSkills() {
     return skillsDB.map((v, k) => {
       return <Skills key={k} skill={v} />;
+    });
+  }
+
+  savingThrows() {
+    return AbilityMap.map((v, k) => {
+      return <SavingThrows key={k} label={v} mod={this.props.savingThrows[k]} />
     });
   }
 
@@ -121,7 +128,13 @@ class Generator extends Component {
 
           <br/><br/>
 
-          <SavingThrows saves={this.props.savingThrows} />
+          <h3>Saving Throws</h3>
+
+          <br/>
+          
+          <ul>
+            { this.savingThrows() }
+          </ul>
 
           <br/><br/>
 
@@ -144,7 +157,7 @@ const mapStateToProps = state => ({
   dice: selectDice(state),
   race: selectRace(state),
   speed: state.generator.speed,
-  savingThrows: state.generator.savingThrows,
+  savingThrows: selectSavingThrows(state),
   subrace: selectSubRace(state)
 });
 

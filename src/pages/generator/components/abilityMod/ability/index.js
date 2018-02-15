@@ -4,7 +4,7 @@ import '../../../styles.css';
 export default class Ability extends Component {
   render() {
     const { id, label, mod, ...other } = this.props;
-    console.log(this.props)
+ 
     return (
       <div className="abilityContainer">
         <label 

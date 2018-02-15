@@ -12,9 +12,6 @@ import {
 } from '../../../../actions';
 
 class AbilityWithMod extends Component {
-  componentDidMount() {
-    this.props.setAbility(0, 20);
-  }
   renderAbility() {
     return AbilityMap.map((v, k) => {
       return (
