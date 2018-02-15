@@ -7,8 +7,7 @@ import { connect } from 'react-redux';
 import {
   selectAbility,
   setAbility,
-  selectAbilityMod,
-  setAbilityMod
+  selectAbilityMod
 } from '../../../../actions';
 
 class AbilityWithMod extends Component {
@@ -21,6 +20,7 @@ class AbilityWithMod extends Component {
           onChange={e => 
             this.props.setAbility(k, parseInt(e.target.value, 10))}
           id={v} 
+          min="0"
           mod={this.props.abilityMod[k]}
           label={v + ': '} />
       );
@@ -42,8 +42,7 @@ const mapStateToProps = state => ({
 });
 
 const boundActions = {
-  setAbility,
-  setAbilityMod
+  setAbility
 };
 
 export default connect(mapStateToProps, boundActions)(AbilityWithMod);

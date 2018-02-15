@@ -98,6 +98,8 @@ export const selectSavingThrows = createSelector(
 
 // export const selectAbility = state => state.generator.ability;
 export const setAbility = (index, ability) => {
+  if (isNaN(ability)) ability = 0;
+
   return (dispatch, getState) => {
     const state = [...getState().generator.ability];
     state[index] = ability;

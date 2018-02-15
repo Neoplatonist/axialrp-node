@@ -15,7 +15,7 @@ export default class Ability extends Component {
 
         <input 
           name={id} 
-          className="ability" 
+          className="ability"
           {...other} />
 
         <div className="ability">
