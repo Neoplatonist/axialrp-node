@@ -7,7 +7,10 @@ import { connect } from 'react-redux';
 import {
   selectAbility,
   setAbility,
-  selectAbilityMod
+  selectAbilityMod,
+  selectAbilityRaceMod,
+  selectAbilitySubRaceMod,
+  selectAbilityTotal
 } from '../../../../actions';
 
 class AbilityWithMod extends Component {
@@ -15,12 +18,14 @@ class AbilityWithMod extends Component {
     return AbilityMap.map((v, k) => {
       return (
         <Ability 
+          id={v}
           key={k}
+          race={this.props.abilityRaceMod[k]}
+          subrace={this.props.abilitySubRaceMod[k]}
+          total={this.props.abilityTotal[k]}
           value={this.props.ability[k]}
-          onChange={e => 
-            this.props.setAbility(k, parseInt(e.target.value, 10))}
-          id={v} 
-          min="0"
+          onChange={ e => 
+            this.props.setAbility(k, parseInt(e.target.value, 10)) }
           mod={this.props.abilityMod[k]} />
       );
     });
@@ -38,6 +43,9 @@ class AbilityWithMod extends Component {
 const mapStateToProps = state => ({
   ability: selectAbility(state),
   abilityMod: selectAbilityMod(state),
+  abilityRaceMod: selectAbilityRaceMod(state),
+  abilitySubRaceMod: selectAbilitySubRaceMod(state),
+  abilityTotal: selectAbilityTotal(state)
 });
 
 const boundActions = {
