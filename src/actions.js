@@ -46,7 +46,7 @@ export const selectAbilityRaceMod = createSelector(
   selectRace,
   race => {
     const r = raceDB.find(v => v.name === race);
-    return AbilityMap.map((k, i) => r.ability_bonus[i]);
+    return r.ability_bonus;
   }
 );
 
@@ -56,7 +56,7 @@ export const selectAbilitySubRaceMod = createSelector(
   (race, subrace) => {
     const r = raceDB.find(v => v.name === race);
     const sr = r.sub_races.find(v => v.name === subrace);
-    return AbilityMap.map((k, i) => sr.ability_bonus[i]);
+    return sr.ability_bonus;
   }
 );
 
@@ -65,16 +65,14 @@ export const selectAbilityTotal = createSelector(
   selectAbilityRaceMod,
   selectAbilitySubRaceMod,
   (ability, race, subrace) => {
-    return AbilityMap.reduce((v, k, i) =>
-      [...v, ability[i] + race[i] + subrace[i]], []);
+    return ability.map((v, k) => v + race[k] + subrace[k]);
   }
 );
 
 export const selectAbilityMod = createSelector(
   selectAbilityTotal,
   ability => {
-    return AbilityMap.reduce((v, k, i) => 
-      [...v, AbilityModifier(ability[i])], []);
+    return ability.map((v, k) => AbilityModifier(v));
   }
 );
 
