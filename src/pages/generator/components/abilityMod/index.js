@@ -21,8 +21,7 @@ class AbilityWithMod extends Component {
             this.props.setAbility(k, parseInt(e.target.value, 10))}
           id={v} 
           min="0"
-          mod={this.props.abilityMod[k]}
-          label={v + ': '} />
+          mod={this.props.abilityMod[k]} />
       );
     });
   }

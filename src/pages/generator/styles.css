@@ -24,13 +24,33 @@
   }
 
   .abilityContainer {
-    display: grid;
-    grid-template-columns: 6rem 6rem 6rem;
+    display: flex;
+    flex-wrap: wrap;
     margin-bottom: 0.5rem;
   }
 
+  .abilityContainer > input {
+    width: 100px;
+  }
+
+  .ability-prepend, .ability-append {
+    display: flex;
+    background-color: lightgray;
+    padding: 2% 0;
+    border: 1px solid grey;
+    width: 3rem;
+    text-align: center;
+  }
+
+  .ability-text {
+    white-space: nowrap;
+    display: flex;
+    text-align: center;
+  }
+
   .ability {
-    width: 5rem;
+    /* width: 5rem; */
+    flex: 1 1 auto;
     /* justify-self: left; */
   }
 }

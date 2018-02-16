@@ -36,25 +36,42 @@ export const SET_SUBRACE = 'SET_SUBRACE';
  * selectors
 **/
 
+export const selectAbility = state => state.generator.ability;
 export const selectDice = state => state.generator.dice;
 export const selectRace = state => state.generator.race;
 export const selectSubRace = state => state.generator.subrace;
 export const selectClass = state => state.generator.class;
 
-export const selectAbility = createSelector(
-  state => state.generator.ability,
+export const selectAbilityRaceMod = createSelector(
+  selectRace,
+  race => {
+    const r = raceDB.find(v => v.name === race);
+    return AbilityMap.map((k, i) => r.ability_bonus[i]);
+  }
+);
+
+export const selectAbilitySubRaceMod = createSelector(
   selectRace,
   selectSubRace,
-  (ability, race, subrace) => {
+  (race, subrace) => {
     const r = raceDB.find(v => v.name === race);
     const sr = r.sub_races.find(v => v.name === subrace);
+    return AbilityMap.map((k, i) => sr.ability_bonus[i]);
+  }
+);
+
+export const selectAbilityTotal = createSelector(
+  selectAbility,
+  selectAbilityRaceMod,
+  selectAbilitySubRaceMod,
+  (ability, race, subrace) => {
     return AbilityMap.reduce((v, k, i) =>
-      [...v, ability[i] + r.ability_bonus[i] + sr.ability_bonus[i]], []);
+      [...v, ability[i] + race[i] + subrace[i]], []);
   }
 );
 
 export const selectAbilityMod = createSelector(
-  selectAbility,
+  selectAbilityTotal,
   ability => {
     return AbilityMap.reduce((v, k, i) => 
       [...v, AbilityModifier(ability[i])], []);
@@ -66,14 +83,13 @@ export const selectAlignment = createSelector(
   race => {
     return raceDB.find( e => e.name === race ).alignment.main;
   }
-)
+);
 
 export const selectHP = createSelector(
   selectAbilityMod,
-  selectClass,
-  (abilityMod, clas) => {
-    const hit_die = classDB.find(v => v.name === clas).hit_die;
-    return abilityMod[2] + hit_die;
+  state => state.generator.hp,
+  (abilityMod, hp) => {
+    return abilityMod[2] + parseInt(hp, 10);
   }
 );
 
@@ -85,7 +101,7 @@ export const selectSavingThrows = createSelector(
     return AbilityMap.reduce((v, k, i) => 
       [
         ...v,
-        saves.some(s => s.name.toLowerCase() === k.toLowerCase()) ? 
+        saves.some(s => s.name === k) ? 
           abilityMod[i] : 0
       ], []);
   }
@@ -125,7 +141,12 @@ export const setCharacter = character => {
 };
 
 export const setClass = char_class => {
-  return { type: SET_CLASS, payload: char_class };
+  return dispatch => {
+    dispatch({ type: SET_CLASS, payload: char_class });
+
+    const hp = classDB.find(v => v.name === char_class).hit_die;
+    dispatch({ type: SET_HP, payload: hp});
+  };
 };
 
 export const setDice = dice => {

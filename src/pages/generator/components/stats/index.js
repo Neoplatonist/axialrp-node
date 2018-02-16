@@ -49,7 +49,7 @@ class Stats extends Component {
           type="number" 
           min="0"
           onChange={this.onHpChange}
-          defaultValue={this.props.hp}/>
+          value={this.props.hp}/>
 
         <label htmlFor="ac">Armor Class: </label>
         <input
@@ -58,7 +58,7 @@ class Stats extends Component {
           type="number" 
           min="0"
           onChange={this.onAcChange}
-          defaultValue={this.props.ac}/>
+          value={this.props.ac}/>
 
         <label htmlFor="initiative">Initiative: </label>
         <input
@@ -67,7 +67,7 @@ class Stats extends Component {
           type="number" 
           min="0"
           onChange={this.onInitiativeChange}
-          defaultValue={this.props.initiative}/>
+          value={this.props.initiative}/>
 
         <label htmlFor="speed">Speed: </label>
         <input
@@ -76,7 +76,7 @@ class Stats extends Component {
           type="number" 
           min="0"
           onChange={this.onSpeedChange}
-          defaultValue={this.props.speed}/>
+          value={this.props.speed}/>
 
         <label htmlFor="inspiration">Inspiration: </label>
         <input
@@ -85,7 +85,7 @@ class Stats extends Component {
           type="number" 
           min="0"
           onChange={this.onInspirationChange}
-          defaultValue={this.props.inspiration}/>
+          value={this.props.inspiration}/>
 
         <label htmlFor="proficiency">Proficiency Bonus: </label>
         <input
@@ -94,7 +94,7 @@ class Stats extends Component {
           type="number" 
           min="0"
           onChange={this.onProficiencyBonusChange}
-          defaultValue={this.props.proficiencyBonus}/>
+          value={this.props.proficiencyBonus}/>
       </div>
     );
   }
