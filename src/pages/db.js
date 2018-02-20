@@ -167,14 +167,14 @@ export const classDB = [
     proficiency_choices: [
       {
         choose: 2,
-        type: 'proficiencies',
+        type: 'Skill',
         from: [
-          { name: 'Skill: Animal Handling' },
-          { name: 'Skill: Athletics' },
-          { name: 'Skill: Intimidation' },
-          { name: 'Skill: Nature' },
-          { name: 'Skill: Perception' },
-          { name: 'Skill: Survival' }
+          { name: 'Animal Handling' },
+          { name: 'Athletics' },
+          { name: 'Intimidation' },
+          { name: 'Nature' },
+          { name: 'Perception' },
+          { name: 'Survival' }
         ]
       }
     ],
@@ -198,14 +198,14 @@ export const classDB = [
     proficiency_choices: [
       {
         choose: 2,
-        type: 'proficiencies',
+        type: 'Skill',
         from: [
-          { name: 'Skill: Animal Handling' },
-          { name: 'Skill: Athletics' },
-          { name: 'Skill: Intimidation' },
-          { name: 'Skill: Nature' },
-          { name: 'Skill: Perception' },
-          { name: 'Skill: Survival' }
+          { name: 'Animal Handling' },
+          { name: 'Athletics' },
+          { name: 'Intimidation' },
+          { name: 'Nature' },
+          { name: 'Perception' },
+          { name: 'Survival' }
         ]
       }
     ],
@@ -229,14 +229,14 @@ export const classDB = [
     proficiency_choices: [
       {
         choose: 2,
-        type: 'proficiencies',
+        type: 'Skill',
         from: [
-          { name: 'Skill: Animal Handling' },
-          { name: 'Skill: Athletics' },
-          { name: 'Skill: Intimidation' },
-          { name: 'Skill: Nature' },
-          { name: 'Skill: Perception' },
-          { name: 'Skill: Survival' }
+          { name: 'Animal Handling' },
+          { name: 'Athletics' },
+          { name: 'Intimidation' },
+          { name: 'Nature' },
+          { name: 'Perception' },
+          { name: 'Survival' }
         ]
       }
     ],

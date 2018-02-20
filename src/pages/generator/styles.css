@@ -80,4 +80,45 @@
     flex: 1 1 auto;
     /* justify-self: left; */
   }
+
+
+  .skillContainer {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 0.5rem;
+  }
+
+  .skillContainer > input {
+    display: flex;
+    padding-right: 2rem;
+    align-items: center;
+  }
+
+  .skill-prepend, .skill-append {
+    display: flex;
+    /* background-color: lightgray; */
+    padding: 2% 0;
+    /* border: 1px solid grey; */
+    width: 3rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .skill-text {
+    white-space: nowrap;
+    display: flex;
+    padding-left: 1rem;
+    width: 9rem;
+    align-items: center;
+  }
+
+  .skill {
+    /* width: 5rem; */
+    flex: 1 1 auto;
+    /* justify-self: left; */
+  }
+
+  .skillDesc {
+    display: none;
+  }
 }

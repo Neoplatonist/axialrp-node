@@ -31,7 +31,8 @@ import {
   setHP,
   selectRace,
   selectSubRace,
-  selectSavingThrows
+  selectSavingThrows,
+  selectSkills
 } from '../../actions';
 
 const Option = ({ name }) => <option value={name}>{name}</option>;
@@ -55,9 +56,17 @@ class Generator extends Component {
     });
   }
 
-  renderSkills() {
-    return skillsDB.map((v, k) => {
-      return <Skills key={k} skill={v} />;
+  renderSkills = e => {
+    // return skillsDB.map((v, k) => {
+    //   return <Skills key={k} skill={v} />;
+    // });
+    return this.props.skills.from.map((v, k) => {
+      const skill = skillsDB.find(j => j.name === v.name);
+      return <Skills 
+        key={k} 
+        desc={skill.desc}
+        name={v.name} 
+        mod={skill.ability_score.name} />;
     });
   }
 
@@ -127,7 +136,7 @@ class Generator extends Component {
           <br/><br/>
 
           <h3>Skills</h3>
-
+          <h5>Choose {this.props.skills.choose}</h5>
           <br/>
 
           { this.renderSkills() }
@@ -143,6 +152,7 @@ const mapStateToProps = state => ({
   alignment: selectAlignment(state),
   dice: selectDice(state),
   race: selectRace(state),
+  skills: selectSkills(state),
   speed: state.generator.speed,
   savingThrows: selectSavingThrows(state),
   subrace: selectSubRace(state)

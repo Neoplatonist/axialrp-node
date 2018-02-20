@@ -105,6 +105,14 @@ export const selectSavingThrows = createSelector(
   }
 );
 
+export const selectSkills = createSelector(
+  selectClass,
+  clas => {
+    return classDB.find( v => v.name === clas)
+      .proficiency_choices.find( v => v.type === 'Skill');
+  }
+);
+
 
 /**
  * action creators

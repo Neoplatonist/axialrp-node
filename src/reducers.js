@@ -41,7 +41,9 @@ export const generatorState = {
 
   savingThrows: [0, 0, 0, 0, 0, 0],
 
-  skills: {
+  skills: [],
+
+  allSkills: {
     acrobats: 0,
     animalHandling: 0,
     arcana: 0,
