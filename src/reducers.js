@@ -177,10 +177,7 @@ const generator = (state = generatorState, action) => {
     case SET_SKILLS: 
       return {
         ...state,
-        skills: {
-          ...state.skills,
-          ...action.payload
-        }
+        skills: action.payload
       };
 
     case SET_SPEED: 

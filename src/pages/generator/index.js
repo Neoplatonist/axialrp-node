@@ -35,7 +35,8 @@ import {
   selectSpeed,
   selectSubRace,
   selectSavingThrows,
-  selectSkills
+  selectSkills,
+  selectSkillsFilter
 } from '../../actions';
 
 class Generator extends Component {
@@ -59,7 +60,7 @@ class Generator extends Component {
   }
 
   renderSkills = e => {
-    return this.props.skills.from.map((v, k) => {
+    return this.props.skillsFilter.from.map((v, k) => {
       const skill = skillsDB.find(j => j.name === v.name);
       return <Skills 
         key={k} 
@@ -167,6 +168,7 @@ const mapStateToProps = state => ({
   level: selectLevel(state),
   race: selectRace(state),
   skills: selectSkills(state),
+  skillsFilter: selectSkillsFilter(state),
   speed: selectSpeed(state),
   savingThrows: selectSavingThrows(state),
   subrace: selectSubRace(state)

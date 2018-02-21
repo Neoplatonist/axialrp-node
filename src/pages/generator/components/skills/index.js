@@ -2,13 +2,25 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import '../../styles.css';
 
-export default class Skills extends Component {
+import { connect } from 'react-redux';
+import {
+  selectSkills,
+  setSkills
+} from '../../../../actions';
+
+class Skills extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
       showDesc: false
     };
+  }
+
+  handleInput = (name, e) => {
+    const list = [...this.props.skills];
+    list.push(name)
+    this.props.setSkills(list);
   }
 
   showDesc = e => {
@@ -20,7 +32,11 @@ export default class Skills extends Component {
   render() {
     return (
       <li className="input skillContainer"> 
-        <input type="checkbox" />
+        <input 
+          type="checkbox"
+          onClick={this.handleInput.bind(this, this.props.name)}
+          disabled={this.props.skills.length > 1}
+        />
         <div className="skill-text"> { this.props.name }</div>
         <div className="skill-append"> ({ this.props.mod.slice(0, 3).toUpperCase() })</div>
         <span className="skill-append" onClick={this.showDesc}> info <i className="fas fa-angle-down"></i></span>
@@ -35,3 +51,13 @@ export default class Skills extends Component {
     );
   }
 }
+
+const mapStateToProps = state => ({
+  skills: selectSkills(state)
+});
+
+const boundActions = {
+  setSkills
+};
+
+export default connect(mapStateToProps, boundActions)(Skills);

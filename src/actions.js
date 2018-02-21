@@ -51,6 +51,7 @@ export const selectClass = state => state.generator.class;
 export const selectDice = state => state.generator.dice;
 export const selectLevel = state => state.generator.level;
 export const selectRace = state => state.generator.race;
+export const selectSkills = state => state.generator.skills;
 export const selectSpeed = state => state.generator.speed;
 export const selectSubRace = state => state.generator.subrace;
 export const selectWeapon = state => state.generator.weapon;
@@ -124,7 +125,7 @@ export const selectSavingThrows = createSelector(
   }
 );
 
-export const selectSkills = createSelector(
+export const selectSkillsFilter = createSelector(
   selectClass,
   clas => {
     return classDB.find( v => v.name === clas)
