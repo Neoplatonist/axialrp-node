@@ -21,14 +21,14 @@ import Stats from './components/stats';
 import { connect } from 'react-redux';
 import {
   selectAbility,
-  // setAbility,
   selectAbilityMod,
-  // setAbilityMod,
   selectAlignment,
   setAlignment,
   selectDice,
   setDice,
   setHP,
+  setLevel,
+  selectLevel,
   selectRace,
   selectSubRace,
   selectSavingThrows,
@@ -40,9 +40,6 @@ const Option = ({ name }) => <option value={name}>{name}</option>;
 class Generator extends Component {
   componentDidMount() {
     this.rollDice();
-
-    // const align = raceDB.find( e => e.name === this.props.race ).alignment.main;
-    // this.props.setAlignment(align);
   }
 
   rollDice = e => {
@@ -50,16 +47,17 @@ class Generator extends Component {
     this.props.setDice(dice);
   }
 
-  handleAlignment = e => {
+  handleAlignment = () => {
     return alignmentDB.map((v, k) => {
       return <Option key={k} {...v} />;
     });
   }
 
+  handleLevel = e => {
+    this.props.setAlignment(parseInt(e.target.value, 10));
+  }
+
   renderSkills = e => {
-    // return skillsDB.map((v, k) => {
-    //   return <Skills key={k} skill={v} />;
-    // });
     return this.props.skills.from.map((v, k) => {
       const skill = skillsDB.find(j => j.name === v.name);
       return <Skills 
@@ -99,13 +97,19 @@ class Generator extends Component {
 
 
           <label htmlFor="level">Level: </label>
-          <input name="level" className="input" type="text" />
+          <input 
+            name="level" 
+            className="input" 
+            type="text"
+            onChange={ e => 
+              this.props.setLevel(parseInt(e.target.value, 10))}
+            value={this.props.level} />
 
           <label htmlFor="alignment">Alignment: </label>
           <select 
             name="alignment"
             className="input"
-            onChange={ e => this.props.setAlignment }
+            onChange={ e => this.props.setAlignment(e.target.value) }
             value={this.props.alignment}
           >
             { this.handleAlignment() }
@@ -151,6 +155,7 @@ const mapStateToProps = state => ({
   abilityMod: selectAbilityMod(state),
   alignment: selectAlignment(state),
   dice: selectDice(state),
+  level: selectLevel(state),
   race: selectRace(state),
   skills: selectSkills(state),
   speed: state.generator.speed,
@@ -161,7 +166,8 @@ const mapStateToProps = state => ({
 const boundActions = {
   setAlignment,
   setDice,
-  setHP
+  setHP,
+  setLevel
 };
 
 export default connect(mapStateToProps, boundActions)(Generator);

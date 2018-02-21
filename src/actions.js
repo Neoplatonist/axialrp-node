@@ -24,6 +24,7 @@ export const SET_DICE = 'SET_DICE';
 export const SET_HP = 'SET_HP';
 export const SET_INITIATIVE = 'SET_INITIATIVE';
 export const SET_INSPIRATION = 'SET_INSPIRATION';
+export const SET_LEVEL = 'SET_LEVEL';
 export const SET_PROFICIENCY_BONUS = 'SET_PROFICIENCY_BONUS';
 export const SET_RACE = 'SET_RACE';
 export const SET_SAVING_THROWS = 'SET_SAVING_THROWS';
@@ -37,7 +38,9 @@ export const SET_SUBRACE = 'SET_SUBRACE';
 **/
 
 export const selectAbility = state => state.generator.ability;
+export const selectAlignment = state => state.generator.alignment;
 export const selectDice = state => state.generator.dice;
+export const selectLevel = state => state.generator.level;
 export const selectRace = state => state.generator.race;
 export const selectSubRace = state => state.generator.subrace;
 export const selectClass = state => state.generator.class;
@@ -73,13 +76,6 @@ export const selectAbilityMod = createSelector(
   selectAbilityTotal,
   ability => {
     return ability.map((v, k) => AbilityModifier(v));
-  }
-);
-
-export const selectAlignment = createSelector(
-  selectRace,
-  race => {
-    return raceDB.find( e => e.name === race ).alignment.main;
   }
 );
 
@@ -150,8 +146,8 @@ export const setClass = char_class => {
   return dispatch => {
     dispatch({ type: SET_CLASS, payload: char_class });
 
-    const hp = classDB.find(v => v.name === char_class).hit_die;
-    dispatch({ type: SET_HP, payload: hp});
+    const hit_die = classDB.find(v => v.name === char_class).hit_die;
+    dispatch({ type: SET_HP, payload: hit_die });
   };
 };
 
@@ -174,12 +170,21 @@ export const setInspiration = inspire => {
   return { type: SET_INSPIRATION, payload: inspire };
 };
 
+export const setLevel = level => {
+  return { type: SET_LEVEL, payload: level }
+}
+
 export const setProficiencyBonus = proficiency => {
   return { type: SET_PROFICIENCY_BONUS, payload: proficiency };
 };
 
 export const setRace = race => {
-  return { type: SET_RACE, payload: race };
+  return dispatch => {
+    dispatch({ type: SET_RACE, payload: race });
+
+    const alignment = raceDB.find(v => v.name === race).alignment.main;
+    dispatch({ type: SET_ALIGNMENT, payload: alignment});
+  };
 };
 
 export const setSavingThrows = saves => {

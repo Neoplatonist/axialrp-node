@@ -12,8 +12,9 @@ export default class Skills extends Component {
   }
 
   showDesc = e => {
+    console.log('clikd')
     ReactDOM.findDOMNode(this.skillDesc).style.display = 
-      this.state.showDesc ? 'block' : 'none';
+      !this.state.showDesc ? 'block' : 'none';
     this.setState({showDesc: !this.state.showDesc});
   }
 
@@ -23,7 +24,7 @@ export default class Skills extends Component {
         <input type="checkbox" />
         <div className="skill-text"> { this.props.name }</div>
         <div className="skill-append"> ({ this.props.mod.slice(0, 3).toUpperCase() })</div>
-        <span className="skill-append" onClick={this.showDesc}> info</span>
+        <span className="skill-append" onClick={this.showDesc}> info <i className="fas fa-angle-down"></i></span>
 
         <div 
           ref={ el => this.skillDesc = el } 

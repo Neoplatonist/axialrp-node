@@ -17,6 +17,7 @@ class Stats extends Component {
     this.props.setAC(e.target.value);
   }
 
+  // show the aggregated hp compared to selected hp
   onHpChange = e => {
     // Roll Dice for HP
     // Add Ability Modifier

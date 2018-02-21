@@ -49,7 +49,7 @@ export const raceDB = [
       type: 'Artisan',
       tools: ['Smith Tools', 'Brewer Supplies', 'Mason Tools']
     },
-    proficiency: ['Battleaxes', 'Handaxes', 'Light hammers', 'Warhammers']
+    proficiency: ['Battleaxe', 'Handaxes', 'Light hammers', 'Warhammers']
   },
   {
     name: 'Elf',
@@ -179,11 +179,20 @@ export const classDB = [
       }
     ],
     proficiencies: [
-      { name: 'Light armor' },
-      { name: 'Medium armor' },
-      { name: 'Shields' },
-      { name: 'Simple weapons' },
-      { name: 'Martial weapons' }
+      {
+        type: 'Armor',
+        list: [
+          { name: 'Light' },
+          { name: 'Medium' },
+          { name: 'Shields' }
+        ]
+      }, {
+        type: 'Weapons',
+        list: [
+          { name: 'Simple' },
+          { name: 'Martial' }
+        ]
+      }
     ],
     saving_throws: [
       { name: 'Strength' },
@@ -197,31 +206,75 @@ export const classDB = [
     hit_die: 8,
     proficiency_choices: [
       {
-        choose: 2,
-        type: 'Skill',
-        from: [
-          { name: 'Animal Handling' },
-          { name: 'Athletics' },
-          { name: 'Intimidation' },
-          { name: 'Nature' },
-          { name: 'Perception' },
-          { name: 'Survival' }
+				"choose": 3,
+				"type": "Skill",
+				"from": [
+					{ "name": "Acrobatics" },
+					{ "name": "Animal Handling" },
+					{ "name": "Arcana" },
+					{ "name": "Athletics" },
+					{ "name": "Deception" },
+					{ "name": "History" },
+					{ "name": "Insight" },
+					{ "name": "Intimidation" },
+					{ "name": "Investigation" },
+					{ "name": "Medicine" },
+					{ "name": "Nature" },
+					{ "name": "Perception" },
+					{ "name": "Performance" },
+					{ "name": "Persuasion" },
+					{ "name": "Religion" },
+					{ "name": "Sleight of Hand" },
+					{ "name": "Stealth" },
+          { "name": "Survival" }
+        ]
+      }, {
+				"choose": 3,
+				"type": "Instruments",
+				"from": [
+					{ "name": "Bagpipes" },
+					{ "name": "Drum" },
+					{ "name": "Dulcimer" },
+					{ "name": "Flute" },
+					{ "name": "Lute" },
+					{ "name": "Lyre" },
+					{ "name": "Horn" },
+					{ "name": "Pan flute" },
+					{ "name": "Shawm" },
+					{ "name": "Viol" }
+				]
+			}
+    ],
+    proficiencies: [
+      {
+        type: 'Armor',
+        list: [
+          { name: 'Light armor' }
+        ]
+      }, {
+        type: 'Weapons',
+        list: [
+          { "name": "Simple weapons" },
+          { "name": "Longswords" },
+          { "name": "Rapiers" },
+          { "name": "Shortswords" },
+          { "name": "Crossbows, hand" }
         ]
       }
     ],
-    proficiencies: [
-      { name: 'Light armor' },
-      { name: 'Medium armor' },
-      { name: 'Shields' },
-      { name: 'Simple weapons' },
-      { name: 'Martial weapons' }
-    ],
     saving_throws: [
-      { name: 'Strength' },
-      { name: 'Constitution' }
+      { name: 'Dexterity' },
+      { name: 'Charisma' }
     ],
     starting_equipment: { class: 'Bard' },
-    spellcasting: {}
+    sub_classes: [
+      {
+        name: 'College of Lore',
+        description: 'Bards of the College of Lore know something about most things, collecting bits of knowledge from sources as diverse as scholarly tomes and peasant tales. Whether singing folk ballads in taverns or elaborate compositions in royal courts, these bards use their gifts to hold audiences spellbound. When the applause dies down, the audience members might find themselves questioning everything they held to be true, from their faith in the priesthood of the local temple to their loyalty to the king. The loyalty of these bards lies in the pursuit of beauty and truth, not in fealty to a monarch or following the tenets of a deity. A noble who keeps such a bard as a herald or advisor knows that the bard would rather be honest than politic. The college\'s members gather in libraries and sometimes in actual colleges, complete with classrooms and dormitories, to share their lore with one another. They also meet at festivals or affairs of state, where they can expose corruption, unravel lies, and poke fun at self-important figures of authority.',
+        proficiencies: 'tba'
+      }
+    ],
+    spellcasting: 'tba'
   },
   {
     name: 'Cleric',
@@ -231,28 +284,33 @@ export const classDB = [
         choose: 2,
         type: 'Skill',
         from: [
-          { name: 'Animal Handling' },
-          { name: 'Athletics' },
-          { name: 'Intimidation' },
-          { name: 'Nature' },
-          { name: 'Perception' },
-          { name: 'Survival' }
+          { name: 'History' },
+          { name: 'Insight' },
+          { name: 'Medicine' },
+          { name: 'Persuasion' },
+          { name: 'Religion' }
         ]
       }
     ],
     proficiencies: [
-      { name: 'Light armor' },
-      { name: 'Medium armor' },
+      { name: 'Light' },
+      { name: 'Medium' },
       { name: 'Shields' },
-      { name: 'Simple weapons' },
-      { name: 'Martial weapons' }
+      { name: 'Simple' }
     ],
     saving_throws: [
-      { name: 'Strength' },
-      { name: 'Constitution' }
+      { name: 'Wisdom' },
+      { name: 'Charisma' }
     ],
     starting_equipment: { class: 'Cleric' },
-    spellcasting: {}
+    sub_classes: [
+      {
+        name: 'College of Lore',
+        description: 'The Life domain focuses on the vibrant positive energy—one of the fundamental forces of the universe—that sustains all life. The gods of life promote vitality and health through healing the sick and wounded, caring for those in need, and driving away the forces of death and undeath. Almost any non-evil deity can claim influence over this domain, particularly agricultural deities, sun gods, gods of healing or endurance, and gods of home and community.',
+        proficiencies: 'tba'
+      }
+    ],
+    spellcasting: 'tba'
   }
 ];
 

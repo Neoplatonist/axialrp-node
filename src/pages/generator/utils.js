@@ -23,3 +23,5 @@ export const AbilityMap = [
   'Wisdom', 
   'Charisma'
 ];
+
+export const ProficiencyBonus = level => Math.floor(level / 4) + 2;

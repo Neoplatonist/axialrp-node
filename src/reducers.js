@@ -10,6 +10,7 @@ import {
   SET_HP,
   SET_INITIATIVE,
   SET_INSPIRATION,
+  SET_LEVEL,
   SET_PROFICIENCY_BONUS,
   SET_RACE,
   SET_SKILLS,
@@ -36,6 +37,7 @@ export const generatorState = {
   hp: 12,
   initiative: 0,
   inspiration: 0,
+  level: 1,
   proficiencyBonus: 0,
   race: 'Dwarf',
 
@@ -132,6 +134,12 @@ const generator = (state = generatorState, action) => {
       return {
         ...state,
         inspiration: action.payload
+      };
+
+    case SET_LEVEL: 
+      return {
+        ...state,
+        level: action.payload
       };
 
     case SET_PROFICIENCY_BONUS: 
