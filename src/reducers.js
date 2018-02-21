@@ -4,6 +4,7 @@ import {
   SET_ABILITY_MOD,
   SET_AC,
   SET_ALIGNMENT,
+  SET_ARMOR,
   SET_CHARACTER,
   SET_CLASS,
   SET_DICE,
@@ -23,6 +24,7 @@ export const generatorState = {
   abilityMod: [0, 0, 0, 0, 0, 0],
   ac: 0,
   alignment: 'Lawful Good',
+  armor: [],
 
   character: {
     name: '',
@@ -95,6 +97,12 @@ const generator = (state = generatorState, action) => {
       return {
         ...state,
         alignment: action.payload
+      };
+
+    case SET_ARMOR: 
+      return {
+        ...state,
+        armor: action.payload
       };
 
     case SET_CHARACTER: 

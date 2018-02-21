@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Option } from '../../utils';
 import '../../styles.css';
 
 import { connect } from 'react-redux';
@@ -11,17 +12,15 @@ import {
   setSubRace
 } from '../../../../actions';
 
-const Option = ({ name }) => <option value={name}>{name}</option>;
-
 class Race extends Component {
   handleRace = e => {
-    return this.props.mockRace.map((v, k) => {
+    return this.props.raceDB.map((v, k) => {
       return <Option key={k} {...v} />;
     });
   }
 
   handleSubRace = e => {
-    const subraces = this.props.mockRace
+    const subraces = this.props.raceDB
       .find(v => v.name === this.props.race)
       .sub_races || {sub_races: []};
 
@@ -32,7 +31,7 @@ class Race extends Component {
 
   onRaceChange = e => {
     // TODO: Doesn't update on first loop
-    const r = this.props.mockRace.find(v => v.name === e.target.value);
+    const r = this.props.raceDB.find(v => v.name === e.target.value);
     this.props.setRace(e.target.value);
     this.props.setSubRace(r.sub_races[0].name);
 

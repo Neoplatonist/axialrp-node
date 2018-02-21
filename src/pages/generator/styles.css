@@ -82,7 +82,7 @@
   }
 
 
-  .skillContainer {
+  .skillContainer, .armorContainer {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 0.5rem;
@@ -94,7 +94,7 @@
     align-items: center;
   }
 
-  .skill-prepend, .skill-append {
+  .skill-prepend, .skill-append, .armor-append {
     display: flex;
     /* background-color: lightgray; */
     padding: 2% 0;
@@ -104,7 +104,7 @@
     align-items: center;
   }
 
-  .skill-text {
+  .skill-text, .armor-text {
     white-space: nowrap;
     display: flex;
     padding-left: 1rem;
@@ -118,7 +118,7 @@
     /* justify-self: left; */
   }
 
-  .skillDesc {
+  .skillDesc, .armorDesc {
     display: none;
   }
 }

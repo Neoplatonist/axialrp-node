@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
-import { AbilityMap, Dice } from './utils';
+import { AbilityMap, Dice, Option } from './utils';
 import './styles.css';
 
 // Mock Database
 import { 
   alignmentDB, 
+  armorDB,
   classDB, 
   raceDB,
   skillsDB
 } from '../db.js';
 
 import AbilityWithMod from './components/abilityMod';
+import Armor from './components/armor';
 import Class from './components/class';
 import Description from './components/description';
 import Race from './components/race';
@@ -30,12 +32,11 @@ import {
   setLevel,
   selectLevel,
   selectRace,
+  selectSpeed,
   selectSubRace,
   selectSavingThrows,
   selectSkills
 } from '../../actions';
-
-const Option = ({ name }) => <option value={name}>{name}</option>;
 
 class Generator extends Component {
   componentDidMount() {
@@ -87,11 +88,11 @@ class Generator extends Component {
 
           <br/>
 
-          <Race mockRace={raceDB} />
+          <Race raceDB={raceDB} />
 
           <br/>
 
-          <Class mockClass={classDB} />
+          <Class classDB={classDB} />
 
           <br/>
 
@@ -121,7 +122,7 @@ class Generator extends Component {
 
           <button onClick={this.rollDice}>ReRoll?</button>
 
-          <AbilityWithMod mockClass={classDB}/>
+          <AbilityWithMod />
 
           <br/><br/>
 
@@ -144,6 +145,8 @@ class Generator extends Component {
           <br/>
 
           { this.renderSkills() }
+
+          <Armor armorDB={armorDB} />
         </form>
       </main>
     );
@@ -158,7 +161,7 @@ const mapStateToProps = state => ({
   level: selectLevel(state),
   race: selectRace(state),
   skills: selectSkills(state),
-  speed: state.generator.speed,
+  speed: selectSpeed(state),
   savingThrows: selectSavingThrows(state),
   subrace: selectSubRace(state)
 });

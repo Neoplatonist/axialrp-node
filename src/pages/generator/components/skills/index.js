@@ -12,7 +12,6 @@ export default class Skills extends Component {
   }
 
   showDesc = e => {
-    console.log('clikd')
     ReactDOM.findDOMNode(this.skillDesc).style.display = 
       !this.state.showDesc ? 'block' : 'none';
     this.setState({showDesc: !this.state.showDesc});

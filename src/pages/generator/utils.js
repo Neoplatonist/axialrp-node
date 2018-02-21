@@ -1,3 +1,4 @@
+import React from 'react';
 
 export const Dice = (x, y) => {
   let z = 0;
@@ -23,5 +24,7 @@ export const AbilityMap = [
   'Wisdom', 
   'Charisma'
 ];
+
+export const Option = ({ name }) => <option value={name}>{name}</option>;
 
 export const ProficiencyBonus = level => Math.floor(level / 4) + 2;

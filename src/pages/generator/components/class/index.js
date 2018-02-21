@@ -1,21 +1,20 @@
 import React, { Component } from 'react';
+import { Option } from '../../utils';
 import '../../styles.css';
 
 import { connect } from 'react-redux';
 import { setClass, setHP } from '../../../../actions';
 
-const Option = ({ name }) => <option value={name}>{name}</option>;
-
 class Class extends Component {
   handleClass = e => {
-    return this.props.mockClass.map((v, k) => {
+    return this.props.classDB.map((v, k) => {
       return <Option key={k} {...v} />;
     })
   }
 
   onClassChange = e => {
     this.props.setClass(e.target.value);
-    const hit_die = this.props.mockClass
+    const hit_die = this.props.classDB
       .find( v => v.name === e.target.value).hit_die;
 
     // TODO: Constitution is for level 1 only.

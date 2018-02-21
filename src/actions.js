@@ -18,6 +18,7 @@ export const SET_ABILITY = 'SET_ABILITY';
 export const SET_ABILITY_MOD = 'SET_ABILITY_MOD';
 export const SET_AC = 'SET_AC';
 export const SET_ALIGNMENT = 'SET_ALIGNMENT';
+export const SET_ARMOR = 'SET_ARMOR';
 export const SET_CHARACTER = 'SET_CHARACTER';
 export const SET_CLASS = 'SET_CLASS';
 export const SET_DICE = 'SET_DICE';
@@ -39,11 +40,15 @@ export const SET_SUBRACE = 'SET_SUBRACE';
 
 export const selectAbility = state => state.generator.ability;
 export const selectAlignment = state => state.generator.alignment;
+export const selectArmor = state => state.generator.armor;
+export const selectClass = state => state.generator.class;
 export const selectDice = state => state.generator.dice;
 export const selectLevel = state => state.generator.level;
 export const selectRace = state => state.generator.race;
+export const selectSpeed = state => state.generator.speed;
 export const selectSubRace = state => state.generator.subrace;
-export const selectClass = state => state.generator.class;
+
+
 
 export const selectAbilityRaceMod = createSelector(
   selectRace,
@@ -137,6 +142,10 @@ export const setAC = ac => {
 export const setAlignment = alignment => {
   return { type: SET_ALIGNMENT, payload: alignment };
 };
+
+export const setArmor = armor => {
+  return { type: SET_ARMOR, payload: armor };
+}
 
 export const setCharacter = character => {
   return { type: SET_CHARACTER, payload: character };
