@@ -17,7 +17,9 @@ import {
   SET_RACE,
   SET_SKILLS,
   SET_SPEED,
-  SET_SUBRACE
+  SET_SUBRACE,
+  SET_WEAPON,
+  SET_WEAPON_ACTIVE
 } from './actions';
 
 export const generatorState = {
@@ -71,7 +73,9 @@ export const generatorState = {
   },
 
   speed: 25,
-  subrace: 'Hill Dwarf'
+  subrace: 'Hill Dwarf',
+  weapon: [],
+  weaponActive: 'proficiency'
 };
 
 const generator = (state = generatorState, action) => {
@@ -189,6 +193,18 @@ const generator = (state = generatorState, action) => {
       return { 
         ...state,
         subrace: action.payload
+      };
+
+    case SET_WEAPON: 
+      return { 
+        ...state,
+        weapon: action.payload
+      };
+
+      case SET_WEAPON_ACTIVE: 
+      return { 
+        ...state,
+        weaponActive: action.payload
       };
   
     default:

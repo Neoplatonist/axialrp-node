@@ -49,7 +49,7 @@ export const raceDB = [
       type: 'Artisan',
       tools: ['Smith Tools', 'Brewer Supplies', 'Mason Tools']
     },
-    proficiency: ['Battleaxe', 'Handaxes', 'Light hammers', 'Warhammers']
+    proficiency: ['Battleaxe', 'Handaxe', 'Light Hammer', 'Warhammer']
   },
   {
     name: 'Elf',
@@ -100,7 +100,7 @@ export const raceDB = [
       type: 'Artisan',
       tools: ['Smith Tools', 'Brewer Supplies', 'Mason Tools']
     },
-    proficiency: ['Longswords', 'Shortswords', 'Shortbows', 'Longbows']
+    proficiency: ['Longsword', 'Shortsword', 'Shortbow', 'Longbow']
   }
 ];
 
@@ -583,7 +583,7 @@ export const weaponDB = [
       long: 120
     }
   }, {
-    name: "Light hammer",
+    name: "Light Hammer",
     category: "Simple",
     range: "Melee",
     cost: {

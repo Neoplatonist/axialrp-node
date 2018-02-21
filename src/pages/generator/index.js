@@ -18,6 +18,7 @@ import Race from './components/race';
 import SavingThrows from './components/savingThrows';
 import Skills from './components/skills';
 import Stats from './components/stats';
+import Weapons from './components/weapons';
 
 import { connect } from 'react-redux';
 import {
@@ -148,6 +149,10 @@ class Generator extends Component {
           <br/>
 
           <Armor />
+
+          <br/>
+
+          <Weapons />
         </form>
       </main>
     );

@@ -6,7 +6,8 @@ import {
   armorDB, 
   classDB, 
   raceDB,
-  // skillsDB
+  // skillsDB,
+  weaponDB
 } from './pages/db.js';
 
 
@@ -34,6 +35,8 @@ export const SET_SAVING_THROWS = 'SET_SAVING_THROWS';
 export const SET_SPEED = 'SET_SPEED';
 export const SET_SKILLS = 'SET_SKILLS'; 
 export const SET_SUBRACE = 'SET_SUBRACE';
+export const SET_WEAPON = 'SET_WEAPON';
+export const SET_WEAPON_ACTIVE = 'SET_WEAPON_ACTIVE';
 
 
 /**
@@ -50,6 +53,8 @@ export const selectLevel = state => state.generator.level;
 export const selectRace = state => state.generator.race;
 export const selectSpeed = state => state.generator.speed;
 export const selectSubRace = state => state.generator.subrace;
+export const selectWeapon = state => state.generator.weapon;
+export const selectWeaponActive = state => state.generator.weaponActive;
 
 
 
@@ -124,6 +129,20 @@ export const selectSkills = createSelector(
   clas => {
     return classDB.find( v => v.name === clas)
       .proficiency_choices.find( v => v.type === 'Skill');
+  }
+);
+
+export const selectWeaponProficiency = createSelector(
+  selectClass,
+  selectRace,
+  (clas, race) => {
+    const raceList = raceDB.find(v => v.name === race).proficiency;
+    const weaponList = [].concat(
+      ...raceList.map(v => weaponDB.filter(j => j.name === v)));
+    const classList = classDB.find(v => v.name === clas)
+      .proficiencies.find(v => v.type === 'Weapons').list;
+    return [].concat(
+      ...classList.map(v => weaponList.filter(j => j.category === v.name)));
   }
 );
 
@@ -227,4 +246,12 @@ export const setSpeed = speed => {
 
 export const setSubRace = subrace => {
   return { type: SET_SUBRACE, payload: subrace };
+};
+
+export const setWeapon = weapon => {
+  return { type: SET_WEAPON, payload: weapon };
+};
+
+export const setWeaponActive = active => {
+  return { type: SET_WEAPON_ACTIVE, payload: active };
 };
