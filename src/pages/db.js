@@ -293,10 +293,19 @@ export const classDB = [
       }
     ],
     proficiencies: [
-      { name: 'Light' },
-      { name: 'Medium' },
-      { name: 'Shield' },
-      { name: 'Simple' }
+      {
+        type: 'Armor',
+        list: [
+          { name: 'Light' },
+          { name: 'Medium' },
+          { name: 'Shield' }
+        ]
+      }, {
+        type: 'Weapons',
+        list: [
+          { name: 'Simple' }
+        ]
+      }
     ],
     saving_throws: [
       { name: 'Wisdom' },
