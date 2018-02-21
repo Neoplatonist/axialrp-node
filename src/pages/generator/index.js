@@ -5,7 +5,6 @@ import './styles.css';
 // Mock Database
 import { 
   alignmentDB, 
-  armorDB,
   classDB, 
   raceDB,
   skillsDB
@@ -146,7 +145,9 @@ class Generator extends Component {
 
           { this.renderSkills() }
 
-          <Armor armorDB={armorDB} />
+          <br/>
+
+          <Armor />
         </form>
       </main>
     );

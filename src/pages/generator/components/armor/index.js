@@ -5,10 +5,21 @@ import ArmorList from './armorList';
 import { connect } from 'react-redux';
 import {
   selectArmor,
-  setArmor
+  setArmor,
+  selectArmorProficiency,
+  selectArmorActive,
+  setArmorActive
 } from '../../../../actions';
 
+import { 
+  armorDB
+} from '../../../db.js';
+
 class Armor extends Component {
+  componentDidMount() {
+    document.getElementsByClassName('tab-item')[0].className += ' tab-active';
+  }
+
   addArmor = e => {
     const armor = [...this.props.armor, e.target.value];
     this.props.setArmor(armor);
@@ -16,15 +27,33 @@ class Armor extends Component {
 
   armorList = () => {
     return this.props.armor.map((v, k) => {
-      const list = this.props.armorDB.find( j => j.name === v);
+      const list = armorDB.find( j => j.name === v);
       return <ArmorList key={k} desc={list} />
     });
   }
 
   handleArmor = () => {
-    return this.props.armorDB.map((v, k) => {
-      return <Option key={k} {...v} />;
-    });
+    if (this.props.armorActive === 'proficiency') {
+      return this.props.armorProficiency.map((v, k) => {
+        return <Option key={k} {...v} />;
+      });
+    } else {
+      return armorDB.map((v, k) => {
+        return <Option key={k} {...v} />;
+      });
+    }
+  }
+
+  selectAll = e => {
+    document.getElementsByClassName('tab-item')[0].className = 'tab-item';
+    document.getElementsByClassName('tab-item')[1].className = 'tab-item tab-active';
+    this.props.setArmorActive('all');
+  }
+
+  selectProficiency = e => {
+    document.getElementsByClassName('tab-item')[0].className = 'tab-item tab-active';
+    document.getElementsByClassName('tab-item')[1].className = 'tab-item';
+    this.props.setArmorActive('proficiency');
   }
 
   render() {
@@ -32,8 +61,14 @@ class Armor extends Component {
       <div>
         <label htmlFor="armor">Select Armor: </label>
 
-        <button>Proficiency</button>
-        <button>All</button>
+        <ul className="tabs">
+          <li className="tab-item" onClick={this.selectProficiency}>
+            <span className="tab-link">Proficiency</span>
+          </li>
+          <li className="tab-item" onClick={this.selectAll}>
+            <span className="tab-link">All</span>
+          </li>
+        </ul>
 
         <select 
           name="armor"
@@ -53,11 +88,14 @@ class Armor extends Component {
 }
 
 const mapStateToProps = state => ({
-  armor: selectArmor(state)
+  armor: selectArmor(state),
+  armorActive: selectArmorActive(state),
+  armorProficiency: selectArmorProficiency(state)
 });
 
 const boundActions = {
-  setArmor
+  setArmor,
+  setArmorActive
 };
 
 export default connect(mapStateToProps, boundActions)(Armor);

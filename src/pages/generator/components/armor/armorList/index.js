@@ -17,9 +17,8 @@ class ArmorList extends Component {
     };
   }
 
-  deleteItem = e => {
-    const armor = [...this.props.armor];
-    this.props.setArmor(armor.splice(armor.indexOf(e.target.value), 1));
+  deleteItem = (name, e) => {
+    this.props.setArmor(this.props.armor.filter(v => v !== name));
   }
 
   showDesc = e => {
@@ -34,7 +33,7 @@ class ArmorList extends Component {
         <div className="armor-text"> { this.props.desc.name }</div>
         <span className="armor-append" onClick={this.showDesc}> info <i className="fas fa-angle-down"></i></span>
 
-        <span onClick={this.deleteItem}><i className="fas fa-times"></i></span>
+        <span onClick={this.deleteItem.bind(this, this.props.desc.name)}><i className="fas fa-times"></i></span>
         
 
         <div 

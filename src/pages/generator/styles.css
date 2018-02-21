@@ -121,4 +121,44 @@
   .skillDesc, .armorDesc {
     display: none;
   }
+
+  .tabs {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 1rem;
+    list-style: none;
+    border-bottom: 1px solid #333;
+  }
+
+  .tab-item {
+    display: list-item;
+    margin-bottom: -1px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .tab-link {
+    display: block;
+    padding: .5rem 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .tab-active {
+    border: 1px solid #333;
+    border-bottom: none;
+    border-radius: .25rem .25rem 0 0;
+    background: lightgrey;
+    border-color: #333 #333 white;
+  }
+
+  /* <ul className="tabs">
+    <li className="tab-item">
+      <span className="tab-link">Proficiency</span>
+    </li>
+    <li className="tab-item">
+      <span className="tab-link">All</span>
+    </li>
+  </ul> */
 }

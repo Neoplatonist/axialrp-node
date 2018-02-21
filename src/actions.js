@@ -2,7 +2,8 @@ import { createSelector } from 'reselect';
 import { AbilityMap, AbilityModifier } from './pages/generator/utils';
 // Mock Database
 import { 
-  // alignmentDB, 
+  // alignmentDB,
+  armorDB, 
   classDB, 
   raceDB,
   // skillsDB
@@ -19,6 +20,7 @@ export const SET_ABILITY_MOD = 'SET_ABILITY_MOD';
 export const SET_AC = 'SET_AC';
 export const SET_ALIGNMENT = 'SET_ALIGNMENT';
 export const SET_ARMOR = 'SET_ARMOR';
+export const SET_ARMOR_ACTIVE = 'SET_ARMOR_ACTIVE';
 export const SET_CHARACTER = 'SET_CHARACTER';
 export const SET_CLASS = 'SET_CLASS';
 export const SET_DICE = 'SET_DICE';
@@ -41,6 +43,7 @@ export const SET_SUBRACE = 'SET_SUBRACE';
 export const selectAbility = state => state.generator.ability;
 export const selectAlignment = state => state.generator.alignment;
 export const selectArmor = state => state.generator.armor;
+export const selectArmorActive = state => state.generator.armorActive;
 export const selectClass = state => state.generator.class;
 export const selectDice = state => state.generator.dice;
 export const selectLevel = state => state.generator.level;
@@ -81,6 +84,16 @@ export const selectAbilityMod = createSelector(
   selectAbilityTotal,
   ability => {
     return ability.map((v, k) => AbilityModifier(v));
+  }
+);
+
+export const selectArmorProficiency = createSelector(
+  selectClass,
+  clas => {
+    const list = classDB.find(v => v.name === clas)
+      .proficiencies.find(v => v.type === 'Armor')
+      .list.map(v =>  armorDB.filter(j => j.armor_category === v.name));
+    return [].concat(...list);
   }
 );
 
@@ -145,7 +158,11 @@ export const setAlignment = alignment => {
 
 export const setArmor = armor => {
   return { type: SET_ARMOR, payload: armor };
-}
+};
+
+export const setArmorActive = active => {
+  return { type: SET_ARMOR_ACTIVE, payload: active };
+};
 
 export const setCharacter = character => {
   return { type: SET_CHARACTER, payload: character };
@@ -181,7 +198,7 @@ export const setInspiration = inspire => {
 
 export const setLevel = level => {
   return { type: SET_LEVEL, payload: level }
-}
+};
 
 export const setProficiencyBonus = proficiency => {
   return { type: SET_PROFICIENCY_BONUS, payload: proficiency };
