@@ -8,6 +8,7 @@ import {
   SET_ARMOR_ACTIVE,
   SET_CHARACTER,
   SET_CLASS,
+  SET_CLASS_OBJ,
   SET_DICE,
   SET_HP,
   SET_INITIATIVE,
@@ -39,6 +40,46 @@ export const generatorState = {
   },
 
   class: 'Barbarian',
+  classObj: {
+    name: 'Barbarian',
+    hit_die: 12,
+    proficiency_choices: [
+      {
+        choose: 2,
+        type: 'Skill',
+        from: [
+          { name: 'Animal Handling' },
+          { name: 'Athletics' },
+          { name: 'Intimidation' },
+          { name: 'Nature' },
+          { name: 'Perception' },
+          { name: 'Survival' }
+        ]
+      }
+    ],
+    proficiencies: [
+      {
+        type: 'Armor',
+        list: [
+          { name: 'Light' },
+          { name: 'Medium' },
+          { name: 'Shield' }
+        ]
+      }, {
+        type: 'Weapons',
+        list: [
+          { name: 'Simple' },
+          { name: 'Martial' }
+        ]
+      }
+    ],
+    saving_throws: [
+      { name: 'Strength' },
+      { name: 'Constitution' }
+    ],
+    starting_equipment: { class: 'Barbarian' },
+    spellcasting: {}
+  },
   dice: [0, 0, 0, 0, 0, 0],
   hp: 12,
   initiative: 0,
@@ -131,6 +172,12 @@ const generator = (state = generatorState, action) => {
         ...state,
         class: action.payload
       };
+    
+    case SET_CLASS_OBJ:
+      return {
+        ...state,
+        classObj: action.payload
+      }
 
     case SET_DICE: 
       return {

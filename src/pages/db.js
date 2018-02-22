@@ -101,6 +101,57 @@ export const raceDB = [
       tools: ['Smith Tools', 'Brewer Supplies', 'Mason Tools']
     },
     proficiency: ['Longsword', 'Shortsword', 'Shortbow', 'Longbow']
+  },
+  {
+    name: 'Halfling',
+    ability_bonus: [ 0, 2, 0, 0, 0, 0 ],
+    age: {
+      adult: 20,
+      description: 'A halfling reaches adulthood at the age of 20 and generally lives into the middle of his or her second century.',
+      max: 200 
+    },
+    alignment: {
+      description: 'Most halflings are lawful good. As a rule, they are good-hearted and kind, hate to see others in pain, and have no tolerance for oppression. They are also very orderly and traditional, leaning heavily on the support of their community and the comfort of their old ways.',
+      main: 'Lawful Good'
+    },
+    size: {
+      description: 'Halflings average about 3 feet tall and weigh about 40 pounds. Your size is Small.',
+      height: {
+        min: 3,
+        max: 3
+      },
+      size: 'Small'
+    },
+    speed: {
+      base: 25,
+      description: 'Your speed is not reduced by wearing heavy armor.'
+    },
+    darkvision: {
+      distance: 0,
+      description: ''
+    },
+    languages: {
+      description: 'You can speak, read, and write Common and Halfling. The Halfling language isn’t secret, but halflings are loath to share it with others. They write very little, so they don’t have a rich body of literature. Their oral tradition, however, is very strong. Almost all halflings speak Common to converse with the people in whose lands they dwell or through which they are traveling.',
+      type: ['Common', 'Halfling']
+    },
+    sub_races: [
+      {
+        name: 'Lightfoot Halfling',
+        description: 'As a lightfoot halfling, you can easily hide from notice, even using other people as cover. You’re inclined to be affable and get along well with others. Lightfoots are more prone to wanderlust than other halflings, and often dwell alongside other races or take up a nomadic life.',
+        ability_bonus: [ 0, 0, 0, 0, 0, 1 ],
+        hit_points: {}
+      }
+    ],
+    saving_throws: {
+      against: '',
+      description: ''
+    },
+    tool_proficiency: {
+      choose: 0,
+      type: '',
+      tools: []
+    },
+    proficiency: []
   }
 ];
 
@@ -206,42 +257,42 @@ export const classDB = [
     hit_die: 8,
     proficiency_choices: [
       {
-				"choose": 3,
-				"type": "Skill",
-				"from": [
-					{ "name": "Acrobatics" },
-					{ "name": "Animal Handling" },
-					{ "name": "Arcana" },
-					{ "name": "Athletics" },
-					{ "name": "Deception" },
-					{ "name": "History" },
-					{ "name": "Insight" },
-					{ "name": "Intimidation" },
-					{ "name": "Investigation" },
-					{ "name": "Medicine" },
-					{ "name": "Nature" },
-					{ "name": "Perception" },
-					{ "name": "Performance" },
-					{ "name": "Persuasion" },
-					{ "name": "Religion" },
-					{ "name": "Sleight of Hand" },
-					{ "name": "Stealth" },
-          { "name": "Survival" }
+				choose: 3,
+				type: "Skill",
+				from: [
+					{ name: "Acrobatics" },
+					{ name: "Animal Handling" },
+					{ name: "Arcana" },
+					{ name: "Athletics" },
+					{ name: "Deception" },
+					{ name: "History" },
+					{ name: "Insight" },
+					{ name: "Intimidation" },
+					{ name: "Investigation" },
+					{ name: "Medicine" },
+					{ name: "Nature" },
+					{ name: "Perception" },
+					{ name: "Performance" },
+					{ name: "Persuasion" },
+					{ name: "Religion" },
+					{ name: "Sleight of Hand" },
+					{ name: "Stealth" },
+          { name: "Survival" }
         ]
       }, {
-				"choose": 3,
-				"type": "Instruments",
-				"from": [
-					{ "name": "Bagpipes" },
-					{ "name": "Drum" },
-					{ "name": "Dulcimer" },
-					{ "name": "Flute" },
-					{ "name": "Lute" },
-					{ "name": "Lyre" },
-					{ "name": "Horn" },
-					{ "name": "Pan flute" },
-					{ "name": "Shawm" },
-					{ "name": "Viol" }
+				choose: 3,
+				type: "Instruments",
+        from: [
+					{ name: "Bagpipes" },
+					{ name: "Drum" },
+					{ name: "Dulcimer" },
+					{ name: "Flute" },
+					{ name: "Lute" },
+					{ name: "Lyre" },
+					{ name: "Horn" },
+					{ name: "Pan flute" },
+					{ name: "Shawm" },
+					{ name: "Viol" }
 				]
 			}
     ],
@@ -249,16 +300,16 @@ export const classDB = [
       {
         type: 'Armor',
         list: [
-          { name: 'Light armor' }
+          { name: 'Light' }
         ]
       }, {
         type: 'Weapons',
         list: [
-          { "name": "Simple weapons" },
-          { "name": "Longswords" },
-          { "name": "Rapiers" },
-          { "name": "Shortswords" },
-          { "name": "Crossbows, hand" }
+          { name: "Simple" },
+          { name: "Longsword" },
+          { name: "Rapier" },
+          { name: "Shortsword" },
+          { name: "Crossbows, hand" }
         ]
       }
     ],

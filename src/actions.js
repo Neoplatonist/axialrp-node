@@ -24,6 +24,7 @@ export const SET_ARMOR = 'SET_ARMOR';
 export const SET_ARMOR_ACTIVE = 'SET_ARMOR_ACTIVE';
 export const SET_CHARACTER = 'SET_CHARACTER';
 export const SET_CLASS = 'SET_CLASS';
+export const SET_CLASS_OBJ = 'SET_CLASS_OBJ';
 export const SET_DICE = 'SET_DICE';
 export const SET_HP = 'SET_HP';
 export const SET_INITIATIVE = 'SET_INITIATIVE';
@@ -48,6 +49,7 @@ export const selectAlignment = state => state.generator.alignment;
 export const selectArmor = state => state.generator.armor;
 export const selectArmorActive = state => state.generator.armorActive;
 export const selectClass = state => state.generator.class;
+export const selectClassObj = state => state.generator.classObj;
 export const selectDice = state => state.generator.dice;
 export const selectLevel = state => state.generator.level;
 export const selectRace = state => state.generator.race;
@@ -94,10 +96,9 @@ export const selectAbilityMod = createSelector(
 );
 
 export const selectArmorProficiency = createSelector(
-  selectClass,
-  clas => {
-    const list = classDB.find(v => v.name === clas)
-      .proficiencies.find(v => v.type === 'Armor')
+  selectClassObj,
+  classObj => {
+    const list = classObj.proficiencies.find(v => v.type === 'Armor')
       .list.map(v =>  armorDB.filter(j => j.armor_category === v.name));
     return [].concat(...list);
   }
@@ -113,37 +114,44 @@ export const selectHP = createSelector(
 
 export const selectSavingThrows = createSelector(
   selectAbilityMod,
-  selectClass,
-  (abilityMod, clas) => {
-    const saves = classDB.find(v => v.name === clas).saving_throws;
+  selectClassObj,
+  (abilityMod, classObj) => {
     return AbilityMap.reduce((v, k, i) => 
       [
         ...v,
-        saves.some(s => s.name === k) ? 
+        classObj.saving_throws.some(s => s.name === k) ? 
           abilityMod[i] : 0
       ], []);
   }
 );
 
 export const selectSkillsFilter = createSelector(
-  selectClass,
-  clas => {
-    return classDB.find( v => v.name === clas)
-      .proficiency_choices.find( v => v.type === 'Skill');
+  selectClassObj,
+  classObj => {
+    return classObj.proficiency_choices.find( v => v.type === 'Skill');
   }
 );
 
 export const selectWeaponProficiency = createSelector(
-  selectClass,
+  selectClassObj,
   selectRace,
-  (clas, race) => {
+  (classObj, race) => {
     const raceList = raceDB.find(v => v.name === race).proficiency;
     const weaponList = [].concat(
-      ...raceList.map(v => weaponDB.filter(j => j.name === v)));
-    const classList = classDB.find(v => v.name === clas)
-      .proficiencies.find(v => v.type === 'Weapons').list;
-    return [].concat(
-      ...classList.map(v => weaponList.filter(j => j.category === v.name)));
+        ...raceList.map(v => weaponDB.filter(j => j.name === v)));
+
+    const classList = classObj.proficiencies.find(v => v.type === 'Weapons').list;
+    const classCat = [].concat(
+      ...classList.map(v => 
+        weaponDB.filter(j => j.category === v.name)), 
+      ...weaponList
+    );
+
+    const filtered = classCat.reduce((v, k) =>
+      [...v, classList.filter(j => j.name === k.name) ], []);
+
+    const className = [].concat(...filtered.map(v => weaponDB.filter(j => j.name === v.name)));
+    return [].concat(classCat, className);
   }
 );
 
@@ -189,12 +197,18 @@ export const setCharacter = character => {
 };
 
 export const setClass = char_class => {
-  return dispatch => {
+  return (dispatch, getState) => {
     dispatch({ type: SET_CLASS, payload: char_class });
 
-    const hit_die = classDB.find(v => v.name === char_class).hit_die;
-    dispatch({ type: SET_HP, payload: hit_die });
+    const clas = classDB.find(v => v.name === char_class);
+    console.log(clas)
+    dispatch({ type: SET_CLASS_OBJ, payload: clas });
+    dispatch({ type: SET_HP, payload: clas.hit_die });
   };
+};
+
+export const setClassObj = clas => {
+  return { type: SET_CLASS_OBJ, payload: clas };
 };
 
 export const setDice = dice => {

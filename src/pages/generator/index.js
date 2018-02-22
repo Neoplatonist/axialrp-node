@@ -142,7 +142,7 @@ class Generator extends Component {
           <br/><br/>
 
           <h3>Skills</h3>
-          <h5>Choose {this.props.skills.choose}</h5>
+          <h5>Choose {this.props.skillsFilter.choose}</h5>
           <br/>
 
           { this.renderSkills() }
