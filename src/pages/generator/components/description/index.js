@@ -45,7 +45,8 @@ class Description extends Component {
         <input
           name="xp"
           className="input"
-          type="text" 
+          type="number" 
+          min="0"
           onChange={ e => this.props.setCharacter({ xp: e.target.value }) }
           value={this.props.character.xp}/>
       </div>

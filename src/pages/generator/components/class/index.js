@@ -3,7 +3,12 @@ import { Option } from '../../utils';
 import '../../styles.css';
 
 import { connect } from 'react-redux';
-import { setClass, setHP } from '../../../../actions';
+import { 
+  selectAbilityMod, 
+  selectClass, 
+  setClass,
+  setHP 
+} from '../../../../actions';
 
 class Class extends Component {
   handleClass = e => {
@@ -52,8 +57,8 @@ class Class extends Component {
 }
 
 const mapStateToProps = state => ({
-  class: state.generator.class,
-  abilityMod: state.generator.abilityMod
+  class: selectClass(state),
+  abilityMod: selectAbilityMod(state)
 });
 
 const boundActions = {

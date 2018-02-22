@@ -8,6 +8,7 @@ import {
   selectRace,
   setRace,
   setSpeed,
+  selectRaceObj,
   selectSubRace,
   setSubRace
 } from '../../../../actions';
@@ -20,9 +21,7 @@ class Race extends Component {
   }
 
   handleSubRace = e => {
-    const subraces = this.props.raceDB
-      .find(v => v.name === this.props.race)
-      .sub_races || {sub_races: []};
+    const subraces = this.props.raceObj.sub_races || {sub_races: []};
 
     return subraces.map((v, k) => {
       return <Option key={k} {...v} />;
@@ -34,11 +33,6 @@ class Race extends Component {
     const r = this.props.raceDB.find(v => v.name === e.target.value);
     this.props.setRace(e.target.value);
     this.props.setSubRace(r.sub_races[0].name);
-
-    // setTimeout(() => {
-    //   this.props.setAlignment(r.alignment.main);
-    //   this.props.setSpeed(r.speed.base);
-    // });
   }
 
   onSubRaceChange = e => {
@@ -76,6 +70,7 @@ class Race extends Component {
 
 const mapStateToProps = state => ({
   race: selectRace(state),
+  raceObj: selectRaceObj(state),
   subrace: selectSubRace(state),
 });
 

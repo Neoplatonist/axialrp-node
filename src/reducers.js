@@ -16,6 +16,7 @@ import {
   SET_LEVEL,
   SET_PROFICIENCY_BONUS,
   SET_RACE,
+  SET_RACE_OBJ,
   SET_SKILLS,
   SET_SPEED,
   SET_SUBRACE,
@@ -87,6 +88,58 @@ export const generatorState = {
   level: 1,
   proficiencyBonus: 0,
   race: 'Dwarf',
+  raceObj: {
+    name: 'Dwarf',
+    ability_bonus: [ 0, 0, 2, 0, 0, 0 ],
+    // ability_bonus: { constitution: 2 },
+    age: {
+      adult: 50,
+      description: 'Dwarves mature at the same rate as humans, but theyâ€™re considered young until they reach the age of 50. On average, they live about 350 years.',
+      max: 350 
+    },
+    alignment: {
+      description: 'Most dwarves are lawful, believing firmly in the benefits of a well-ordered society. They tend toward good as well, with a strong sense of fair play and a belief that everyone deserves to share in the benefits of a just order.',
+      main: 'Lawful Good',
+    },
+    size: {
+      description: 'Dwarves stand between 4 and 5 feet tall and average about 150 pounds. Your size is Medium.',
+      height: {
+        min: 4,
+        max: 5
+      },
+      size: 'Medium'
+    },
+    speed: {
+      base: 25,
+      description: 'Your speed is not reduced by wearing heavy armor.'
+    },
+    darkvision: {
+      distance: 60,
+      description: 'Accustomed to life underground, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You canâ€™t discern color in darkness, only shades of gray.'
+    },
+    languages: {
+      description: 'You can speak, read, and write Common and Dwarvish. Dwarvish is full of hard consonants and guttural sounds, and those characteristics spill over into whatever other language a dwarf might speak.',
+      type: ['Common', 'Dwarvish']
+    },
+    sub_races: [
+      {
+        name: 'Hill Dwarf',
+        description: 'As a hill dwarf, you have keen senses, deep intuition, and remarkable resilience.',
+        ability_bonus: [ 0, 0, 0, 0, 1, 0 ],
+        hit_points: {}
+      }
+    ],
+    saving_throws: {
+      against: 'Poison',
+      description: 'You have advantage on saving throws against poison, and you have resistance against poison damage.'
+    },
+    tool_proficiency: {
+      choose: 1,
+      type: 'Artisan',
+      tools: ['Smith Tools', 'Brewer Supplies', 'Mason Tools']
+    },
+    proficiency: ['Battleaxe', 'Handaxe', 'Light Hammer', 'Warhammer']
+  },
 
   savingThrows: [0, 0, 0, 0, 0, 0],
 
@@ -220,6 +273,12 @@ const generator = (state = generatorState, action) => {
         ...state,
         race: action.payload
       };
+
+    case SET_RACE_OBJ:
+      return {
+        ...state,
+        raceObj: action.payload
+      }
 
     case SET_SKILLS: 
       return {

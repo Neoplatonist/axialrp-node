@@ -13,33 +13,6 @@ import {
 } from '../../../../actions';
 
 class Stats extends Component {
-  onAcChange = e => {
-    this.props.setAC(e.target.value);
-  }
-
-  // show the aggregated hp compared to selected hp
-  onHpChange = e => {
-    // Roll Dice for HP
-    // Add Ability Modifier
-    this.props.setHP(e.target.value);
-  }
-
-  onInitiativeChange = e => {
-    this.props.setInitiative(e.target.value);
-  }
-
-  onInspirationChange = e => {
-    this.props.setInspiration(e.target.value);
-  }
-
-  onProficiencyBonusChange = e => {
-    this.props.setProficiencyBonus(e.target.value);
-  }
-
-  onSpeedChange = e => {
-    this.props.setSpeed(e.target.value);
-  }
-
   render() {
     return (
       <div>
@@ -49,7 +22,7 @@ class Stats extends Component {
           className="input"
           type="number" 
           min="0"
-          onChange={this.onHpChange}
+          onChange={e => this.props.setHP(e.target.value)}
           value={this.props.hp}/>
 
         <label htmlFor="ac">Armor Class: </label>
@@ -58,7 +31,7 @@ class Stats extends Component {
           className="input"
           type="number" 
           min="0"
-          onChange={this.onAcChange}
+          onChange={e => this.props.setAC(e.target.value)}
           value={this.props.ac}/>
 
         <label htmlFor="initiative">Initiative: </label>
@@ -67,7 +40,7 @@ class Stats extends Component {
           className="input"
           type="number" 
           min="0"
-          onChange={this.onInitiativeChange}
+          onChange={e => this.props.setInitiative(e.target.value)}
           value={this.props.initiative}/>
 
         <label htmlFor="speed">Speed: </label>
@@ -76,7 +49,7 @@ class Stats extends Component {
           className="input"
           type="number" 
           min="0"
-          onChange={this.onSpeedChange}
+          onChange={e => this.props.setSpeed(e.target.value)}
           value={this.props.speed}/>
 
         <label htmlFor="inspiration">Inspiration: </label>
@@ -85,7 +58,7 @@ class Stats extends Component {
           className="input"
           type="number" 
           min="0"
-          onChange={this.onInspirationChange}
+          onChange={e => this.props.setInspiration(e.target.value)}
           value={this.props.inspiration}/>
 
         <label htmlFor="proficiency">Proficiency Bonus: </label>
@@ -94,7 +67,7 @@ class Stats extends Component {
           className="input"
           type="number" 
           min="0"
-          onChange={this.onProficiencyBonusChange}
+          onChange={e => this.props.setProficiencyBonus(e.target.value)}
           value={this.props.proficiencyBonus}/>
       </div>
     );
