@@ -309,7 +309,8 @@ export const raceDB = [
         { name: "Damage Resistance (Dragonborn)" }
       ]
     },
-		subraces: []
+    subraces: [],
+    proficiency: []
   },
   {
 		name: 'Gnome',
@@ -355,7 +356,8 @@ export const raceDB = [
     subraces: [
       {name: "Forest Gnome"},
       {name: "Rock Gnome"}
-    ]
+    ],
+    proficiency: []
   },
   {
 		name: 'Half-Elf',
@@ -419,7 +421,8 @@ export const raceDB = [
         { name: "Skill Versatility" }
       ]
     },
-		subraces: []
+		subraces: [],
+    proficiency: []
   },
   {
 		name: 'Half-Orc',
@@ -466,7 +469,8 @@ export const raceDB = [
       ]
     },
     trait_options: {},
-		subraces: []
+		subraces: [],
+    proficiency: []
   },
   {
 		name: 'Tiefling',
@@ -512,7 +516,8 @@ export const raceDB = [
         { name: "Infernal Legacy" }
       ]
     },
-		subraces: []
+		subraces: [],
+    proficiency: []
 	}
 ];
 

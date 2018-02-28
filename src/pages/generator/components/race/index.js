@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Option } from '../../utils';
+import { isEmpty, Option } from '../../utils';
 import '../../styles.css';
 
 import { connect } from 'react-redux';
@@ -22,7 +22,6 @@ class Race extends Component {
 
   handleSubRace = e => {
     const subraces = this.props.raceObj.sub_races || {sub_races: []};
-
     return subraces.map((v, k) => {
       return <Option key={k} {...v} />;
     });
@@ -32,11 +31,28 @@ class Race extends Component {
     // TODO: Doesn't update on first loop
     const r = this.props.raceDB.find(v => v.name === e.target.value);
     this.props.setRace(e.target.value);
-    this.props.setSubRace(r.sub_races[0].name);
+    isEmpty(r.sub_races) ? 
+      this.props.setSubRace('') :
+      this.props.setSubRace(r.sub_races[0].name);
   }
 
   onSubRaceChange = e => {
     this.props.setSubRace(e.target.value);
+  }
+
+  renderSubRace = () => {
+    return !isEmpty(this.props.subraces) ?
+      (
+        <select
+          name="sub-races"
+          className="input"
+          onChange={this.onSubRaceChange}
+          value={this.props.subrace}
+        >
+          { this.handleSubRace() }
+        </select>
+      ) :
+      'None';
   }
 
   render() {
@@ -55,14 +71,7 @@ class Race extends Component {
         <br/>
 
         <label htmlFor="sub-races">Sub-Race: </label>
-        <select
-          name="sub-races"
-          className="input"
-          onChange={this.onSubRaceChange}
-          value={this.props.subrace}
-        >
-          { this.handleSubRace() }
-        </select>
+        { this.renderSubRace() }
       </div>
     );
   }

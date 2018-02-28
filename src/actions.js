@@ -1,5 +1,5 @@
 import { createSelector } from 'reselect';
-import { AbilityMap, AbilityModifier } from './pages/generator/utils';
+import { AbilityMap, AbilityModifier, isEmpty } from './pages/generator/utils';
 // Mock Database
 import { 
   // alignmentDB,
@@ -77,8 +77,12 @@ export const selectAbilitySubRaceMod = createSelector(
   selectRaceObj,
   selectSubRace,
   (raceObj, subrace) => {
-    const sr = raceObj.sub_races.find(v => v.name === subrace);
-    return sr.ability_bonus;
+    if (isEmpty(raceObj.sub_races)) {
+      return [0, 0, 0, 0, 0, 0];
+    } else {
+      const sr = raceObj.sub_races.find(v => v.name === subrace);
+      return sr.ability_bonus;
+    }
   }
 );
 
