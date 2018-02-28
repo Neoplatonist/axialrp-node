@@ -28,3 +28,18 @@ export const AbilityMap = [
 export const Option = ({ name }) => <option value={name}>{name}</option>;
 
 export const ProficiencyBonus = level => Math.floor(level / 4) + 2;
+
+export const getCheck = (obj, ...props) => {
+  const val = obj[props[0]];
+  if (props.length === 1 || !val) return val;
+  const rest = props.slice(1);
+  return getCheck.apply(null, [val, ...rest]);
+};
+
+export const isEmpty = obj => {
+  for(var key in obj) {
+    if(obj.hasOwnProperty(key)) return false;
+  }
+  
+  return true;
+}

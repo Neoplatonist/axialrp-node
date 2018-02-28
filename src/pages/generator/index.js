@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { AbilityMap, Dice, Option } from './utils';
+import { AbilityMap, Dice, Option, isEmpty } from './utils';
 import './styles.css';
 
 // Mock Database
@@ -29,9 +29,13 @@ import {
   selectDice,
   setDice,
   setHP,
+  setLanguage,
+  selectLanguage,
+  selectLanguageList,
   setLevel,
   selectLevel,
   selectRace,
+  selectRaceObj,
   selectSpeed,
   selectSubRace,
   selectSavingThrows,
@@ -57,6 +61,35 @@ class Generator extends Component {
 
   handleLevel = e => {
     this.props.setAlignment(parseInt(e.target.value, 10));
+  }
+
+  renderLanguages = () => {
+    this.renderLanguageOptions();
+    return this.props.languageList.map((v, k) => {
+      return <li key={k}>{v}</li>;
+    });
+  }
+
+  renderLO = () => {
+    return this.props.raceObj.languages.options.from.map((v, k) => {
+      return <Option key={k} {...v} />;
+    });
+  }
+
+  renderLanguageOptions = () => {
+    if (!isEmpty(this.props.raceObj.languages.options)) {
+      return <div>
+        <select 
+          name="lang" 
+          className="input"
+          onChange={ e => this.props.setLanguage(e.target.value)}
+          value={this.props.language} 
+        >
+          { 'Choose: ' + JSON.stringify(this.props.raceObj.languages.options.choose) }
+          { this.renderLO() }
+        </select>
+      </div>
+    }
   }
 
   renderSkills = e => {
@@ -86,6 +119,14 @@ class Generator extends Component {
 
         <form onSubmit={ e => e.preventDefault() }>
           <Description />
+
+          <br/>
+
+          <label htmlFor="lang">Languages: </label>
+          { this.renderLanguageOptions() }
+          <ul>
+            { this.renderLanguages() }
+          </ul>
 
           <br/>
 
@@ -165,8 +206,11 @@ const mapStateToProps = state => ({
   abilityMod: selectAbilityMod(state),
   alignment: selectAlignment(state),
   dice: selectDice(state),
+  language: selectLanguage(state),
+  languageList: selectLanguageList(state),
   level: selectLevel(state),
   race: selectRace(state),
+  raceObj: selectRaceObj(state),
   skills: selectSkills(state),
   skillsFilter: selectSkillsFilter(state),
   speed: selectSpeed(state),
@@ -178,6 +222,7 @@ const boundActions = {
   setAlignment,
   setDice,
   setHP,
+  setLanguage,
   setLevel
 };
 

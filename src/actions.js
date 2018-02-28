@@ -29,6 +29,8 @@ export const SET_DICE = 'SET_DICE';
 export const SET_HP = 'SET_HP';
 export const SET_INITIATIVE = 'SET_INITIATIVE';
 export const SET_INSPIRATION = 'SET_INSPIRATION';
+export const SET_LANGUAGE = 'SET_LANGUAGE';
+export const SET_LANGUAGE_LIST = 'SET_LANGUAGE_LIST';
 export const SET_LEVEL = 'SET_LEVEL';
 export const SET_PROFICIENCY_BONUS = 'SET_PROFICIENCY_BONUS';
 export const SET_RACE = 'SET_RACE';
@@ -52,6 +54,7 @@ export const selectArmorActive = state => state.generator.armorActive;
 export const selectClass = state => state.generator.class;
 export const selectClassObj = state => state.generator.classObj;
 export const selectDice = state => state.generator.dice;
+export const selectLanguage = state => state.generator.language;
 export const selectLevel = state => state.generator.level;
 export const selectRace = state => state.generator.race;
 export const selectRaceObj = state => state.generator.raceObj;
@@ -65,7 +68,9 @@ export const selectWeaponActive = state => state.generator.weaponActive;
 
 export const selectAbilityRaceMod = createSelector(
   selectRaceObj,
-  raceObj => raceObj.ability_bonus
+  raceObj => {
+    return raceObj.ability_bonus;
+  }
 );
 
 export const selectAbilitySubRaceMod = createSelector(
@@ -108,6 +113,16 @@ export const selectHP = createSelector(
   (abilityMod, hp) => {
     if (isNaN(hp)) hp = 0;
     return abilityMod[2] + parseInt(hp, 10);
+  }
+);
+
+export const selectLanguageList = createSelector(
+  selectRaceObj,
+  state => state.generator.language,
+  (raceObj, lang) => {
+    const list = raceObj.languages.type.map(v => v.name);
+    const filter = list.filter(v => v !== lang && v !== '');
+    return [...filter, lang];
   }
 );
 
@@ -229,6 +244,14 @@ export const setInspiration = inspire => {
   return { type: SET_INSPIRATION, payload: inspire };
 };
 
+export const setLanguage = lang => {
+  return { type: SET_LANGUAGE, payload: lang };
+};
+
+export const setLanguageList = lang => {
+  return { type: SET_LANGUAGE_LIST, payload: lang };
+};
+
 export const setLevel = level => {
   return { type: SET_LEVEL, payload: level }
 };
@@ -244,6 +267,11 @@ export const setRace = race => {
     const r = raceDB.find(v => v.name === race);
     dispatch({ type: SET_RACE_OBJ, payload: r });
     dispatch({ type: SET_ALIGNMENT, payload: r.alignment.main });
+    dispatch({ type: SET_LANGUAGE, payload: '' })
+    dispatch({ 
+      type: SET_LANGUAGE_LIST,
+      payload: r.languages.type.map(v => v.name) 
+    });
   };
 };
 

@@ -30,7 +30,10 @@ export const raceDB = [
     languages: {
       description: 'You can speak, read, and write Common and Dwarvish. Dwarvish is full of hard consonants and guttural sounds, and those characteristics spill over into whatever other language a dwarf might speak.',
       options: {},
-      type: ['Common', 'Dwarvish']
+      type: [
+        { name: 'Common' }, 
+        { name: 'Dwarvish' }
+      ]
     },
     starting_proficiencies: [
       { name: "Skill: Intimidation" }
@@ -89,7 +92,10 @@ export const raceDB = [
     languages: {
       description: 'You can speak, read, and write Common and Elvish. Elvish is fluid, with subtle intonations and intricate grammar. Elven literature is rich and varied, and their songs and poems are famous among other races. Many bards learn their language so they can add Elvish ballads to their repertoires.',
       options: {},
-      type: ['Common', 'Elvish']
+      type: [
+        { name: 'Common' }, 
+        { name: 'Elvish' }
+      ]
     },
     starting_proficiency_options: {},
 		traits: {
@@ -145,7 +151,10 @@ export const raceDB = [
     languages: {
       description: 'You can speak, read, and write Common and Halfling. The Halfling language isn’t secret, but halflings are loath to share it with others. They write very little, so they don’t have a rich body of literature. Their oral tradition, however, is very strong. Almost all halflings speak Common to converse with the people in whose lands they dwell or through which they are traveling.',
       options: {},
-      type: ['Common', 'Halfling']
+      type: [
+        { name: 'Common' }, 
+        { name: 'Halfling' }
+      ]
     },
     starting_proficiency_options: {},
 		traits: {
@@ -172,7 +181,7 @@ export const raceDB = [
     proficiency: []
   }, {
 		name: 'Human',
-    ability_bonuses: [ 1, 1, 1, 1, 1, 1 ],
+    ability_bonus: [ 1, 1, 1, 1, 1, 1 ],
     age: {
       adult: 18,
       description: 'Humans reach adulthood in their late teens and live less than a century.',
@@ -217,18 +226,35 @@ export const raceDB = [
           { name: 'Undercommon' }
         ]
       },
-      type: ['Common']
+      type: [{ name: 'Common' }]
     },
-		starting_proficiency_options: {},
+    starting_proficiency_options: {},
 		traits: {
       options: {},
       type: []
     },
-		subraces: []
+		sub_races: [
+      {
+        name: "Forest Human",
+        description: 'Halp me, I n forest.',
+        ability_bonus: [ 0, 0, 0, 0, 1, 0 ],
+        hit_points: {}
+      }
+    ],
+    saving_throws: {
+      against: 'Poison',
+      description: 'You have advantage on saving throws against poison, and you have resistance against poison damage.'
+    },
+    tool_proficiency: {
+      choose: 1,
+      type: 'Artisan',
+      tools: ['Smith Tools', 'Brewer Supplies', 'Mason Tools']
+    },
+    proficiency: ['Longsword', 'Shortsword', 'Shortbow', 'Longbow']
   },
   {
 		name: 'Dragonborn',
-    ability_bonuses: [ 2, 0, 0, 0, 0, 1 ],
+    ability_bonus: [ 2, 0, 0, 0, 0, 1 ],
     age: {
       adult: 15,
       description: 'Young dragonborn grow quickly. They walk hours after hatching, attain the size and development of a 10-year-old human child by the age of 3, and reach adulthood by 15. They live to be around 80.',
@@ -253,7 +279,10 @@ export const raceDB = [
     languages: {
       description: 'You can speak, read, and write Common and Draconic. Draconic is thought to be one of the oldest languages and is often used in the study of magic. The language sounds harsh to most other creatures and includes numerous hard consonants and sibilants.',
       options: {},
-      type: ['Common', 'Draconic']
+      type: [
+        { name: 'Common' }, 
+        { name: 'Draconic' }
+      ]
     },
 		starting_proficiencies: [],
 		starting_proficiency_options: {},
@@ -284,7 +313,7 @@ export const raceDB = [
   },
   {
 		name: 'Gnome',
-    ability_bonuses: [ 0, 0, 0, 2, 0, 0 ],
+    ability_bonus: [ 0, 0, 0, 2, 0, 0 ],
     age: {
       adult: 40,
       description: 'Gnomes mature at the same rate humans do, and most are expected to settle down into an adult life by around age 40. They can live 350 to almost 500 years.',
@@ -309,7 +338,10 @@ export const raceDB = [
     languages: {
       description: 'You can speak, read, and write Common and Gnomish. The Gnomish language, which uses the Dwarvish script, is renowned for its technical treatises and its catalogs of knowledge about the natural world.',
       options: {},
-      type: ['Common', 'Gnomish']
+      type: [
+        { name: 'Common' }, 
+        { name: 'Gnomish' }
+      ]
     },
 		starting_proficiencies: [],
 		starting_proficiency_options: {},
@@ -327,7 +359,7 @@ export const raceDB = [
   },
   {
 		name: 'Half-Elf',
-    ability_bonuses: [ 0, 0, 0, 0, 0, 2 ],
+    ability_bonus: [ 0, 0, 0, 0, 0, 2 ],
     age: {
       adult: 20,
       description: 'Half-elves mature at the same rate humans do and reach adulthood around the age of 20. They live much longer than humans, however, often exceeding 180 years.',
@@ -372,7 +404,10 @@ export const raceDB = [
           { name: 'Undercommon' }
         ]
       },
-      type: ['Common', 'Gnomish']
+      type: [
+        { name: 'Common' }, 
+        { name: 'Gnomish' }
+      ]
     },
 		starting_proficiencies: [],
     starting_proficiency_options: {},
@@ -388,7 +423,7 @@ export const raceDB = [
   },
   {
 		name: 'Half-Orc',
-    ability_bonuses: [ 2, 0, 1, 0, 0, 0 ],
+    ability_bonus: [ 2, 0, 1, 0, 0, 0 ],
     age: {
       adult: 14,
       description: 'Half-orcs mature a little faster than humans, reaching adulthood around age 14. They age noticeably faster and rarely live longer than 75 years.',
@@ -413,7 +448,10 @@ export const raceDB = [
     languages: {
       description: 'You can speak, read, and write Common and Orc. Orc is a harsh, grating language with hard consonants. It has no script of its own but is written in the Dwarvish script.',
       options: {},
-      type: ['Common', 'Orcish']
+      type: [
+        { name: 'Common' }, 
+        { name: 'Orcish' }
+      ]
     },
     starting_proficiencies: [
       { name: "Skill: Intimidation" }
@@ -432,7 +470,7 @@ export const raceDB = [
   },
   {
 		name: 'Tiefling',
-    ability_bonuses: [ 2, 0, 1, 0, 0, 0 ],
+    ability_bonus: [ 2, 0, 1, 0, 0, 0 ],
     age: {
       adult: 20,
       description: 'Tieflings mature at the same rate as humans but live a few years longer.',
@@ -457,7 +495,10 @@ export const raceDB = [
     languages: {
       description: 'You can speak, read, and write Common and Infernal.',
       options: {},
-      type: ['Common', 'Infernal']
+      type: [
+        { name: 'Common' }, 
+        { name: 'Infernal' }
+      ]
     },
     starting_proficiencies: [
       { name: "Skill: Intimidation" }

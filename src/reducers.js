@@ -13,6 +13,8 @@ import {
   SET_HP,
   SET_INITIATIVE,
   SET_INSPIRATION,
+  SET_LANGUAGE,
+  SET_LANGUAGE_LIST,
   SET_LEVEL,
   SET_PROFICIENCY_BONUS,
   SET_RACE,
@@ -81,17 +83,20 @@ export const generatorState = {
     starting_equipment: { class: 'Barbarian' },
     spellcasting: {}
   },
+
   dice: [0, 0, 0, 0, 0, 0],
   hp: 12,
   initiative: 0,
   inspiration: 0,
+  language: '',
+  languageList: ['Common', 'Dwarvish'],
   level: 1,
   proficiencyBonus: 0,
+
   race: 'Dwarf',
   raceObj: {
     name: 'Dwarf',
     ability_bonus: [ 0, 0, 2, 0, 0, 0 ],
-    // ability_bonus: { constitution: 2 },
     age: {
       adult: 50,
       description: 'Dwarves mature at the same rate as humans, but theyâ€™re considered young until they reach the age of 50. On average, they live about 350 years.',
@@ -119,7 +124,19 @@ export const generatorState = {
     },
     languages: {
       description: 'You can speak, read, and write Common and Dwarvish. Dwarvish is full of hard consonants and guttural sounds, and those characteristics spill over into whatever other language a dwarf might speak.',
-      type: ['Common', 'Dwarvish']
+      options: {},
+      type: [
+        { name: 'Common'}, 
+        { name: 'Dwarvish'}
+      ]
+    },
+    starting_proficiencies: [
+      { name: "Skill: Intimidation" }
+    ],
+		starting_proficiency_options: {},
+		traits: {
+      options: {},
+      type: []
     },
     sub_races: [
       {
@@ -254,6 +271,18 @@ const generator = (state = generatorState, action) => {
       return {
         ...state,
         inspiration: action.payload
+      };
+
+    case SET_LANGUAGE:
+      return {
+        ...state,
+        language: action.payload
+      };
+
+    case SET_LANGUAGE_LIST:
+      return {
+        ...state,
+        languageList: action.payload
       };
 
     case SET_LEVEL: 
