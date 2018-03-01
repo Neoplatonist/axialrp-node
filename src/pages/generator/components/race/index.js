@@ -21,7 +21,8 @@ class Race extends Component {
   }
 
   handleSubRace = e => {
-    const subraces = this.props.raceObj.sub_races || {sub_races: []};
+    const subraces = this.props.raceObj.sub_races || {};
+    console.log(subraces)
     return subraces.map((v, k) => {
       return <Option key={k} {...v} />;
     });
@@ -41,7 +42,7 @@ class Race extends Component {
   }
 
   renderSubRace = () => {
-    return !isEmpty(this.props.subraces) ?
+    return this.props.subrace ?
       (
         <select
           name="sub-races"
