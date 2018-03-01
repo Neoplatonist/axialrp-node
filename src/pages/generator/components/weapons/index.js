@@ -34,11 +34,13 @@ class Weapon extends Component {
 
   handleWeapon = () => {
     if (this.props.weaponActive === 'proficiency') {
-      return this.props.weaponProficiency.map((v, k) => {
+      const weaponProf = [{name: '---'}, ...this.props.weaponProficiency];
+      return weaponProf.map((v, k) => {
         return <Option key={k} {...v} />;
       });
     } else {
-      return weaponDB.map((v, k) => {
+      const weaponProf = [{name: '---'}, ...weaponDB];
+      return weaponProf.map((v, k) => {
         return <Option key={k} {...v} />;
       });
     }
@@ -74,7 +76,7 @@ class Weapon extends Component {
           name="weapon"
           className="input"
           onChange={this.addWeapon}
-          value="Padded"
+          value=""
         >
           { this.handleWeapon() }
         </select>
