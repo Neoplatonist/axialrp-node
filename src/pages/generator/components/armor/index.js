@@ -34,11 +34,13 @@ class Armor extends Component {
 
   handleArmor = () => {
     if (this.props.armorActive === 'proficiency') {
-      return this.props.armorProficiency.map((v, k) => {
+      const armorProf = [{name: '---'}, ...this.props.armorProficiency];
+      return armorProf.map((v, k) => {
         return <Option key={k} {...v} />;
       });
     } else {
-      return armorDB.map((v, k) => {
+      const armorProf = [{name: '---'}, ...armorDB];
+      return armorProf.map((v, k) => {
         return <Option key={k} {...v} />;
       });
     }
@@ -74,7 +76,7 @@ class Armor extends Component {
           name="armor"
           className="input"
           onChange={this.addArmor}
-          value="Padded"
+          value=""
         >
           { this.handleArmor() }
         </select>

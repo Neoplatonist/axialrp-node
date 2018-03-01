@@ -102,6 +102,19 @@ export const selectAbilityMod = createSelector(
   }
 );
 
+export const selectAC = createSelector(
+  state => state.generator.ac,
+  state => state.generator.armor,
+  state => state.generator.abilityMod,
+  (ac, list, abilityMod) => {
+    const a = list.map(v => armorDB.find(j => v === j.name));
+    return a.reduce((v, k) =>
+      v + k.armor_class.base + 
+      (k.armor_class.max_bonus || 0) + 
+      (k.armor_class.max_bonux ? abilityMod[1] : 0), ac);
+  }
+);
+
 export const selectArmorProficiency = createSelector(
   selectClassObj,
   classObj => {

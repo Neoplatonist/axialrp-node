@@ -1866,7 +1866,6 @@ export const weaponDB = [
 export const armorDB = [
   {
     name: 'Padded',
-    equipment_category: 'Armor',
     armor_category: 'Light',
     armor_class: {
       base: 11,
@@ -1882,7 +1881,6 @@ export const armorDB = [
     }
   }, {
     name: 'Leather',
-    equipment_category: 'Armor',
     armor_category: 'Light',
     armor_class: {
       base: 11,
@@ -1898,7 +1896,6 @@ export const armorDB = [
     }
   }, {
     name: 'Studded Leather',
-    equipment_category: 'Armor',
     armor_category: 'Light',
     armor_class: {
       base: 12,
@@ -1914,7 +1911,6 @@ export const armorDB = [
     }
   }, {
     name: 'Hide',
-    equipment_category: 'Armor',
     armor_category: 'Medium',
     armor_class: {
       base: 12,
@@ -1930,7 +1926,6 @@ export const armorDB = [
     }
   }, {
     name: 'Chain Shirt',
-    equipment_category: 'Armor',
     armor_category: 'Medium',
     armor_class: {
       base: 13,
@@ -1946,7 +1941,6 @@ export const armorDB = [
     }
   }, {
     name: 'Scale Mail',
-    equipment_category: 'Armor',
     armor_category: 'Medium',
     armor_class: {
       base: 14,
@@ -1962,7 +1956,6 @@ export const armorDB = [
     }
   }, {
     name: 'Breastplate',
-    equipment_category: 'Armor',
     armor_category: 'Medium',
     armor_class: {
       base: 14,
@@ -1978,7 +1971,6 @@ export const armorDB = [
     }
   }, {
     name: 'Half Plate',
-    equipment_category: 'Armor',
     armor_category: 'Medium',
     armor_class: {
       base: 15,
@@ -1994,7 +1986,6 @@ export const armorDB = [
     }
   }, {
     name: 'Ring Mail',
-    equipment_category: 'Armor',
     armor_category: 'Heavy',
     armor_class: {
       base: 14,
@@ -2010,7 +2001,6 @@ export const armorDB = [
     }
   }, {
     name: 'Chain Mail',
-    equipment_category: 'Armor',
     armor_category: 'Heavy',
     armor_class: {
       base: 16,
@@ -2026,7 +2016,6 @@ export const armorDB = [
     }
   }, {
     name: 'Splint',
-    equipment_category: 'Armor',
     armor_category: 'Heavy',
     armor_class: {
       base: 17,
@@ -2042,7 +2031,6 @@ export const armorDB = [
     }
   }, {
     name: 'Plate',
-    equipment_category: 'Armor',
     armor_category: 'Heavy',
     armor_class: {
       base: 18,
@@ -2058,7 +2046,6 @@ export const armorDB = [
     }
   }, {
     name: 'Shield',
-    equipment_category: 'Armor',
     armor_category: 'Shield',
     armor_class: {
       base: 2,

@@ -31,6 +31,7 @@ export const generatorState = {
   abilityMod: [0, 0, 0, 0, 0, 0],
   ac: 0,
   alignment: 'Lawful Good',
+
   armor: [],
   armorActive: 'proficiency',
 

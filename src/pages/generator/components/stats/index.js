@@ -3,6 +3,7 @@ import '../../styles.css';
 
 import { connect } from 'react-redux';
 import {
+  selectAC,
   setAC,
   selectHP,
   setHP,
@@ -75,7 +76,7 @@ class Stats extends Component {
 }
 
 const mapStateToProps = state => ({
-  ac: state.generator.ac,
+  ac: selectAC(state),
   hp: selectHP(state),
   initiative: state.generator.initiative,
   inspiration: state.generator.inspiration,
