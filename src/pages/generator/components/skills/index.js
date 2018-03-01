@@ -17,9 +17,27 @@ class Skills extends Component {
     };
   }
 
+  componentDidUpdate() {
+    console.log(this.props.skills.length)
+    if (this.props.skills.length === 0) {
+      this.checkbox.checked = '';
+    }
+  }
+
   handleInput = (name, e) => {
-    const list = [...this.props.skills];
-    list.push(name)
+    this.checkbox.checked ? this.checkbox.checked = name : this.checkbox.checked = '';
+    console.log(this.checkbox.checked)
+
+    let list = [...this.props.skills];
+
+    !this.checkbox.checked ?
+      list = list.filter(v => v !== name) :
+      list.push(name)
+
+    if (list.length > 1) {
+      list = list.map(v => list.filter(j => v !== j)).filter(v => v.length);
+    }
+
     this.props.setSkills(list);
   }
 
@@ -36,6 +54,7 @@ class Skills extends Component {
           type="checkbox"
           onClick={this.handleInput.bind(this, this.props.name)}
           disabled={this.props.skills.length > 1}
+          ref={el => this.checkbox = el}
         />
         <div className="skill-text"> { this.props.name }</div>
         <div className="skill-append"> ({ this.props.mod.slice(0, 3).toUpperCase() })</div>

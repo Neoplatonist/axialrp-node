@@ -36,6 +36,7 @@ import {
   selectLevel,
   selectRace,
   selectRaceObj,
+  setSkills,
   selectSpeed,
   selectSubRace,
   selectSavingThrows,
@@ -61,6 +62,10 @@ class Generator extends Component {
 
   handleLevel = e => {
     this.props.setAlignment(parseInt(e.target.value, 10));
+  }
+
+  handleSkillReset = e => {
+    this.props.setSkills([]);
   }
 
   renderLanguages = () => {
@@ -99,7 +104,8 @@ class Generator extends Component {
         key={k} 
         desc={skill.desc}
         name={v.name} 
-        mod={skill.ability_score.name} />;
+        mod={skill.ability_score.name} 
+        checked={''}/>;
     });
   }
 
@@ -184,6 +190,7 @@ class Generator extends Component {
 
           <h3>Skills</h3>
           <h5>Choose {this.props.skillsFilter.choose}</h5>
+          <button onClick={this.handleSkillReset} >Reset</button>
           <br/>
 
           { this.renderSkills() }
@@ -223,7 +230,8 @@ const boundActions = {
   setDice,
   setHP,
   setLanguage,
-  setLevel
+  setLevel,
+  setSkills
 };
 
 export default connect(mapStateToProps, boundActions)(Generator);
