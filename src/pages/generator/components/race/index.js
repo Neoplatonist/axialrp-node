@@ -22,7 +22,6 @@ class Race extends Component {
 
   handleSubRace = e => {
     const subraces = this.props.raceObj.sub_races || {};
-    console.log(subraces)
     return subraces.map((v, k) => {
       return <Option key={k} {...v} />;
     });

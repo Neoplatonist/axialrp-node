@@ -236,8 +236,7 @@ export const setDice = dice => {
 };
 
 export const setHP = hp => {
-  hp = JSON.stringify(hp);
-  return { type: SET_HP, payload: hp };
+  return { type: SET_HP, payload: hp || 0 };
 };
 
 export const setInitiative = init => {

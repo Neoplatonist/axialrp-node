@@ -16,7 +16,7 @@ class Stats extends Component {
   render() {
     return (
       <div>
-        <label htmlFor="hp">Hit Points: </label>
+        <label htmlFor="hp">Hit Points (+CON): </label>
         <input
           name="hp"
           className="input"

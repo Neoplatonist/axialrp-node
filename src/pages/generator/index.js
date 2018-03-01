@@ -237,6 +237,4 @@ const boundActions = {
 export default connect(mapStateToProps, boundActions)(Generator);
 
 // FIXME: Armor updating ac score
-// FIXME: Changable hit points
 // FIXME: RaceDB Normalization
-// FIXME: Subrace list error handling
