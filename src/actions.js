@@ -118,8 +118,8 @@ export const selectAC = createSelector(
 export const selectArmorProficiency = createSelector(
   selectClassObj,
   classObj => {
-    const list = classObj.proficiencies.find(v => v.type === 'Armor')
-      .list.map(v =>  armorDB.filter(j => j.armor_category === v.name));
+    const list = classObj.armor.map(v => 
+      armorDB.filter(j => j.armor_category === v.name));
     return [].concat(...list);
   }
 );
@@ -168,17 +168,16 @@ export const selectWeaponProficiency = createSelector(
   selectRaceObj,
   (classObj, raceObj) => {
     const raceList = [].concat(
-        ...raceObj.proficiency.map(v => weaponDB.filter(j => j.name === v)));
+        ...raceObj.weapons.map(v => weaponDB.filter(j => j.name === v)));
 
-    const classList = classObj.proficiencies.find(v => v.type === 'Weapons').list;
     const classCat = [].concat(
-      ...classList.map(v => 
+      ...classObj.weapons.map(v => 
         weaponDB.filter(j => j.category === v.name)), 
       ...raceList
     );
 
     const filtered = classCat.reduce((v, k) =>
-      [...v, classList.filter(j => j.name === k.name) ], []);
+      [...v, classObj.weapons.filter(j => j.name === k.name) ], []);
 
     const className = [].concat(
       ...filtered.map(v => weaponDB.filter(j => j.name === v.name)));

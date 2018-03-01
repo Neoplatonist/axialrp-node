@@ -35,11 +35,7 @@ export const raceDB = [
         { name: 'Dwarvish' }
       ]
     },
-    starting_proficiencies: [
-      { name: "Skill: Intimidation" }
-    ],
-		starting_proficiency_options: {},
-		traits: {
+    traits: {
       options: {},
       type: []
     },
@@ -55,12 +51,13 @@ export const raceDB = [
       against: 'Poison',
       description: 'You have advantage on saving throws against poison, and you have resistance against poison damage.'
     },
-    tool_proficiency: {
+    skills: {},
+    tools: {
       choose: 1,
       type: 'Artisan',
-      tools: ['Smith Tools', 'Brewer Supplies', 'Mason Tools']
+      list: ['Smith Tools', 'Brewer Supplies', 'Mason Tools']
     },
-    proficiency: ['Battleaxe', 'Handaxe', 'Light Hammer', 'Warhammer']
+    weapons: ['Battleaxe', 'Handaxe', 'Light Hammer', 'Warhammer'],
   }, {
     name: 'Elf',
     ability_bonus: [ 0, 2, 0, 0, 0, 0 ],
@@ -97,8 +94,7 @@ export const raceDB = [
         { name: 'Elvish' }
       ]
     },
-    starting_proficiency_options: {},
-		traits: {
+    traits: {
       options: {},
       type: []
     },
@@ -114,12 +110,12 @@ export const raceDB = [
       against: 'Poison',
       description: 'You have advantage on saving throws against poison, and you have resistance against poison damage.'
     },
-    tool_proficiency: {
+    tools: {
       choose: 1,
       type: 'Artisan',
       tools: ['Smith Tools', 'Brewer Supplies', 'Mason Tools']
     },
-    proficiency: ['Longsword', 'Shortsword', 'Shortbow', 'Longbow']
+    weapons: ['Longsword', 'Shortsword', 'Shortbow', 'Longbow']
   }, {
     name: 'Halfling',
     ability_bonus: [ 0, 2, 0, 0, 0, 0 ],
@@ -156,8 +152,7 @@ export const raceDB = [
         { name: 'Halfling' }
       ]
     },
-    starting_proficiency_options: {},
-		traits: {
+    traits: {
       options: {},
       type: []
     },
@@ -173,14 +168,14 @@ export const raceDB = [
       against: '',
       description: ''
     },
-    tool_proficiency: {
+    tools: {
       choose: 0,
       type: '',
       tools: []
     },
-    proficiency: []
+    weapons: []
   }, {
-		name: 'Human',
+    name: 'Human',
     ability_bonus: [ 1, 1, 1, 1, 1, 1 ],
     age: {
       adult: 18,
@@ -191,7 +186,7 @@ export const raceDB = [
       description: 'Humans tend toward no particular alignment. The best and the worst are found among them.',
       main: 'Neutral'
     },
-		size: {
+    size: {
       description: 'Humans vary widely in height and build, from barely 5 feet to well over 6 feet tall. Regardless of your position in that range, your size is Medium.',
       height: {
         min: 5,
@@ -228,12 +223,11 @@ export const raceDB = [
       },
       type: [{ name: 'Common' }]
     },
-    starting_proficiency_options: {},
-		traits: {
+    traits: {
       options: {},
       type: []
     },
-		sub_races: [
+    sub_races: [
       {
         name: "Forest Human",
         description: 'Halp me, I n forest.',
@@ -245,15 +239,15 @@ export const raceDB = [
       against: 'Poison',
       description: 'You have advantage on saving throws against poison, and you have resistance against poison damage.'
     },
-    tool_proficiency: {
+    tools: {
       choose: 1,
       type: 'Artisan',
       tools: ['Smith Tools', 'Brewer Supplies', 'Mason Tools']
     },
-    proficiency: ['Longsword', 'Shortsword', 'Shortbow', 'Longbow']
+    weapons: ['Longsword', 'Shortsword', 'Shortbow', 'Longbow']
   },
   {
-		name: 'Dragonborn',
+    name: 'Dragonborn',
     ability_bonus: [ 2, 0, 0, 0, 0, 1 ],
     age: {
       adult: 15,
@@ -264,7 +258,7 @@ export const raceDB = [
       description: 'Dragonborn tend to extremes, making a conscious choice for one side or the other in the cosmic war between good and evil. Most dragonborn are good, but those who side with evil can be terrible villains.',
       main: 'Lawful Good'
     },
-		size: {
+    size: {
       description: 'Dragonborn are taller and heavier than humans, standing well over 6 feet tall and averaging almost 250 pounds. Your size is Medium.',
       height: {
         min: 6,
@@ -284,24 +278,22 @@ export const raceDB = [
         { name: 'Draconic' }
       ]
     },
-		starting_proficiencies: [],
-		starting_proficiency_options: {},
     traits: {
       options: {
-				choose: 1,
-				from: [
-					{name: "Breath Weapon (Black)"},
-					{name: "Breath Weapon (Blue)"},
-					{name: "Breath Weapon (Brass)"},
-					{name: "Breath Weapon (Bronze)"},
-					{name: "Breath Weapon (Copper)"},
-					{name: "Breath Weapon (Gold)"},
-					{name: "Breath Weapon (Green)"},
-					{name: "Breath Weapon (Red)"},
-					{name: "Breath Weapon (Silver)"},
-					{name: "Breath Weapon (White)"}
-				],
-				type: "trait"
+        choose: 1,
+        from: [
+          {name: "Breath Weapon (Black)"},
+          {name: "Breath Weapon (Blue)"},
+          {name: "Breath Weapon (Brass)"},
+          {name: "Breath Weapon (Bronze)"},
+          {name: "Breath Weapon (Copper)"},
+          {name: "Breath Weapon (Gold)"},
+          {name: "Breath Weapon (Green)"},
+          {name: "Breath Weapon (Red)"},
+          {name: "Breath Weapon (Silver)"},
+          {name: "Breath Weapon (White)"}
+        ],
+        type: "trait"
       },
       type: [
         { name: "Draconic Anscestry" },
@@ -310,10 +302,11 @@ export const raceDB = [
       ]
     },
     subraces: [],
-    proficiency: []
+    tools: {},
+    weapons: []
   },
   {
-		name: 'Gnome',
+    name: 'Gnome',
     ability_bonus: [ 0, 0, 0, 2, 0, 0 ],
     age: {
       adult: 40,
@@ -324,7 +317,7 @@ export const raceDB = [
       description: 'Gnomes are most often good. Those who tend toward law are sages, engineers, researchers, scholars, investigators, or inventors. Those who tend toward chaos are minstrels, tricksters, wanderers, or fanciful jewelers. Gnomes are good-hearted, and even the tricksters among them are more playful than vicious.',
       main: 'Lawful Neutral'
     },
-		size: {
+    size: {
       description: 'Gnomes are between 3 and 4 feet tall and average about 40 pounds. Your size is Small.',
       height: {
         min: 3,
@@ -344,9 +337,7 @@ export const raceDB = [
         { name: 'Gnomish' }
       ]
     },
-		starting_proficiencies: [],
-		starting_proficiency_options: {},
-		traits: {
+    traits: {
       options: {},
       type: [
         { name: "Darkvision (Gnome)" },
@@ -357,10 +348,11 @@ export const raceDB = [
       {name: "Forest Gnome"},
       {name: "Rock Gnome"}
     ],
-    proficiency: []
+    tools: {},
+    weapons: []
   },
   {
-		name: 'Half-Elf',
+    name: 'Half-Elf',
     ability_bonus: [ 0, 0, 0, 0, 0, 2 ],
     age: {
       adult: 20,
@@ -371,7 +363,7 @@ export const raceDB = [
       description: 'Half-elves share the chaotic bent of their elven heritage. They value both personal freedom and creative expression, demonstrating neither love of leaders nor desire for followers. They chafe at rules, resent others\' demands, and sometimes prove unreliable, or at least unpredictable.',
       main: 'Chaotic Good'
     },
-		size: {
+    size: {
       description: 'Half-elves are about the same size as humans, ranging from 5 to 6 feet tall. Your size is Medium.',
       height: {
         min: 5,
@@ -411,9 +403,7 @@ export const raceDB = [
         { name: 'Gnomish' }
       ]
     },
-		starting_proficiencies: [],
-    starting_proficiency_options: {},
-		traits: {
+    traits: {
       options: {},
       type: [
         { name: "Darkvision (Gnome)" },
@@ -421,11 +411,12 @@ export const raceDB = [
         { name: "Skill Versatility" }
       ]
     },
-		subraces: [],
-    proficiency: []
+    subraces: [],
+    tools: {},
+    weapons: []
   },
   {
-		name: 'Half-Orc',
+    name: 'Half-Orc',
     ability_bonus: [ 2, 0, 1, 0, 0, 0 ],
     age: {
       adult: 14,
@@ -436,7 +427,7 @@ export const raceDB = [
       description: 'Half-orcs inherit a tendency toward chaos from their orc parents and are not strongly inclined toward good. Half-orcs raised among orcs and willing to live out their lives among them are usually evil.',
       main: 'Chaotic Evil'
     },
-		size: {
+    size: {
       description: 'Half-orcs are somewhat larger and bulkier than humans, and they range from 5 to well over 6 feet tall. Your size is Medium.',
       height: {
         min: 5,
@@ -456,11 +447,7 @@ export const raceDB = [
         { name: 'Orcish' }
       ]
     },
-    starting_proficiencies: [
-      { name: "Skill: Intimidation" }
-    ],
-		starting_proficiency_options: {},
-		traits: {
+    traits: {
       options: {},
       type: [
         { name: "Darkvision (Half-Orc)" },
@@ -469,11 +456,12 @@ export const raceDB = [
       ]
     },
     trait_options: {},
-		subraces: [],
-    proficiency: []
+    subraces: [],
+    tools: {},
+    weapons: []
   },
   {
-		name: 'Tiefling',
+    name: 'Tiefling',
     ability_bonus: [ 2, 0, 1, 0, 0, 0 ],
     age: {
       adult: 20,
@@ -484,7 +472,7 @@ export const raceDB = [
       description: 'Tieflings might not have an innate tendency toward evil, but many of them end up there. Evil or not, an independent nature inclines many tieflings toward a chaotic alignment.',
       main: 'Neutral Evil'
     },
-		size: {
+    size: {
       description: 'Half-orcs are somewhat larger and bulkier than humans, and they range from 5 to well over 6 feet tall. Your size is Medium.',
       height: {
         min: 5,
@@ -504,11 +492,8 @@ export const raceDB = [
         { name: 'Infernal' }
       ]
     },
-    starting_proficiencies: [
-      { name: "Skill: Intimidation" }
-    ],
     starting_proficiency_options: {},
-		traits: {
+    traits: {
       options: {},
       type: [
         { name: "Darkvision (Tiefling)" },
@@ -516,9 +501,10 @@ export const raceDB = [
         { name: "Infernal Legacy" }
       ]
     },
-		subraces: [],
-    proficiency: []
-	}
+    subraces: [],
+    tools: {},
+    weapons: []
+  }
 ];
 
 
@@ -581,6 +567,11 @@ export const classDB = [
   {
     name: 'Barbarian',
     hit_die: 12,
+    armor: [
+      { name: 'Light' },
+      { name: 'Medium' },
+      { name: 'Shield' }
+    ],
     proficiency_choices: [
       {
         choose: 2,
@@ -595,87 +586,61 @@ export const classDB = [
         ]
       }
     ],
-    proficiencies: [
-      {
-        type: 'Armor',
-        list: [
-          { name: 'Light' },
-          { name: 'Medium' },
-          { name: 'Shield' }
-        ]
-      }, {
-        type: 'Weapons',
-        list: [
-          { name: 'Simple' },
-          { name: 'Martial' }
-        ]
-      }
-    ],
     saving_throws: [
       { name: 'Strength' },
       { name: 'Constitution' }
     ],
     starting_equipment: { class: 'Barbarian' },
-    spellcasting: {}
+    spellcasting: {},
+    weapons: [
+      { name: 'Simple' },
+      { name: 'Martial' }
+    ]
   },
   {
     name: 'Bard',
     hit_die: 8,
+    armor: [
+      { name: 'Light' }
+    ],
     proficiency_choices: [
       {
-				choose: 3,
-				type: 'Skill',
-				from: [
-					{ name: 'Acrobatics' },
-					{ name: 'Animal Handling' },
-					{ name: 'Arcana' },
-					{ name: 'Athletics' },
-					{ name: 'Deception' },
-					{ name: 'History' },
-					{ name: 'Insight' },
-					{ name: 'Intimidation' },
-					{ name: 'Investigation' },
-					{ name: 'Medicine' },
-					{ name: 'Nature' },
-					{ name: 'Perception' },
-					{ name: 'Performance' },
-					{ name: 'Persuasion' },
-					{ name: 'Religion' },
-					{ name: 'Sleight of Hand' },
-					{ name: 'Stealth' },
+        choose: 3,
+        type: 'Skill',
+        from: [
+          { name: 'Acrobatics' },
+          { name: 'Animal Handling' },
+          { name: 'Arcana' },
+          { name: 'Athletics' },
+          { name: 'Deception' },
+          { name: 'History' },
+          { name: 'Insight' },
+          { name: 'Intimidation' },
+          { name: 'Investigation' },
+          { name: 'Medicine' },
+          { name: 'Nature' },
+          { name: 'Perception' },
+          { name: 'Performance' },
+          { name: 'Persuasion' },
+          { name: 'Religion' },
+          { name: 'Sleight of Hand' },
+          { name: 'Stealth' },
           { name: 'Survival' }
         ]
       }, {
-				choose: 3,
-				type: 'Instruments',
+        choose: 3,
+        type: 'Instruments',
         from: [
-					{ name: 'Bagpipes' },
-					{ name: 'Drum' },
-					{ name: 'Dulcimer' },
-					{ name: 'Flute' },
-					{ name: 'Lute' },
-					{ name: 'Lyre' },
-					{ name: 'Horn' },
-					{ name: 'Pan flute' },
-					{ name: 'Shawm' },
-					{ name: 'Viol' }
-				]
-			}
-    ],
-    proficiencies: [
-      {
-        type: 'Armor',
-        list: [
-          { name: 'Light' }
-        ]
-      }, {
-        type: 'Weapons',
-        list: [
-          { name: 'Simple' },
-          { name: 'Longsword' },
-          { name: 'Rapier' },
-          { name: 'Shortsword' },
-          { name: 'Crossbows, hand' }
+          { name: 'Bagpipes' },
+          { name: 'Drum' },
+          { name: 'Dulcimer' },
+          { name: 'Flute' },
+          { name: 'Lute' },
+          { name: 'Lyre' },
+          { name: 'Horn' },
+          { name: 'Pan flute' },
+          { name: 'Shawm' },
+          { name: 'Viol' }
         ]
       }
     ],
@@ -691,11 +656,23 @@ export const classDB = [
         proficiencies: 'tba'
       }
     ],
-    spellcasting: 'tba'
+    spellcasting: 'tba',
+    weapons: [
+      { name: 'Simple' },
+      { name: 'Longsword' },
+      { name: 'Rapier' },
+      { name: 'Shortsword' },
+      { name: 'Crossbows, hand' }
+    ]
   },
   {
     name: 'Cleric',
     hit_die: 8,
+    armor: [
+      { name: 'Light' },
+      { name: 'Medium' },
+      { name: 'Shield' }
+    ],
     proficiency_choices: [
       {
         choose: 2,
@@ -706,21 +683,6 @@ export const classDB = [
           { name: 'Medicine' },
           { name: 'Persuasion' },
           { name: 'Religion' }
-        ]
-      }
-    ],
-    proficiencies: [
-      {
-        type: 'Armor',
-        list: [
-          { name: 'Light' },
-          { name: 'Medium' },
-          { name: 'Shield' }
-        ]
-      }, {
-        type: 'Weapons',
-        list: [
-          { name: 'Simple' }
         ]
       }
     ],
@@ -736,7 +698,10 @@ export const classDB = [
         proficiencies: 'tba'
       }
     ],
-    spellcasting: 'tba'
+    spellcasting: 'tba',
+    weapons: [
+      { name: 'Simple' }
+    ]
   }
 ];
 

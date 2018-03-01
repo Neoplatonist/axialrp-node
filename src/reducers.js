@@ -47,6 +47,11 @@ export const generatorState = {
   classObj: {
     name: 'Barbarian',
     hit_die: 12,
+    armor: [
+      { name: 'Light' },
+      { name: 'Medium' },
+      { name: 'Shield' }
+    ],
     proficiency_choices: [
       {
         choose: 2,
@@ -61,28 +66,16 @@ export const generatorState = {
         ]
       }
     ],
-    proficiencies: [
-      {
-        type: 'Armor',
-        list: [
-          { name: 'Light' },
-          { name: 'Medium' },
-          { name: 'Shield' }
-        ]
-      }, {
-        type: 'Weapons',
-        list: [
-          { name: 'Simple' },
-          { name: 'Martial' }
-        ]
-      }
-    ],
     saving_throws: [
       { name: 'Strength' },
       { name: 'Constitution' }
     ],
     starting_equipment: { class: 'Barbarian' },
-    spellcasting: {}
+    spellcasting: {},
+    weapons: [
+      { name: 'Simple' },
+      { name: 'Martial' }
+    ]
   },
 
   dice: [0, 0, 0, 0, 0, 0],
@@ -127,15 +120,11 @@ export const generatorState = {
       description: 'You can speak, read, and write Common and Dwarvish. Dwarvish is full of hard consonants and guttural sounds, and those characteristics spill over into whatever other language a dwarf might speak.',
       options: {},
       type: [
-        { name: 'Common'}, 
-        { name: 'Dwarvish'}
+        { name: 'Common' }, 
+        { name: 'Dwarvish' }
       ]
     },
-    starting_proficiencies: [
-      { name: "Skill: Intimidation" }
-    ],
-		starting_proficiency_options: {},
-		traits: {
+    traits: {
       options: {},
       type: []
     },
@@ -151,12 +140,13 @@ export const generatorState = {
       against: 'Poison',
       description: 'You have advantage on saving throws against poison, and you have resistance against poison damage.'
     },
-    tool_proficiency: {
+    skills: {},
+    tools: {
       choose: 1,
       type: 'Artisan',
-      tools: ['Smith Tools', 'Brewer Supplies', 'Mason Tools']
+      list: ['Smith Tools', 'Brewer Supplies', 'Mason Tools']
     },
-    proficiency: ['Battleaxe', 'Handaxe', 'Light Hammer', 'Warhammer']
+    weapons: ['Battleaxe', 'Handaxe', 'Light Hammer', 'Warhammer'],
   },
 
   savingThrows: [0, 0, 0, 0, 0, 0],
