@@ -10,7 +10,9 @@ import {
   setSpeed,
   selectRaceObj,
   selectSubRace,
-  setSubRace
+  setSubRace,
+  selectSubRaceObj,
+  setSubRaceObj
 } from '../../../../actions';
 
 class Race extends Component {
@@ -21,7 +23,7 @@ class Race extends Component {
   }
 
   handleSubRace = e => {
-    const subraces = this.props.raceObj.sub_races || {};
+    const subraces = this.props.raceObj.sub_races || [];
     return subraces.map((v, k) => {
       return <Option key={k} {...v} />;
     });
@@ -31,13 +33,21 @@ class Race extends Component {
     // TODO: Doesn't update on first loop
     const r = this.props.raceDB.find(v => v.name === e.target.value);
     this.props.setRace(e.target.value);
-    isEmpty(r.sub_races) ? 
-      this.props.setSubRace('') :
+    if (isEmpty(r.sub_races)) {
+      this.props.setSubRace('')
+    } else {
       this.props.setSubRace(r.sub_races[0].name);
+      this.props.setSubRaceObj(
+        this.props.subracesDB.find(v => v.name === r.sub_races[0].name)
+      );
+    } 
   }
 
   onSubRaceChange = e => {
     this.props.setSubRace(e.target.value);
+    this.props.setSubRaceObj(
+      this.props.subracesDB.find(v => v.name === e.target.value)
+    );
   }
 
   renderSubRace = () => {
@@ -81,13 +91,15 @@ const mapStateToProps = state => ({
   race: selectRace(state),
   raceObj: selectRaceObj(state),
   subrace: selectSubRace(state),
+  subraceObj: selectSubRaceObj(state)
 });
 
 const boundActions = {
   setAlignment,
   setRace,
   setSpeed,
-  setSubRace
+  setSubRace,
+  setSubRaceObj
 };
 
 export default connect(mapStateToProps, boundActions)(Race);

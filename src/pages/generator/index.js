@@ -7,6 +7,7 @@ import {
   alignmentDB, 
   classDB, 
   raceDB,
+  subracesDB,
   skillsDB
 } from '../db.js';
 
@@ -136,7 +137,7 @@ class Generator extends Component {
 
           <br/>
 
-          <Race raceDB={raceDB} />
+          <Race raceDB={raceDB} subracesDB={subracesDB}/>
 
           <br/>
 

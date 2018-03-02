@@ -1,6 +1,7 @@
 export const raceDB = [
   {
     name: 'Dwarf',
+    description: 'Your dwarf character has an assortment of inborn abilities, part and parcel of dwarven nature.',
     ability_bonus: [ 0, 0, 2, 0, 0, 0 ],
     age: {
       adult: 50,
@@ -23,10 +24,6 @@ export const raceDB = [
       base: 25,
       description: 'Your speed is not reduced by wearing heavy armor.'
     },
-    darkvision: {
-      distance: 60,
-      description: 'Accustomed to life underground, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You canâ€™t discern color in darkness, only shades of gray.'
-    },
     languages: {
       description: 'You can speak, read, and write Common and Dwarvish. Dwarvish is full of hard consonants and guttural sounds, and those characteristics spill over into whatever other language a dwarf might speak.',
       options: {},
@@ -35,18 +32,21 @@ export const raceDB = [
         { name: 'Dwarvish' }
       ]
     },
-    traits: {
-      options: {},
-      type: []
-    },
-    sub_races: [
-      {
-        name: 'Hill Dwarf',
-        description: 'As a hill dwarf, you have keen senses, deep intuition, and remarkable resilience.',
-        ability_bonus: [ 0, 0, 0, 0, 1, 0 ],
-        hit_points: {}
+    traits: [
+      { 
+        name: 'Darkvision',
+        description: 'Accustomed to life underground, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.'
+      },
+      { 
+        name: 'Dwarven Resilience',
+        description: 'You have advantage on saving throws against poison, and you have resistance against poison damage.'
+      },
+      { 
+        name: 'Stonecunning',
+        description: 'Whenever you make an Intelligence (History) check related to the origin of stonework, you are considered proficient in the History skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus.'
       }
     ],
+    sub_races: [ {name: 'Hill Dwarf'} ],
     saving_throws: {
       against: 'Poison',
       description: 'You have advantage on saving throws against poison, and you have resistance against poison damage.'
@@ -60,6 +60,7 @@ export const raceDB = [
     weapons: ['Battleaxe', 'Handaxe', 'Light Hammer', 'Warhammer'],
   }, {
     name: 'Elf',
+    description: 'Your elf character has a variety of natural abilities, the result of thousands of years of elven refinement.',
     ability_bonus: [ 0, 2, 0, 0, 0, 0 ],
     age: {
       adult: 100,
@@ -82,10 +83,6 @@ export const raceDB = [
       base: 30,
       description: 'Your speed is not reduced by wearing heavy armor.'
     },
-    darkvision: {
-      distance: 60,
-      description: 'Accustomed to twilit forests and the night sky, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You canâ€™t discern color in darkness, only shades of gray'
-    },
     languages: {
       description: 'You can speak, read, and write Common and Elvish. Elvish is fluid, with subtle intonations and intricate grammar. Elven literature is rich and varied, and their songs and poems are famous among other races. Many bards learn their language so they can add Elvish ballads to their repertoires.',
       options: {},
@@ -94,18 +91,21 @@ export const raceDB = [
         { name: 'Elvish' }
       ]
     },
-    traits: {
-      options: {},
-      type: []
-    },
-    sub_races: [
-      {
-        name: 'High Elf',
-        description: 'As a high elf, you have a keen mind and a mastery of at least the basics of magic. In many fantasy gaming worlds, there are two kinds of high elves. One type is haughty and reclusive, believing themselves to be superior to non-elves and even other elves. The other type is more common and more friendly, and often encountered among humans and other races.',
-        ability_bonus: [ 0, 0, 0, 1, 0, 0 ],
-        hit_points: {}
+    traits: [
+      { 
+        name: 'Darkvision',
+        description: 'Accustomed to twilit forests and the night sky, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You canâ€™t discern color in darkness, only shades of gray.'
+      },
+      { 
+        name: 'Fey Ancestry',
+        description: 'You have advantage on saving throws against being charmed, and magic can’t put you to sleep.'
+      },
+      { 
+        name: 'Trance',
+        description: 'Elves don’t need to sleep. Instead, they meditate deeply, remaining semiconscious, for 4 hours a day. (The Common word for such meditation is “trance.”) While meditating, you can dream after a fashion; such dreams are actually mental exercises that have become reflexive through years of practice. After resting in this way, you gain the same benefit that a human does from 8 hours of sleep.'
       }
     ],
+    sub_races: [ {name: 'High Elf'} ],
     saving_throws: {
       against: 'Poison',
       description: 'You have advantage on saving throws against poison, and you have resistance against poison damage.'
@@ -118,6 +118,7 @@ export const raceDB = [
     weapons: ['Longsword', 'Shortsword', 'Shortbow', 'Longbow']
   }, {
     name: 'Halfling',
+    description: 'Your halfling character has a number of traits in common with all other halflings.',
     ability_bonus: [ 0, 2, 0, 0, 0, 0 ],
     age: {
       adult: 20,
@@ -156,14 +157,7 @@ export const raceDB = [
       options: {},
       type: []
     },
-    sub_races: [
-      {
-        name: 'Lightfoot Halfling',
-        description: 'As a lightfoot halfling, you can easily hide from notice, even using other people as cover. You’re inclined to be affable and get along well with others. Lightfoots are more prone to wanderlust than other halflings, and often dwell alongside other races or take up a nomadic life.',
-        ability_bonus: [ 0, 0, 0, 0, 0, 1 ],
-        hit_points: {}
-      }
-    ],
+    sub_races: [ {name: 'Lightfoot Halfling'} ],
     saving_throws: {
       against: '',
       description: ''
@@ -176,6 +170,7 @@ export const raceDB = [
     weapons: []
   }, {
     name: 'Human',
+    description: 'It’s hard to make generalizations about humans, but your human character has these traits.',
     ability_bonus: [ 1, 1, 1, 1, 1, 1 ],
     age: {
       adult: 18,
@@ -227,14 +222,7 @@ export const raceDB = [
       options: {},
       type: []
     },
-    sub_races: [
-      {
-        name: "Forest Human",
-        description: 'Halp me, I n forest.',
-        ability_bonus: [ 0, 0, 0, 0, 1, 0 ],
-        hit_points: {}
-      }
-    ],
+    sub_races: [],
     saving_throws: {
       against: 'Poison',
       description: 'You have advantage on saving throws against poison, and you have resistance against poison damage.'
@@ -248,6 +236,7 @@ export const raceDB = [
   },
   {
     name: 'Dragonborn',
+    description: 'Your draconic heritage manifests in a variety of traits you share with other dragonborn.',
     ability_bonus: [ 2, 0, 0, 0, 0, 1 ],
     age: {
       adult: 15,
@@ -282,23 +271,23 @@ export const raceDB = [
       options: {
         choose: 1,
         from: [
-          {name: "Breath Weapon (Black)"},
-          {name: "Breath Weapon (Blue)"},
-          {name: "Breath Weapon (Brass)"},
-          {name: "Breath Weapon (Bronze)"},
-          {name: "Breath Weapon (Copper)"},
-          {name: "Breath Weapon (Gold)"},
-          {name: "Breath Weapon (Green)"},
-          {name: "Breath Weapon (Red)"},
-          {name: "Breath Weapon (Silver)"},
-          {name: "Breath Weapon (White)"}
+          {name: 'Breath Weapon (Black)'},
+          {name: 'Breath Weapon (Blue)'},
+          {name: 'Breath Weapon (Brass)'},
+          {name: 'Breath Weapon (Bronze)'},
+          {name: 'Breath Weapon (Copper)'},
+          {name: 'Breath Weapon (Gold)'},
+          {name: 'Breath Weapon (Green)'},
+          {name: 'Breath Weapon (Red)'},
+          {name: 'Breath Weapon (Silver)'},
+          {name: 'Breath Weapon (White)'}
         ],
-        type: "trait"
+        type: 'trait'
       },
       type: [
-        { name: "Draconic Anscestry" },
-        { name: "Breath Weapon" },
-        { name: "Damage Resistance (Dragonborn)" }
+        { name: 'Draconic Anscestry' },
+        { name: 'Breath Weapon' },
+        { name: 'Damage Resistance (Dragonborn)' }
       ]
     },
     subraces: [],
@@ -307,6 +296,7 @@ export const raceDB = [
   },
   {
     name: 'Gnome',
+    description: 'Your gnome character has certain characteristics in common with all other gnomes',
     ability_bonus: [ 0, 0, 0, 2, 0, 0 ],
     age: {
       adult: 40,
@@ -340,19 +330,17 @@ export const raceDB = [
     traits: {
       options: {},
       type: [
-        { name: "Darkvision (Gnome)" },
-        { name: "Gnome Cunning" }
+        { name: 'Darkvision (Gnome)' },
+        { name: 'Gnome Cunning' }
       ]
     },
-    subraces: [
-      {name: "Forest Gnome"},
-      {name: "Rock Gnome"}
-    ],
+    subraces: [],
     tools: {},
     weapons: []
   },
   {
     name: 'Half-Elf',
+    description: 'Your half-elf character has some qualities in common with elves and some that are unique to half-elves.',
     ability_bonus: [ 0, 0, 0, 0, 0, 2 ],
     age: {
       adult: 20,
@@ -406,9 +394,9 @@ export const raceDB = [
     traits: {
       options: {},
       type: [
-        { name: "Darkvision (Gnome)" },
-        { name: "Fey Ancestry" },
-        { name: "Skill Versatility" }
+        { name: 'Darkvision (Gnome)' },
+        { name: 'Fey Ancestry' },
+        { name: 'Skill Versatility' }
       ]
     },
     subraces: [],
@@ -417,6 +405,7 @@ export const raceDB = [
   },
   {
     name: 'Half-Orc',
+    description: 'Your half-orc character has certain traits deriving from your orc ancestry.',
     ability_bonus: [ 2, 0, 1, 0, 0, 0 ],
     age: {
       adult: 14,
@@ -450,9 +439,9 @@ export const raceDB = [
     traits: {
       options: {},
       type: [
-        { name: "Darkvision (Half-Orc)" },
-        { name: "Savage Attacks" },
-        { name: "Restless Endurance" }
+        { name: 'Darkvision (Half-Orc)' },
+        { name: 'Savage Attacks' },
+        { name: 'Restless Endurance' }
       ]
     },
     trait_options: {},
@@ -462,6 +451,7 @@ export const raceDB = [
   },
   {
     name: 'Tiefling',
+    description: 'Tieflings share certain racial traits as a result of their infernal descent.',
     ability_bonus: [ 2, 0, 1, 0, 0, 0 ],
     age: {
       adult: 20,
@@ -496,9 +486,9 @@ export const raceDB = [
     traits: {
       options: {},
       type: [
-        { name: "Darkvision (Tiefling)" },
-        { name: "Hellish Resistance" },
-        { name: "Infernal Legacy" }
+        { name: 'Darkvision (Tiefling)' },
+        { name: 'Hellish Resistance' },
+        { name: 'Infernal Legacy' }
       ]
     },
     subraces: [],
@@ -506,6 +496,110 @@ export const raceDB = [
     weapons: []
   }
 ];
+
+
+
+
+
+
+
+
+
+
+export const subracesDB = [
+  {
+    name: 'Hill Dwarf',
+    description: 'As a hill dwarf, you have keen senses, deep intuition, and remarkable resilience.',
+    ability_bonus: [0, 0, 0, 0, 0, 0],
+    hit_points: 1,
+    age: {},
+    alignment: {},
+    size: {},
+    speed: {},
+    darkvision: {
+      distance: 60,
+      description: 'Accustomed to life underground, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You canâ€™t discern color in darkness, only shades of gray.'
+    },
+    languages: {},
+    traits: [
+      { 
+        name: 'Dwarven Toughness',
+        description: 'Your hit point maximum increases by 1, and it increases by 1 every time you gain a level.'
+      }
+    ],
+    saving_throws: {},
+    skills: {},
+    tools: {},
+    weapons: [],
+  },
+  {
+    name: 'High Elf',
+    description: 'As a high elf, you have a keen mind and a mastery of at least the basics of magic. In many fantasy gaming worlds, there are two kinds of high elves. One type is haughty and reclusive, believing themselves to be superior to non-elves and even other elves. The other type is more common and more friendly, and often encountered among humans and other races.',
+    ability_bonus: [ 0, 0, 0, 1, 0, 0 ],
+    hit_points: 0,
+    age: {},
+    alignment: {},
+    size: {},
+    speed: {},
+    darkvision: {
+      distance: 60,
+      description: 'Accustomed to life underground, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You canâ€™t discern color in darkness, only shades of gray.'
+    },
+    languages: {},
+    traits: [
+      { 
+        name: 'Darkvision',
+        description: 'Accustomed to twilit forests and the night sky, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You canâ€™t discern color in darkness, only shades of gray.'
+      },
+      { 
+        name: 'Fey Ancestry',
+        description: 'You have advantage on saving throws against being charmed, and magic can’t put you to sleep.'
+      },
+      { 
+        name: 'Trance',
+        description: 'Elves don’t need to sleep. Instead, they meditate deeply, remaining semiconscious, for 4 hours a day. (The Common word for such meditation is “trance.”) While meditating, you can dream after a fashion; such dreams are actually mental exercises that have become reflexive through years of practice. After resting in this way, you gain the same benefit that a human does from 8 hours of sleep.'
+      }
+    ],
+    saving_throws: {},
+    skills: {},
+    tools: {},
+    weapons: [],
+  },
+  {
+    name: 'Lightfoot Halfling',
+    description: 'As a lightfoot halfling, you can easily hide from notice, even using other people as cover. You’re inclined to be affable and get along well with others. Lightfoots are more prone to wanderlust than other halflings, and often dwell alongside other races or take up a nomadic life.',
+    ability_bonus: [ 0, 0, 0, 0, 0, 1 ],
+    hit_points: 0,
+    age: {},
+    alignment: {},
+    size: {},
+    speed: {},
+    darkvision: {
+      distance: 60,
+      description: 'Accustomed to life underground, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You canâ€™t discern color in darkness, only shades of gray.'
+    },
+    languages: {},
+    traits: [
+      { 
+        name: 'Darkvision',
+        description: 'Accustomed to twilit forests and the night sky, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You canâ€™t discern color in darkness, only shades of gray.'
+      },
+      { 
+        name: 'Fey Ancestry',
+        description: 'You have advantage on saving throws against being charmed, and magic can’t put you to sleep.'
+      },
+      { 
+        name: 'Trance',
+        description: 'Elves don’t need to sleep. Instead, they meditate deeply, remaining semiconscious, for 4 hours a day. (The Common word for such meditation is “trance.”) While meditating, you can dream after a fashion; such dreams are actually mental exercises that have become reflexive through years of practice. After resting in this way, you gain the same benefit that a human does from 8 hours of sleep.'
+      }
+    ],
+    saving_throws: {},
+    skills: {},
+    tools: {},
+    weapons: [],
+  }
+]
+
 
 
 

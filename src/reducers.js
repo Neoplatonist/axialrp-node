@@ -22,6 +22,7 @@ import {
   SET_SKILLS,
   SET_SPEED,
   SET_SUBRACE,
+  SET_SUBRACE_OBJ,
   SET_WEAPON,
   SET_WEAPON_ACTIVE
 } from './actions';
@@ -90,6 +91,7 @@ export const generatorState = {
   race: 'Dwarf',
   raceObj: {
     name: 'Dwarf',
+    description: 'Your dwarf character has an assortment of inborn abilities, part and parcel of dwarven nature.',
     ability_bonus: [ 0, 0, 2, 0, 0, 0 ],
     age: {
       adult: 50,
@@ -112,10 +114,6 @@ export const generatorState = {
       base: 25,
       description: 'Your speed is not reduced by wearing heavy armor.'
     },
-    darkvision: {
-      distance: 60,
-      description: 'Accustomed to life underground, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You canâ€™t discern color in darkness, only shades of gray.'
-    },
     languages: {
       description: 'You can speak, read, and write Common and Dwarvish. Dwarvish is full of hard consonants and guttural sounds, and those characteristics spill over into whatever other language a dwarf might speak.',
       options: {},
@@ -124,18 +122,21 @@ export const generatorState = {
         { name: 'Dwarvish' }
       ]
     },
-    traits: {
-      options: {},
-      type: []
-    },
-    sub_races: [
-      {
-        name: 'Hill Dwarf',
-        description: 'As a hill dwarf, you have keen senses, deep intuition, and remarkable resilience.',
-        ability_bonus: [ 0, 0, 0, 0, 1, 0 ],
-        hit_points: {}
+    traits: [
+      { 
+        name: 'Darkvision',
+        description: 'Accustomed to life underground, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.'
+      },
+      { 
+        name: 'Dwarven Resilience',
+        description: 'You have advantage on saving throws against poison, and you have resistance against poison damage.'
+      },
+      { 
+        name: 'Stonecunning',
+        description: 'Whenever you make an Intelligence (History) check related to the origin of stonework, you are considered proficient in the History skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus.'
       }
     ],
+    sub_races: [ {name: 'Hill Dwarf'} ],
     saving_throws: {
       against: 'Poison',
       description: 'You have advantage on saving throws against poison, and you have resistance against poison damage.'
@@ -176,6 +177,32 @@ export const generatorState = {
 
   speed: 25,
   subrace: 'Hill Dwarf',
+  subraceObj: {
+    name: 'Hill Dwarf',
+    description: 'As a hill dwarf, you have keen senses, deep intuition, and remarkable resilience.',
+    ability_bonus: [0, 0, 0, 0, 0, 0],
+    hit_points: 1,
+    age: {},
+    alignment: {},
+    size: {},
+    speed: {},
+    darkvision: {
+      distance: 60,
+      description: 'Accustomed to life underground, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You canâ€™t discern color in darkness, only shades of gray.'
+    },
+    languages: {},
+    traits: [
+      { 
+        name: 'Dwarven Toughness',
+        description: 'Your hit point maximum increases by 1, and it increases by 1 every time you gain a level.'
+      }
+    ],
+    saving_throws: {},
+    skills: {},
+    tools: {},
+    weapons: []
+  },
+
   weapon: [],
   weaponActive: 'proficiency'
 };
@@ -316,6 +343,12 @@ const generator = (state = generatorState, action) => {
       return { 
         ...state,
         subrace: action.payload
+      };
+
+    case SET_SUBRACE_OBJ:
+      return {
+        ...state,
+        subraceObj: action.payload
       };
 
     case SET_WEAPON: 

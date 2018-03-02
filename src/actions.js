@@ -1,5 +1,5 @@
 import { createSelector } from 'reselect';
-import { AbilityMap, AbilityModifier, isEmpty } from './pages/generator/utils';
+import { AbilityMap, AbilityModifier } from './pages/generator/utils';
 // Mock Database
 import { 
   // alignmentDB,
@@ -39,6 +39,7 @@ export const SET_SAVING_THROWS = 'SET_SAVING_THROWS';
 export const SET_SPEED = 'SET_SPEED';
 export const SET_SKILLS = 'SET_SKILLS'; 
 export const SET_SUBRACE = 'SET_SUBRACE';
+export const SET_SUBRACE_OBJ = 'SET_SUBRACE_OBJ';
 export const SET_WEAPON = 'SET_WEAPON';
 export const SET_WEAPON_ACTIVE = 'SET_WEAPON_ACTIVE';
 
@@ -61,6 +62,7 @@ export const selectRaceObj = state => state.generator.raceObj;
 export const selectSkills = state => state.generator.skills;
 export const selectSpeed = state => state.generator.speed;
 export const selectSubRace = state => state.generator.subrace;
+export const selectSubRaceObj = state => state.generator.subraceObj;
 export const selectWeapon = state => state.generator.weapon;
 export const selectWeaponActive = state => state.generator.weaponActive;
 
@@ -75,13 +77,14 @@ export const selectAbilityRaceMod = createSelector(
 
 export const selectAbilitySubRaceMod = createSelector(
   selectRaceObj,
-  selectSubRace,
-  (raceObj, subrace) => {
-    if (isEmpty(raceObj.sub_races)) {
+  selectSubRaceObj,
+  (raceObj, subraceObj) => {
+    console.log(raceObj.sub_races.length === 0)
+    if (raceObj.sub_races.length === 0) {
       return [0, 0, 0, 0, 0, 0];
     } else {
-      const sr = raceObj.sub_races.find(v => v.name === subrace);
-      return sr.ability_bonus;
+      console.log(subraceObj)
+      return subraceObj.ability_bonus;
     }
   }
 );
@@ -247,7 +250,8 @@ export const setDice = dice => {
   };
 };
 
-export const setHP = hp => {
+export const setHP = hp => {    console.log(this.props.subrace)
+
   return { type: SET_HP, payload: hp || 0 };
 };
 
@@ -308,6 +312,10 @@ export const setSpeed = speed => {
 
 export const setSubRace = subrace => {
   return { type: SET_SUBRACE, payload: subrace };
+};
+
+export const setSubRaceObj = subraceObj => {
+  return { type: SET_SUBRACE_OBJ, payload: subraceObj };
 };
 
 export const setWeapon = weapon => {
