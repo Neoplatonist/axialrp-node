@@ -21,8 +21,8 @@ class Weapon extends Component {
   }
 
   addWeapon = e => {
-    const weapon = [...this.props.weapon, e.target.value];
-    this.props.setWeapon(weapon);
+    const list = [...this.props.weapon].filter(v => v !== e.target.value);
+    this.props.setWeapon([...list, e.target.value]);
   }
 
   weaponList = () => {

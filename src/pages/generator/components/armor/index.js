@@ -21,8 +21,8 @@ class Armor extends Component {
   }
 
   addArmor = e => {
-    const armor = [...this.props.armor, e.target.value];
-    this.props.setArmor(armor);
+    const list = [...this.props.armor].filter(v => v !== e.target.value);
+    this.props.setArmor([...list, e.target.value]);
   }
 
   armorList = () => {

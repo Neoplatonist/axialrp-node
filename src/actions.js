@@ -243,8 +243,7 @@ export const setDice = dice => {
   };
 };
 
-export const setHP = hp => {    console.log(this.props.subrace)
-
+export const setHP = hp => {
   return { type: SET_HP, payload: hp || 0 };
 };
 

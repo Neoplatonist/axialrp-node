@@ -237,5 +237,5 @@ const boundActions = {
 
 export default connect(mapStateToProps, boundActions)(Generator);
 
-// FIXME: Switching armor list between proficiency and all allows multiple of same type.
 // FIXME: RaceDB Normalization
+// TODO: Hit Points - add base input with controlled mod and controlled total
