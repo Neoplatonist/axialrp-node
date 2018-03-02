@@ -76,16 +76,9 @@ export const selectAbilityRaceMod = createSelector(
 );
 
 export const selectAbilitySubRaceMod = createSelector(
-  selectRaceObj,
   selectSubRaceObj,
-  (raceObj, subraceObj) => {
-    console.log(raceObj.sub_races.length === 0)
-    if (raceObj.sub_races.length === 0) {
-      return [0, 0, 0, 0, 0, 0];
-    } else {
-      console.log(subraceObj)
-      return subraceObj.ability_bonus;
-    }
+  subraceObj => {
+    return subraceObj.ability_bonus || [0, 0, 0, 0, 0, 0];
   }
 );
 
