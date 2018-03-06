@@ -238,11 +238,12 @@ const boundActions = {
 export default connect(mapStateToProps, boundActions)(Generator);
 
 // FIXME: RaceDB Normalization
-// FIXME: AbilityMod put - in front of negative + in front of positive
 // FIXME: MountsDB Normalize
 // FIXME: GearDB Normalization
 // FIXME: kitsDB Normalization
+// FIXME: ClassDB Normalization
+// FIXME: AbilityScore Dice roll
 // TODO: Hit Points - add base input with controlled mod and controlled total
-// TODO: ClassDB finish adding classes and normalize
 // TODO: Create SpellsDB/CantripsDB
 // TODO: Error checking for all input fields
+// TODO: Level up characters

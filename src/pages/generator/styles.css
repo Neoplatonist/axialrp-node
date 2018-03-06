@@ -50,32 +50,33 @@
     padding: 0.3rem 0;
   }
 
-  .abilityContainer {
+  .abilityContainer, .statsContainer {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 0.5rem;
   }
 
-  .abilityContainer > input {
+  .abilityContainer > input, .statsContainer > input {
     width: 100px;
   }
 
-  .ability-prepend, .ability-append {
+  .ability-prepend, .ability-append, .stats-prepend, .stats-append {
     display: flex;
     background-color: lightgray;
     padding: 2% 0;
     border: 1px solid grey;
     width: 3rem;
     text-align: center;
+    justify-content: center;
   }
 
-  .ability-text {
+  .ability-text, .stats-text {
     white-space: nowrap;
     display: flex;
     text-align: center;
   }
 
-  .ability {
+  .ability, .stats {
     /* width: 5rem; */
     flex: 1 1 auto;
     /* justify-self: left; */

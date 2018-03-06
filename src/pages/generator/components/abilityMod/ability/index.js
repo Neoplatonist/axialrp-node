@@ -65,7 +65,7 @@ export default class Ability extends Component {
           onClick={this.showBreakdown}
         >
           <div className="ability">
-            {' +' + mod}
+            {mod}
           </div>
         </div>
       </div>

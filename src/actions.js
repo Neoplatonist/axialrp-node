@@ -55,6 +55,8 @@ export const selectArmorActive = state => state.generator.armorActive;
 export const selectClass = state => state.generator.class;
 export const selectClassObj = state => state.generator.classObj;
 export const selectDice = state => state.generator.dice;
+export const selectHP = state => state.generator.hp;
+export const selectInitiative = state => state.generator.initiative;
 export const selectLanguage = state => state.generator.language;
 export const selectLevel = state => state.generator.level;
 export const selectRace = state => state.generator.race;
@@ -120,7 +122,7 @@ export const selectArmorProficiency = createSelector(
   }
 );
 
-export const selectHP = createSelector(
+export const selectHPTotal = createSelector(
   selectAbilityMod,
   state => state.generator.hp,
   (abilityMod, hp) => {
@@ -129,7 +131,7 @@ export const selectHP = createSelector(
   }
 );
 
-export const selectInitiative = createSelector(
+export const selectInitiativeTotal = createSelector(
   selectAbilityMod,
   state => state.generator.initiative,
   (abilityMod, initiative) => {
