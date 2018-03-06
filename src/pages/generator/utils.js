@@ -14,7 +14,7 @@ export const Dice = (x, y) => {
   return die;
 };
 
-export const AbilityModifier = x => Math.max(0,Math.floor((x - 10) / 2));
+export const AbilityModifier = x => Math.floor((x - 10) / 2);
 
 export const AbilityMap = [
   'Strength', 
@@ -27,7 +27,7 @@ export const AbilityMap = [
 
 export const Option = ({ name }) => <option value={name}>{name}</option>;
 
-export const ProficiencyBonus = level => Math.floor(level / 4) + 2;
+export const ProficiencyBonus = level => Math.ceil(level / 4) + 1;
 
 export const getCheck = (obj, ...props) => {
   const val = obj[props[0]];

@@ -10,6 +10,7 @@ import {
   selectInitiative,
   setInitiative,
   setInspiration,
+  selectProficiency,
   setProficiencyBonus,
   setSpeed
 } from '../../../../actions';
@@ -81,7 +82,7 @@ const mapStateToProps = state => ({
   hp: selectHP(state),
   initiative: selectInitiative(state),
   inspiration: state.generator.inspiration,
-  proficiencyBonus: state.generator.proficiencyBonus,
+  proficiencyBonus: selectProficiency(state),
   speed: state.generator.speed,
 });
 

@@ -1,5 +1,5 @@
 import { createSelector } from 'reselect';
-import { AbilityMap, AbilityModifier } from './pages/generator/utils';
+import { AbilityMap, AbilityModifier, ProficiencyBonus } from './pages/generator/utils';
 // Mock Database
 import { 
   // alignmentDB,
@@ -145,6 +145,13 @@ export const selectLanguageList = createSelector(
     const list = raceObj.languages.type.map(v => v.name);
     const filter = list.filter(v => v !== lang && v !== '');
     return [...filter, lang];
+  }
+);
+
+export const selectProficiency = createSelector(
+  selectLevel,
+  level => {
+    return ProficiencyBonus(level);
   }
 );
 
