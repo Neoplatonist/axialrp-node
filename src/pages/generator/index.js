@@ -239,9 +239,10 @@ export default connect(mapStateToProps, boundActions)(Generator);
 
 // FIXME: RaceDB Normalization
 // FIXME: AbilityMod put - in front of negative + in front of positive
+// FIXME: MountsDB Normalize
+// FIXME: GearDB Normalization
+// FIXME: kitsDB Normalization
 // TODO: Hit Points - add base input with controlled mod and controlled total
-// TODO: GearDB Normalization
 // TODO: ClassDB finish adding classes and normalize
-// TODO: MountsDB Normalize
 // TODO: Create SpellsDB/CantripsDB
 // TODO: Error checking for all input fields

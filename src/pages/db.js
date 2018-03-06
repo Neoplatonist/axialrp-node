@@ -1,3 +1,4 @@
+/* eslint-disable no-useless-escape */
 export const raceDB = [
   {
     name: 'Dwarf',
@@ -795,6 +796,412 @@ export const classDB = [
     spellcasting: 'tba',
     weapons: [
       { name: 'Simple' }
+    ]
+  },
+  {
+    name: 'Druid',
+    hit_die: 8,
+    armor: [
+      { name: 'Light' },
+      { name: 'Medium' },
+      { name: 'Shield' }
+    ],
+    proficiency_choices: [
+      {
+        choose: 2,
+        type: 'Skill',
+        from: [
+          { name: 'Animal Handling' },
+          { name: 'Arcana' },
+          { name: 'Insight' },
+          { name: 'Medicine' },
+          { name: 'Nature' },
+          { name: 'Perception' },
+          { name: 'Religion' },
+          { name: 'Survival' }
+        ]
+      }
+    ],
+    saving_throws: [
+      { name: 'Intelligence' },
+      { name: 'Wisdom' }
+    ],
+    starting_equipment: { class: 'Druid' },
+    sub_classes: [
+      {
+        name: 'Circle of the Land',
+        description: 'The Circle of the Land is made up of mystics and sages who safeguard ancient knowledge and rites through a vast oral tradition. These druids meet within sacred circles of trees or standing stones to whisper primal secrets in Druidic. The circle’s wisest members preside as the chief priests of communities that hold to the Old Faith and serve as advisors to the rulers of those folk. As a member of this circle, your magic is influenced by the land where you were initiated into the circle’s mysterious rites.',
+        proficiencies: 'tba'
+      }
+    ],
+    spellcasting: 'tba',
+    weapons: [
+      { name: 'Clubs' },
+      { name: 'Dagger' },
+      { name: 'Javelin' },
+      { name: 'Mace' },
+      { name: 'Quarterstaff' },
+      { name: 'Sickle' },
+      { name: 'Spear' },
+      { name: 'Dart' },
+      { name: 'Sling' },
+      { name: 'Scimitar' }
+      // { name: 'Herbalism Kit' }
+    ]
+  },
+  {
+    name: 'Fighter',
+    hit_die: 10,
+    armor: [
+      { name: 'Light' },
+      { name: 'Medium' },
+      { name: 'Heavy' },
+      { name: 'Shield' }
+    ],
+    proficiency_choices: [
+      {
+        choose: 2,
+        type: 'Skill',
+        from: [
+          { name: 'Acrobatics' },
+          { name: 'Animal Handling' },
+          { name: 'Athletics' },
+          { name: 'History' },
+          { name: 'Insight' },
+          { name: 'Intimidation' },
+          { name: 'Perception' },
+          { name: 'Survival' }
+        ]
+      }
+    ],
+    saving_throws: [
+      { name: 'Strength' },
+      { name: 'Constitution' }
+    ],
+    starting_equipment: { class: 'Fighter' },
+    sub_classes: [
+      {
+        name: 'Champion',
+        description: 'The archetypal Champion focuses on the development of raw physical power honed to deadly perfection. Those who model themselves on this archetype combine rigorous training with physical excellence to deal devastating blows.',
+        proficiencies: 'tba'
+      }
+    ],
+    spellcasting: 'tba',
+    weapons: [
+      { name: 'Simple' },
+      { name: 'Martial' }
+    ]
+  },
+  {
+    // Beginning at 1st level, while you are wearing no armor 
+    // and not wielding a shield, your 
+    // AC equals 10 + Dexterity modifier + Wisdom modifier
+    name: 'Monk',
+    hit_die: 8,
+    armor: [],
+    proficiency_choices: [
+      // Choose 1 Artisan Kit or Musical Instrument
+      {
+        choose: 1,
+        type: 'Kit',
+        from: [
+          { name: 'Alchemist\'s Supplies' },
+          { name: 'Brewer\'s Supplies' },
+          { name: 'Calligrapher\'s Supplies' },
+          { name: "Carpenter\'s tools" },
+          { name: "Cartographer\'s tools" },
+          { name: "Cobbler\'s tools" },
+          { name: "Cook\'s utensils" },
+          { name: "Glassblower\'s tools" },
+          { name: "Jeweler\'s tools" },
+          { name: "Leatherworker\'s tools" },
+          { name: "Mason\'s tools" },
+          { name: "Painter\'s supplies" },
+          { name: "Potter\'s tools" },
+          { name: "Smith\'s tools" },
+          { name: "Tinker\'s tools" },
+          { name: "Weaver\'s tools" },
+          { name: "Woodcarver\'s tools" },
+          { name: "Disguise kit" },
+          { name: "Forgery kit" }
+        ]
+      }, {
+        choose: 1,
+        type: 'Instruments',
+        from: [
+          { name: 'Bagpipes' },
+          { name: 'Drum' },
+          { name: 'Dulcimer' },
+          { name: 'Flute' },
+          { name: 'Lute' },
+          { name: 'Lyre' },
+          { name: 'Horn' },
+          { name: 'Pan flute' },
+          { name: 'Shawm' },
+          { name: 'Viol' }
+        ]
+      }, {
+        choose: 2,
+        type: 'Skill',
+        from: [
+          { name: 'Acrobatics' },
+          { name: 'Athletics' },
+          { name: 'History' },
+          { name: 'Insight' },
+          { name: 'Religion' },
+          { name: 'Stealth' }
+        ]
+      }
+    ],
+    saving_throws: [
+      { name: 'Strength' },
+      { name: 'Dexterity' }
+    ],
+    starting_equipment: { class: 'Monk' },
+    sub_classes: [
+      {
+        name: 'Way of the Open Hand',
+        description: 'Monks of the Way of the Open Hand are the ultimate masters of martial arts combat, whether armed or unarmed. They learn techniques to push and trip their opponents, manipulate ki to heal damage to their bodies, and practice advanced meditation that can protect them from harm.',
+        proficiencies: 'tba'
+      }
+    ],
+    spellcasting: 'tba',
+    weapons: [
+      { name: 'Simple' },
+      { name: 'Shortsword' }
+    ]
+  },
+  {
+    name: 'Paladin',
+    hit_die: 10,
+    armor: [
+      { name: 'Light' },
+      { name: 'Medium' },
+      { name: 'Heavy' },
+      { name: 'Shield' }
+    ],
+    proficiency_choices: [
+      {
+        choose: 2,
+        type: 'Skill',
+        from: [
+          { name: 'Athletics' },
+          { name: 'Insight' },
+          { name: 'Intimidation' },
+          { name: 'Medicine' },
+          { name: 'Persuasion' },
+          { name: 'Religion' }
+        ]
+      }
+    ],
+    saving_throws: [
+      { name: 'Wisdom' },
+      { name: 'Charisma' }
+    ],
+    starting_equipment: { class: 'Paladin' },
+    sub_classes: [
+      {
+        name: 'Oath of Devotion',
+        description: 'The Oath of Devotion binds a paladin to the loftiest ideals of justice, virtue, and order. Sometimes called cavaliers, white knights, or holy warriors, these paladins meet the ideal of the knight in shining armor, acting with honor in pursuit of justice and the greater good. They hold themselves to the highest standards of conduct, and some, for better or worse, hold the rest of the world to the same standards. Many who swear this oath are devoted to gods of law and good and use their gods\' tenets as the measure of their devotion. They hold angels--the perfect servants of good--as their ideals, and incorporate images of angelic wings into their helmets or coats of arms.',
+        proficiencies: 'tba'
+      }
+    ],
+    spellcasting: 'tba',
+    weapons: [
+      { name: 'Simple' },
+      { name: 'Martial' }
+    ]
+  }, {
+    name: 'Ranger',
+    hit_die: 10,
+    armor: [
+      { name: 'Light' },
+      { name: 'Medium' },
+      { name: 'Shield' }
+    ],
+    proficiency_choices: [
+      {
+        choose: 2,
+        type: 'Skill',
+        from: [
+          { name: 'Animal Handling' },
+          { name: 'Athletics' },
+          { name: 'Insight' },
+          { name: 'Investigation' },
+          { name: 'Nature' },
+          { name: 'Perception' },
+          { name: 'Stealth' },
+          { name: 'Survival' }
+        ]
+      }
+    ],
+    saving_throws: [
+      { name: 'Strength' },
+      { name: 'Dexterity' }
+    ],
+    starting_equipment: { class: 'Ranger' },
+    sub_classes: [
+      {
+        name: 'Hunter',
+        description: 'Emulating the Hunter archetype means accepting your place as a bulwark between civilization and the terrors of the wilderness. As you walk the Hunter\'s path, you learn specialized techniques for fighting the threats you face, from rampaging ogres and hordes of orcs to towering giants and terrifying dragons.',
+        proficiencies: 'tba'
+      }
+    ],
+    spellcasting: 'tba',
+    weapons: [
+      { name: 'Simple' },
+      { name: 'Martial' }
+    ]
+  }, {
+    name: 'Rogue',
+    hit_die: 8,
+    armor: [{ name: 'Light' }],
+    proficiency_choices: [
+      {
+        choose: 2,
+        type: 'Skill',
+        from: [
+          { name: "Acrobatics" },
+          { name: "Athletics" },
+          { name: "Deception" },
+          { name: "Insight" },
+          { name: "Intimidation" },
+          { name: "Investigation" },
+          { name: "Perception" },
+          { name: "Performance" },
+          { name: "Persuasion" },
+          { name: "Sleight of Hand" },
+          { name: "Stealth" }
+        ]
+      }
+    ],
+    saving_throws: [
+      { name: 'Dexterity' },
+      { name: 'Intelligence' }
+    ],
+    starting_equipment: { class: 'Rogue' },
+    sub_classes: [
+      {
+        name: 'Thief',
+        description: 'You hone your skills in the larcenous arts. Burglars, bandits, cutpurses, and other criminals typically follow this archetype, but so do rogues who prefer to think of themselves as professional treasure seekers, explorers, delvers, and investigators. In addition to improving your agility and stealth, you learn skills useful for delving into ancient ruins, reading unfamiliar languages, and using magic items you normally couldn\'t employ.',
+        proficiencies: 'tba'
+      }
+    ],
+    spellcasting: 'tba',
+    weapons: [
+      { name: 'Simple' },
+      { name: 'Longsword' },
+      { name: 'Rapier' },
+      { name: 'Shortsword' },
+      { name: 'Crossbows, hand' }
+      // { name: 'Thieves\ Tools' }
+    ]
+  }, {
+    name: 'Sorcerer',
+    hit_die: 6,
+    armor: [{ name: 'Light' }],
+    proficiency_choices: [
+      {
+        choose: 2,
+        type: 'Skill',
+        from: [
+          { name: "Arcana" },
+          { name: "Deception" },
+          { name: "Insight" },
+          { name: "Intimidation" },
+          { name: "Persuasion" },
+          { name: "Religion" }
+        ]
+      }
+    ],
+    saving_throws: [
+      { name: 'Constitution' },
+      { name: 'Charisma' }
+    ],
+    starting_equipment: { class: 'Sorcerer' },
+    sub_classes: [
+      {
+        name: 'Draconic Bloodline',
+        description: 'Your innate magic comes from draconic magic that was mingled with your blood or that of your ancestors. Most often, sorcerers with this origin trace their descent back to a mighty sorcerer of ancient times who made a bargain with a dragon or who might even have claimed a dragon parent. Some of these bloodlines are well established in the world, but most are obscure. Any given sorcerer could be the first of a new bloodline, as a result of a pact or some other exceptional circumstance.',
+        proficiencies: 'tba'
+      }
+    ],
+    spellcasting: 'tba',
+    weapons: [
+      { name: 'Dagger' },
+      { name: 'Quarterstaff' },
+      { name: 'Dart' },
+      { name: 'Sling' },
+    ]
+  }, {
+    name: 'Warlock',
+    hit_die: 8,
+    armor: [{ name: 'Light' }],
+    proficiency_choices: [
+      {
+        choose: 2,
+        type: 'Skill',
+        from: [
+          { name: "Arcana" },
+          { name: "Deception" },
+          { name: "History" },
+          { name: "Intimidation" },
+          { name: "Investigation" },
+          { name: "Nature" },
+          { name: 'Religion' }
+        ]
+      }
+    ],
+    saving_throws: [
+      { name: 'Wisdom' },
+      { name: 'Charisma' }
+    ],
+    starting_equipment: { class: 'Warlock' },
+    sub_classes: [
+      {
+        name: 'The Fiend',
+        description: 'You have made a pact with a fiend from the lower planes of existence, a being whose aims are evil, even if you strive against those aims. Such beings desire the corruption or destruction of all things, ultimately including you. Fiends powerful enough to forge a pact include demon lords such as Demogorgon, Orcus, Fraz\'Urb-luu, and Baphomet; archdevils such as Asmodeus, Dispater, Mephistopheles, and Belial; pit fiends and balors that are especially mighty; and ultroloths and other lords of the yugoloths.',
+        proficiencies: 'tba'
+      }
+    ],
+    spellcasting: 'tba',
+    weapons: [{ name: 'Simple' }]
+  }, {
+    name: 'Wizard',
+    hit_die: 6,
+    armor: [{ name: 'Light' }],
+    proficiency_choices: [
+      {
+        choose: 2,
+        type: 'Skill',
+        from: [
+          { name: "Arcana" },
+          { name: "History" },
+          { name: "Insight" },
+          { name: "Investigation" },
+          { name: "Medicine" },
+          { name: 'Religion' }
+        ]
+      }
+    ],
+    saving_throws: [
+      { name: 'Intelligence' },
+      { name: 'Wisdom' }
+    ],
+    starting_equipment: { class: 'Wizard' },
+    sub_classes: [
+      {
+        name: 'School of Evocation',
+        description: 'You focus your study on magic that creates powerful elemental effects such as bitter cold, searing flame, rolling thunder, crackling lightning, and burning acid. Some evokers find employment in military forces, serving as artillery to blast enemy armies from afar. Others use their spectacular power to protect the weak, while some seek their own gain as bandits, adventurers, or aspiring tyrants.',
+        proficiencies: 'tba'
+      }
+    ],
+    spellcasting: 'tba',
+    weapons: [
+      { name: 'Dagger' },
+      { name: 'Quarterstaff' },
+      { name: 'Dart' },
+      { name: 'Sling' }
     ]
   }
 ];
