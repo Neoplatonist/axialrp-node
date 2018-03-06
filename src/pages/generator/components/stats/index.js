@@ -7,6 +7,7 @@ import {
   setAC,
   selectHP,
   setHP,
+  selectInitiative,
   setInitiative,
   setInspiration,
   setProficiencyBonus,
@@ -78,7 +79,7 @@ class Stats extends Component {
 const mapStateToProps = state => ({
   ac: selectAC(state),
   hp: selectHP(state),
-  initiative: state.generator.initiative,
+  initiative: selectInitiative(state),
   inspiration: state.generator.inspiration,
   proficiencyBonus: state.generator.proficiencyBonus,
   speed: state.generator.speed,

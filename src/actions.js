@@ -129,6 +129,15 @@ export const selectHP = createSelector(
   }
 );
 
+export const selectInitiative = createSelector(
+  selectAbilityMod,
+  state => state.generator.initiative,
+  (abilityMod, initiative) => {
+    if (isNaN(initiative)) initiative = 0;
+    return abilityMod[1] + parseInt(initiative, 10);
+  }
+);
+
 export const selectLanguageList = createSelector(
   selectRaceObj,
   state => state.generator.language,
