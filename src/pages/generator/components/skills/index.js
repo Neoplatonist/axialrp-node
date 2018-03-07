@@ -18,7 +18,6 @@ class Skills extends Component {
   }
 
   componentDidUpdate() {
-    console.log(this.props.skills.length)
     if (this.props.skills.length === 0) {
       this.checkbox.checked = '';
     }
@@ -26,7 +25,6 @@ class Skills extends Component {
 
   handleInput = (name, e) => {
     this.checkbox.checked ? this.checkbox.checked = name : this.checkbox.checked = '';
-    console.log(this.checkbox.checked)
 
     let list = [...this.props.skills];
 

@@ -51,7 +51,10 @@ class Generator extends Component {
   }
 
   rollDice = e => {
-    const dice = Dice(20, 6);
+    const dice = this.props.dice.map(v => {
+      return Dice(6, 4).sort((a, b) => a - b).slice(1).reduce((p, c) => p + c, 0);
+    });
+
     this.props.setDice(dice);
   }
 
