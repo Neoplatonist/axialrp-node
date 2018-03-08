@@ -41,7 +41,7 @@ export const generatorState = {
     gender: '',
     age: '',
     height: '',
-    xp: ''
+    xp: 0
   },
 
   class: 'Barbarian',

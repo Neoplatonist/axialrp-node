@@ -153,7 +153,8 @@ class Generator extends Component {
           <input 
             name="level" 
             className="input" 
-            type="text"
+            type="number"
+            min="1"
             onChange={ e => 
               this.props.setLevel(parseInt(e.target.value, 10))}
             value={this.props.level} />
@@ -245,8 +246,8 @@ export default connect(mapStateToProps, boundActions)(Generator);
 // FIXME: GearDB Normalization
 // FIXME: kitsDB Normalization
 // FIXME: ClassDB Normalization
-// FIXME: AbilityScore Dice roll
+// FIXME: AbilityScore point calculator
 // TODO: Hit Points - add base input with controlled mod and controlled total
 // TODO: Create SpellsDB/CantripsDB
-// TODO: Error checking for all input fields
 // TODO: Level up characters
+// TODO: Calculate starting money for characters

@@ -916,7 +916,7 @@ export const classDB = [
           { name: "Jeweler\'s tools" },
           { name: "Leatherworker\'s tools" },
           { name: "Mason\'s tools" },
-          { name: "Painter\'s supplies" },
+          { name: "Painter\'s Supplies" },
           { name: "Potter\'s tools" },
           { name: "Smith\'s tools" },
           { name: "Tinker\'s tools" },
@@ -3036,7 +3036,7 @@ export const kitsDB = [
       unit: 'gp'
     },
     weight: 5,
-    desc: ['This small box contains a variety of papers and parchments, pens and inks, seals and sealing wax, gold and silver leaf, and other supplies necessary to create convincing forgeries of physical documents. Proficiency with this kit lets you add your proficiency bonus to any ability checks you make to create a physical forgery of a document.']
+    desc: ['This small box contains a variety of papers and parchments, pens and inks, seals and sealing wax, gold and silver leaf, and other Supplies necessary to create convincing forgeries of physical documents. Proficiency with this kit lets you add your proficiency bonus to any ability checks you make to create a physical forgery of a document.']
   }, {
     name: 'Herbalism Kit',
     category: 'Kit',
@@ -3672,377 +3672,284 @@ export const kitsDB = [
 
 export const toolsDB = [
   {
-    'index': 161,
-    'name': 'Alchemist’s supplies',
-    'equipment_category': 'Tools',
-    'tool_category': 'Artisan\'s Tools',
-    'cost': {
-      'quantity': 50,
-      'unit': 'gp'
+    name: 'Alchemist’s Supplies',
+    category: 'Artisan\'s Tools',
+    cost: {
+      quantity: 50,
+      unit: 'gp'
     },
-    'weight': 8,
-    'desc': ['These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan’s tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan’s tools requires a separate proficiency.'],
-    'url': 'http://www.dnd5eapi.co/api/equipment/161'
+    weight: 8,
+    desc: ['These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan’s tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan’s tools requires a separate proficiency.']
   }, {
-    'index': 162,
-    'name': 'Brewer’s supplies',
-    'equipment_category': 'Tools',
-    'tool_category': 'Artisan\'s Tools',
-    'cost': {
-      'quantity': 20,
-      'unit': 'gp'
+    name: 'Brewer’s Supplies',
+    category: 'Artisan\'s Tools',
+    cost: {
+      quantity: 20,
+      unit: 'gp'
     },
-    'weight': 9,
-    'desc': ['These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan’s tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan’s tools requires a separate proficiency.'],
-    'url': 'http://www.dnd5eapi.co/api/equipment/162'
+    weight: 9,
+    desc: ['These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan’s tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan’s tools requires a separate proficiency.']
   }, {
-    'index': 163,
-    'name': 'Calligrapher’s supplies',
-    'equipment_category': 'Tools',
-    'tool_category': 'Artisan\'s Tools',
-    'cost': {
-      'quantity': 10,
-      'unit': 'gp'
+    name: 'Calligrapher’s Supplies',
+    category: 'Artisan\'s Tools',
+    cost: {
+      quantity: 10,
+      unit: 'gp'
     },
-    'weight': 5,
-    'desc': ['These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan’s tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan’s tools requires a separate proficiency.'],
-    'url': 'http://www.dnd5eapi.co/api/equipment/163'
+    weight: 5,
+    desc: ['These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan’s tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan’s tools requires a separate proficiency.']
   }, {
-    'index': 164,
-    'name': 'Carpenter’s tools',
-    'equipment_category': 'Tools',
-    'tool_category': 'Artisan\'s Tools',
-    'cost': {
-      'quantity': 8,
-      'unit': 'gp'
+    name: 'Carpenter’s Tools',
+    category: 'Artisan\'s Tools',
+    cost: {
+      quantity: 8,
+      unit: 'gp'
     },
-    'weight': 6,
-    'desc': ['These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan’s tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan’s tools requires a separate proficiency.'],
-    'url': 'http://www.dnd5eapi.co/api/equipment/164'
+    weight: 6,
+    desc: ['These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan’s tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan’s tools requires a separate proficiency.']
   }, {
-    'index': 165,
-    'name': 'Cartographer’s tools',
-    'equipment_category': 'Tools',
-    'tool_category': 'Artisan\'s Tools',
-    'cost': {
-      'quantity': 15,
-      'unit': 'gp'
+    name: 'Cartographer’s Tools',
+    category: 'Artisan\'s Tools',
+    cost: {
+      quantity: 15,
+      unit: 'gp'
     },
-    'weight': 6,
-    'desc': ['These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan’s tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan’s tools requires a separate proficiency.'],
-    'url': 'http://www.dnd5eapi.co/api/equipment/165'
+    weight: 6,
+    desc: ['These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan’s tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan’s tools requires a separate proficiency.']
   }, {
-    'index': 166,
-    'name': 'Cobbler’s tools',
-    'equipment_category': 'Tools',
-    'tool_category': 'Artisan\'s Tools',
-    'cost': {
-      'quantity': 5,
-      'unit': 'gp'
+    name: 'Cobbler’s Tools',
+    category: 'Artisan\'s Tools',
+    cost: {
+      quantity: 5,
+      unit: 'gp'
     },
-    'weight': 5,
-    'desc': ['These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan’s tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan’s tools requires a separate proficiency.'],
-    'url': 'http://www.dnd5eapi.co/api/equipment/166'
+    weight: 5,
+    desc: ['These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan’s tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan’s tools requires a separate proficiency.']
   }, {
-    'index': 167,
-    'name': 'Cook’s utensils',
-    'equipment_category': 'Tools',
-    'tool_category': 'Artisan\'s Tools',
-    'cost': {
-      'quantity': 1,
-      'unit': 'gp'
+    name: 'Cook’s utensils',
+    category: 'Artisan\'s Tools',
+    cost: {
+      quantity: 1,
+      unit: 'gp'
     },
-    'weight': 8,
-    'desc': ['These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan’s tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan’s tools requires a separate proficiency.'],
-    'url': 'http://www.dnd5eapi.co/api/equipment/167'
+    weight: 8,
+    desc: ['These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan’s tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan’s tools requires a separate proficiency.']
   }, {
-    'index': 168,
-    'name': 'Glassblower’s tools',
-    'equipment_category': 'Tools',
-    'tool_category': 'Artisan\'s Tools',
-    'cost': {
-      'quantity': 30,
-      'unit': 'gp'
+    name: 'Glassblower’s Tools',
+    category: 'Artisan\'s Tools',
+    cost: {
+      quantity: 30,
+      unit: 'gp'
     },
-    'weight': 5,
-    'desc': ['These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan’s tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan’s tools requires a separate proficiency.'],
-    'url': 'http://www.dnd5eapi.co/api/equipment/168'
+    weight: 5,
+    desc: ['These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan’s tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan’s tools requires a separate proficiency.']
   }, {
-    'index': 169,
-    'name': 'Jeweler’s tools',
-    'equipment_category': 'Tools',
-    'tool_category': 'Artisan\'s Tools',
-    'cost': {
-      'quantity': 25,
-      'unit': 'gp'
+    name: 'Jeweler’s Tools',
+    category: 'Artisan\'s Tools',
+    cost: {
+      quantity: 25,
+      unit: 'gp'
     },
-    'weight': 2,
-    'desc': ['These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan’s tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan’s tools requires a separate proficiency.'],
-    'url': 'http://www.dnd5eapi.co/api/equipment/169'
+    weight: 2,
+    desc: ['These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan’s tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan’s tools requires a separate proficiency.']
   }, {
-    'index': 170,
-    'name': 'Leatherworker’s tools',
-    'equipment_category': 'Tools',
-    'tool_category': 'Artisan\'s Tools',
-    'cost': {
-      'quantity': 5,
-      'unit': 'gp'
+    name: 'Leatherworker’s Tools',
+    category: 'Artisan\'s Tools',
+    cost: {
+      quantity: 5,
+      unit: 'gp'
     },
-    'weight': 5,
-    'desc': ['These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan’s tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan’s tools requires a separate proficiency.'],
-    'url': 'http://www.dnd5eapi.co/api/equipment/170'
+    weight: 5,
+    desc: ['These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan’s tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan’s tools requires a separate proficiency.']
   }, {
-    'index': 171,
-    'name': 'Mason’s tools',
-    'equipment_category': 'Tools',
-    'tool_category': 'Artisan\'s Tools',
-    'cost': {
-      'quantity': 10,
-      'unit': 'gp'
+    name: 'Mason’s Tools',
+    category: 'Artisan\'s Tools',
+    cost: {
+      quantity: 10,
+      unit: 'gp'
     },
-    'weight': 8,
-    'desc': ['These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan’s tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan’s tools requires a separate proficiency.'],
-    'url': 'http://www.dnd5eapi.co/api/equipment/171'
+    weight: 8,
+    desc: ['These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan’s tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan’s tools requires a separate proficiency.']
   }, {
-    'index': 172,
-    'name': 'Painter’s supplies',
-    'equipment_category': 'Tools',
-    'tool_category': 'Artisan\'s Tools',
-    'cost': {
-      'quantity': 10,
-      'unit': 'gp'
+    name: 'Painter’s Supplies',
+    category: 'Artisan\'s Tools',
+    cost: {
+      quantity: 10,
+      unit: 'gp'
     },
-    'weight': 5,
-    'desc': ['These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan’s tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan’s tools requires a separate proficiency.'],
-    'url': 'http://www.dnd5eapi.co/api/equipment/172'
+    weight: 5,
+    desc: ['These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan’s tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan’s tools requires a separate proficiency.']
   }, {
-    'index': 173,
-    'name': 'Potter’s tools',
-    'equipment_category': 'Tools',
-    'tool_category': 'Artisan\'s Tools',
-    'cost': {
-      'quantity': 10,
-      'unit': 'gp'
+    name: 'Potter’s Tools',
+    category: 'Artisan\'s Tools',
+    cost: {
+      quantity: 10,
+      unit: 'gp'
     },
-    'weight': 3,
-    'desc': ['These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan’s tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan’s tools requires a separate proficiency.'],
-    'url': 'http://www.dnd5eapi.co/api/equipment/173'
+    weight: 3,
+    desc: ['These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan’s tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan’s tools requires a separate proficiency.']
   }, {
-    'index': 174,
-    'name': 'Smith’s tools',
-    'equipment_category': 'Tools',
-    'tool_category': 'Artisan\'s Tools',
-    'cost': {
-      'quantity': 20,
-      'unit': 'gp'
+    name: 'Smith’s Tools',
+    category: 'Artisan\'s Tools',
+    cost: {
+      quantity: 20,
+      unit: 'gp'
     },
-    'weight': 8,
-    'desc': ['These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan’s tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan’s tools requires a separate proficiency.'],
-    'url': 'http://www.dnd5eapi.co/api/equipment/174'
+    weight: 8,
+    desc: ['These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan’s tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan’s tools requires a separate proficiency.']
   }, {
-    'index': 175,
-    'name': 'Tinker’s tools',
-    'equipment_category': 'Tools',
-    'tool_category': 'Artisan\'s Tools',
-    'cost': {
-      'quantity': 50,
-      'unit': 'gp'
+    name: 'Tinker’s Tools',
+    category: 'Artisan\'s Tools',
+    cost: {
+      quantity: 50,
+      unit: 'gp'
     },
-    'weight': 10,
-    'desc': ['These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan’s tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan’s tools requires a separate proficiency.'],
-    'url': 'http://www.dnd5eapi.co/api/equipment/175'
+    weight: 10,
+    desc: ['These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan’s tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan’s tools requires a separate proficiency.']
   }, {
-    'index': 176,
-    'name': 'Weaver’s tools',
-    'equipment_category': 'Tools',
-    'tool_category': 'Artisan\'s Tools',
-    'cost': {
-      'quantity': 1,
-      'unit': 'gp'
+    name: 'Weaver’s Tools',
+    category: 'Artisan\'s Tools',
+    cost: {
+      quantity: 1,
+      unit: 'gp'
     },
-    'weight': 5,
-    'desc': ['These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan’s tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan’s tools requires a separate proficiency.'],
-    'url': 'http://www.dnd5eapi.co/api/equipment/176'
+    weight: 5,
+    desc: ['These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan’s tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan’s tools requires a separate proficiency.']
   }, {
-    'index': 177,
-    'name': 'Woodcarver’s tools',
-    'equipment_category': 'Tools',
-    'tool_category': 'Artisan\'s Tools',
-    'cost': {
-      'quantity': 1,
-      'unit': 'gp'
+    name: 'Woodcarver’s Tools',
+    category: 'Artisan\'s Tools',
+    cost: {
+      quantity: 1,
+      unit: 'gp'
     },
-    'weight': 5,
-    'desc': ['These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan’s tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan’s tools requires a separate proficiency.'],
-    'url': 'http://www.dnd5eapi.co/api/equipment/177'
+    weight: 5,
+    desc: ['These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan’s tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan’s tools requires a separate proficiency.']
   }, {
-    'index': 178,
-    'name': 'Dice set',
-    'equipment_category': 'Tools',
-    'tool_category': 'Gaming Sets',
-    'cost': {
-      'quantity': 1,
-      'unit': 'sp'
+    name: 'Dice set',
+    category: 'Gaming Sets',
+    cost: {
+      quantity: 1,
+      unit: 'sp'
     },
-    'weight': 0,
-    'desc': ['This item encompasses a wide range of game pieces, including dice and decks of cards (for games such as Three-Dragon Ante). A few common examples appear on the Tools table, but other kinds of gaming sets exist. If you are proficient with a gaming set, you can add your proficiency bonus to ability checks you make to play a game with that set. Each type of gaming set requires a separate proficiency.'],
-    'url': 'http://www.dnd5eapi.co/api/equipment/178'
+    weight: 0,
+    desc: ['This item encompasses a wide range of game pieces, including dice and decks of cards (for games such as Three-Dragon Ante). A few common examples appear on the Tools table, but other kinds of gaming sets exist. If you are proficient with a gaming set, you can add your proficiency bonus to ability checks you make to play a game with that set. Each type of gaming set requires a separate proficiency.']
   }, {
-    'index': 179,
-    'name': 'Playing card set',
-    'equipment_category': 'Tools',
-    'tool_category': 'Gaming Sets',
-    'cost': {
-      'quantity': 5,
-      'unit': 'sp'
+    name: 'Playing card set',
+    category: 'Gaming Sets',
+    cost: {
+      quantity: 5,
+      unit: 'sp'
     },
-    'weight': 0,
-    'desc': ['This item encompasses a wide range of game pieces, including dice and decks of cards (for games such as Three-Dragon Ante). A few common examples appear on the Tools table, but other kinds of gaming sets exist. If you are proficient with a gaming set, you can add your proficiency bonus to ability checks you make to play a game with that set. Each type of gaming set requires a separate proficiency.'],
-    'url': 'http://www.dnd5eapi.co/api/equipment/179'
+    weight: 0,
+    desc: ['This item encompasses a wide range of game pieces, including dice and decks of cards (for games such as Three-Dragon Ante). A few common examples appear on the Tools table, but other kinds of gaming sets exist. If you are proficient with a gaming set, you can add your proficiency bonus to ability checks you make to play a game with that set. Each type of gaming set requires a separate proficiency.']
   }, {
-    'index': 180,
-    'name': 'Bagpipes',
-    'equipment_category': 'Tools',
-    'tool_category': 'Musical Instrument',
-    'cost': {
-      'quantity': 30,
-      'unit': 'gp'
+    name: 'Bagpipes',
+    category: 'Musical Instrument',
+    cost: {
+      quantity: 30,
+      unit: 'gp'
     },
-    'weight': 6,
-    'desc': ['Several of the most common types of musical instruments are shown on the table as examples. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency.'],
-    'url': 'http://www.dnd5eapi.co/api/equipment/180'
+    weight: 6,
+    desc: ['Several of the most common types of musical instruments are shown on the table as examples. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency.']
   }, {
-    'index': 181,
-    'name': 'Drum',
-    'equipment_category': 'Tools',
-    'tool_category': 'Musical Instrument',
-    'cost': {
-      'quantity': 6,
-      'unit': 'gp'
+    name: 'Drum',
+    category: 'Musical Instrument',
+    cost: {
+      quantity: 6,
+      unit: 'gp'
     },
-    'weight': 3,
-    'desc': ['Several of the most common types of musical instruments are shown on the table as examples. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency.'],
-    'url': 'http://www.dnd5eapi.co/api/equipment/181'
+    weight: 3,
+    desc: ['Several of the most common types of musical instruments are shown on the table as examples. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency.']
   }, {
-    'index': 182,
-    'name': 'Dulcimer',
-    'equipment_category': 'Tools',
-    'tool_category': 'Musical Instrument',
-    'cost': {
-      'quantity': 25,
-      'unit': 'gp'
+    name: 'Dulcimer',
+    category: 'Musical Instrument',
+    cost: {
+      quantity: 25,
+      unit: 'gp'
     },
-    'weight': 10,
-    'desc': ['Several of the most common types of musical instruments are shown on the table as examples. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency.'],
-    'url': 'http://www.dnd5eapi.co/api/equipment/182'
+    weight: 10,
+    desc: ['Several of the most common types of musical instruments are shown on the table as examples. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency.']
   }, {
-    'index': 183,
-    'name': 'Flute',
-    'equipment_category': 'Tools',
-    'tool_category': 'Musical Instrument',
-    'cost': {
-      'quantity': 2,
-      'unit': 'gp'
+    name: 'Flute',
+    category: 'Musical Instrument',
+    cost: {
+      quantity: 2,
+      unit: 'gp'
     },
-    'weight': 1,
-    'desc': ['Several of the most common types of musical instruments are shown on the table as examples. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency.'],
-    'url': 'http://www.dnd5eapi.co/api/equipment/183'
+    weight: 1,
+    desc: ['Several of the most common types of musical instruments are shown on the table as examples. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency.']
   }, {
-    'index': 184,
-    'name': 'Lute',
-    'equipment_category': 'Tools',
-    'tool_category': 'Musical Instrument',
-    'cost': {
-      'quantity': 35,
-      'unit': 'gp'
+    name: 'Lute',
+    category: 'Musical Instrument',
+    cost: {
+      quantity: 35,
+      unit: 'gp'
     },
-    'weight': 2,
-    'desc': ['Several of the most common types of musical instruments are shown on the table as examples. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency.'],
-    'url': 'http://www.dnd5eapi.co/api/equipment/184'
+    weight: 2,
+    desc: ['Several of the most common types of musical instruments are shown on the table as examples. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency.']
   }, {
-    'index': 185,
-    'name': 'Lyre',
-    'equipment_category': 'Tools',
-    'tool_category': 'Musical Instrument',
-    'cost': {
-      'quantity': 30,
-      'unit': 'gp'
+    name: 'Lyre',
+    category: 'Musical Instrument',
+    cost: {
+      quantity: 30,
+      unit: 'gp'
     },
-    'weight': 2,
-    'desc': ['Several of the most common types of musical instruments are shown on the table as examples. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency.'],
-    'url': 'http://www.dnd5eapi.co/api/equipment/185'
+    weight: 2,
+    desc: ['Several of the most common types of musical instruments are shown on the table as examples. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency.']
   }, {
-    'index': 186,
-    'name': 'Horn',
-    'equipment_category': 'Tools',
-    'tool_category': 'Musical Instrument',
-    'cost': {
-      'quantity': 3,
-      'unit': 'gp'
+    name: 'Horn',
+    category: 'Musical Instrument',
+    cost: {
+      quantity: 3,
+      unit: 'gp'
     },
-    'weight': 2,
-    'desc': ['Several of the most common types of musical instruments are shown on the table as examples. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency.'],
-    'url': 'http://www.dnd5eapi.co/api/equipment/186'
+    weight: 2,
+    desc: ['Several of the most common types of musical instruments are shown on the table as examples. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency.']
   }, {
-    'index': 187,
-    'name': 'Pan flute',
-    'equipment_category': 'Tools',
-    'tool_category': 'Musical Instrument',
-    'cost': {
-      'quantity': 12,
-      'unit': 'gp'
+    name: 'Pan flute',
+    category: 'Musical Instrument',
+    cost: {
+      quantity: 12,
+      unit: 'gp'
     },
-    'weight': 2,
-    'desc': ['Several of the most common types of musical instruments are shown on the table as examples. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency.'],
-    'url': 'http://www.dnd5eapi.co/api/equipment/187'
+    weight: 2,
+    desc: ['Several of the most common types of musical instruments are shown on the table as examples. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency.']
   }, {
-    'index': 188,
-    'name': 'Shawm',
-    'equipment_category': 'Tools',
-    'tool_category': 'Musical Instrument',
-    'cost': {
-      'quantity': 2,
-      'unit': 'gp'
+    name: 'Shawm',
+    category: 'Musical Instrument',
+    cost: {
+      quantity: 2,
+      unit: 'gp'
     },
-    'weight': 1,
-    'desc': ['Several of the most common types of musical instruments are shown on the table as examples. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency.'],
-    'url': 'http://www.dnd5eapi.co/api/equipment/188'
+    weight: 1,
+    desc: ['Several of the most common types of musical instruments are shown on the table as examples. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency.']
   }, {
-    'index': 189,
-    'name': 'Viol',
-    'equipment_category': 'Tools',
-    'tool_category': 'Musical Instrument',
-    'cost': {
-      'quantity': 30,
-      'unit': 'gp'
+    name: 'Viol',
+    category: 'Musical Instrument',
+    cost: {
+      quantity: 30,
+      unit: 'gp'
     },
-    'weight': 1,
-    'desc': ['Several of the most common types of musical instruments are shown on the table as examples. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency.'],
-    'url': 'http://www.dnd5eapi.co/api/equipment/189'
+    weight: 1,
+    desc: ['Several of the most common types of musical instruments are shown on the table as examples. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency.']
   }, {
-    'index': 190,
-    'name': 'Navigator’s tools',
-    'equipment_category': 'Tools',
-    'tool_category': 'Other Tools',
-    'cost': {
-      'quantity': 25,
-      'unit': 'gp'
+    name: 'Navigator’s Tools',
+    category: 'Other Tools',
+    cost: {
+      quantity: 25,
+      unit: 'gp'
     },
-    'weight': 2,
-    'desc': ['This set of instruments is used for navigation at sea. Proficiency with navigator’s tools lets you chart a ship’s course and follow navigation charts. In addition, these tools allow you to add your proficiency bonus to any ability check you make to avoid getting lost at sea.'],
-    'url': 'http://www.dnd5eapi.co/api/equipment/190'
+    weight: 2,
+    desc: ['This set of instruments is used for navigation at sea. Proficiency with navigator’s tools lets you chart a ship’s course and follow navigation charts. In addition, these tools allow you to add your proficiency bonus to any ability check you make to avoid getting lost at sea.']
   }, {
-    'index': 191,
-    'name': 'Thieves’ tools',
-    'equipment_category': 'Tools',
-    'tool_category': 'Other Tools',
-    'cost': {
-      'quantity': 25,
-      'unit': 'gp'
+    name: 'Thieves’ Tools',
+    category: 'Other Tools',
+    cost: {
+      quantity: 25,
+      unit: 'gp'
     },
-    'weight': 1,
-    'desc': ['This set of tools includes a small file, a set of lock picks, a small mirror mounted on a metal handle, a set of narrow-bladed scissors, and a pair of pliers. Proficiency with these tools lets you add your proficiency bonus to any ability checks you make to disarm traps or open locks.'],
-    'url': 'http://www.dnd5eapi.co/api/equipment/191'
+    weight: 1,
+    desc: ['This set of tools includes a small file, a set of lock picks, a small mirror mounted on a metal handle, a set of narrow-bladed scissors, and a pair of pliers. Proficiency with these tools lets you add your proficiency bonus to any ability checks you make to disarm traps or open locks.']
   }
 ]
 
@@ -4057,805 +3964,610 @@ export const toolsDB = [
 
 export const mountsDB = [
   {
-    'index': 192,
-    'name': 'Camel',
-    'equipment_category': 'Mounts and Vehicles',
-    'vehicle_category': 'Mounts and Other Animals',
-    'cost': {
-      'quantity': 50,
-      'unit': 'gp'
+    name: 'Camel',
+    category: 'Mounts and Other Animals',
+    cost: {
+      quantity: 50,
+      unit: 'gp'
     },
     'speed': {
-      'quantity': 50,
-      'unit': 'ft/round'
+      quantity: 50,
+      unit: 'ft/round'
     },
-    'capacity': '480 lb.',
-    'url': 'http://www.dnd5eapi.co/api/equipment/192'
+    'capacity': '480 lb.'
   }, {
-    'index': 193,
-    'name': 'Donkey',
-    'equipment_category': 'Mounts and Vehicles',
-    'vehicle_category': 'Mounts and Other Animals',
-    'cost': {
-      'quantity': 8,
-      'unit': 'gp'
+    name: 'Donkey',
+    category: 'Mounts and Other Animals',
+    cost: {
+      quantity: 8,
+      unit: 'gp'
     },
     'speed': {
-      'quantity': 40,
-      'unit': 'ft/round'
+      quantity: 40,
+      unit: 'ft/round'
     },
-    'capacity': '420 lb.',
-    'url': 'http://www.dnd5eapi.co/api/equipment/193'
+    'capacity': '420 lb.'
   }, {
-    'index': 194,
-    'name': 'Mule',
-    'equipment_category': 'Mounts and Vehicles',
-    'vehicle_category': 'Mounts and Other Animals',
-    'cost': {
-      'quantity': 8,
-      'unit': 'gp'
+    name: 'Mule',
+    category: 'Mounts and Other Animals',
+    cost: {
+      quantity: 8,
+      unit: 'gp'
     },
     'speed': {
-      'quantity': 40,
-      'unit': 'ft/round'
+      quantity: 40,
+      unit: 'ft/round'
     },
-    'capacity': '420 lb.',
-    'url': 'http://www.dnd5eapi.co/api/equipment/194'
+    'capacity': '420 lb.'
   }, {
-    'index': 195,
-    'name': 'Elephant',
-    'equipment_category': 'Mounts and Vehicles',
-    'vehicle_category': 'Mounts and Other Animals',
-    'cost': {
-      'quantity': 200,
-      'unit': 'gp'
+    name: 'Elephant',
+    category: 'Mounts and Other Animals',
+    cost: {
+      quantity: 200,
+      unit: 'gp'
     },
     'speed': {
-      'quantity': 40,
-      'unit': 'ft/round'
+      quantity: 40,
+      unit: 'ft/round'
     },
-    'capacity': '1,320 lb.',
-    'url': 'http://www.dnd5eapi.co/api/equipment/195'
+    'capacity': '1,320 lb.'
   }, {
-    'index': 196,
-    'name': 'Horse, draft',
-    'equipment_category': 'Mounts and Vehicles',
-    'vehicle_category': 'Mounts and Other Animals',
-    'cost': {
-      'quantity': 50,
-      'unit': 'gp'
+    name: 'Horse, draft',
+    category: 'Mounts and Other Animals',
+    cost: {
+      quantity: 50,
+      unit: 'gp'
     },
     'speed': {
-      'quantity': 40,
-      'unit': 'ft/round'
+      quantity: 40,
+      unit: 'ft/round'
     },
-    'capacity': '540 lb.',
-    'url': 'http://www.dnd5eapi.co/api/equipment/196'
+    'capacity': '540 lb.'
   }, {
-    'index': 197,
-    'name': 'Horse, riding',
-    'equipment_category': 'Mounts and Vehicles',
-    'vehicle_category': 'Mounts and Other Animals',
-    'cost': {
-      'quantity': 75,
-      'unit': 'gp'
+    name: 'Horse, riding',
+    category: 'Mounts and Other Animals',
+    cost: {
+      quantity: 75,
+      unit: 'gp'
     },
     'speed': {
-      'quantity': 60,
-      'unit': 'ft/round'
+      quantity: 60,
+      unit: 'ft/round'
     },
-    'capacity': '480 lb.',
-    'url': 'http://www.dnd5eapi.co/api/equipment/197'
+    'capacity': '480 lb.'
   }, {
-    'index': 198,
-    'name': 'Mastiff',
-    'equipment_category': 'Mounts and Vehicles',
-    'vehicle_category': 'Mounts and Other Animals',
-    'cost': {
-      'quantity': 25,
-      'unit': 'gp'
+    name: 'Mastiff',
+    category: 'Mounts and Other Animals',
+    cost: {
+      quantity: 25,
+      unit: 'gp'
     },
     'speed': {
-      'quantity': 40,
-      'unit': 'ft/round'
+      quantity: 40,
+      unit: 'ft/round'
     },
-    'capacity': '195 lb.',
-    'url': 'http://www.dnd5eapi.co/api/equipment/198'
+    'capacity': '195 lb.'
   }, {
-    'index': 199,
-    'name': 'Pony',
-    'equipment_category': 'Mounts and Vehicles',
-    'vehicle_category': 'Mounts and Other Animals',
-    'cost': {
-      'quantity': 30,
-      'unit': 'gp'
+    name: 'Pony',
+    category: 'Mounts and Other Animals',
+    cost: {
+      quantity: 30,
+      unit: 'gp'
     },
     'speed': {
-      'quantity': 40,
-      'unit': 'ft/round'
+      quantity: 40,
+      unit: 'ft/round'
     },
-    'capacity': '225 lb.',
-    'url': 'http://www.dnd5eapi.co/api/equipment/199'
+    'capacity': '225 lb.'
   }, {
-    'index': 200,
-    'name': 'Warhorse',
-    'equipment_category': 'Mounts and Vehicles',
-    'vehicle_category': 'Mounts and Other Animals',
-    'cost': {
-      'quantity': 400,
-      'unit': 'gp'
+    name: 'Warhorse',
+    category: 'Mounts and Other Animals',
+    cost: {
+      quantity: 400,
+      unit: 'gp'
     },
     'speed': {
-      'quantity': 60,
-      'unit': 'ft/round'
+      quantity: 60,
+      unit: 'ft/round'
     },
-    'capacity': '540 lb.',
-    'url': 'http://www.dnd5eapi.co/api/equipment/200'
+    'capacity': '540 lb.'
   }, {
-    'index': 201,
-    'name': 'Barding: Padded',
-    'equipment_category': 'Mounts and Vehicles',
-    'vehicle_category': 'Tack, Harness, and Drawn Vehicles',
-    'cost': {
-      'quantity': 20,
-      'unit': 'gp'
+    name: 'Barding: Padded',
+    category: 'Tack, Harness, and Drawn Vehicles',
+    cost: {
+      quantity: 20,
+      unit: 'gp'
     },
-    'weight': 16,
-    'desc': ['Barding is armor designed to protect an animal’s head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much.'],
-    'url': 'http://www.dnd5eapi.co/api/equipment/201'
+    weight: 16,
+    desc: ['Barding is armor designed to protect an animal’s head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much.']
   }, {
-    'index': 202,
-    'name': 'Barding: Leather',
-    'equipment_category': 'Mounts and Vehicles',
-    'vehicle_category': 'Tack, Harness, and Drawn Vehicles',
-    'cost': {
-      'quantity': 40,
-      'unit': 'gp'
+    name: 'Barding: Leather',
+    category: 'Tack, Harness, and Drawn Vehicles',
+    cost: {
+      quantity: 40,
+      unit: 'gp'
     },
-    'weight': 20,
-    'desc': ['Barding is armor designed to protect an animal’s head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much.'],
-    'url': 'http://www.dnd5eapi.co/api/equipment/202'
+    weight: 20,
+    desc: ['Barding is armor designed to protect an animal’s head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much.']
   }, {
-    'index': 203,
-    'name': 'Barding: Studded Leather',
-    'equipment_category': 'Mounts and Vehicles',
-    'vehicle_category': 'Tack, Harness, and Drawn Vehicles',
-    'cost': {
-      'quantity': 180,
-      'unit': 'gp'
+    name: 'Barding: Studded Leather',
+    category: 'Tack, Harness, and Drawn Vehicles',
+    cost: {
+      quantity: 180,
+      unit: 'gp'
     },
-    'weight': 26,
-    'desc': ['Barding is armor designed to protect an animal’s head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much.'],
-    'url': 'http://www.dnd5eapi.co/api/equipment/203'
+    weight: 26,
+    desc: ['Barding is armor designed to protect an animal’s head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much.']
   }, {
-    'index': 204,
-    'name': 'Barding: Hide',
-    'equipment_category': 'Mounts and Vehicles',
-    'vehicle_category': 'Tack, Harness, and Drawn Vehicles',
-    'cost': {
-      'quantity': 40,
-      'unit': 'gp'
+    name: 'Barding: Hide',
+    category: 'Tack, Harness, and Drawn Vehicles',
+    cost: {
+      quantity: 40,
+      unit: 'gp'
     },
-    'weight': 24,
-    'desc': ['Barding is armor designed to protect an animal’s head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much.'],
-    'url': 'http://www.dnd5eapi.co/api/equipment/204'
+    weight: 24,
+    desc: ['Barding is armor designed to protect an animal’s head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much.']
   }, {
-    'index': 205,
-    'name': 'Barding: Chain shirt',
-    'equipment_category': 'Mounts and Vehicles',
-    'vehicle_category': 'Tack, Harness, and Drawn Vehicles',
-    'cost': {
-      'quantity': 200,
-      'unit': 'gp'
+    name: 'Barding: Chain shirt',
+    category: 'Tack, Harness, and Drawn Vehicles',
+    cost: {
+      quantity: 200,
+      unit: 'gp'
     },
-    'weight': 40,
-    'desc': ['Barding is armor designed to protect an animal’s head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much.'],
-    'url': 'http://www.dnd5eapi.co/api/equipment/205'
+    weight: 40,
+    desc: ['Barding is armor designed to protect an animal’s head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much.']
   }, {
-    'index': 206,
-    'name': 'Barding: Scale mail',
-    'equipment_category': 'Mounts and Vehicles',
-    'vehicle_category': 'Tack, Harness, and Drawn Vehicles',
-    'cost': {
-      'quantity': 200,
-      'unit': 'gp'
+    name: 'Barding: Scale mail',
+    category: 'Tack, Harness, and Drawn Vehicles',
+    cost: {
+      quantity: 200,
+      unit: 'gp'
     },
-    'weight': 90,
-    'desc': ['Barding is armor designed to protect an animal’s head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much.'],
-    'url': 'http://www.dnd5eapi.co/api/equipment/206'
+    weight: 90,
+    desc: ['Barding is armor designed to protect an animal’s head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much.']
   }, {
-    'index': 207,
-    'name': 'Barding: Breastplate',
-    'equipment_category': 'Mounts and Vehicles',
-    'vehicle_category': 'Tack, Harness, and Drawn Vehicles',
-    'cost': {
-      'quantity': 1600,
-      'unit': 'gp'
+    name: 'Barding: Breastplate',
+    category: 'Tack, Harness, and Drawn Vehicles',
+    cost: {
+      quantity: 1600,
+      unit: 'gp'
     },
-    'weight': 40,
-    'desc': ['Barding is armor designed to protect an animal’s head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much.'],
-    'url': 'http://www.dnd5eapi.co/api/equipment/207'
+    weight: 40,
+    desc: ['Barding is armor designed to protect an animal’s head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much.']
   }, {
-    'index': 208,
-    'name': 'Barding: Half plate',
-    'equipment_category': 'Mounts and Vehicles',
-    'vehicle_category': 'Tack, Harness, and Drawn Vehicles',
-    'cost': {
-      'quantity': 3000,
-      'unit': 'gp'
+    name: 'Barding: Half plate',
+    category: 'Tack, Harness, and Drawn Vehicles',
+    cost: {
+      quantity: 3000,
+      unit: 'gp'
     },
-    'weight': 80,
-    'desc': ['Barding is armor designed to protect an animal’s head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much.'],
-    'url': 'http://www.dnd5eapi.co/api/equipment/208'
+    weight: 80,
+    desc: ['Barding is armor designed to protect an animal’s head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much.']
   }, {
-    'index': 209,
-    'name': 'Barding: Ring mail',
-    'equipment_category': 'Mounts and Vehicles',
-    'vehicle_category': 'Tack, Harness, and Drawn Vehicles',
-    'cost': {
-      'quantity': 12,
-      'unit': 'gp'
+    name: 'Barding: Ring mail',
+    category: 'Tack, Harness, and Drawn Vehicles',
+    cost: {
+      quantity: 12,
+      unit: 'gp'
     },
-    'weight': 80,
-    'desc': ['Barding is armor designed to protect an animal’s head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much.'],
-    'url': 'http://www.dnd5eapi.co/api/equipment/209'
+    weight: 80,
+    desc: ['Barding is armor designed to protect an animal’s head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much.']
   }, {
-    'index': 210,
-    'name': 'Barding: Chain mail',
-    'equipment_category': 'Mounts and Vehicles',
-    'vehicle_category': 'Tack, Harness, and Drawn Vehicles',
-    'cost': {
-      'quantity': 300,
-      'unit': 'gp'
+    name: 'Barding: Chain mail',
+    category: 'Tack, Harness, and Drawn Vehicles',
+    cost: {
+      quantity: 300,
+      unit: 'gp'
     },
-    'weight': 110,
-    'desc': ['Barding is armor designed to protect an animal’s head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much.'],
-    'url': 'http://www.dnd5eapi.co/api/equipment/210'
+    weight: 110,
+    desc: ['Barding is armor designed to protect an animal’s head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much.']
   }, {
-    'index': 211,
-    'name': 'Barding: Splint',
-    'equipment_category': 'Mounts and Vehicles',
-    'vehicle_category': 'Tack, Harness, and Drawn Vehicles',
-    'cost': {
-      'quantity': 800,
-      'unit': 'gp'
+    name: 'Barding: Splint',
+    category: 'Tack, Harness, and Drawn Vehicles',
+    cost: {
+      quantity: 800,
+      unit: 'gp'
     },
-    'weight': 120,
-    'desc': ['Barding is armor designed to protect an animal’s head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much.'],
-    'url': 'http://www.dnd5eapi.co/api/equipment/211'
+    weight: 120,
+    desc: ['Barding is armor designed to protect an animal’s head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much.']
   }, {
-    'index': 212,
-    'name': 'Barding: Plate',
-    'equipment_category': 'Mounts and Vehicles',
-    'vehicle_category': 'Tack, Harness, and Drawn Vehicles',
-    'cost': {
-      'quantity': 6000,
-      'unit': 'gp'
+    name: 'Barding: Plate',
+    category: 'Tack, Harness, and Drawn Vehicles',
+    cost: {
+      quantity: 6000,
+      unit: 'gp'
     },
-    'weight': 130,
-    'desc': ['Barding is armor designed to protect an animal’s head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much.'],
-    'url': 'http://www.dnd5eapi.co/api/equipment/212'
+    weight: 130,
+    desc: ['Barding is armor designed to protect an animal’s head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much.']
   }, {
-    'index': 213,
-    'name': 'Bit and bridle',
-    'equipment_category': 'Mounts and Vehicles',
-    'vehicle_category': 'Tack, Harness, and Drawn Vehicles',
-    'cost': {
-      'quantity': 2,
-      'unit': 'gp'
+    name: 'Bit and bridle',
+    category: 'Tack, Harness, and Drawn Vehicles',
+    cost: {
+      quantity: 2,
+      unit: 'gp'
     },
-    'weight': 1,
-    'url': 'http://www.dnd5eapi.co/api/equipment/213'
+    weight: 1
   }, {
-    'index': 214,
-    'name': 'Carriage',
-    'equipment_category': 'Mounts and Vehicles',
-    'vehicle_category': 'Tack, Harness, and Drawn Vehicles',
-    'cost': {
-      'quantity': 100,
-      'unit': 'gp'
+    name: 'Carriage',
+    category: 'Tack, Harness, and Drawn Vehicles',
+    cost: {
+      quantity: 100,
+      unit: 'gp'
     },
-    'weight': 600,
-    'url': 'http://www.dnd5eapi.co/api/equipment/214'
+    weight: 600
   }, {
-    'index': 215,
-    'name': 'Cart',
-    'equipment_category': 'Mounts and Vehicles',
-    'vehicle_category': 'Tack, Harness, and Drawn Vehicles',
-    'cost': {
-      'quantity': 15,
-      'unit': 'gp'
+    name: 'Cart',
+    category: 'Tack, Harness, and Drawn Vehicles',
+    cost: {
+      quantity: 15,
+      unit: 'gp'
     },
-    'weight': 200,
-    'url': 'http://www.dnd5eapi.co/api/equipment/215'
+    weight: 200
   }, {
-    'index': 216,
-    'name': 'Chariot',
-    'equipment_category': 'Mounts and Vehicles',
-    'vehicle_category': 'Tack, Harness, and Drawn Vehicles',
-    'cost': {
-      'quantity': 250,
-      'unit': 'gp'
+    name: 'Chariot',
+    category: 'Tack, Harness, and Drawn Vehicles',
+    cost: {
+      quantity: 250,
+      unit: 'gp'
     },
-    'weight': 100,
-    'url': 'http://www.dnd5eapi.co/api/equipment/216'
+    weight: 100
   }, {
-    'index': 217,
-    'name': 'Animal Feed (1 day)',
-    'equipment_category': 'Mounts and Vehicles',
-    'vehicle_category': 'Tack, Harness, and Drawn Vehicles',
-    'cost': {
-      'quantity': 5,
-      'unit': 'cp'
+    name: 'Animal Feed (1 day)',
+    category: 'Tack, Harness, and Drawn Vehicles',
+    cost: {
+      quantity: 5,
+      unit: 'cp'
     },
-    'weight': 10,
-    'url': 'http://www.dnd5eapi.co/api/equipment/217'
+    weight: 10
   }, {
-    'index': 218,
-    'name': 'Saddle, Exotic',
-    'equipment_category': 'Mounts and Vehicles',
-    'vehicle_category': 'Tack, Harness, and Drawn Vehicles',
-    'cost': {
-      'quantity': 60,
-      'unit': 'gp'
+    name: 'Saddle, Exotic',
+    category: 'Tack, Harness, and Drawn Vehicles',
+    cost: {
+      quantity: 60,
+      unit: 'gp'
     },
-    'weight': 50,
-    'desc': ['A military saddle braces the rider, helping you keep your seat on an active mount in battle. It gives you advantage on any check you make to remain mounted. An exotic saddle is required for riding any aquatic or flying mount.'],
-    'url': 'http://www.dnd5eapi.co/api/equipment/218'
+    weight: 50,
+    desc: ['A military saddle braces the rider, helping you keep your seat on an active mount in battle. It gives you advantage on any check you make to remain mounted. An exotic saddle is required for riding any aquatic or flying mount.']
   }, {
-    'index': 219,
-    'name': 'Saddle, Military',
-    'equipment_category': 'Mounts and Vehicles',
-    'vehicle_category': 'Tack, Harness, and Drawn Vehicles',
-    'cost': {
-      'quantity': 20,
-      'unit': 'gp'
+    name: 'Saddle, Military',
+    category: 'Tack, Harness, and Drawn Vehicles',
+    cost: {
+      quantity: 20,
+      unit: 'gp'
     },
-    'weight': 30,
-    'desc': ['A military saddle braces the rider, helping you keep your seat on an active mount in battle. It gives you advantage on any check you make to remain mounted. An exotic saddle is required for riding any aquatic or flying mount.'],
-    'url': 'http://www.dnd5eapi.co/api/equipment/219'
+    weight: 30,
+    desc: ['A military saddle braces the rider, helping you keep your seat on an active mount in battle. It gives you advantage on any check you make to remain mounted. An exotic saddle is required for riding any aquatic or flying mount.']
   }, {
-    'index': 220,
-    'name': 'Saddle, Pack',
-    'equipment_category': 'Mounts and Vehicles',
-    'vehicle_category': 'Tack, Harness, and Drawn Vehicles',
-    'cost': {
-      'quantity': 5,
-      'unit': 'gp'
+    name: 'Saddle, Pack',
+    category: 'Tack, Harness, and Drawn Vehicles',
+    cost: {
+      quantity: 5,
+      unit: 'gp'
     },
-    'weight': 15,
-    'desc': ['A military saddle braces the rider, helping you keep your seat on an active mount in battle. It gives you advantage on any check you make to remain mounted. An exotic saddle is required for riding any aquatic or flying mount.'],
-    'url': 'http://www.dnd5eapi.co/api/equipment/220'
+    weight: 15,
+    desc: ['A military saddle braces the rider, helping you keep your seat on an active mount in battle. It gives you advantage on any check you make to remain mounted. An exotic saddle is required for riding any aquatic or flying mount.']
   }, {
-    'index': 221,
-    'name': 'Riding',
-    'equipment_category': 'Mounts and Vehicles',
-    'vehicle_category': 'Tack, Harness, and Drawn Vehicles',
-    'cost': {
-      'quantity': 10,
-      'unit': 'gp'
+    name: 'Riding',
+    category: 'Tack, Harness, and Drawn Vehicles',
+    cost: {
+      quantity: 10,
+      unit: 'gp'
     },
-    'weight': 25,
-    'url': 'http://www.dnd5eapi.co/api/equipment/221'
+    weight: 25
   }, {
-    'index': 222,
-    'name': 'Saddlebags',
-    'equipment_category': 'Mounts and Vehicles',
-    'vehicle_category': 'Tack, Harness, and Drawn Vehicles',
-    'cost': {
-      'quantity': 4,
-      'unit': 'gp'
+    name: 'Saddlebags',
+    category: 'Tack, Harness, and Drawn Vehicles',
+    cost: {
+      quantity: 4,
+      unit: 'gp'
     },
-    'weight': 8,
-    'url': 'http://www.dnd5eapi.co/api/equipment/222'
+    weight: 8
   }, {
-    'index': 223,
-    'name': 'Sled',
-    'equipment_category': 'Mounts and Vehicles',
-    'vehicle_category': 'Tack, Harness, and Drawn Vehicles',
-    'cost': {
-      'quantity': 20,
-      'unit': 'gp'
+    name: 'Sled',
+    category: 'Tack, Harness, and Drawn Vehicles',
+    cost: {
+      quantity: 20,
+      unit: 'gp'
     },
-    'weight': 300,
-    'url': 'http://www.dnd5eapi.co/api/equipment/223'
+    weight: 300
   }, {
-    'index': 224,
-    'name': 'Stabling (1 day)',
-    'equipment_category': 'Mounts and Vehicles',
-    'vehicle_category': 'Tack, Harness, and Drawn Vehicles',
-    'cost': {
-      'quantity': 5,
-      'unit': 'sp'
+    name: 'Stabling (1 day)',
+    category: 'Tack, Harness, and Drawn Vehicles',
+    cost: {
+      quantity: 5,
+      unit: 'sp'
     },
-    'weight': 0,
-    'url': 'http://www.dnd5eapi.co/api/equipment/224'
+    weight: 0
   }, {
-    'index': 225,
-    'name': 'Wagon',
-    'equipment_category': 'Mounts and Vehicles',
-    'vehicle_category': 'Tack, Harness, and Drawn Vehicles',
-    'cost': {
-      'quantity': 35,
-      'unit': 'gp'
+    name: 'Wagon',
+    category: 'Tack, Harness, and Drawn Vehicles',
+    cost: {
+      quantity: 35,
+      unit: 'gp'
     },
-    'weight': 400,
-    'url': 'http://www.dnd5eapi.co/api/equipment/225'
+    weight: 400
   }, {
-    'index': 226,
-    'name': 'Barding: Padded',
-    'equipment_category': 'Mounts and Vehicles',
-    'vehicle_category': 'Tack, Harness, and Drawn Vehicles',
-    'cost': {
-      'quantity': 20,
-      'unit': 'gp'
+    name: 'Barding: Padded',
+    category: 'Tack, Harness, and Drawn Vehicles',
+    cost: {
+      quantity: 20,
+      unit: 'gp'
     },
-    'weight': 16,
-    'desc': ['Barding is armor designed to protect an animal’s head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much.'],
-    'url': 'http://www.dnd5eapi.co/api/equipment/226'
+    weight: 16,
+    desc: ['Barding is armor designed to protect an animal’s head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much.']
   }, {
-    'index': 227,
-    'name': 'Barding: Leather',
-    'equipment_category': 'Mounts and Vehicles',
-    'vehicle_category': 'Tack, Harness, and Drawn Vehicles',
-    'cost': {
-      'quantity': 40,
-      'unit': 'gp'
+    name: 'Barding: Leather',
+    category: 'Tack, Harness, and Drawn Vehicles',
+    cost: {
+      quantity: 40,
+      unit: 'gp'
     },
-    'weight': 20,
-    'desc': ['Barding is armor designed to protect an animal’s head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much.'],
-    'url': 'http://www.dnd5eapi.co/api/equipment/227'
+    weight: 20,
+    desc: ['Barding is armor designed to protect an animal’s head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much.']
   }, {
-    'index': 228,
-    'name': 'Barding: Studded Leather',
-    'equipment_category': 'Mounts and Vehicles',
-    'vehicle_category': 'Tack, Harness, and Drawn Vehicles',
-    'cost': {
-      'quantity': 180,
-      'unit': 'gp'
+    name: 'Barding: Studded Leather',
+    category: 'Tack, Harness, and Drawn Vehicles',
+    cost: {
+      quantity: 180,
+      unit: 'gp'
     },
-    'weight': 26,
-    'desc': ['Barding is armor designed to protect an animal’s head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much.'],
-    'url': 'http://www.dnd5eapi.co/api/equipment/228'
+    weight: 26,
+    desc: ['Barding is armor designed to protect an animal’s head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much.']
   }, {
-    'index': 229,
-    'name': 'Barding: Hide',
-    'equipment_category': 'Mounts and Vehicles',
-    'vehicle_category': 'Tack, Harness, and Drawn Vehicles',
-    'cost': {
-      'quantity': 40,
-      'unit': 'gp'
+    name: 'Barding: Hide',
+    category: 'Tack, Harness, and Drawn Vehicles',
+    cost: {
+      quantity: 40,
+      unit: 'gp'
     },
-    'weight': 24,
-    'desc': ['Barding is armor designed to protect an animal’s head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much.'],
-    'url': 'http://www.dnd5eapi.co/api/equipment/229'
+    weight: 24,
+    desc: ['Barding is armor designed to protect an animal’s head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much.']
   }, {
-    'index': 230,
-    'name': 'Barding: Chain shirt',
-    'equipment_category': 'Mounts and Vehicles',
-    'vehicle_category': 'Tack, Harness, and Drawn Vehicles',
-    'cost': {
-      'quantity': 200,
-      'unit': 'gp'
+    name: 'Barding: Chain shirt',
+    category: 'Tack, Harness, and Drawn Vehicles',
+    cost: {
+      quantity: 200,
+      unit: 'gp'
     },
-    'weight': 40,
-    'desc': ['Barding is armor designed to protect an animal’s head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much.'],
-    'url': 'http://www.dnd5eapi.co/api/equipment/230'
+    weight: 40,
+    desc: ['Barding is armor designed to protect an animal’s head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much.']
   }, {
-    'index': 231,
-    'name': 'Barding: Scale mail',
-    'equipment_category': 'Mounts and Vehicles',
-    'vehicle_category': 'Tack, Harness, and Drawn Vehicles',
-    'cost': {
-      'quantity': 200,
-      'unit': 'gp'
+    name: 'Barding: Scale mail',
+    category: 'Tack, Harness, and Drawn Vehicles',
+    cost: {
+      quantity: 200,
+      unit: 'gp'
     },
-    'weight': 90,
-    'desc': ['Barding is armor designed to protect an animal’s head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much.'],
-    'url': 'http://www.dnd5eapi.co/api/equipment/231'
+    weight: 90,
+    desc: ['Barding is armor designed to protect an animal’s head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much.']
   }, {
-    'index': 232,
-    'name': 'Barding: Breastplate',
-    'equipment_category': 'Mounts and Vehicles',
-    'vehicle_category': 'Tack, Harness, and Drawn Vehicles',
-    'cost': {
-      'quantity': 1600,
-      'unit': 'gp'
+    name: 'Barding: Breastplate',
+    category: 'Tack, Harness, and Drawn Vehicles',
+    cost: {
+      quantity: 1600,
+      unit: 'gp'
     },
-    'weight': 40,
-    'desc': ['Barding is armor designed to protect an animal’s head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much.'],
-    'url': 'http://www.dnd5eapi.co/api/equipment/232'
+    weight: 40,
+    desc: ['Barding is armor designed to protect an animal’s head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much.']
   }, {
-    'index': 233,
-    'name': 'Barding: Half plate',
-    'equipment_category': 'Mounts and Vehicles',
-    'vehicle_category': 'Tack, Harness, and Drawn Vehicles',
-    'cost': {
-      'quantity': 3000,
-      'unit': 'gp'
+    name: 'Barding: Half plate',
+    category: 'Tack, Harness, and Drawn Vehicles',
+    cost: {
+      quantity: 3000,
+      unit: 'gp'
     },
-    'weight': 80,
-    'desc': ['Barding is armor designed to protect an animal’s head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much.'],
-    'url': 'http://www.dnd5eapi.co/api/equipment/233'
+    weight: 80,
+    desc: ['Barding is armor designed to protect an animal’s head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much.']
   }, {
-    'index': 234,
-    'name': 'Barding: Ring mail',
-    'equipment_category': 'Mounts and Vehicles',
-    'vehicle_category': 'Tack, Harness, and Drawn Vehicles',
-    'cost': {
-      'quantity': 12,
-      'unit': 'gp'
+    name: 'Barding: Ring mail',
+    category: 'Tack, Harness, and Drawn Vehicles',
+    cost: {
+      quantity: 12,
+      unit: 'gp'
     },
-    'weight': 80,
-    'desc': ['Barding is armor designed to protect an animal’s head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much.'],
-    'url': 'http://www.dnd5eapi.co/api/equipment/234'
+    weight: 80,
+    desc: ['Barding is armor designed to protect an animal’s head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much.']
   }, {
-    'index': 235,
-    'name': 'Barding: Chain mail',
-    'equipment_category': 'Mounts and Vehicles',
-    'vehicle_category': 'Tack, Harness, and Drawn Vehicles',
-    'cost': {
-      'quantity': 300,
-      'unit': 'gp'
+    name: 'Barding: Chain mail',
+    category: 'Tack, Harness, and Drawn Vehicles',
+    cost: {
+      quantity: 300,
+      unit: 'gp'
     },
-    'weight': 110,
-    'desc': ['Barding is armor designed to protect an animal’s head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much.'],
-    'url': 'http://www.dnd5eapi.co/api/equipment/235'
+    weight: 110,
+    desc: ['Barding is armor designed to protect an animal’s head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much.']
   }, {
-    'index': 236,
-    'name': 'Barding: Splint',
-    'equipment_category': 'Mounts and Vehicles',
-    'vehicle_category': 'Tack, Harness, and Drawn Vehicles',
-    'cost': {
-      'quantity': 800,
-      'unit': 'gp'
+    name: 'Barding: Splint',
+    category: 'Tack, Harness, and Drawn Vehicles',
+    cost: {
+      quantity: 800,
+      unit: 'gp'
     },
-    'weight': 120,
-    'desc': ['Barding is armor designed to protect an animal’s head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much.'],
-    'url': 'http://www.dnd5eapi.co/api/equipment/236'
+    weight: 120,
+    desc: ['Barding is armor designed to protect an animal’s head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much.']
   }, {
-    'index': 237,
-    'name': 'Barding: Plate',
-    'equipment_category': 'Mounts and Vehicles',
-    'vehicle_category': 'Tack, Harness, and Drawn Vehicles',
-    'cost': {
-      'quantity': 6000,
-      'unit': 'gp'
+    name: 'Barding: Plate',
+    category: 'Tack, Harness, and Drawn Vehicles',
+    cost: {
+      quantity: 6000,
+      unit: 'gp'
     },
-    'weight': 130,
-    'desc': ['Barding is armor designed to protect an animal’s head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much.'],
-    'url': 'http://www.dnd5eapi.co/api/equipment/237'
+    weight: 130,
+    desc: ['Barding is armor designed to protect an animal’s head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much.']
   }, {
-    'index': 238,
-    'name': 'Bit and bridle',
-    'equipment_category': 'Mounts and Vehicles',
-    'vehicle_category': 'Tack, Harness, and Drawn Vehicles',
-    'cost': {
-      'quantity': 2,
-      'unit': 'gp'
+    name: 'Bit and bridle',
+    category: 'Tack, Harness, and Drawn Vehicles',
+    cost: {
+      quantity: 2,
+      unit: 'gp'
     },
-    'weight': 0,
-    'url': 'http://www.dnd5eapi.co/api/equipment/238'
+    weight: 0
   }, {
-    'index': 239,
-    'name': 'Carriage',
-    'equipment_category': 'Mounts and Vehicles',
-    'vehicle_category': 'Tack, Harness, and Drawn Vehicles',
-    'cost': {
-      'quantity': 100,
-      'unit': 'gp'
+    name: 'Carriage',
+    category: 'Tack, Harness, and Drawn Vehicles',
+    cost: {
+      quantity: 100,
+      unit: 'gp'
     },
-    'weight': 60,
-    'url': 'http://www.dnd5eapi.co/api/equipment/239'
+    weight: 60
   }, {
-    'index': 240,
-    'name': 'Cart',
-    'equipment_category': 'Mounts and Vehicles',
-    'vehicle_category': 'Tack, Harness, and Drawn Vehicles',
-    'cost': {
-      'quantity': 15,
-      'unit': 'gp'
+    name: 'Cart',
+    category: 'Tack, Harness, and Drawn Vehicles',
+    cost: {
+      quantity: 15,
+      unit: 'gp'
     },
-    'weight': 20,
-    'url': 'http://www.dnd5eapi.co/api/equipment/240'
+    weight: 20
   }, {
-    'index': 241,
-    'name': 'Chariot',
-    'equipment_category': 'Mounts and Vehicles',
-    'vehicle_category': 'Tack, Harness, and Drawn Vehicles',
-    'cost': {
-      'quantity': 250,
-      'unit': 'gp'
+    name: 'Chariot',
+    category: 'Tack, Harness, and Drawn Vehicles',
+    cost: {
+      quantity: 250,
+      unit: 'gp'
     },
-    'weight': 10,
-    'url': 'http://www.dnd5eapi.co/api/equipment/241'
+    weight: 10
   }, {
-    'index': 242,
-    'name': 'Animal Feed (1 day)',
-    'equipment_category': 'Mounts and Vehicles',
-    'vehicle_category': 'Tack, Harness, and Drawn Vehicles',
-    'cost': {
-      'quantity': 5,
-      'unit': 'cp'
+    name: 'Animal Feed (1 day)',
+    category: 'Tack, Harness, and Drawn Vehicles',
+    cost: {
+      quantity: 5,
+      unit: 'cp'
     },
-    'weight': 1,
-    'url': 'http://www.dnd5eapi.co/api/equipment/242'
+    weight: 1
   }, {
-    'index': 243,
-    'name': 'Saddle, Exotic',
-    'equipment_category': 'Mounts and Vehicles',
-    'vehicle_category': 'Tack, Harness, and Drawn Vehicles',
-    'cost': {
-      'quantity': 60,
-      'unit': 'gp'
+    name: 'Saddle, Exotic',
+    category: 'Tack, Harness, and Drawn Vehicles',
+    cost: {
+      quantity: 60,
+      unit: 'gp'
     },
-    'weight': 50,
-    'desc': ['A military saddle braces the rider, helping you keep your seat on an active mount in battle. It gives you advantage on any check you make to remain mounted. An exotic saddle is required for riding any aquatic or flying mount.'],
-    'url': 'http://www.dnd5eapi.co/api/equipment/243'
+    weight: 50,
+    desc: ['A military saddle braces the rider, helping you keep your seat on an active mount in battle. It gives you advantage on any check you make to remain mounted. An exotic saddle is required for riding any aquatic or flying mount.']
   }, {
-    'index': 244,
-    'name': 'Saddle, Military',
-    'equipment_category': 'Mounts and Vehicles',
-    'vehicle_category': 'Tack, Harness, and Drawn Vehicles',
-    'cost': {
-      'quantity': 20,
-      'unit': 'gp'
+    name: 'Saddle, Military',
+    category: 'Tack, Harness, and Drawn Vehicles',
+    cost: {
+      quantity: 20,
+      unit: 'gp'
     },
-    'weight': 30,
-    'desc': ['A military saddle braces the rider, helping you keep your seat on an active mount in battle. It gives you advantage on any check you make to remain mounted. An exotic saddle is required for riding any aquatic or flying mount.'],
-    'url': 'http://www.dnd5eapi.co/api/equipment/244'
+    weight: 30,
+    desc: ['A military saddle braces the rider, helping you keep your seat on an active mount in battle. It gives you advantage on any check you make to remain mounted. An exotic saddle is required for riding any aquatic or flying mount.']
   }, {
-    'index': 245,
-    'name': 'Saddle, Pack',
-    'equipment_category': 'Mounts and Vehicles',
-    'vehicle_category': 'Tack, Harness, and Drawn Vehicles',
-    'cost': {
-      'quantity': 5,
-      'unit': 'gp'
+    name: 'Saddle, Pack',
+    category: 'Tack, Harness, and Drawn Vehicles',
+    cost: {
+      quantity: 5,
+      unit: 'gp'
     },
-    'weight': 15,
-    'desc': ['A military saddle braces the rider, helping you keep your seat on an active mount in battle. It gives you advantage on any check you make to remain mounted. An exotic saddle is required for riding any aquatic or flying mount.'],
-    'url': 'http://www.dnd5eapi.co/api/equipment/245'
+    weight: 15,
+    desc: ['A military saddle braces the rider, helping you keep your seat on an active mount in battle. It gives you advantage on any check you make to remain mounted. An exotic saddle is required for riding any aquatic or flying mount.']
   }, {
-    'index': 246,
-    'name': 'Riding',
-    'equipment_category': 'Mounts and Vehicles',
-    'vehicle_category': 'Tack, Harness, and Drawn Vehicles',
-    'cost': {
-      'quantity': 10,
-      'unit': 'gp'
+    name: 'Riding',
+    category: 'Tack, Harness, and Drawn Vehicles',
+    cost: {
+      quantity: 10,
+      unit: 'gp'
     },
-    'weight': 2,
-    'url': 'http://www.dnd5eapi.co/api/equipment/246'
+    weight: 2
   }, {
-    'index': 247,
-    'name': 'Saddlebags',
-    'equipment_category': 'Mounts and Vehicles',
-    'vehicle_category': 'Tack, Harness, and Drawn Vehicles',
-    'cost': {
-      'quantity': 4,
-      'unit': 'gp'
+    name: 'Saddlebags',
+    category: 'Tack, Harness, and Drawn Vehicles',
+    cost: {
+      quantity: 4,
+      unit: 'gp'
     },
-    'weight': 0,
-    'url': 'http://www.dnd5eapi.co/api/equipment/247'
+    weight: 0
   }, {
-    'index': 248,
-    'name': 'Sled',
-    'equipment_category': 'Mounts and Vehicles',
-    'vehicle_category': 'Tack, Harness, and Drawn Vehicles',
-    'cost': {
-      'quantity': 20,
-      'unit': 'gp'
+    name: 'Sled',
+    category: 'Tack, Harness, and Drawn Vehicles',
+    cost: {
+      quantity: 20,
+      unit: 'gp'
     },
-    'weight': 30,
-    'url': 'http://www.dnd5eapi.co/api/equipment/248'
+    weight: 30
   }, {
-    'index': 249,
-    'name': 'Stabling (1 day)',
-    'equipment_category': 'Mounts and Vehicles',
-    'vehicle_category': 'Tack, Harness, and Drawn Vehicles',
-    'cost': {
-      'quantity': 5,
-      'unit': 'sp'
+    name: 'Stabling (1 day)',
+    category: 'Tack, Harness, and Drawn Vehicles',
+    cost: {
+      quantity: 5,
+      unit: 'sp'
     },
-    'weight': 0,
-    'url': 'http://www.dnd5eapi.co/api/equipment/249'
+    weight: 0
   }, {
-    'index': 250,
-    'name': 'Wagon',
-    'equipment_category': 'Mounts and Vehicles',
-    'vehicle_category': 'Tack, Harness, and Drawn Vehicles',
-    'cost': {
-      'quantity': 35,
-      'unit': 'gp'
+    name: 'Wagon',
+    category: 'Tack, Harness, and Drawn Vehicles',
+    cost: {
+      quantity: 35,
+      unit: 'gp'
     },
-    'weight': 40,
-    'url': 'http://www.dnd5eapi.co/api/equipment/250'
+    weight: 40
   }, {
-    'index': 251,
-    'name': 'Galley',
-    'equipment_category': 'Mounts and Vehicles',
-    'vehicle_category': 'Waterborne Vehicles',
-    'cost': {
-      'quantity': 30000,
-      'unit': 'gp'
+    name: 'Galley',
+    category: 'Waterborne Vehicles',
+    cost: {
+      quantity: 30000,
+      unit: 'gp'
     },
     'speed': {
-      'quantity': 4,
-      'unit': 'mph'
-    },
-    'url': 'http://www.dnd5eapi.co/api/equipment/251'
+      quantity: 4,
+      unit: 'mph'
+    }
   }, {
-    'index': 252,
-    'name': 'Keelboat',
-    'equipment_category': 'Mounts and Vehicles',
-    'vehicle_category': 'Waterborne Vehicles',
-    'cost': {
-      'quantity': 3000,
-      'unit': 'gp'
+    name: 'Keelboat',
+    category: 'Waterborne Vehicles',
+    cost: {
+      quantity: 3000,
+      unit: 'gp'
     },
     'speed': {
-      'quantity': 1,
-      'unit': 'mph'
+      quantity: 1,
+      unit: 'mph'
     },
-    'desc': ['Keelboats and rowboats are used on lakes and rivers. If going downstream, add the speed of the current (typically 3 miles per hour) to the speed of the vehicle. These vehicles can’t be rowed against any significant current, but they can be pulled upstream by draft animals on the shores. A rowboat weighs 100 pounds, in case adventurers carry it over land.'],
-    'url': 'http://www.dnd5eapi.co/api/equipment/252'
+    desc: ['Keelboats and rowboats are used on lakes and rivers. If going downstream, add the speed of the current (typically 3 miles per hour) to the speed of the vehicle. These vehicles can’t be rowed against any significant current, but they can be pulled upstream by draft animals on the shores. A rowboat weighs 100 pounds, in case adventurers carry it over land.']
   }, {
-    'index': 253,
-    'name': 'Longship',
-    'equipment_category': 'Mounts and Vehicles',
-    'vehicle_category': 'Waterborne Vehicles',
-    'cost': {
-      'quantity': 10000,
-      'unit': 'gp'
+    name: 'Longship',
+    category: 'Waterborne Vehicles',
+    cost: {
+      quantity: 10000,
+      unit: 'gp'
     },
     'speed': {
-      'quantity': 3,
-      'unit': 'mph'
-    },
-    'url': 'http://www.dnd5eapi.co/api/equipment/253'
+      quantity: 3,
+      unit: 'mph'
+    }
   }, {
-    'index': 254,
-    'name': 'Rowboat',
-    'equipment_category': 'Mounts and Vehicles',
-    'vehicle_category': 'Waterborne Vehicles',
-    'cost': {
-      'quantity': 50,
-      'unit': 'gp'
+    name: 'Rowboat',
+    category: 'Waterborne Vehicles',
+    cost: {
+      quantity: 50,
+      unit: 'gp'
     },
     'speed': {
-      'quantity': 1.5,
-      'unit': 'mph'
+      quantity: 1.5,
+      unit: 'mph'
     },
-    'desc': ['Keelboats and rowboats are used on lakes and rivers. If going downstream, add the speed of the current (typically 3 miles per hour) to the speed of the vehicle. These vehicles can’t be rowed against any significant current, but they can be pulled upstream by draft animals on the shores. A rowboat weighs 100 pounds, in case adventurers carry it over land.'],
-    'url': 'http://www.dnd5eapi.co/api/equipment/254'
+    desc: ['Keelboats and rowboats are used on lakes and rivers. If going downstream, add the speed of the current (typically 3 miles per hour) to the speed of the vehicle. These vehicles can’t be rowed against any significant current, but they can be pulled upstream by draft animals on the shores. A rowboat weighs 100 pounds, in case adventurers carry it over land.']
   }, {
-    'index': 255,
-    'name': 'Sailing ship',
-    'equipment_category': 'Mounts and Vehicles',
-    'vehicle_category': 'Waterborne Vehicles',
-    'cost': {
-      'quantity': 10000,
-      'unit': 'gp'
+    name: 'Sailing ship',
+    category: 'Waterborne Vehicles',
+    cost: {
+      quantity: 10000,
+      unit: 'gp'
     },
     'speed': {
-      'quantity': 2,
-      'unit': 'mph'
-    },
-    'url': 'http://www.dnd5eapi.co/api/equipment/255'
+      quantity: 2,
+      unit: 'mph'
+    }
   }, {
-    'index': 256,
-    'name': 'Warship',
-    'equipment_category': 'Mounts and Vehicles',
-    'vehicle_category': 'Waterborne Vehicles',
-    'cost': {
-      'quantity': 25000,
-      'unit': 'gp'
+    name: 'Warship',
+    category: 'Waterborne Vehicles',
+    cost: {
+      quantity: 25000,
+      unit: 'gp'
     },
     'speed': {
-      'quantity': 2.5,
-      'unit': 'mph'
-    },
-    'url': 'http://www.dnd5eapi.co/api/equipment/256'
+      quantity: 2.5,
+      unit: 'mph'
+    }
   }
 ]

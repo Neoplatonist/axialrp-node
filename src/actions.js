@@ -105,6 +105,7 @@ export const selectAC = createSelector(
   state => state.generator.armor,
   state => state.generator.abilityMod,
   (ac, list, abilityMod) => {
+    if (isNaN(ac)) ac = 0;
     const a = list.map(v => armorDB.find(j => v === j.name));
     return a.reduce((v, k) =>
       v + k.armor_class.base + 
@@ -204,24 +205,22 @@ export const selectWeaponProficiency = createSelector(
  * action creators
 **/
 
-// export const selectAbility = state => state.generator.ability;
 export const setAbility = (index, ability) => {
-  if (isNaN(ability)) ability = 0;
+  // if (isNaN(ability)) ability = 0;
 
   return (dispatch, getState) => {
     const state = [...getState().generator.ability];
-    state[index] = ability;
+    state[index] = ability || 0;
     return dispatch({ type: SET_ABILITY, payload: state });
   }
 };
 
-// export const selectAbilityMod = state => state.generator.abilityMod;
 export const setAbilityMod = mod => {
   return { type: SET_ABILITY_MOD, payload: mod };
 };
 
 export const setAC = ac => {
-  return { type: SET_AC, payload: ac };
+  return { type: SET_AC, payload: ac || 0 };
 };
 
 export const setAlignment = alignment => {
@@ -237,7 +236,8 @@ export const setArmorActive = active => {
 };
 
 export const setCharacter = character => {
-  return { type: SET_CHARACTER, payload: character };
+  const char = { ...character, xp: character.xp || 0 };
+  return { type: SET_CHARACTER, payload: char };
 };
 
 export const setClass = char_class => {
@@ -266,11 +266,11 @@ export const setHP = hp => {
 };
 
 export const setInitiative = init => {
-  return { type: SET_INITIATIVE, payload: init };
+  return { type: SET_INITIATIVE, payload: init || 0 };
 };
 
 export const setInspiration = inspire => {
-  return { type: SET_INSPIRATION, payload: inspire };
+  return { type: SET_INSPIRATION, payload: inspire || 0 };
 };
 
 export const setLanguage = lang => {
@@ -282,7 +282,7 @@ export const setLanguageList = lang => {
 };
 
 export const setLevel = level => {
-  return { type: SET_LEVEL, payload: level }
+  return { type: SET_LEVEL, payload: level || 1 }
 };
 
 export const setProficiencyBonus = proficiency => {
@@ -317,7 +317,7 @@ export const setSkills = skills => {
 };
 
 export const setSpeed = speed => {
-  return { type: SET_SPEED, payload: speed };
+  return { type: SET_SPEED, payload: speed || 0 };
 };
 
 export const setSubRace = subrace => {
