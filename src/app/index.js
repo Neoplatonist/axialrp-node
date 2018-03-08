@@ -6,7 +6,6 @@ import Header from './components/header';
 import Sidebar from './components/sidebar';
 // import Footer from './components/footer';
 
-// this.props.children
 import Dashboard from '../pages/dashboard';
 import Generator from '../pages/generator';
 import Character from '../pages/character';
@@ -24,7 +23,6 @@ export default class App extends Component {
 
   componentDidMount() {
     this.setState({ mobile: window.innerWidth <= 700 });
-
     window.addEventListener('resize', this.handleResize, false);
   }
 
@@ -43,15 +41,12 @@ export default class App extends Component {
 
         <Sidebar mobile={ this.state.mobile } />
 
-        {/* {this.props.children} */}
-
         <Switch>
           <Route exact path="/" component={Dashboard}/>
           <Route exact path="/generator" component={Generator}/>
           <Route exact path="/character" component={Character}/>
           <Route exact path="/list" component={List}/>
           <Route exact path="/wiki" component={Wiki}/>
-          {/* <Route path="/second" component={SecondPage}/> */}
           <Route component={NoMatch}/>
         </Switch>
 

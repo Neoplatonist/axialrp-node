@@ -2,7 +2,10 @@ import React, { Component } from 'react';
 import '../../styles.css';
 
 import { connect } from 'react-redux';
-import { setCharacter } from '../../../../actions';
+import { 
+  selectCharacter,
+  setCharacter
+} from '../../../../actions';
 
 
 class Description extends Component {

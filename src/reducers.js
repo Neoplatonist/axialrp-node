@@ -39,7 +39,7 @@ export const generatorState = {
   character: {
     name: '',
     gender: '',
-    age: '',
+    age: 50,
     height: '',
     xp: 0
   },

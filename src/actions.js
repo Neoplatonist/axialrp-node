@@ -52,6 +52,7 @@ export const selectAbility = state => state.generator.ability;
 export const selectAlignment = state => state.generator.alignment;
 export const selectArmor = state => state.generator.armor;
 export const selectArmorActive = state => state.generator.armorActive;
+// export const selectCharacter = state => state.generator.character;
 export const selectClass = state => state.generator.class;
 export const selectClassObj = state => state.generator.classObj;
 export const selectDice = state => state.generator.dice;
@@ -113,6 +114,14 @@ export const selectAC = createSelector(
       (k.armor_class.max_bonux ? abilityMod[1] : 0), ac);
   }
 );
+
+// export const selectCharacter = createSelector(
+//   state => state.generator.character,
+//   selectRaceObj,
+//   (character, raceObj) => {
+//     return { ...character, age: character.age || raceObj.age.adult };
+//   }
+// );
 
 export const selectArmorProficiency = createSelector(
   selectClassObj,
@@ -236,7 +245,11 @@ export const setArmorActive = active => {
 };
 
 export const setCharacter = character => {
-  const char = { ...character, xp: character.xp || 0 };
+  const char = { 
+    ...character, 
+    age: character.age || 0, 
+    xp: character.xp || 0 
+  };
   return { type: SET_CHARACTER, payload: char };
 };
 
@@ -290,7 +303,7 @@ export const setProficiencyBonus = proficiency => {
 };
 
 export const setRace = race => {
-  return dispatch => {
+  return (dispatch, getState) => {
     dispatch({ type: SET_RACE, payload: race });
 
     const r = raceDB.find(v => v.name === race);
@@ -301,6 +314,9 @@ export const setRace = race => {
       type: SET_LANGUAGE_LIST,
       payload: r.languages.type.map(v => v.name) 
     });
+
+    const char = getState().generator.character;
+    dispatch({ type: SET_CHARACTER, payload: {...char, age: r.age.adult} });
   };
 };
 
