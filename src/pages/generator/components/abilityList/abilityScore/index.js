@@ -1,6 +1,7 @@
 /* eslint-disable import/first */
 import React, { Component } from 'react';
-import { AbilityMap } from '../../utils.js';
+import { AbilityMap } from '../../../utils.js';
+
 import Ability from './ability';
 
 import { connect } from 'react-redux';
@@ -11,21 +12,20 @@ import {
   selectAbilityRaceMod,
   selectAbilitySubRaceMod,
   selectAbilityTotal
-} from '../../../../actions';
+} from '../../../../../actions';
 
-class AbilityWithMod extends Component {
+class AbilityScores extends Component {
   renderAbility() {
     return AbilityMap.map((v, k) => {
       return (
         <Ability 
           id={v}
           key={k}
+          index={k}
           race={this.props.abilityRaceMod[k]}
           subrace={this.props.abilitySubRaceMod[k]}
           total={this.props.abilityTotal[k]}
           value={this.props.ability[k]}
-          onChange={ e => 
-            this.props.setAbility(k, parseInt(e.target.value, 10)) }
           mod={this.props.abilityMod[k]} />
       );
     });
@@ -52,4 +52,4 @@ const boundActions = {
   setAbility
 };
 
-export default connect(mapStateToProps, boundActions)(AbilityWithMod);
+export default connect(mapStateToProps, boundActions)(AbilityScores);

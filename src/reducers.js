@@ -2,6 +2,8 @@ import { combineReducers } from 'redux';
 import { 
   SET_ABILITY,
   SET_ABILITY_MOD,
+  SET_ABILITY_POINTS,
+  SET_ABILITY_TYPE,
   SET_AC,
   SET_ALIGNMENT,
   SET_ARMOR,
@@ -30,6 +32,8 @@ import {
 export const generatorState = {
   ability: [0, 0, 0, 0, 0, 0],
   abilityMod: [0, 0, 0, 0, 0, 0],
+  abilityPoints: 27,
+  abilityType: 'Dice',
   ac: 0,
   alignment: 'Lawful Good',
 
@@ -40,7 +44,7 @@ export const generatorState = {
     name: '',
     gender: '',
     age: 50,
-    height: '',
+    height: '4ft',
     xp: 0
   },
 
@@ -220,6 +224,18 @@ const generator = (state = generatorState, action) => {
       return {
         ...state,
         abilityMod: action.payload
+      };
+
+    case SET_ABILITY_POINTS:
+      return {
+        ...state,
+        abilityPoints: action.payload
+      }
+
+    case SET_ABILITY_TYPE:
+      return {
+        ...state,
+        abilityType: action.payload
       };
 
     case SET_AC: 

@@ -1,18 +1,34 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import '../../styles.css';
 
 import { connect } from 'react-redux';
 import { 
-  selectCharacter,
-  setCharacter
+  setCharacter,
+  selectRaceObj
 } from '../../../../actions';
 
 
 class Description extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      ageDesc: false,
+      heightDesc: false
+    };
+  }
+
+  showDesc = desc => e => {
+    ReactDOM.findDOMNode(this[desc]).style.display = 
+      !this.state[desc] ? 'block' : 'none';
+    this.setState({ [desc]: !this.state[desc]});
+  }
+
   render() {
     return (
       <div>
-        <label htmlFor="character-name">Character Name: </label>
+        <label className="desc" htmlFor="character-name">Character Name: </label>
         <input
           name="character-name"
           className="input"
@@ -20,7 +36,7 @@ class Description extends Component {
           onChange={ e => this.props.setCharacter({ name: e.target.value }) }
           value={this.props.character.name}/>
 
-        <label htmlFor="gender">Gender: </label>
+        <label className="desc" htmlFor="gender">Gender: </label>
         <input
           name="gender"
           className="input"
@@ -28,15 +44,31 @@ class Description extends Component {
           onChange={ e => this.props.setCharacter({ gender: e.target.value }) }
           value={this.props.character.gender}/>
 
-        <label htmlFor="age">Age: </label>
+        <label className="desc" htmlFor="age">Age
+          <span onClick={this.showDesc('ageDesc')}> more info 
+            <i className="fas fa-angle-down"></i>
+          </span>: 
+        </label>
         <input
           name="age"
           className="input"
           type="number" 
+          min="0"
           onChange={ e => this.props.setCharacter({ age: e.target.value }) }
           value={this.props.character.age}/>
 
-        <label htmlFor="height">Height: </label>
+        <div 
+          ref={ el => this.ageDesc = el } 
+          className="ageDesc"
+        >
+          {this.props.raceObj.age.description}
+        </div>
+
+        <label className="desc" htmlFor="height">Height
+          <span onClick={this.showDesc('heightDesc')}> more info 
+            <i className="fas fa-angle-down"></i>
+          </span>:
+        </label>
         <input
           name="height"
           className="input"
@@ -44,7 +76,14 @@ class Description extends Component {
           onChange={ e => this.props.setCharacter({ height: e.target.value }) }
           value={this.props.character.height}/>
 
-        <label htmlFor="xp">XP: </label>
+        <div 
+          ref={ el => this.heightDesc = el } 
+          className="heightDesc"
+        >
+          {this.props.raceObj.size.description}
+        </div>
+
+        <label className="desc" htmlFor="xp">XP: </label>
         <input
           name="xp"
           className="input"
@@ -58,7 +97,8 @@ class Description extends Component {
 }
 
 const mapStateToProps = state => ({
-  character: state.generator.character
+  character: state.generator.character,
+  raceObj: selectRaceObj(state)
 });
 
 const boundActions = {

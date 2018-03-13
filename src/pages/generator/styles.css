@@ -3,7 +3,7 @@
 } */
 
 /* Portrait and Landscape */
-@media only screen and (max-device-width: 320px)  {
+@media only screen and (max-device-width: 425px)  {
   #modal {
     display: none;
     position: fixed;
@@ -57,7 +57,7 @@
   }
 
   .abilityContainer > input, .statsContainer > input {
-    width: 100px;
+    width: 50px;
   }
 
   .ability-prepend, .ability-append, .stats-prepend, .stats-append {
@@ -70,11 +70,20 @@
     justify-content: center;
   }
 
+  .ability-arrow {
+    width: 1.7em;
+    margin: 0;
+  }
+
   .ability-text, .stats-text {
     white-space: nowrap;
     display: flex;
     text-align: center;
   }
+
+  /* .ability-text::-webkit-inner-spin-button {
+    opacity: 1;
+  } */
 
   .ability, .stats {
     /* width: 5rem; */
@@ -154,12 +163,7 @@
     border-color: #333 #333 white;
   }
 
-  /* <ul className="tabs">
-    <li className="tab-item">
-      <span className="tab-link">Proficiency</span>
-    </li>
-    <li className="tab-item">
-      <span className="tab-link">All</span>
-    </li>
-  </ul> */
+  .ageDesc, .heightDesc {
+    display: none;
+  }
 }

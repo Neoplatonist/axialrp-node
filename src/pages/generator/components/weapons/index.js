@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import { Option } from '../../utils';
 import WeaponList from './weaponList';
 
@@ -17,7 +18,7 @@ import {
 
 class Weapon extends Component {
   componentDidMount() {
-    document.getElementsByClassName('tab-item')[2].className += ' tab-active';
+    ReactDOM.findDOMNode(this.weaponProf).className = 'tab-item tab-active';
   }
 
   addWeapon = e => {
@@ -47,14 +48,14 @@ class Weapon extends Component {
   }
 
   selectAll = e => {
-    document.getElementsByClassName('tab-item')[2].className = 'tab-item';
-    document.getElementsByClassName('tab-item')[3].className = 'tab-item tab-active';
+    ReactDOM.findDOMNode(this.weaponProf).className = 'tab-item';
+    ReactDOM.findDOMNode(this.weaponAll).className = 'tab-item tab-active';
     this.props.setWeaponActive('all');
   }
 
   selectProficiency = e => {
-    document.getElementsByClassName('tab-item')[2].className = 'tab-item tab-active';
-    document.getElementsByClassName('tab-item')[3].className = 'tab-item';
+    ReactDOM.findDOMNode(this.weaponProf).className = 'tab-item tab-active';
+    ReactDOM.findDOMNode(this.weaponAll).className = 'tab-item';
     this.props.setWeaponActive('proficiency');
   }
 
@@ -64,10 +65,16 @@ class Weapon extends Component {
         <label htmlFor="weapon">Select Weapon: </label>
 
         <ul className="tabs">
-          <li className="tab-item" onClick={this.selectProficiency}>
+          <li 
+            ref={el => this.weaponProf = el}
+            className="tab-item" 
+            onClick={this.selectProficiency}>
             <span className="tab-link">Proficiency</span>
           </li>
-          <li className="tab-item" onClick={this.selectAll}>
+          <li 
+            ref={el => this.weaponAll = el}
+            className="tab-item" 
+            onClick={this.selectAll}>
             <span className="tab-link">All</span>
           </li>
         </ul>

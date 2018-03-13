@@ -18,6 +18,8 @@ import {
 
 export const SET_ABILITY = 'SET_ABILITY';
 export const SET_ABILITY_MOD = 'SET_ABILITY_MOD';
+export const SET_ABILITY_POINTS = 'SET_ABILITY_POINTS';
+export const SET_ABILITY_TYPE = 'SET_ABILITY_TYPE';
 export const SET_AC = 'SET_AC';
 export const SET_ALIGNMENT = 'SET_ALIGNMENT';
 export const SET_ARMOR = 'SET_ARMOR';
@@ -49,10 +51,10 @@ export const SET_WEAPON_ACTIVE = 'SET_WEAPON_ACTIVE';
 **/
 
 export const selectAbility = state => state.generator.ability;
+export const selectAbilityPoints = state => state.generator.abilityPoints;
 export const selectAlignment = state => state.generator.alignment;
 export const selectArmor = state => state.generator.armor;
 export const selectArmorActive = state => state.generator.armorActive;
-// export const selectCharacter = state => state.generator.character;
 export const selectClass = state => state.generator.class;
 export const selectClassObj = state => state.generator.classObj;
 export const selectDice = state => state.generator.dice;
@@ -111,17 +113,9 @@ export const selectAC = createSelector(
     return a.reduce((v, k) =>
       v + k.armor_class.base + 
       (k.armor_class.max_bonus || 0) + 
-      (k.armor_class.max_bonux ? abilityMod[1] : 0), ac);
+      (k.armor_class.max_bonus ? abilityMod[1] : 0), ac);
   }
 );
-
-// export const selectCharacter = createSelector(
-//   state => state.generator.character,
-//   selectRaceObj,
-//   (character, raceObj) => {
-//     return { ...character, age: character.age || raceObj.age.adult };
-//   }
-// );
 
 export const selectArmorProficiency = createSelector(
   selectClassObj,
@@ -201,7 +195,7 @@ export const selectWeaponProficiency = createSelector(
     );
 
     const filtered = classCat.reduce((v, k) =>
-      [...v, classObj.weapons.filter(j => j.name === k.name) ], []);
+      [ ...v, classObj.weapons.filter(j => j.name === k.name) ], []);
 
     const className = [].concat(
       ...filtered.map(v => weaponDB.filter(j => j.name === v.name)));
@@ -216,16 +210,53 @@ export const selectWeaponProficiency = createSelector(
 
 export const setAbility = (index, ability) => {
   // if (isNaN(ability)) ability = 0;
-
   return (dispatch, getState) => {
     const state = [...getState().generator.ability];
     state[index] = ability || 0;
     return dispatch({ type: SET_ABILITY, payload: state });
-  }
+  };
+};
+
+export const setAbilityPoints = points => {
+  if (isNaN(points)) points = 0;
+  return { type: SET_ABILITY_POINTS, payload: points };
+}
+
+export const setAbilityBulk = ability => {
+  // if (isNaN(ability)) ability = 0;
+  return { type: SET_ABILITY, payload: ability };
 };
 
 export const setAbilityMod = mod => {
   return { type: SET_ABILITY_MOD, payload: mod };
+};
+
+export const setAbilitySwitch = (index, direction) => {
+  return (dispatch, getState) => {
+    let ability = [...getState().generator.ability];
+
+    if (direction === 'up') {
+      if (index === 0) {
+        ability.push(...ability.splice(index, 1));
+      } else {
+        ability[index-1] = ability.splice(index, 1, ability[index-1])[0];
+      }
+    }
+
+    if (direction === 'down') {
+      if (index === ability.length-1) {
+        ability.unshift(ability.pop());
+      } else {
+        ability[index+1] = ability.splice(index, 1, ability[index+1])[0];
+      }
+    }
+
+    dispatch({ type: SET_ABILITY, payload: ability });
+  }; 
+};
+
+export const setAbilityType = type => {
+  return { type: SET_ABILITY_TYPE, payload: type };
 };
 
 export const setAC = ac => {
@@ -316,7 +347,10 @@ export const setRace = race => {
     });
 
     const char = getState().generator.character;
-    dispatch({ type: SET_CHARACTER, payload: {...char, age: r.age.adult} });
+    dispatch({ 
+      type: SET_CHARACTER, 
+      payload: {...char, age: r.age.adult, height: JSON.stringify(r.size.height.min) + 'ft'} 
+    });
   };
 };
 

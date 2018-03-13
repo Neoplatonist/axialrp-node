@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { AbilityMap, Dice, Option, isEmpty } from './utils';
+import { AbilityMap, Option, isEmpty } from './utils';
 import './styles.css';
 
 // Mock Database
@@ -11,7 +11,7 @@ import {
   skillsDB
 } from '../db.js';
 
-import AbilityWithMod from './components/abilityMod';
+import AbilityList from './components/abilityList';
 import Armor from './components/armor';
 import Class from './components/class';
 import Description from './components/description';
@@ -46,18 +46,6 @@ import {
 } from '../../actions';
 
 class Generator extends Component {
-  componentDidMount() {
-    this.rollDice();
-  }
-
-  rollDice = e => {
-    const dice = this.props.dice.map(v => {
-      return Dice(6, 4).sort((a, b) => a - b).slice(1).reduce((p, c) => p + c, 0);
-    });
-
-    this.props.setDice(dice);
-  }
-
   handleAlignment = () => {
     return alignmentDB.map((v, k) => {
       return <Option key={k} {...v} />;
@@ -113,7 +101,7 @@ class Generator extends Component {
     });
   }
 
-  savingThrows() {
+  savingThrows = () => {
     return AbilityMap.map((v, k) => {
       return <SavingThrows key={k} label={v} mod={this.props.savingThrows[k]} />
     });
@@ -169,13 +157,7 @@ class Generator extends Component {
             { this.handleAlignment() }
           </select>
 
-          <br/><br/>
-
-          <h3>Ability Scores</h3>
-
-          <button onClick={this.rollDice}>ReRoll?</button>
-
-          <AbilityWithMod />
+          <AbilityList />
 
           <br/><br/>
 
@@ -247,6 +229,7 @@ export default connect(mapStateToProps, boundActions)(Generator);
 // FIXME: kitsDB Normalization
 // FIXME: ClassDB Normalization
 // FIXME: AbilityScore point calculator
+// FIXME: XP attacks Age
 // TODO: Hit Points - add base input with controlled mod and controlled total
 // TODO: Create SpellsDB/CantripsDB
 // TODO: Level up characters

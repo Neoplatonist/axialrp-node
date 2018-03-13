@@ -25,6 +25,19 @@ export const AbilityMap = [
   'Charisma'
 ];
 
+export const AbilityPointMap = {
+  7:  0,
+  8:  0,
+  9:  1,
+  10: 2,
+  11: 3,
+  12: 4,
+  13: 5,
+  14: 7,
+  15: 9,
+  16: 0
+}
+
 export const Option = ({ name }) => <option value={name}>{name}</option>;
 
 export const ProficiencyBonus = level => Math.ceil(level / 4) + 1;

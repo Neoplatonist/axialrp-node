@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import { Option } from '../../utils';
 import ArmorList from './armorList';
 
@@ -17,7 +18,7 @@ import {
 
 class Armor extends Component {
   componentDidMount() {
-    document.getElementsByClassName('tab-item')[0].className += ' tab-active';
+    ReactDOM.findDOMNode(this.armorProf).className = 'tab-item tab-active';
   }
 
   addArmor = e => {
@@ -47,14 +48,14 @@ class Armor extends Component {
   }
 
   selectAll = e => {
-    document.getElementsByClassName('tab-item')[0].className = 'tab-item';
-    document.getElementsByClassName('tab-item')[1].className = 'tab-item tab-active';
+    ReactDOM.findDOMNode(this.armorProf).className = 'tab-item';
+    ReactDOM.findDOMNode(this.armorAll).className = 'tab-item tab-active';
     this.props.setArmorActive('all');
   }
 
   selectProficiency = e => {
-    document.getElementsByClassName('tab-item')[0].className = 'tab-item tab-active';
-    document.getElementsByClassName('tab-item')[1].className = 'tab-item';
+    ReactDOM.findDOMNode(this.armorProf).className = 'tab-item tab-active';
+    ReactDOM.findDOMNode(this.armorAll).className = 'tab-item';
     this.props.setArmorActive('proficiency');
   }
 
@@ -64,10 +65,16 @@ class Armor extends Component {
         <label htmlFor="armor">Select Armor: </label>
 
         <ul className="tabs">
-          <li className="tab-item" onClick={this.selectProficiency}>
+          <li 
+            ref={el => this.armorProf = el}
+            className="tab-item" 
+            onClick={this.selectProficiency}>
             <span className="tab-link">Proficiency</span>
           </li>
-          <li className="tab-item" onClick={this.selectAll}>
+          <li 
+            ref={el => this.armorAll = el}
+            className="tab-item" 
+            onClick={this.selectAll}>
             <span className="tab-link">All</span>
           </li>
         </ul>

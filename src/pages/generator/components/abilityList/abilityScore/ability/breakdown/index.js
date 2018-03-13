@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../../../../styles.css';
+import '../../../../../styles.css';
 // ({base, mod, race, subrace, total})
 
 export default class Breakdown extends Component { 
