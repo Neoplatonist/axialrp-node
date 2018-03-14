@@ -23,12 +23,8 @@ import Weapons from './components/weapons';
 
 import { connect } from 'react-redux';
 import {
-  selectAbility,
-  selectAbilityMod,
   selectAlignment,
   setAlignment,
-  selectDice,
-  setDice,
   setHP,
   setLanguage,
   selectLanguage,
@@ -38,7 +34,6 @@ import {
   selectRace,
   selectRaceObj,
   setSkills,
-  selectSpeed,
   selectSubRace,
   selectSavingThrows,
   selectSkills,
@@ -196,10 +191,7 @@ class Generator extends Component {
 }
 
 const mapStateToProps = state => ({
-  ability: selectAbility(state),
-  abilityMod: selectAbilityMod(state),
   alignment: selectAlignment(state),
-  dice: selectDice(state),
   language: selectLanguage(state),
   languageList: selectLanguageList(state),
   level: selectLevel(state),
@@ -207,14 +199,12 @@ const mapStateToProps = state => ({
   raceObj: selectRaceObj(state),
   skills: selectSkills(state),
   skillsFilter: selectSkillsFilter(state),
-  speed: selectSpeed(state),
   savingThrows: selectSavingThrows(state),
   subrace: selectSubRace(state)
 });
 
 const boundActions = {
   setAlignment,
-  setDice,
   setHP,
   setLanguage,
   setLevel,
@@ -230,7 +220,7 @@ export default connect(mapStateToProps, boundActions)(Generator);
 // FIXME: ClassDB Normalization
 // FIXME: AbilityScore point calculator
 // FIXME: XP attacks Age
-// TODO: Hit Points - add base input with controlled mod and controlled total
+// TODO: Create FeatsDB
 // TODO: Create SpellsDB/CantripsDB
 // TODO: Level up characters
 // TODO: Calculate starting money for characters

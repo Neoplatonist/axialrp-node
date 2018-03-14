@@ -26,6 +26,8 @@ class Description extends Component {
   }
 
   render() {
+    const {character, setCharacter, raceObj} = this.props;
+
     return (
       <div>
         <label className="desc" htmlFor="character-name">Character Name: </label>
@@ -33,16 +35,16 @@ class Description extends Component {
           name="character-name"
           className="input"
           type="text"
-          onChange={ e => this.props.setCharacter({ name: e.target.value }) }
-          value={this.props.character.name}/>
+          onChange={ e => setCharacter({ ...character, name: e.target.value }) }
+          value={character.name}/>
 
         <label className="desc" htmlFor="gender">Gender: </label>
         <input
           name="gender"
           className="input"
           type="text" 
-          onChange={ e => this.props.setCharacter({ gender: e.target.value }) }
-          value={this.props.character.gender}/>
+          onChange={ e => setCharacter({ ...character, gender: e.target.value }) }
+          value={character.gender}/>
 
         <label className="desc" htmlFor="age">Age
           <span onClick={this.showDesc('ageDesc')}> more info 
@@ -54,14 +56,14 @@ class Description extends Component {
           className="input"
           type="number" 
           min="0"
-          onChange={ e => this.props.setCharacter({ age: e.target.value }) }
-          value={this.props.character.age}/>
+          onChange={ e => setCharacter({ ...character, age: e.target.value }) }
+          value={character.age}/>
 
         <div 
           ref={ el => this.ageDesc = el } 
           className="ageDesc"
         >
-          {this.props.raceObj.age.description}
+          {raceObj.age.description}
         </div>
 
         <label className="desc" htmlFor="height">Height
@@ -73,14 +75,14 @@ class Description extends Component {
           name="height"
           className="input"
           type="text" 
-          onChange={ e => this.props.setCharacter({ height: e.target.value }) }
-          value={this.props.character.height}/>
+          onChange={ e => setCharacter({ ...character, height: e.target.value }) }
+          value={character.height}/>
 
         <div 
           ref={ el => this.heightDesc = el } 
           className="heightDesc"
         >
-          {this.props.raceObj.size.description}
+          {raceObj.size.description}
         </div>
 
         <label className="desc" htmlFor="xp">XP: </label>
@@ -89,8 +91,8 @@ class Description extends Component {
           className="input"
           type="number" 
           min="0"
-          onChange={ e => this.props.setCharacter({ xp: e.target.value }) }
-          value={this.props.character.xp}/>
+          onChange={ e => setCharacter({ ...character, xp: e.target.value }) }
+          value={character.xp}/>
       </div>
     );
   }
@@ -100,7 +102,7 @@ const mapStateToProps = state => ({
   character: state.generator.character,
   raceObj: selectRaceObj(state)
 });
-
+ 
 const boundActions = {
   setCharacter
 };
