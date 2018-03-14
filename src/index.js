@@ -9,7 +9,7 @@ import App from './app'
 //import registerServiceWorker from './registerServiceWorker'
 
 // Let the reducers handle initial state
-const store = createStore();
+const store = createStore(window.__INITIAL__STATE__);
 if (window.DATA && window.DATA !== '{{data}}') {
   window.DATA=JSON.parse(window.atob(window.DATA))
 } else {
