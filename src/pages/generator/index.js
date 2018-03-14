@@ -220,7 +220,6 @@ export default connect(mapStateToProps, boundActions)(Generator);
 // FIXME: ClassDB Normalization
 // FIXME: AbilityScore point calculator
 // FIXME: XP attacks Age
-// TODO: Create FeatsDB
 // TODO: Create SpellsDB/CantripsDB
 // TODO: Level up characters
 // TODO: Calculate starting money for characters
