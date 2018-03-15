@@ -686,7 +686,7 @@ export const classDB = [
       { name: 'Constitution' }
     ],
     starting_equipment: { class: 'Barbarian' },
-    spellcasting: {},
+    spellcasting: false,
     weapons: [
       { name: 'Simple' },
       { name: 'Martial' }
@@ -751,7 +751,7 @@ export const classDB = [
         proficiencies: 'tba'
       }
     ],
-    spellcasting: 'tba',
+    spellcasting: true,
     weapons: [
       { name: 'Simple' },
       { name: 'Longsword' },
@@ -793,7 +793,7 @@ export const classDB = [
         proficiencies: 'tba'
       }
     ],
-    spellcasting: 'tba',
+    spellcasting: true,
     weapons: [
       { name: 'Simple' }
     ]
@@ -834,7 +834,7 @@ export const classDB = [
         proficiencies: 'tba'
       }
     ],
-    spellcasting: 'tba',
+    spellcasting: true,
     weapons: [
       { name: 'Clubs' },
       { name: 'Dagger' },
@@ -886,7 +886,7 @@ export const classDB = [
         proficiencies: 'tba'
       }
     ],
-    spellcasting: 'tba',
+    spellcasting: false,
     weapons: [
       { name: 'Simple' },
       { name: 'Martial' }
@@ -965,7 +965,7 @@ export const classDB = [
         proficiencies: 'tba'
       }
     ],
-    spellcasting: 'tba',
+    spellcasting: false,
     weapons: [
       { name: 'Simple' },
       { name: 'Shortsword' }
@@ -1006,7 +1006,7 @@ export const classDB = [
         proficiencies: 'tba'
       }
     ],
-    spellcasting: 'tba',
+    spellcasting: true,
     weapons: [
       { name: 'Simple' },
       { name: 'Martial' }
@@ -1047,7 +1047,7 @@ export const classDB = [
         proficiencies: 'tba'
       }
     ],
-    spellcasting: 'tba',
+    spellcasting: true,
     weapons: [
       { name: 'Simple' },
       { name: 'Martial' }
@@ -1087,7 +1087,7 @@ export const classDB = [
         proficiencies: 'tba'
       }
     ],
-    spellcasting: 'tba',
+    spellcasting: false,
     weapons: [
       { name: 'Simple' },
       { name: 'Longsword' },
@@ -1126,7 +1126,7 @@ export const classDB = [
         proficiencies: 'tba'
       }
     ],
-    spellcasting: 'tba',
+    spellcasting: true,
     weapons: [
       { name: 'Dagger' },
       { name: 'Quarterstaff' },
@@ -1164,7 +1164,7 @@ export const classDB = [
         proficiencies: 'tba'
       }
     ],
-    spellcasting: 'tba',
+    spellcasting: true,
     weapons: [{ name: 'Simple' }]
   }, {
     name: 'Wizard',
@@ -1196,7 +1196,7 @@ export const classDB = [
         proficiencies: 'tba'
       }
     ],
-    spellcasting: 'tba',
+    spellcasting: true,
     weapons: [
       { name: 'Dagger' },
       { name: 'Quarterstaff' },
@@ -3985,6 +3985,2133 @@ export const toolsDB = [
 
 
 
+export const startingEquipment = [
+  {
+    class: 'Barbarian',
+    starting_equipment: [
+      { 
+        name: 'Explorer\'s Pack',
+        quantity: 1
+      },
+      { 
+        name: 'Javelin',
+        quantity: 4
+      }
+    ],
+    choices_to_make: 2,
+    choice_1: [
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Greataxe',
+            quantity: 1
+          }
+        ]
+      },
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Battleaxe',
+            quantity: 1
+          },
+          {
+            name: 'Flail',
+            quantity: 1
+          },
+          {
+            name: 'Glaive',
+            quantity: 1
+          },
+          {
+            name: 'Greataxe',
+            quantity: 1
+          },
+          {
+            name: 'Greatsword',
+            quantity: 1
+          },
+          {
+            name: 'Halberd',
+            quantity: 1
+          },
+          {
+            name: 'Lance',
+            quantity: 1
+          },
+          {
+            name: 'Longsword',
+            quantity: 1
+          },
+          {
+            name: 'Maul',
+            quantity: 1
+          },
+          {
+            name: 'Morningstar',
+            quantity: 1
+          },
+          {
+            name: 'Pike',
+            quantity: 1
+          },
+          {
+            name: 'Rapier',
+            quantity: 1
+          },
+          {
+            name: 'Scimitar',
+            quantity: 1
+          },
+          {
+            name: 'Shortsword',
+            quantity: 1
+          },
+          {
+            name: 'Trident',
+            quantity: 1
+          },
+          {
+            name: 'War pick',
+            quantity: 1
+          },
+          {
+            name: 'Warhammer',
+            quantity: 1
+          },
+          {
+            name: 'Whip',
+            quantity: 1
+          }
+        ]
+      }
+    ],
+    choice_2: [
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Handaxe',
+            quantity: 2
+          }
+        ]
+      },
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Club',
+            quantity: 1
+          },
+          {
+            name: 'Dagger',
+            quantity: 1
+          },
+          {
+            name: 'Greatclub',
+            quantity: 1
+          },
+          {
+            name: 'Handaxe',
+            quantity: 1
+          },
+          {
+            name: 'Javelin',
+            quantity: 1
+          },
+          {
+            name: 'Light hammer',
+            quantity: 1
+          },
+          {
+            name: 'Mace',
+            quantity: 1
+          },
+          {
+            name: 'Quarterstaff',
+            quantity: 1
+          },
+          {
+            name: 'Sickle',
+            quantity: 1
+          },
+          {
+            name: 'Spear',
+            quantity: 1
+          },
+          {
+            name: 'Crossbow, light',
+            quantity: 1
+          },
+          {
+            name: 'Dart',
+            quantity: 1
+          },
+          {
+            name: 'Shortbow',
+            quantity: 1
+          },
+          {
+            name: 'Sling',
+            quantity: 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    class: 'Bard',
+    starting_equipment: [
+      { 
+        name: 'Leather',
+        quantity: 1
+      },
+      { 
+        name: 'Dagger',
+        quantity: 1
+      }
+    ],
+    choices_to_make: 3,
+    choice_1: [
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Rapier',
+            quantity: 1
+          }
+        ]
+      },
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Longsword',
+            quantity: 1
+          }
+        ]
+      },
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Club',
+            quantity: 1
+          },
+          {
+            name: 'Dagger',
+            quantity: 1
+          },
+          {
+            name: 'Greatclub',
+            quantity: 1
+          },
+          {
+            name: 'Handaxe',
+            quantity: 1
+          },
+          {
+            name: 'Javelin',
+            quantity: 1
+          },
+          {
+            name: 'Light hammer',
+            quantity: 1
+          },
+          {
+            name: 'Mace',
+            quantity: 1
+          },
+          {
+            name: 'Quarterstaff',
+            quantity: 1
+          },
+          {
+            name: 'Sickle',
+            quantity: 1
+          },
+          {
+            name: 'Spear',
+            quantity: 1
+          },
+          {
+            name: 'Crossbow, light',
+            quantity: 1
+          },
+          {
+            name: 'Dart',
+            quantity: 1
+          },
+          {
+            name: 'Shortbow',
+            quantity: 1
+          },
+          {
+            name: 'Sling',
+            quantity: 1
+          }
+        ]
+      }
+    ],
+    choice_2: [
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Diplomat\'s Pack',
+            quantity: 1
+          }
+        ]
+      },
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Entertainer\'s Pack',
+            quantity: 1
+          }
+        ]
+      }
+    ],
+    choice_3: [
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Lute',
+            quantity: 1
+          }
+        ]
+      },
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Bagpipes',
+            quantity: 1
+          },
+          {
+            name: 'Drum',
+            quantity: 1
+          },
+          {
+            name: 'Dulcimer',
+            quantity: 1
+          },
+          {
+            name: 'Flute',
+            quantity: 1
+          },
+          {
+            name: 'Lute',
+            quantity: 1
+          },
+          {
+            name: 'Lyre',
+            quantity: 1
+          },
+          {
+            name: 'Horn',
+            quantity: 1
+          },
+          {
+            name: 'Pan flute',
+            quantity: 1
+          },
+          {
+            name: 'Shawm',
+            quantity: 1
+          },
+          {
+            name: 'Viol',
+            quantity: 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    class: 'Cleric',
+    starting_equipment: [
+      { 
+        name: 'Shield',
+        quantity: 1
+      }
+    ],
+    choices_to_make: 5,
+    choice_1: [
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Mace',
+            quantity: 1
+          }
+        ]
+      },
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Warhammer',
+            quantity: 1
+          }
+        ]
+      }
+    ],
+    choice_2: [
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Scale Mail',
+            quantity: 1
+          }
+        ]
+      },
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Leather',
+            quantity: 1
+          }
+        ]
+      },
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Chain Mail',
+            quantity: 1
+          }
+        ]
+      }
+    ],
+    choice_3: [
+      {
+        choose: 2,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Crossbow, light',
+            quantity: 1
+          },
+          {
+            name: 'Crossbow bolt',
+            quantity: 20
+          }
+        ]
+      },
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Club',
+            quantity: 1
+          },
+          {
+            name: 'Dagger',
+            quantity: 1
+          },
+          {
+            name: 'Greatclub',
+            quantity: 1
+          },
+          {
+            name: 'Handaxe',
+            quantity: 1
+          },
+          {
+            name: 'Javelin',
+            quantity: 1
+          },
+          {
+            name: 'Light hammer',
+            quantity: 1
+          },
+          {
+            name: 'Mace',
+            quantity: 1
+          },
+          {
+            name: 'Quarterstaff',
+            quantity: 1
+          },
+          {
+            name: 'Sickle',
+            quantity: 1
+          },
+          {
+            name: 'Spear',
+            quantity: 1
+          },
+          {
+            name: 'Crossbow, light',
+            quantity: 1
+          },
+          {
+            name: 'Dart',
+            quantity: 1
+          },
+          {
+            name: 'Shortbow',
+            quantity: 1
+          },
+          {
+            name: 'Sling',
+            quantity: 1
+          }
+        ]
+      }
+    ],
+    choice_4: [
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Priest\'s Pack',
+            quantity: 1
+          }
+        ]
+      },
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Explorer\'s Pack',
+            quantity: 1
+          }
+        ]
+      }
+    ],
+    choice_5: [
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Amulet',
+            quantity: 1
+          },
+          {
+            name: 'Emblem',
+            quantity: 1
+          },
+          {
+            name: 'Reliquary',
+            quantity: 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    class: 'Druid',
+    starting_equipment: [
+      { 
+        name: 'Leather',
+        quantity: 1
+      },
+      { 
+        name: 'Explorer\'s Pack',
+        quantity: 1
+      }
+    ],
+    choices_to_make: 3,
+    choice_1: [
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Shield',
+            quantity: 1
+          }
+        ]
+      },
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Club',
+            quantity: 1
+          },
+          {
+            name: 'Dagger',
+            quantity: 1
+          },
+          {
+            name: 'Greatclub',
+            quantity: 1
+          },
+          {
+            name: 'Handaxe',
+            quantity: 1
+          },
+          {
+            name: 'Javelin',
+            quantity: 1
+          },
+          {
+            name: 'Light hammer',
+            quantity: 1
+          },
+          {
+            name: 'Mace',
+            quantity: 1
+          },
+          {
+            name: 'Quarterstaff',
+            quantity: 1
+          },
+          {
+            name: 'Sickle',
+            quantity: 1
+          },
+          {
+            name: 'Spear',
+            quantity: 1
+          },
+          {
+            name: 'Crossbow, light',
+            quantity: 1
+          },
+          {
+            name: 'Dart',
+            quantity: 1
+          },
+          {
+            name: 'Shortbow',
+            quantity: 1
+          },
+          {
+            name: 'Sling',
+            quantity: 1
+          }
+        ]
+      }
+    ],
+    choice_2: [
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Scimitar',
+            quantity: 1
+          }
+        ]
+      },
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Club',
+            quantity: 1
+          },
+          {
+            name: 'Dagger',
+            quantity: 1
+          },
+          {
+            name: 'Greatclub',
+            quantity: 1
+          },
+          {
+            name: 'Handaxe',
+            quantity: 1
+          },
+          {
+            name: 'Javelin',
+            quantity: 1
+          },
+          {
+            name: 'Light hammer',
+            quantity: 1
+          },
+          {
+            name: 'Mace',
+            quantity: 1
+          },
+          {
+            name: 'Quarterstaff',
+            quantity: 1
+          },
+          {
+            name: 'Sickle',
+            quantity: 1
+          },
+          {
+            name: 'Spear',
+            quantity: 1
+          }
+        ]
+      }
+    ],
+    choice_3: [
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Sprig of mistletoe',
+            quantity: 1
+          },
+          {
+            name: 'Totem',
+            quantity: 1
+          },
+          {
+            name: 'Wooden staff',
+            quantity: 1
+          },
+          {
+            name: 'Yew wand',
+            quantity: 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    class: 'Fighter',
+    starting_equipment: [],
+    choices_to_make: 5,
+    choice_1: [
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Chain Mail',
+            quantity: 1
+          }
+        ]
+      },
+      {
+        choose: 3,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Leather',
+            quantity: 1
+          },
+          {
+            name: 'Longbow',
+            quantity: 1
+          },
+          {
+            name: 'Arrow',
+            quantity: 20
+          }
+        ]
+      }
+    ],
+    choice_2: [
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Shield',
+            quantity: 1
+          }
+        ]
+      },
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Battleaxe',
+            quantity: 1
+          },
+          {
+            name: 'Flail',
+            quantity: 1
+          },
+          {
+            name: 'Glaive',
+            quantity: 1
+          },
+          {
+            name: 'Greataxe',
+            quantity: 1
+          },
+          {
+            name: 'Greatsword',
+            quantity: 1
+          },
+          {
+            name: 'Halberd',
+            quantity: 1
+          },
+          {
+            name: 'Lance',
+            quantity: 1
+          },
+          {
+            name: 'Longsword',
+            quantity: 1
+          },
+          {
+            name: 'Maul',
+            quantity: 1
+          },
+          {
+            name: 'Morningstar',
+            quantity: 1
+          },
+          {
+            name: 'Pike',
+            quantity: 1
+          },
+          {
+            name: 'Rapier',
+            quantity: 1
+          },
+          {
+            name: 'Scimitar',
+            quantity: 1
+          },
+          {
+            name: 'Shortsword',
+            quantity: 1
+          },
+          {
+            name: 'Trident',
+            quantity: 1
+          },
+          {
+            name: 'War pick',
+            quantity: 1
+          },
+          {
+            name: 'Warhammer',
+            quantity: 1
+          },
+          {
+            name: 'Whip',
+            quantity: 1
+          },
+          {
+            name: 'Blowgun',
+            quantity: 1
+          },
+          {
+            name: 'Crossbow, hand',
+            quantity: 1
+          },
+          {
+            name: 'Crossbow, heavy',
+            quantity: 1
+          },
+          {
+            name: 'Longbow',
+            quantity: 1
+          },
+          {
+            name: 'Net',
+            quantity: 1
+          }
+        ]
+      }
+    ],
+    choice_3: [
+      {
+        choose: 2,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Crossbow, light',
+            quantity: 1
+          },
+          {
+            name: 'Crossbow bolt',
+            quantity: 20
+          }
+        ]
+      },
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Handaxe',
+            quantity: 2
+          }
+        ]
+      }
+    ],
+    choice_4: [
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Dungeoneer\'s Pack',
+            quantity: 1
+          }
+        ]
+      },
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Explorer\'s Pack',
+            quantity: 1
+          }
+        ]
+      }
+    ],
+    choice_5: [
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Battleaxe',
+            quantity: 1
+          },
+          {
+            name: 'Flail',
+            quantity: 1
+          },
+          {
+            name: 'Glaive',
+            quantity: 1
+          },
+          {
+            name: 'Greataxe',
+            quantity: 1
+          },
+          {
+            name: 'Greatsword',
+            quantity: 1
+          },
+          {
+            name: 'Halberd',
+            quantity: 1
+          },
+          {
+            name: 'Lance',
+            quantity: 1
+          },
+          {
+            name: 'Longsword',
+            quantity: 1
+          },
+          {
+            name: 'Maul',
+            quantity: 1
+          },
+          {
+            name: 'Morningstar',
+            quantity: 1
+          },
+          {
+            name: 'Pike',
+            quantity: 1
+          },
+          {
+            name: 'Rapier',
+            quantity: 1
+          },
+          {
+            name: 'Scimitar',
+            quantity: 1
+          },
+          {
+            name: 'Shortsword',
+            quantity: 1
+          },
+          {
+            name: 'Trident',
+            quantity: 1
+          },
+          {
+            name: 'War pick',
+            quantity: 1
+          },
+          {
+            name: 'Warhammer',
+            quantity: 1
+          },
+          {
+            name: 'Whip',
+            quantity: 1
+          },
+          {
+            name: 'Blowgun',
+            quantity: 1
+          },
+          {
+            name: 'Crossbow, hand',
+            quantity: 1
+          },
+          {
+            name: 'Crossbow, heavy',
+            quantity: 1
+          },
+          {
+            name: 'Longbow',
+            quantity: 1
+          },
+          {
+            name: 'Net',
+            quantity: 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    class: 'Monk',
+    starting_equipment: [
+      { 
+        name: 'Dart',
+        quantity: 10
+      }
+    ],
+    choices_to_make: 2,
+    choice_1: [
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Shortsword',
+            quantity: 1
+          }
+        ]
+      },
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Club',
+            quantity: 1
+          },
+          {
+            name: 'Dagger',
+            quantity: 1
+          },
+          {
+            name: 'Greatclub',
+            quantity: 1
+          },
+          {
+            name: 'Handaxe',
+            quantity: 1
+          },
+          {
+            name: 'Javelin',
+            quantity: 1
+          },
+          {
+            name: 'Light hammer',
+            quantity: 1
+          },
+          {
+            name: 'Mace',
+            quantity: 1
+          },
+          {
+            name: 'Quarterstaff',
+            quantity: 1
+          },
+          {
+            name: 'Sickle',
+            quantity: 1
+          },
+          {
+            name: 'Spear',
+            quantity: 1
+          },
+          {
+            name: 'Crossbow, light',
+            quantity: 1
+          },
+          {
+            name: 'Dart',
+            quantity: 1
+          },
+          {
+            name: 'Shortbow',
+            quantity: 1
+          },
+          {
+            name: 'Sling',
+            quantity: 1
+          }
+        ]
+      }
+    ],
+    choice_2: [
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Dungeoneer\'s Pack',
+            quantity: 1
+          }
+        ]
+      },
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Explorer\'s Pack',
+            quantity: 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    class: 'Paladin',
+    starting_equipment: [
+      { 
+        name: 'Chain Mail',
+        quantity: 1
+      }
+    ],
+    choices_to_make: 5,
+    choice_1: [
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Shield',
+            quantity: 1
+          }
+        ]
+      },
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Battleaxe',
+            quantity: 1
+          },
+          {
+            name: 'Flail',
+            quantity: 1
+          },
+          {
+            name: 'Glaive',
+            quantity: 1
+          },
+          {
+            name: 'Greataxe',
+            quantity: 1
+          },
+          {
+            name: 'Greatsword',
+            quantity: 1
+          },
+          {
+            name: 'Halberd',
+            quantity: 1
+          },
+          {
+            name: 'Lance',
+            quantity: 1
+          },
+          {
+            name: 'Longsword',
+            quantity: 1
+          },
+          {
+            name: 'Maul',
+            quantity: 1
+          },
+          {
+            name: 'Morningstar',
+            quantity: 1
+          },
+          {
+            name: 'Pike',
+            quantity: 1
+          },
+          {
+            name: 'Rapier',
+            quantity: 1
+          },
+          {
+            name: 'Scimitar',
+            quantity: 1
+          },
+          {
+            name: 'Shortsword',
+            quantity: 1
+          },
+          {
+            name: 'Trident',
+            quantity: 1
+          },
+          {
+            name: 'War pick',
+            quantity: 1
+          },
+          {
+            name: 'Warhammer',
+            quantity: 1
+          },
+          {
+            name: 'Whip',
+            quantity: 1
+          },
+          {
+            name: 'Blowgun',
+            quantity: 1
+          },
+          {
+            name: 'Crossbow, hand',
+            quantity: 1
+          },
+          {
+            name: 'Crossbow, heavy',
+            quantity: 1
+          },
+          {
+            name: 'Longbow',
+            quantity: 1
+          },
+          {
+            name: 'Net',
+            quantity: 1
+          }
+        ]
+      }
+    ],
+    choice_2: [
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Javelin',
+            quantity: 5
+          }
+        ]
+      },
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Club',
+            quantity: 1
+          },
+          {
+            name: 'Dagger',
+            quantity: 1
+          },
+          {
+            name: 'Greatclub',
+            quantity: 1
+          },
+          {
+            name: 'Handaxe',
+            quantity: 1
+          },
+          {
+            name: 'Javelin',
+            quantity: 1
+          },
+          {
+            name: 'Light hammer',
+            quantity: 1
+          },
+          {
+            name: 'Mace',
+            quantity: 1
+          },
+          {
+            name: 'Quarterstaff',
+            quantity: 1
+          },
+          {
+            name: 'Sickle',
+            quantity: 1
+          },
+          {
+            name: 'Spear',
+            quantity: 1
+          },
+          {
+            name: 'Crossbow, light',
+            quantity: 1
+          },
+          {
+            name: 'Dart',
+            quantity: 1
+          },
+          {
+            name: 'Shortbow',
+            quantity: 1
+          },
+          {
+            name: 'Sling',
+            quantity: 1
+          }
+        ]
+      }
+    ],
+    choice_3: [
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Priest\'s Pack',
+            quantity: 1
+          }
+        ]
+      },
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Explorer\'s Pack',
+            quantity: 1
+          }
+        ]
+      }
+    ],
+    choice_4: [
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Amulet',
+            quantity: 1
+          },
+          {
+            name: 'Emblem',
+            quantity: 1
+          },
+          {
+            name: 'Reliquary',
+            quantity: 1
+          }
+        ]
+      }
+    ],
+    choice_5: [
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Battleaxe',
+            quantity: 1
+          },
+          {
+            name: 'Flail',
+            quantity: 1
+          },
+          {
+            name: 'Glaive',
+            quantity: 1
+          },
+          {
+            name: 'Greataxe',
+            quantity: 1
+          },
+          {
+            name: 'Greatsword',
+            quantity: 1
+          },
+          {
+            name: 'Halberd',
+            quantity: 1
+          },
+          {
+            name: 'Lance',
+            quantity: 1
+          },
+          {
+            name: 'Longsword',
+            quantity: 1
+          },
+          {
+            name: 'Maul',
+            quantity: 1
+          },
+          {
+            name: 'Morningstar',
+            quantity: 1
+          },
+          {
+            name: 'Pike',
+            quantity: 1
+          },
+          {
+            name: 'Rapier',
+            quantity: 1
+          },
+          {
+            name: 'Scimitar',
+            quantity: 1
+          },
+          {
+            name: 'Shortsword',
+            quantity: 1
+          },
+          {
+            name: 'Trident',
+            quantity: 1
+          },
+          {
+            name: 'War pick',
+            quantity: 1
+          },
+          {
+            name: 'Warhammer',
+            quantity: 1
+          },
+          {
+            name: 'Whip',
+            quantity: 1
+          },
+          {
+            name: 'Blowgun',
+            quantity: 1
+          },
+          {
+            name: 'Crossbow, hand',
+            quantity: 1
+          },
+          {
+            name: 'Crossbow, heavy',
+            quantity: 1
+          },
+          {
+            name: 'Longbow',
+            quantity: 1
+          },
+          {
+            name: 'Net',
+            quantity: 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    class: 'Ranger',
+    starting_equipment: [
+      { 
+        name: 'Longbow',
+        quantity: 1
+      },
+      { 
+        name: 'Arrow',
+        quantity: 20
+      }
+    ],
+    choices_to_make: 3,
+    choice_1: [
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Scale Mail',
+            quantity: 1
+          }
+        ]
+      },
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Shortsword',
+            quantity: 1
+          }
+        ]
+      }
+    ],
+    choice_2: [
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Dungeoneer\'s Pack',
+            quantity: 2
+          }
+        ]
+      },
+      {
+        choose: 2,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Club',
+            quantity: 1
+          },
+          {
+            name: 'Dagger',
+            quantity: 1
+          },
+          {
+            name: 'Greatclub',
+            quantity: 1
+          },
+          {
+            name: 'Handaxe',
+            quantity: 1
+          },
+          {
+            name: 'Javelin',
+            quantity: 1
+          },
+          {
+            name: 'Light hammer',
+            quantity: 1
+          },
+          {
+            name: 'Mace',
+            quantity: 1
+          },
+          {
+            name: 'Quarterstaff',
+            quantity: 1
+          },
+          {
+            name: 'Sickle',
+            quantity: 1
+          },
+          {
+            name: 'Spear',
+            quantity: 1
+          }
+        ]
+      }
+    ],
+    choice_3: [
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Dungeoneer\'s Pack',
+            quantity: 1
+          }
+        ]
+      },
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Explorer\'s Pack',
+            quantity: 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    class: 'Rogue',
+    starting_equipment: [
+      { 
+        name: 'Leather',
+        quantity: 1
+      },
+      { 
+        name: 'Dagger',
+        quantity: 2
+      },
+      { 
+        name: 'Thieves’ tools',
+        quantity: 1
+      }
+    ],
+    choices_to_make: 3,
+    choice_1: [
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Rapier',
+            quantity: 1
+          }
+        ]
+      },
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Shortsword',
+            quantity: 1
+          }
+        ]
+      }
+    ],
+    choice_2: [
+      {
+        choose: 2,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Shortbow',
+            quantity: 1
+          },
+          {
+            name: 'Arrow',
+            quantity: 20
+          }
+        ]
+      },
+      {
+        choose: 2,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Shortsword',
+            quantity: 1
+          }
+        ]
+      }
+    ],
+    choice_3: [
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Burglar\'s Pack',
+            quantity: 1
+          }
+        ]
+      },
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Dungeoneer\'s Pack',
+            quantity: 1
+          }
+        ]
+      },
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Explorer\'s Pack',
+            quantity: 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    class: 'Sorcerer',
+    starting_equipment: [
+      { 
+        name: 'Dagger',
+        quantity: 2
+      }
+    ],
+    choices_to_make: 3,
+    choice_1: [
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Crossbow, light',
+            quantity: 1
+          },
+          {
+            name: 'Crossbow bolt',
+            quantity: 20
+          }
+        ]
+      },
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Club',
+            quantity: 1
+          },
+          {
+            name: 'Dagger',
+            quantity: 1
+          },
+          {
+            name: 'Greatclub',
+            quantity: 1
+          },
+          {
+            name: 'Handaxe',
+            quantity: 1
+          },
+          {
+            name: 'Javelin',
+            quantity: 1
+          },
+          {
+            name: 'Light hammer',
+            quantity: 1
+          },
+          {
+            name: 'Mace',
+            quantity: 1
+          },
+          {
+            name: 'Quarterstaff',
+            quantity: 1
+          },
+          {
+            name: 'Sickle',
+            quantity: 1
+          },
+          {
+            name: 'Spear',
+            quantity: 1
+          },
+          {
+            name: 'Crossbow, light',
+            quantity: 1
+          },
+          {
+            name: 'Dart',
+            quantity: 1
+          },
+          {
+            name: 'Shortbow',
+            quantity: 1
+          },
+          {
+            name: 'Sling',
+            quantity: 1
+          }
+        ]
+      }
+    ],
+    choice_2: [
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Component pouch',
+            quantity: 2
+          }
+        ]
+      },
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Crystal',
+            quantity: 1
+          },
+          {
+            name: 'Orb',
+            quantity: 1
+          },
+          {
+            name: 'Rod',
+            quantity: 1
+          },
+          {
+            name: 'Staff',
+            quantity: 1
+          },
+          {
+            name: 'Wand',
+            quantity: 1
+          }
+        ]
+      }
+    ],
+    choice_3: [
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Dungeoneer\'s Pack',
+            quantity: 1
+          }
+        ]
+      },
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Explorer\'s Pack',
+            quantity: 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    class: 'Warlock',
+    starting_equipment: [
+      { 
+        name: 'Dagger',
+        quantity: 2
+      },
+      { 
+        name: 'Leather',
+        quantity: 1
+      }
+    ],
+    choices_to_make: 4,
+    choice_1: [
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Crossbow, light',
+            quantity: 1
+          },
+          {
+            name: 'Crossbow bolt',
+            quantity: 20
+          }
+        ]
+      },
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Club',
+            quantity: 1
+          },
+          {
+            name: 'Dagger',
+            quantity: 1
+          },
+          {
+            name: 'Greatclub',
+            quantity: 1
+          },
+          {
+            name: 'Handaxe',
+            quantity: 1
+          },
+          {
+            name: 'Javelin',
+            quantity: 1
+          },
+          {
+            name: 'Light hammer',
+            quantity: 1
+          },
+          {
+            name: 'Mace',
+            quantity: 1
+          },
+          {
+            name: 'Quarterstaff',
+            quantity: 1
+          },
+          {
+            name: 'Sickle',
+            quantity: 1
+          },
+          {
+            name: 'Spear',
+            quantity: 1
+          },
+          {
+            name: 'Crossbow, light',
+            quantity: 1
+          },
+          {
+            name: 'Dart',
+            quantity: 1
+          },
+          {
+            name: 'Shortbow',
+            quantity: 1
+          },
+          {
+            name: 'Sling',
+            quantity: 1
+          }
+        ]
+      }
+    ],
+    choice_2: [
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Component pouch',
+            quantity: 2
+          }
+        ]
+      },
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Crystal',
+            quantity: 1
+          },
+          {
+            name: 'Orb',
+            quantity: 1
+          },
+          {
+            name: 'Rod',
+            quantity: 1
+          },
+          {
+            name: 'Staff',
+            quantity: 1
+          },
+          {
+            name: 'Wand',
+            quantity: 1
+          }
+        ]
+      }
+    ],
+    choice_3: [
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Scholar\'s Pack',
+            quantity: 1
+          }
+        ]
+      },
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Dungeoneer\'s Pack',
+            quantity: 1
+          }
+        ]
+      }
+    ],
+    choice_4: [
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Club',
+            quantity: 1
+          },
+          {
+            name: 'Dagger',
+            quantity: 1
+          },
+          {
+            name: 'Greatclub',
+            quantity: 1
+          },
+          {
+            name: 'Handaxe',
+            quantity: 1
+          },
+          {
+            name: 'Javelin',
+            quantity: 1
+          },
+          {
+            name: 'Light hammer',
+            quantity: 1
+          },
+          {
+            name: 'Mace',
+            quantity: 1
+          },
+          {
+            name: 'Quarterstaff',
+            quantity: 1
+          },
+          {
+            name: 'Sickle',
+            quantity: 1
+          },
+          {
+            name: 'Spear',
+            quantity: 1
+          },
+          {
+            name: 'Crossbow, light',
+            quantity: 1
+          },
+          {
+            name: 'Dart',
+            quantity: 1
+          },
+          {
+            name: 'Shortbow',
+            quantity: 1
+          },
+          {
+            name: 'Sling',
+            quantity: 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    class: 'Wizard',
+    starting_equipment: [
+      { 
+        name: 'Spellbook',
+        quantity: 1
+      }
+    ],
+    choices_to_make: 4,
+    choice_1: [
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Dagger',
+            quantity: 1
+          }
+        ]
+      },
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Quarterstaff',
+            quantity: 1
+          }
+        ]
+      }
+    ],
+    choice_2: [
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Component pouch',
+            quantity: 2
+          }
+        ]
+      },
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Crystal',
+            quantity: 1
+          },
+          {
+            name: 'Orb',
+            quantity: 1
+          },
+          {
+            name: 'Rod',
+            quantity: 1
+          },
+          {
+            name: 'Staff',
+            quantity: 1
+          },
+          {
+            name: 'Wand',
+            quantity: 1
+          }
+        ]
+      }
+    ],
+    choice_3: [
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Scholar\'s Pack',
+            quantity: 1
+          }
+        ]
+      },
+      {
+        choose: 1,
+        type: 'equipment',
+        from: [
+          {
+            name: 'Dungeoneer\'s Pack',
+            quantity: 1
+          }
+        ]
+      }
+    ]
+  }
+];
+
+
+
+
+
+
+
+
+
+
 export const mountsDB = [
   {
     name: 'Camel',
@@ -4628,6 +6755,11 @@ export const spellsDB = [
     school: {
       name: 'Evocation'
     },
+    classes: [
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -4635,7 +6767,7 @@ export const spellsDB = [
       {
         name: 'Land',
       }
-    ],
+    ]
   },
   {
     name: 'Acid Splash',
@@ -4656,11 +6788,19 @@ export const spellsDB = [
     school: {
       name: 'Conjuration'
     },
+    classes: [
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Aid',
@@ -4685,11 +6825,19 @@ export const spellsDB = [
     school: {
       name: 'Abjuration'
     },
+    classes: [
+      {
+        name: 'Cleric'
+      },
+      {
+        name: 'Paladin'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Alarm',
@@ -4713,11 +6861,19 @@ export const spellsDB = [
     school: {
       name: 'Abjuration'
     },
+    classes: [
+      {
+        name: 'Ranger'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Alter Self',
@@ -4741,21 +6897,28 @@ export const spellsDB = [
     casting_time: '1 action',
     level: 2,
     school: {
-      name: 'Transmutation',
-    },
+      name: 'Transmutation',    },
+    classes: [
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Animal Friendship',
     desc: [
-      'This spell lets you convince a beast that you mean it no harm. Choose a beast that you can see within range. It must see and hear you. If the beast\'s Intelligence is 4 or higher, the spell fails. Otherwise, the beast must succeed on a Wisdom saving throw or be charmed by you for the spell\'s duration. If you or one of your companions harms the target, the spells ends.'
+      'This spell lets you convince a beast that you mean it no harm. Choose a beast that you can see within range. It must see and hear you. If the beast\'s Intelligence is 4 or higher, the spell fails. Otherwise,the beast must succeed on a Wisdom saving throw or be charmed by you for the spell\'s duration. If you or one of your companions harms the target, the spells ends.'
     ],
     higher_level: [
-      'When you cast this spell using a spell slot of 2nd level or higher, you can affect one additional beast t level above 1st.'
+      'If you cast this spell using a spell slot of 3nd level or higher, the duration of the spell increases by 48 hours for each slot level above 2nd.'
     ],
     range: '30 feet',
     components: [
@@ -4764,19 +6927,29 @@ export const spellsDB = [
       'M'
     ],
     material: 'A morsel of food.',
-    ritual: 'no',
+    ritual: 'yes',
     duration: '24 hours',
     concentration: 'no',
     casting_time: '1 action',
     level: 2,
     school: {
-      name: 'Enchantment',
-    },
+      name: 'Enchantment',    },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Druid'
+      },
+      {
+        name: 'Ranger'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Animal Messenger',
@@ -4800,13 +6973,23 @@ export const spellsDB = [
     casting_time: '1 action',
     level: 2,
     school: {
-      name: 'Enchantment',
-    },
+      name: 'Enchantment',    },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Druid'
+      },
+      {
+        name: 'Ranger'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Animal Shapes',
@@ -4826,9 +7009,13 @@ export const spellsDB = [
     casting_time: '1 action',
     level: 8,
     school: {
-      name: 'Transmutation',
-    },
-    subclasses: [],
+      name: 'Transmutation',    },
+    classes: [
+      {
+        name: 'Druid'
+      }
+    ],
+    subclasses: []
   },
   {
     name: 'Animate Dead',
@@ -4855,11 +7042,19 @@ export const spellsDB = [
     school: {
       name: 'Necromancy'
     },
+    classes: [
+      {
+        name: 'Cleric'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Animate Objects',
@@ -4883,9 +7078,19 @@ export const spellsDB = [
     casting_time: '1 action',
     level: 5,
     school: {
-      name: 'Transmutation',
-    },
-    subclasses: [],
+      name: 'Transmutation',    },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
+    subclasses: []
   },
   {
     name: 'Antilife Shell',
@@ -4907,7 +7112,12 @@ export const spellsDB = [
     school: {
       name: 'Abjuration'
     },
-    subclasses: [],
+    classes: [
+      {
+        name: 'Druid'
+      }
+    ],
+    subclasses: []
   },
   {
     name: 'Antimagic Field',
@@ -4938,7 +7148,15 @@ export const spellsDB = [
     school: {
       name: 'Abjuration'
     },
-    subclasses: [],
+    classes: [
+      {
+        name: 'Cleric'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
+    subclasses: []
   },
   {
     name: 'Antipathy/Sympathy',
@@ -4965,9 +7183,16 @@ export const spellsDB = [
     casting_time: '1 hour',
     level: 8,
     school: {
-      name: 'Enchantment',
-    },
-    subclasses: [],
+      name: 'Enchantment',    },
+    classes: [
+      {
+        name: 'Druid'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
+    subclasses: []
   },
   {
     name: 'Arcane Eye',
@@ -4991,7 +7216,15 @@ export const spellsDB = [
     school: {
       name: 'Divination'
     },
-    subclasses: [],
+    classes: [
+      {
+        name: 'Cleric'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
+    subclasses: []
   },
   {
     name: 'Arcane Hand',
@@ -5026,7 +7259,12 @@ export const spellsDB = [
     school: {
       name: 'Evocation'
     },
-    subclasses: [],
+    classes: [
+      {
+        name: 'Wizard'
+      }
+    ],
+    subclasses: []
   },
   {
     name: 'Arcane Lock',
@@ -5049,11 +7287,16 @@ export const spellsDB = [
     school: {
       name: 'Abjuration'
     },
+    classes: [
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Arcane Sword',
@@ -5076,7 +7319,15 @@ export const spellsDB = [
     school: {
       name: 'Evocation'
     },
-    subclasses: [],
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
+    subclasses: []
   },
   {
     name: 'Arcanist\'s Magic Aura',
@@ -5103,11 +7354,16 @@ export const spellsDB = [
     school: {
       name: 'Illusion'
     },
+    classes: [
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Astral Projection',
@@ -5134,7 +7390,18 @@ export const spellsDB = [
     school: {
       name: 'Necromancy'
     },
-    subclasses: [],
+    classes: [
+      {
+        name: 'Cleric'
+      },
+      {
+        name: 'Warlock'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
+    subclasses: []
   },
   {
     name: 'Augury',
@@ -5162,11 +7429,16 @@ export const spellsDB = [
     school: {
       name: 'Divination'
     },
+    classes: [
+      {
+        name: 'Cleric'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Awaken',
@@ -5187,9 +7459,16 @@ export const spellsDB = [
     casting_time: '8 hours',
     level: 5,
     school: {
-      name: 'Transmutation',
-    },
-    subclasses: [],
+      name: 'Transmutation',    },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Druid'
+      }
+    ],
+    subclasses: []
   },
   {
     name: 'Bane',
@@ -5212,13 +7491,20 @@ export const spellsDB = [
     casting_time: '1 action',
     level: 1,
     school: {
-      name: 'Enchantment',
-    },
+      name: 'Enchantment',    },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Cleric'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Banishment',
@@ -5245,7 +7531,24 @@ export const spellsDB = [
     school: {
       name: 'Abjuration'
     },
-    subclasses: [],
+    classes: [
+      {
+        name: 'Cleric'
+      },
+      {
+        name: 'Paladin'
+      },
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Warlock'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
+    subclasses: []
   },
   {
     name: 'Barkskin',
@@ -5265,8 +7568,15 @@ export const spellsDB = [
     casting_time: '1 action',
     level: 2,
     school: {
-      name: 'Transmutation',
-    },
+      name: 'Transmutation',    },
+    classes: [
+      {
+        name: 'Druid'
+      },
+      {
+        name: 'Ranger'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -5274,7 +7584,7 @@ export const spellsDB = [
       {
         name: 'Land',
       }
-    ],
+    ]
   },
   {
     name: 'Beacon of Hope',
@@ -5294,6 +7604,11 @@ export const spellsDB = [
     school: {
       name: 'Abjuration'
     },
+    classes: [
+      {
+        name: 'Cleric'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -5304,7 +7619,7 @@ export const spellsDB = [
       {
         name: 'Devotion',
       }
-    ],
+    ]
   },
   {
     name: 'Bestow Curse',
@@ -5332,11 +7647,22 @@ export const spellsDB = [
     school: {
       name: 'Necromancy'
     },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Cleric'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Black Tentacles',
@@ -5360,7 +7686,12 @@ export const spellsDB = [
     school: {
       name: 'Conjuration'
     },
-    subclasses: [],
+    classes: [
+      {
+        name: 'Wizard'
+      }
+    ],
+    subclasses: []
   },
   {
     name: 'Blade Barrier',
@@ -5381,7 +7712,12 @@ export const spellsDB = [
     school: {
       name: 'Evocation'
     },
-    subclasses: [],
+    classes: [
+      {
+        name: 'Cleric'
+      }
+    ],
+    subclasses: []
   },
   {
     name: 'Bless',
@@ -5404,8 +7740,15 @@ export const spellsDB = [
     casting_time: '1 action',
     level: 1,
     school: {
-      name: 'Enchantment',
-    },
+      name: 'Enchantment',    },
+    classes: [
+      {
+        name: 'Cleric'
+      },
+      {
+        name: 'Paladin'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -5413,7 +7756,7 @@ export const spellsDB = [
       {
         name: 'Life',
       }
-    ],
+    ]
   },
   {
     name: 'Blight',
@@ -5438,11 +7781,25 @@ export const spellsDB = [
     school: {
       name: 'Necromancy'
     },
+    classes: [
+      {
+        name: 'Druid'
+      },
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Warlock'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Land',
       }
-    ],
+    ]
   },
   {
     name: 'Blindness/Deafness',
@@ -5464,6 +7821,20 @@ export const spellsDB = [
     school: {
       name: 'Necromancy'
     },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Cleric'
+      },
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -5471,7 +7842,7 @@ export const spellsDB = [
       {
         name: 'Fiend',
       }
-    ],
+    ]
   },
   {
     name: 'Blink',
@@ -5490,13 +7861,20 @@ export const spellsDB = [
     casting_time: '1 action',
     level: 3,
     school: {
-      name: 'Transmutation',
-    },
+      name: 'Transmutation',    },
+    classes: [
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Blur',
@@ -5515,6 +7893,14 @@ export const spellsDB = [
     school: {
       name: 'Illusion'
     },
+    classes: [
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -5522,7 +7908,7 @@ export const spellsDB = [
       {
         name: 'Land',
       }
-    ],
+    ]
   },
   {
     name: 'Burning Hands',
@@ -5546,6 +7932,14 @@ export const spellsDB = [
     school: {
       name: 'Evocation'
     },
+    classes: [
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -5553,7 +7947,7 @@ export const spellsDB = [
       {
         name: 'Fiend',
       }
-    ],
+    ]
   },
   {
     name: 'Call Lightning',
@@ -5578,6 +7972,11 @@ export const spellsDB = [
     school: {
       name: 'Conjuration'
     },
+    classes: [
+      {
+        name: 'Druid'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -5585,7 +7984,7 @@ export const spellsDB = [
       {
         name: 'Land',
       }
-    ],
+    ]
   },
   {
     name: 'Calm Emotions',
@@ -5604,13 +8003,20 @@ export const spellsDB = [
     casting_time: '1 action',
     level: 2,
     school: {
-      name: 'Enchantment',
-    },
+      name: 'Enchantment',    },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Cleric'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Chain Lightning',
@@ -5636,7 +8042,15 @@ export const spellsDB = [
     school: {
       name: 'Evocation'
     },
-    subclasses: [],
+    classes: [
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
+    subclasses: []
   },
   {
     name: 'Charm Person',
@@ -5657,13 +8071,29 @@ export const spellsDB = [
     casting_time: '1 action',
     level: 1,
     school: {
-      name: 'Enchantment',
-    },
+      name: 'Enchantment',    },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Druid'
+      },
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Warlock'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Chill Touch',
@@ -5685,11 +8115,22 @@ export const spellsDB = [
     school: {
       name: 'Necromancy'
     },
+    classes: [
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Warlock'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Circle of Death',
@@ -5714,7 +8155,18 @@ export const spellsDB = [
     school: {
       name: 'Necromancy'
     },
-    subclasses: [],
+    classes: [
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Warlock'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
+    subclasses: []
   },
   {
     name: 'Clairvoyance',
@@ -5738,11 +8190,25 @@ export const spellsDB = [
     school: {
       name: 'Divination'
     },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Cleric'
+      },
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Clone',
@@ -5765,7 +8231,12 @@ export const spellsDB = [
     school: {
       name: 'Necromancy'
     },
-    subclasses: [],
+    classes: [
+      {
+        name: 'Wizard'
+      }
+    ],
+    subclasses: []
   },
   {
     name: 'Cloudkill',
@@ -5790,11 +8261,19 @@ export const spellsDB = [
     school: {
       name: 'Conjuration'
     },
+    classes: [
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Land',
       }
-    ],
+    ]
   },
   {
     name: 'Color Spray',
@@ -5820,11 +8299,19 @@ export const spellsDB = [
     school: {
       name: 'Illusion'
     },
+    classes: [
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Command',
@@ -5855,8 +8342,15 @@ export const spellsDB = [
     casting_time: '1 action',
     level: 1,
     school: {
-      name: 'Enchantment',
-    },
+      name: 'Enchantment',    },
+    classes: [
+      {
+        name: 'Cleric'
+      },
+      {
+        name: 'Paladin'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -5864,7 +8358,7 @@ export const spellsDB = [
       {
         name: 'Fiend',
       }
-    ],
+    ]
   },
   {
     name: 'Commune',
@@ -5888,11 +8382,16 @@ export const spellsDB = [
     school: {
       name: 'Divination'
     },
+    classes: [
+      {
+        name: 'Cleric'
+      }
+    ],
     subclasses: [
       {
         name: 'Devotion',
       }
-    ],
+    ]
   },
   {
     name: 'Commune with Nature',
@@ -5919,11 +8418,19 @@ export const spellsDB = [
     school: {
       name: 'Divination'
     },
+    classes: [
+      {
+        name: 'Druid'
+      },
+      {
+        name: 'Ranger'
+      }
+    ],
     subclasses: [
       {
         name: 'Land',
       }
-    ],
+    ]
   },
   {
     name: 'Comprehend Languages',
@@ -5946,11 +8453,25 @@ export const spellsDB = [
     school: {
       name: 'Divination'
     },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Warlock'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Cone of Cold',
@@ -5976,11 +8497,19 @@ export const spellsDB = [
     school: {
       name: 'Evocation'
     },
+    classes: [
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Land',
       }
-    ],
+    ]
   },
   {
     name: 'Confusion',
@@ -6005,9 +8534,22 @@ export const spellsDB = [
     casting_time: '1 action',
     level: 4,
     school: {
-      name: 'Enchantment',
-    },
-    subclasses: [],
+      name: 'Enchantment',    },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Druid'
+      },
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
+    subclasses: []
   },
   {
     name: 'Conjure Animals',
@@ -6037,11 +8579,19 @@ export const spellsDB = [
     school: {
       name: 'Conjuration'
     },
+    classes: [
+      {
+        name: 'Druid'
+      },
+      {
+        name: 'Ranger'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Conjure Celestial',
@@ -6066,7 +8616,12 @@ export const spellsDB = [
     school: {
       name: 'Conjuration'
     },
-    subclasses: [],
+    classes: [
+      {
+        name: 'Cleric'
+      }
+    ],
+    subclasses: []
   },
   {
     name: 'Conjure Elemental',
@@ -6094,11 +8649,19 @@ export const spellsDB = [
     school: {
       name: 'Conjuration'
     },
+    classes: [
+      {
+        name: 'Druid'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Land',
       }
-    ],
+    ]
   },
   {
     name: 'Conjure Fey',
@@ -6124,7 +8687,15 @@ export const spellsDB = [
     school: {
       name: 'Conjuration'
     },
-    subclasses: [],
+    classes: [
+      {
+        name: 'Druid'
+      },
+      {
+        name: 'Warlock'
+      }
+    ],
+    subclasses: []
   },
   {
     name: 'Conjure Minor Elementals',
@@ -6154,7 +8725,15 @@ export const spellsDB = [
     school: {
       name: 'Conjuration'
     },
-    subclasses: [],
+    classes: [
+      {
+        name: 'Druid'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
+    subclasses: []
   },
   {
     name: 'Conjure Woodland Beings',
@@ -6186,7 +8765,15 @@ export const spellsDB = [
     school: {
       name: 'Conjuration'
     },
-    subclasses: [],
+    classes: [
+      {
+        name: 'Druid'
+      },
+      {
+        name: 'Ranger'
+      }
+    ],
+    subclasses: []
   },
   {
     name: 'Contact Other Plane',
@@ -6206,7 +8793,15 @@ export const spellsDB = [
     school: {
       name: 'Divination'
     },
-    subclasses: [],
+    classes: [
+      {
+        name: 'Warlock'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
+    subclasses: []
   },
   {
     name: 'Contagion',
@@ -6240,7 +8835,15 @@ export const spellsDB = [
     school: {
       name: 'Necromancy'
     },
-    subclasses: [],
+    classes: [
+      {
+        name: 'Cleric'
+      },
+      {
+        name: 'Druid'
+      }
+    ],
+    subclasses: []
   },
   {
     name: 'Contingency',
@@ -6264,7 +8867,12 @@ export const spellsDB = [
     school: {
       name: 'Evocation'
     },
-    subclasses: [],
+    classes: [
+      {
+        name: 'Wizard'
+      }
+    ],
+    subclasses: []
   },
   {
     name: 'Continual Flame',
@@ -6286,11 +8894,19 @@ export const spellsDB = [
     school: {
       name: 'Evocation'
     },
+    classes: [
+      {
+        name: 'Cleric'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Control Water',
@@ -6322,9 +8938,19 @@ export const spellsDB = [
     casting_time: '1 action',
     level: 4,
     school: {
-      name: 'Transmutation',
-    },
-    subclasses: [],
+      name: 'Transmutation',    },
+    classes: [
+      {
+        name: 'Cleric'
+      },
+      {
+        name: 'Druid'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
+    subclasses: []
   },
   {
     name: 'Control Weather',
@@ -6346,13 +8972,23 @@ export const spellsDB = [
     casting_time: '10 minutes',
     level: 8,
     school: {
-      name: 'Transmutation',
-    },
+      name: 'Transmutation',    },
+    classes: [
+      {
+        name: 'Cleric'
+      },
+      {
+        name: 'Druid'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Land',
       }
-    ],
+    ]
   },
   {
     name: 'Create Food and Water',
@@ -6373,6 +9009,15 @@ export const spellsDB = [
       name: 'Conjuration'
     },
     classes: [
+      {
+        name: 'Cleric'
+      },
+      {
+        name: 'Druid'
+      },
+      {
+        name: 'Paladin'
+      }
     ],
     subclasses: [
       {
@@ -6381,7 +9026,7 @@ export const spellsDB = [
       {
         name: 'Land',
       }
-    ],
+    ]
   },
   {
     name: 'Create or Destroy Water',
@@ -6408,13 +9053,20 @@ export const spellsDB = [
     casting_time: '1 action',
     level: 1,
     school: {
-      name: 'Transmutation',
-    },
+      name: 'Transmutation',    },
+    classes: [
+      {
+        name: 'Cleric'
+      },
+      {
+        name: 'Druid'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Create Undead',
@@ -6441,7 +9093,18 @@ export const spellsDB = [
     school: {
       name: 'Necromancy'
     },
-    subclasses: [],
+    classes: [
+      {
+        name: 'Cleric'
+      },
+      {
+        name: 'Warlock'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
+    subclasses: []
   },
   {
     name: 'Creation',
@@ -6478,7 +9141,15 @@ export const spellsDB = [
     school: {
       name: 'Illusion'
     },
-    subclasses: [],
+    classes: [
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
+    subclasses: []
   },
   {
     name: 'Cure Wounds',
@@ -6501,6 +9172,23 @@ export const spellsDB = [
     school: {
       name: 'Evocation'
     },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Cleric'
+      },
+      {
+        name: 'Druid'
+      },
+      {
+        name: 'Paladin'
+      },
+      {
+        name: 'Ranger'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -6508,7 +9196,7 @@ export const spellsDB = [
       {
         name: 'Life',
       }
-    ],
+    ]
   },
   {
     name: 'Dancing Lights',
@@ -6531,11 +9219,22 @@ export const spellsDB = [
     school: {
       name: 'Evocation'
     },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Darkness',
@@ -6558,6 +9257,17 @@ export const spellsDB = [
     school: {
       name: 'Evocation'
     },
+    classes: [
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Warlock'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -6565,7 +9275,7 @@ export const spellsDB = [
       {
         name: 'Land',
       }
-    ],
+    ]
   },
   {
     name: 'Darkvision',
@@ -6585,13 +9295,26 @@ export const spellsDB = [
     casting_time: '1 action',
     level: 2,
     school: {
-      name: 'Transmutation',
-    },
+      name: 'Transmutation',    },
+    classes: [
+      {
+        name: 'Druid'
+      },
+      {
+        name: 'Ranger'
+      },
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Daylight',
@@ -6613,6 +9336,23 @@ export const spellsDB = [
     school: {
       name: 'Evocation'
     },
+    classes: [
+      {
+        name: 'Cleric'
+      },
+      {
+        name: 'Druid'
+      },
+      {
+        name: 'Paladin'
+      },
+      {
+        name: 'Ranger'
+      },
+      {
+        name: 'Sorcerer'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -6620,7 +9360,7 @@ export const spellsDB = [
       {
         name: 'Land',
       }
-    ],
+    ]
   },
   {
     name: 'Death Ward',
@@ -6642,11 +9382,19 @@ export const spellsDB = [
     school: {
       name: 'Abjuration'
     },
+    classes: [
+      {
+        name: 'Cleric'
+      },
+      {
+        name: 'Paladin'
+      }
+    ],
     subclasses: [
       {
         name: 'Life',
       }
-    ],
+    ]
   },
   {
     name: 'Delayed Blast Fireball',
@@ -6674,7 +9422,15 @@ export const spellsDB = [
     school: {
       name: 'Evocation'
     },
-    subclasses: [],
+    classes: [
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
+    subclasses: []
   },
   {
     name: 'Demiplane',
@@ -6694,7 +9450,15 @@ export const spellsDB = [
     school: {
       name: 'Conjuration'
     },
-    subclasses: [],
+    classes: [
+      {
+        name: 'Warlock'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
+    subclasses: []
   },
   {
     name: 'Detect Evil and Good',
@@ -6715,11 +9479,19 @@ export const spellsDB = [
     school: {
       name: 'Divination'
     },
+    classes: [
+      {
+        name: 'Cleric'
+      },
+      {
+        name: 'Paladin'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Detect Magic',
@@ -6740,11 +9512,34 @@ export const spellsDB = [
     school: {
       name: 'Divination'
     },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Cleric'
+      },
+      {
+        name: 'Druid'
+      },
+      {
+        name: 'Paladin'
+      },
+      {
+        name: 'Ranger'
+      },
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Detect Poison and Disease',
@@ -6767,11 +9562,25 @@ export const spellsDB = [
     school: {
       name: 'Divination'
     },
+    classes: [
+      {
+        name: 'Cleric'
+      },
+      {
+        name: 'Druid'
+      },
+      {
+        name: 'Paladin'
+      },
+      {
+        name: 'Ranger'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Detect Thoughts',
@@ -6797,11 +9606,22 @@ export const spellsDB = [
     school: {
       name: 'Divination'
     },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Dimension Door',
@@ -6822,7 +9642,21 @@ export const spellsDB = [
     school: {
       name: 'Conjuration'
     },
-    subclasses: [],
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Warlock'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
+    subclasses: []
   },
   {
     name: 'Disguise Self',
@@ -6844,11 +9678,22 @@ export const spellsDB = [
     school: {
       name: 'Illusion'
     },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Disintegrate',
@@ -6874,9 +9719,16 @@ export const spellsDB = [
     casting_time: '1 action',
     level: 6,
     school: {
-      name: 'Transmutation',
-    },
-    subclasses: [],
+      name: 'Transmutation',    },
+    classes: [
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
+    subclasses: []
   },
   {
     name: 'Dispel Evil and Good',
@@ -6903,7 +9755,15 @@ export const spellsDB = [
     school: {
       name: 'Abjuration'
     },
-    subclasses: [],
+    classes: [
+      {
+        name: 'Cleric'
+      },
+      {
+        name: 'Paladin'
+      }
+    ],
+    subclasses: []
   },
   {
     name: 'Dispel Magic',
@@ -6926,6 +9786,29 @@ export const spellsDB = [
     school: {
       name: 'Abjuration'
     },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Cleric'
+      },
+      {
+        name: 'Druid'
+      },
+      {
+        name: 'Paladin'
+      },
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Warlock'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -6933,7 +9816,7 @@ export const spellsDB = [
       {
         name: 'Devotion',
       }
-    ],
+    ]
   },
   {
     name: 'Divination',
@@ -6957,11 +9840,16 @@ export const spellsDB = [
     school: {
       name: 'Divination'
     },
+    classes: [
+      {
+        name: 'Druid'
+      }
+    ],
     subclasses: [
       {
         name: 'Land',
       }
-    ],
+    ]
   },
   {
     name: 'Divine Favor',
@@ -6982,12 +9870,15 @@ export const spellsDB = [
       name: 'Evocation'
     },
     classes: [
+      {
+        name: 'Paladin'
+      }
     ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Divine Word',
@@ -7011,7 +9902,12 @@ export const spellsDB = [
     school: {
       name: 'Evocation'
     },
-    subclasses: [],
+    classes: [
+      {
+        name: 'Cleric'
+      }
+    ],
+    subclasses: []
   },
   {
     name: 'Dominate Beast',
@@ -7034,14 +9930,16 @@ export const spellsDB = [
     casting_time: '1 action',
     level: 4,
     school: {
-      name: 'Enchantment',
-    },
+      name: 'Enchantment',    },
     classes: [
+      {
+        name: 'Druid'
+      },
       {
         name: 'Sorcerer'
       }
     ],
-    subclasses: [],
+    subclasses: []
   },
   {
     name: 'Dominate Monster',
@@ -7065,9 +9963,22 @@ export const spellsDB = [
     casting_time: '1 action',
     level: 8,
     school: {
-      name: 'Enchantment',
-    },
-    subclasses: [],
+      name: 'Enchantment',    },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Warlock'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
+    subclasses: []
   },
   {
     name: 'Dominate Person',
@@ -7091,9 +10002,19 @@ export const spellsDB = [
     casting_time: '1 action',
     level: 5,
     school: {
-      name: 'Enchantment',
-    },
-    subclasses: [],
+      name: 'Enchantment',    },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
+    subclasses: []
   },
   {
     name: 'Dream',
@@ -7119,11 +10040,22 @@ export const spellsDB = [
     school: {
       name: 'Illusion'
     },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Warlock'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Land',
       }
-    ],
+    ]
   },
   {
     name: 'Earthquake',
@@ -7153,10 +10085,16 @@ export const spellsDB = [
     },
     classes: [
       {
+        name: 'Cleric'
+      },
+      {
+        name: 'Druid'
+      },
+      {
         name: 'Sorcerer'
       }
     ],
-    subclasses: [],
+    subclasses: []
   },
   {
     name: 'Eldritch Blast',
@@ -7179,11 +10117,16 @@ export const spellsDB = [
     school: {
       name: 'Evocation'
     },
+    classes: [
+      {
+        name: 'Warlock'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Enhance Ability',
@@ -7218,9 +10161,17 @@ export const spellsDB = [
     casting_time: '1 action',
     level: 2,
     school: {
-      name: 'Transmutation',
-    },
+      name: 'Transmutation',    },
     classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Cleric'
+      },
+      {
+        name: 'Druid'
+      },
       {
         name: 'Sorcerer'
       }
@@ -7229,7 +10180,7 @@ export const spellsDB = [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Enlarge/Reduce',
@@ -7254,13 +10205,20 @@ export const spellsDB = [
     casting_time: '1 action',
     level: 2,
     school: {
-      name: 'Transmutation',
-    },
+      name: 'Transmutation',    },
+    classes: [
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Entangle',
@@ -7282,11 +10240,16 @@ export const spellsDB = [
     school: {
       name: 'Conjuration'
     },
+    classes: [
+      {
+        name: 'Druid'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Enthrall',
@@ -7304,13 +10267,20 @@ export const spellsDB = [
     casting_time: '1 action',
     level: 2,
     school: {
-      name: 'Enchantment',
-    },
+      name: 'Enchantment',    },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Warlock'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Etherealness',
@@ -7335,9 +10305,25 @@ export const spellsDB = [
     casting_time: '1 action',
     level: 7,
     school: {
-      name: 'Transmutation',
-    },
-    subclasses: [],
+      name: 'Transmutation',    },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Cleric'
+      },
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Warlock'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
+    subclasses: []
   },
   {
     name: 'Expeditious Retreat',
@@ -7355,13 +10341,23 @@ export const spellsDB = [
     casting_time: '1 bonus action',
     level: 1,
     school: {
-      name: 'Transmutation',
-    },
+      name: 'Transmutation',    },
+    classes: [
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Warlock'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Eyebite',
@@ -7387,7 +10383,21 @@ export const spellsDB = [
     school: {
       name: 'Necromancy'
     },
-    subclasses: [],
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Warlock'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
+    subclasses: []
   },
   {
     name: 'Fabricate',
@@ -7407,9 +10417,13 @@ export const spellsDB = [
     casting_time: '10 minutes',
     level: 4,
     school: {
-      name: 'Transmutation',
-    },
-    subclasses: [],
+      name: 'Transmutation',    },
+    classes: [
+      {
+        name: 'Wizard'
+      }
+    ],
+    subclasses: []
   },
   {
     name: 'Faerie Fire',
@@ -7429,11 +10443,16 @@ export const spellsDB = [
     school: {
       name: 'Evocation'
     },
+    classes: [
+      {
+        name: 'Druid'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Faithful Hound',
@@ -7457,7 +10476,12 @@ export const spellsDB = [
     school: {
       name: 'Conjuration'
     },
-    subclasses: [],
+    classes: [
+      {
+        name: 'Wizard'
+      }
+    ],
+    subclasses: []
   },
   {
     name: 'False Life',
@@ -7482,11 +10506,19 @@ export const spellsDB = [
     school: {
       name: 'Necromancy'
     },
+    classes: [
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Fear',
@@ -7509,11 +10541,25 @@ export const spellsDB = [
     school: {
       name: 'Illusion'
     },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Warlock'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Feather Fall',
@@ -7532,13 +10578,23 @@ export const spellsDB = [
     casting_time: '1 reaction',
     level: 1,
     school: {
-      name: 'Transmutation',
-    },
+      name: 'Transmutation',    },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Feeblemind',
@@ -7561,9 +10617,22 @@ export const spellsDB = [
     casting_time: '1 action',
     level: 8,
     school: {
-      name: 'Enchantment',
-    },
-    subclasses: [],
+      name: 'Enchantment',    },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Druid'
+      },
+      {
+        name: 'Warlock'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
+    subclasses: []
   },
   {
     name: 'Find Steed',
@@ -7588,12 +10657,15 @@ export const spellsDB = [
       name: 'Conjuration'
     },
     classes: [
+      {
+        name: 'Paladin'
+      }
     ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Find the Path',
@@ -7616,7 +10688,15 @@ export const spellsDB = [
     school: {
       name: 'Divination'
     },
-    subclasses: [],
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Cleric'
+      }
+    ],
+    subclasses: []
   },
   {
     name: 'Find Traps',
@@ -7637,11 +10717,22 @@ export const spellsDB = [
     school: {
       name: 'Divination'
     },
+    classes: [
+      {
+        name: 'Cleric'
+      },
+      {
+        name: 'Druid'
+      },
+      {
+        name: 'Ranger'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Finger of Death',
@@ -7662,7 +10753,18 @@ export const spellsDB = [
     school: {
       name: 'Necromancy'
     },
-    subclasses: [],
+    classes: [
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Warlock'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
+    subclasses: []
   },
   {
     name: 'Fireball',
@@ -7688,6 +10790,14 @@ export const spellsDB = [
     school: {
       name: 'Evocation'
     },
+    classes: [
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -7695,7 +10805,7 @@ export const spellsDB = [
       {
         name: 'Fiend',
       }
-    ],
+    ]
   },
   {
     name: 'Fire Shield',
@@ -7719,11 +10829,16 @@ export const spellsDB = [
     school: {
       name: 'Evocation'
     },
+    classes: [
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Fiend',
       }
-    ],
+    ]
   },
   {
     name: 'Fire Storm',
@@ -7746,10 +10861,16 @@ export const spellsDB = [
     },
     classes: [
       {
+        name: 'Cleric'
+      },
+      {
+        name: 'Druid'
+      },
+      {
         name: 'Sorcerer'
       }
     ],
-    subclasses: [],
+    subclasses: []
   },
   {
     name: 'Flame Blade',
@@ -7776,11 +10897,16 @@ export const spellsDB = [
     school: {
       name: 'Evocation'
     },
+    classes: [
+      {
+        name: 'Druid'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Flame Strike',
@@ -7805,6 +10931,11 @@ export const spellsDB = [
     school: {
       name: 'Evocation'
     },
+    classes: [
+      {
+        name: 'Cleric'
+      }
+    ],
     subclasses: [
       {
         name: 'Devotion',
@@ -7812,7 +10943,7 @@ export const spellsDB = [
       {
         name: 'Fiend',
       }
-    ],
+    ]
   },
   {
     name: 'Flaming Sphere',
@@ -7839,11 +10970,19 @@ export const spellsDB = [
     school: {
       name: 'Conjuration'
     },
+    classes: [
+      {
+        name: 'Druid'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Flesh to Stone',
@@ -7866,9 +11005,16 @@ export const spellsDB = [
     casting_time: '1 action',
     level: 6,
     school: {
-      name: 'Transmutation',
-    },
-    subclasses: [],
+      name: 'Transmutation',    },
+    classes: [
+      {
+        name: 'Warlock'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
+    subclasses: []
   },
   {
     name: 'Floating Disk',
@@ -7892,11 +11038,16 @@ export const spellsDB = [
     school: {
       name: 'Conjuration'
     },
+    classes: [
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Fly',
@@ -7919,13 +11070,23 @@ export const spellsDB = [
     casting_time: '1 action',
     level: 3,
     school: {
-      name: 'Transmutation',
-    },
+      name: 'Transmutation',    },
+    classes: [
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Warlock'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Fog Cloud',
@@ -7948,11 +11109,25 @@ export const spellsDB = [
     school: {
       name: 'Conjuration'
     },
+    classes: [
+      {
+        name: 'Druid'
+      },
+      {
+        name: 'Ranger'
+      },
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Forbiddance',
@@ -7977,7 +11152,12 @@ export const spellsDB = [
     school: {
       name: 'Abjuration'
     },
-    subclasses: [],
+    classes: [
+      {
+        name: 'Cleric'
+      }
+    ],
+    subclasses: []
   },
   {
     name: 'Forcecage',
@@ -8004,7 +11184,18 @@ export const spellsDB = [
     school: {
       name: 'Evocation'
     },
-    subclasses: [],
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Warlock'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
+    subclasses: []
   },
   {
     name: 'Foresight',
@@ -8027,7 +11218,21 @@ export const spellsDB = [
     school: {
       name: 'Divination'
     },
-    subclasses: [],
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Druid'
+      },
+      {
+        name: 'Warlock'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
+    subclasses: []
   },
   {
     name: 'Freedom of Movement',
@@ -8050,6 +11255,20 @@ export const spellsDB = [
     school: {
       name: 'Abjuration'
     },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Cleric'
+      },
+      {
+        name: 'Druid'
+      },
+      {
+        name: 'Ranger'
+      }
+    ],
     subclasses: [
       {
         name: 'Land',
@@ -8057,7 +11276,7 @@ export const spellsDB = [
       {
         name: 'Devotion',
       }
-    ],
+    ]
   },
   {
     name: 'Freezing Sphere',
@@ -8084,7 +11303,12 @@ export const spellsDB = [
     school: {
       name: 'Evocation'
     },
-    subclasses: [],
+    classes: [
+      {
+        name: 'Wizard'
+      }
+    ],
+    subclasses: []
   },
   {
     name: 'Gaseous Form',
@@ -8106,8 +11330,18 @@ export const spellsDB = [
     casting_time: '1 action',
     level: 3,
     school: {
-      name: 'Transmutation',
-    },
+      name: 'Transmutation',    },
+    classes: [
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Warlock'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -8115,7 +11349,7 @@ export const spellsDB = [
       {
         name: 'Land',
       }
-    ],
+    ]
   },
   {
     name: 'Gate',
@@ -8140,7 +11374,18 @@ export const spellsDB = [
     school: {
       name: 'Conjuration'
     },
-    subclasses: [],
+    classes: [
+      {
+        name: 'Cleric'
+      },
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
+    subclasses: []
   },
   {
     name: 'Geas',
@@ -8162,9 +11407,25 @@ export const spellsDB = [
     casting_time: '1 minute',
     level: 5,
     school: {
-      name: 'Enchantment',
-    },
-    subclasses: [],
+      name: 'Enchantment',    },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Cleric'
+      },
+      {
+        name: 'Druid'
+      },
+      {
+        name: 'Paladin'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
+    subclasses: []
   },
   {
     name: 'Gentle Repose',
@@ -8187,11 +11448,19 @@ export const spellsDB = [
     school: {
       name: 'Necromancy'
     },
+    classes: [
+      {
+        name: 'Cleric'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Giant Insect',
@@ -8212,9 +11481,13 @@ export const spellsDB = [
     casting_time: '1 action',
     level: 4,
     school: {
-      name: 'Transmutation',
-    },
-    subclasses: [],
+      name: 'Transmutation',    },
+    classes: [
+      {
+        name: 'Druid'
+      }
+    ],
+    subclasses: []
   },
   {
     name: 'Glibness',
@@ -8231,9 +11504,16 @@ export const spellsDB = [
     casting_time: '1 action',
     level: 8,
     school: {
-      name: 'Transmutation',
-    },
-    subclasses: [],
+      name: 'Transmutation',    },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Warlock'
+      }
+    ],
+    subclasses: []
   },
   {
     name: 'Globe of Invulnerability',
@@ -8259,7 +11539,15 @@ export const spellsDB = [
     school: {
       name: 'Abjuration'
     },
-    subclasses: [],
+    classes: [
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
+    subclasses: []
   },
   {
     name: 'Glyph of Warding',
@@ -8292,11 +11580,22 @@ export const spellsDB = [
     school: {
       name: 'Abjuration'
     },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Cleric'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Grease',
@@ -8319,11 +11618,16 @@ export const spellsDB = [
     school: {
       name: 'Conjuration'
     },
+    classes: [
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Greater Invisibility',
@@ -8343,11 +11647,22 @@ export const spellsDB = [
     school: {
       name: 'Illusion'
     },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Land',
       }
-    ],
+    ]
   },
   {
     name: 'Greater Restoration',
@@ -8373,7 +11688,18 @@ export const spellsDB = [
     school: {
       name: 'Abjuration'
     },
-    subclasses: [],
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Cleric'
+      },
+      {
+        name: 'Druid'
+      }
+    ],
+    subclasses: []
   },
   {
     name: 'Guards and Wards',
@@ -8412,7 +11738,15 @@ export const spellsDB = [
     school: {
       name: 'Abjuration'
     },
-    subclasses: [],
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
+    subclasses: []
   },
   {
     name: 'Guidance',
@@ -8432,11 +11766,19 @@ export const spellsDB = [
     school: {
       name: 'Divination'
     },
+    classes: [
+      {
+        name: 'Cleric'
+      },
+      {
+        name: 'Druid'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Guiding Bolt',
@@ -8459,11 +11801,16 @@ export const spellsDB = [
     school: {
       name: 'Evocation'
     },
+    classes: [
+      {
+        name: 'Cleric'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Gust of Wind',
@@ -8488,11 +11835,22 @@ export const spellsDB = [
     school: {
       name: 'Evocation'
     },
+    classes: [
+      {
+        name: 'Druid'
+      },
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Hallow',
@@ -8536,11 +11894,16 @@ export const spellsDB = [
     school: {
       name: 'Evocation'
     },
+    classes: [
+      {
+        name: 'Cleric'
+      }
+    ],
     subclasses: [
       {
         name: 'Fiend',
       }
-    ],
+    ]
   },
   {
     name: 'Hallucinatory Terrain',
@@ -8563,11 +11926,25 @@ export const spellsDB = [
     school: {
       name: 'Illusion'
     },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Druid'
+      },
+      {
+        name: 'Warlock'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Land',
       }
-    ],
+    ]
   },
   {
     name: 'Harm',
@@ -8587,7 +11964,12 @@ export const spellsDB = [
     school: {
       name: 'Necromancy'
     },
-    subclasses: [],
+    classes: [
+      {
+        name: 'Cleric'
+      }
+    ],
+    subclasses: []
   },
   {
     name: 'Haste',
@@ -8608,8 +11990,15 @@ export const spellsDB = [
     casting_time: '1 action',
     level: 3,
     school: {
-      name: 'Transmutation',
-    },
+      name: 'Transmutation',    },
+    classes: [
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -8617,7 +12006,7 @@ export const spellsDB = [
       {
         name: 'Land',
       }
-    ],
+    ]
   },
   {
     name: 'Heal',
@@ -8640,7 +12029,15 @@ export const spellsDB = [
     school: {
       name: 'Evocation'
     },
-    subclasses: [],
+    classes: [
+      {
+        name: 'Cleric'
+      },
+      {
+        name: 'Druid'
+      }
+    ],
+    subclasses: []
   },
   {
     name: 'Healing Word',
@@ -8662,11 +12059,22 @@ export const spellsDB = [
     school: {
       name: 'Evocation'
     },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Cleric'
+      },
+      {
+        name: 'Druid'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Heat Metal',
@@ -8690,13 +12098,20 @@ export const spellsDB = [
     casting_time: '1 action',
     level: 2,
     school: {
-      name: 'Transmutation',
-    },
+      name: 'Transmutation',    },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Druid'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Heroes\' Feast',
@@ -8719,7 +12134,15 @@ export const spellsDB = [
     school: {
       name: 'Conjuration'
     },
-    subclasses: [],
+    classes: [
+      {
+        name: 'Cleric'
+      },
+      {
+        name: 'Druid'
+      }
+    ],
+    subclasses: []
   },
   {
     name: 'Heroism',
@@ -8740,12 +12163,18 @@ export const spellsDB = [
       name: 'Enchantment'
     },
     classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Paladin'
+      }
     ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Hideous Laughter',
@@ -8766,13 +12195,20 @@ export const spellsDB = [
     casting_time: '1 action',
     level: 1,
     school: {
-      name: 'Enchantment',
-    },
+      name: 'Enchantment',    },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Hold Monster',
@@ -8795,9 +12231,22 @@ export const spellsDB = [
     casting_time: '1 action',
     level: 5,
     school: {
-      name: 'Enchantment',
-    },
-    subclasses: [],
+      name: 'Enchantment',    },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Warlock'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
+    subclasses: []
   },
   {
     name: 'Hold Person',
@@ -8820,8 +12269,27 @@ export const spellsDB = [
     casting_time: '1 action',
     level: 2,
     school: {
-      name: 'Enchantment',
-    },
+      name: 'Enchantment',    },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Cleric'
+      },
+      {
+        name: 'Druid'
+      },
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Warlock'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -8829,7 +12297,7 @@ export const spellsDB = [
       {
         name: 'Land',
       }
-    ],
+    ]
   },
   {
     name: 'Holy Aura',
@@ -8851,7 +12319,12 @@ export const spellsDB = [
     school: {
       name: 'Abjuration'
     },
-    subclasses: [],
+    classes: [
+      {
+        name: 'Cleric'
+      }
+    ],
+    subclasses: []
   },
   {
     name: 'Hypnotic Pattern',
@@ -8873,11 +12346,25 @@ export const spellsDB = [
     school: {
       name: 'Illusion'
     },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Warlock'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Ice Storm',
@@ -8903,11 +12390,22 @@ export const spellsDB = [
     school: {
       name: 'Evocation'
     },
+    classes: [
+      {
+        name: 'Druid'
+      },
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Land',
       }
-    ],
+    ]
   },
   {
     name: 'Identify',
@@ -8930,11 +12428,19 @@ export const spellsDB = [
     school: {
       name: 'Divination'
     },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Illusory Script',
@@ -8958,11 +12464,22 @@ export const spellsDB = [
     school: {
       name: 'Illusion'
     },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Warlock'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Imprisonment',
@@ -8998,7 +12515,15 @@ export const spellsDB = [
     school: {
       name: 'Abjuration'
     },
-    subclasses: [],
+    classes: [
+      {
+        name: 'Warlock'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
+    subclasses: []
   },
   {
     name: 'Incendiary Cloud',
@@ -9020,7 +12545,15 @@ export const spellsDB = [
     school: {
       name: 'Conjuration'
     },
-    subclasses: [],
+    classes: [
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
+    subclasses: []
   },
   {
     name: 'Inflict Wounds',
@@ -9043,11 +12576,16 @@ export const spellsDB = [
     school: {
       name: 'Necromancy'
     },
+    classes: [
+      {
+        name: 'Cleric'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Insect Plague',
@@ -9075,6 +12613,12 @@ export const spellsDB = [
     },
     classes: [
       {
+        name: 'Cleric'
+      },
+      {
+        name: 'Druid'
+      },
+      {
         name: 'Sorcerer'
       }
     ],
@@ -9082,7 +12626,7 @@ export const spellsDB = [
       {
         name: 'Land',
       }
-    ],
+    ]
   },
   {
     name: 'Instant Summons',
@@ -9107,7 +12651,12 @@ export const spellsDB = [
     school: {
       name: 'Conjuration'
     },
-    subclasses: [],
+    classes: [
+      {
+        name: 'Wizard'
+      }
+    ],
+    subclasses: []
   },
   {
     name: 'Invisibility',
@@ -9132,6 +12681,20 @@ export const spellsDB = [
     school: {
       name: 'Illusion'
     },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Warlock'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -9139,7 +12702,7 @@ export const spellsDB = [
       {
         name: 'Land',
       }
-    ],
+    ]
   },
   {
     name: 'Irresistible Dance',
@@ -9157,9 +12720,16 @@ export const spellsDB = [
     casting_time: '1 action',
     level: 6,
     school: {
-      name: 'Enchantment',
-    },
-    subclasses: [],
+      name: 'Enchantment',    },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
+    subclasses: []
   },
   {
     name: 'Jump',
@@ -9181,11 +12751,25 @@ export const spellsDB = [
     school: {
       name: 'Transmutation'
     },
+    classes: [
+      {
+        name: 'Druid'
+      },
+      {
+        name: 'Ranger'
+      },
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Knock',
@@ -9205,13 +12789,23 @@ export const spellsDB = [
     casting_time: '1 action',
     level: 2,
     school: {
-      name: 'Transmutation',
-    },
+      name: 'Transmutation',    },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Legend Lore',
@@ -9234,7 +12828,18 @@ export const spellsDB = [
     school: {
       name: 'Divination'
     },
-    subclasses: [],
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Cleric'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
+    subclasses: []
   },
   {
     name: 'Lesser Restoration',
@@ -9254,6 +12859,23 @@ export const spellsDB = [
     school: {
       name: 'Abjuration'
     },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Cleric'
+      },
+      {
+        name: 'Druid'
+      },
+      {
+        name: 'Paladin'
+      },
+      {
+        name: 'Ranger'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -9264,7 +12886,7 @@ export const spellsDB = [
       {
         name: 'Devotion',
       }
-    ],
+    ]
   },
   {
     name: 'Levitate',
@@ -9286,13 +12908,20 @@ export const spellsDB = [
     casting_time: '1 action',
     level: 2,
     school: {
-      name: 'Transmutation',
-    },
+      name: 'Transmutation',    },
+    classes: [
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Light',
@@ -9314,11 +12943,25 @@ export const spellsDB = [
     school: {
       name: 'Evocation'
     },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Cleric'
+      },
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Lightning Bolt',
@@ -9344,6 +12987,14 @@ export const spellsDB = [
     school: {
       name: 'Evocation'
     },
+    classes: [
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -9351,7 +13002,7 @@ export const spellsDB = [
       {
         name: 'Land',
       }
-    ],
+    ]
   },
   {
     name: 'Locate Animals or Plants',
@@ -9373,11 +13024,22 @@ export const spellsDB = [
     school: {
       name: 'Divination'
     },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Druid'
+      },
+      {
+        name: 'Ranger'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Locate Creature',
@@ -9401,11 +13063,31 @@ export const spellsDB = [
     school: {
       name: 'Divination'
     },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Cleric'
+      },
+      {
+        name: 'Druid'
+      },
+      {
+        name: 'Paladin'
+      },
+      {
+        name: 'Ranger'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Land',
       }
-    ],
+    ]
   },
   {
     name: 'Locate Object',
@@ -9429,11 +13111,31 @@ export const spellsDB = [
     school: {
       name: 'Divination'
     },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Cleric'
+      },
+      {
+        name: 'Druid'
+      },
+      {
+        name: 'Paladin'
+      },
+      {
+        name: 'Ranger'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Longstrider',
@@ -9456,13 +13158,26 @@ export const spellsDB = [
     casting_time: '1 action',
     level: 1,
     school: {
-      name: 'Transmutation',
-    },
+      name: 'Transmutation',    },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Druid'
+      },
+      {
+        name: 'Ranger'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Mage Armor',
@@ -9484,11 +13199,19 @@ export const spellsDB = [
     school: {
       name: 'Abjuration'
     },
+    classes: [
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Mage Hand',
@@ -9510,11 +13233,25 @@ export const spellsDB = [
     school: {
       name: 'Conjuration'
     },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Warlock'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Magic Circle',
@@ -9543,11 +13280,25 @@ export const spellsDB = [
     school: {
       name: 'Abjuration'
     },
+    classes: [
+      {
+        name: 'Cleric'
+      },
+      {
+        name: 'Paladin'
+      },
+      {
+        name: 'Warlock'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Magic Jar',
@@ -9575,7 +13326,12 @@ export const spellsDB = [
     school: {
       name: 'Necromancy'
     },
-    subclasses: [],
+    classes: [
+      {
+        name: 'Wizard'
+      }
+    ],
+    subclasses: []
   },
   {
     name: 'Magic Missile',
@@ -9598,11 +13354,19 @@ export const spellsDB = [
     school: {
       name: 'Evocation'
     },
+    classes: [
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Magic Mouth',
@@ -9627,11 +13391,19 @@ export const spellsDB = [
     school: {
       name: 'Illusion'
     },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Magic Weapon',
@@ -9652,13 +13424,20 @@ export const spellsDB = [
     casting_time: '1 bonus action',
     level: 2,
     school: {
-      name: 'Transmutation',
-    },
+      name: 'Transmutation',    },
+    classes: [
+      {
+        name: 'Paladin'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Magnificent Mansion',
@@ -9682,7 +13461,15 @@ export const spellsDB = [
     school: {
       name: 'Conjuration'
     },
-    subclasses: [],
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
+    subclasses: []
   },
   {
     name: 'Major Image',
@@ -9709,11 +13496,25 @@ export const spellsDB = [
     school: {
       name: 'Illusion'
     },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Warlock'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Mass Cure Wounds',
@@ -9736,11 +13537,22 @@ export const spellsDB = [
     school: {
       name: 'Conjuration'
     },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Cleric'
+      },
+      {
+        name: 'Druid'
+      }
+    ],
     subclasses: [
       {
         name: 'Life',
       }
-    ],
+    ]
   },
   {
     name: 'Mass Heal',
@@ -9760,7 +13572,12 @@ export const spellsDB = [
     school: {
       name: 'Conjuration'
     },
-    subclasses: [],
+    classes: [
+      {
+        name: 'Cleric'
+      }
+    ],
+    subclasses: []
   },
   {
     name: 'Mass Healing Word',
@@ -9782,11 +13599,16 @@ export const spellsDB = [
     school: {
       name: 'Evocation'
     },
+    classes: [
+      {
+        name: 'Cleric'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Mass Suggestion',
@@ -9811,9 +13633,22 @@ export const spellsDB = [
     casting_time: '1 action',
     level: 6,
     school: {
-      name: 'Enchantment',
-    },
-    subclasses: [],
+      name: 'Enchantment',    },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Warlock'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
+    subclasses: []
   },
   {
     name: 'Maze',
@@ -9835,7 +13670,12 @@ export const spellsDB = [
     school: {
       name: 'Conjuration'
     },
-    subclasses: [],
+    classes: [
+      {
+        name: 'Wizard'
+      }
+    ],
+    subclasses: []
   },
   {
     name: 'Meld into Stone',
@@ -9855,8 +13695,12 @@ export const spellsDB = [
     casting_time: '1 action',
     level: 3,
     school: {
-      name: 'Transmutation',
-    },
+      name: 'Transmutation',    },
+    classes: [
+      {
+        name: 'Cleric'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -9864,7 +13708,7 @@ export const spellsDB = [
       {
         name: 'Land',
       }
-    ],
+    ]
   },
   {
     name: 'Mending',
@@ -9885,13 +13729,29 @@ export const spellsDB = [
     casting_time: '1 minute',
     level: 0,
     school: {
-      name: 'Transmutation',
-    },
+      name: 'Transmutation',    },
+    classes: [
+      {
+        name: 'Cleric'
+      },
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Druid'
+      },
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
       }
-    ],
+    ]
   },
   {
     name: 'Message',
@@ -9912,8 +13772,19 @@ export const spellsDB = [
     casting_time: '1 action',
     level: 0,
     school: {
-      name: 'Transmutation',
+      name: 'Transmutation'
     },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -9939,6 +13810,14 @@ export const spellsDB = [
     school: {
       name: 'Evocation'
     },
+    classes: [
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [],
   },
   {
@@ -9959,6 +13838,14 @@ export const spellsDB = [
     school: {
       name: 'Abjuration'
     },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [],
   },
   {
@@ -9983,6 +13870,20 @@ export const spellsDB = [
     school: {
       name: 'Illusion'
     },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Warlock'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -10010,6 +13911,17 @@ export const spellsDB = [
     school: {
       name: 'Illusion'
     },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Druid'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [],
   },
   {
@@ -10034,6 +13946,17 @@ export const spellsDB = [
     school: {
       name: 'Illusion'
     },
+    classes: [
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Warlock'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -10062,6 +13985,14 @@ export const spellsDB = [
     school: {
       name: 'Illusion'
     },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [],
   },
   {
@@ -10081,6 +14012,17 @@ export const spellsDB = [
     school: {
       name: 'Conjuration'
     },
+    classes: [
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Warlock'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -10113,8 +14055,16 @@ export const spellsDB = [
     casting_time: '1 action',
     level: 5,
     school: {
-      name: 'Enchantment',
+      name: 'Enchantment'
     },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [],
   },
   {
@@ -10143,6 +14093,11 @@ export const spellsDB = [
     school: {
       name: 'Evocation'
     },
+    classes: [
+      {
+        name: 'Druid'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -10171,8 +14126,19 @@ export const spellsDB = [
     casting_time: '1 action',
     level: 6,
     school: {
-      name: 'Transmutation',
+      name: 'Transmutation'
     },
+    classes: [
+      {
+        name: 'Druid'
+      },
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [],
   },
   {
@@ -10195,6 +14161,17 @@ export const spellsDB = [
     school: {
       name: 'Abjuration'
     },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Ranger'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -10221,6 +14198,14 @@ export const spellsDB = [
     school: {
       name: 'Abjuration'
     },
+    classes: [
+      {
+        name: 'Druid'
+      },
+      {
+        name: 'Ranger'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -10249,8 +14234,13 @@ export const spellsDB = [
     casting_time: '1 action',
     level: 5,
     school: {
-      name: 'Transmutation',
+      name: 'Transmutation'
     },
+    classes: [
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Land',
@@ -10278,6 +14268,11 @@ export const spellsDB = [
     school: {
       name: 'Illusion'
     },
+    classes: [
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [],
   },
   {
@@ -10299,6 +14294,11 @@ export const spellsDB = [
     school: {
       name: 'Illusion'
     },
+    classes: [
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -10328,6 +14328,11 @@ export const spellsDB = [
     school: {
       name: 'Conjuration'
     },
+    classes: [
+      {
+        name: 'Cleric'
+      }
+    ],
     subclasses: [],
   },
   {
@@ -10354,6 +14359,20 @@ export const spellsDB = [
     school: {
       name: 'Abjuration'
     },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Cleric'
+      },
+      {
+        name: 'Druid'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [],
   },
   {
@@ -10378,6 +14397,23 @@ export const spellsDB = [
     school: {
       name: 'Conjuration'
     },
+    classes: [
+      {
+        name: 'Cleric'
+      },
+      {
+        name: 'Druid'
+      },
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Warlock'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [],
   },
   {
@@ -10399,8 +14435,19 @@ export const spellsDB = [
     casting_time: '1 action',
     level: 3,
     school: {
-      name: 'Transmutation',
+      name: 'Transmutation'
     },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Druid'
+      },
+      {
+        name: 'Ranger'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -10432,8 +14479,22 @@ export const spellsDB = [
     casting_time: '1 action',
     level: 4,
     school: {
-      name: 'Transmutation',
+      name: 'Transmutation'
     },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Druid'
+      },
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [],
   },
   {
@@ -10451,8 +14512,22 @@ export const spellsDB = [
     casting_time: '1 action',
     level: 9,
     school: {
-      name: 'Enchantment',
+      name: 'Enchantment'
     },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Warlock'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [],
   },
   {
@@ -10471,8 +14546,22 @@ export const spellsDB = [
     casting_time: '1 action',
     level: 8,
     school: {
-      name: 'Enchantment',
+      name: 'Enchantment'
     },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Warlock'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [],
   },
   {
@@ -10495,6 +14584,11 @@ export const spellsDB = [
     school: {
       name: 'Evocation'
     },
+    classes: [
+      {
+        name: 'Cleric'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -10524,8 +14618,22 @@ export const spellsDB = [
     casting_time: '1 action',
     level: 0,
     school: {
-      name: 'Transmutation',
+      name: 'Transmutation'
     },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Warlock'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -10566,6 +14674,14 @@ export const spellsDB = [
     school: {
       name: 'Evocation'
     },
+    classes: [
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [],
   },
   {
@@ -10604,6 +14720,11 @@ export const spellsDB = [
     school: {
       name: 'Abjuration'
     },
+    classes: [
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [],
   },
   {
@@ -10637,6 +14758,11 @@ export const spellsDB = [
     school: {
       name: 'Abjuration'
     },
+    classes: [
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [],
   },
   {
@@ -10659,6 +14785,11 @@ export const spellsDB = [
     school: {
       name: 'Conjuration'
     },
+    classes: [
+      {
+        name: 'Druid'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -10688,6 +14819,14 @@ export const spellsDB = [
     school: {
       name: 'Illusion'
     },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [],
   },
   {
@@ -10713,6 +14852,14 @@ export const spellsDB = [
     school: {
       name: 'Illusion'
     },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [],
   },
   {
@@ -10733,6 +14880,23 @@ export const spellsDB = [
     school: {
       name: 'Abjuration'
     },
+    classes: [
+      {
+        name: 'Cleric'
+      },
+      {
+        name: 'Druid'
+      },
+      {
+        name: 'Ranger'
+      },
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -10763,6 +14927,20 @@ export const spellsDB = [
     school: {
       name: 'Abjuration'
     },
+    classes: [
+      {
+        name: 'Cleric'
+      },
+      {
+        name: 'Paladin'
+      },
+      {
+        name: 'Warlock'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -10791,6 +14969,20 @@ export const spellsDB = [
     school: {
       name: 'Abjuration'
     },
+    classes: [
+      {
+        name: 'Cleric'
+      },
+      {
+        name: 'Druid'
+      },
+      {
+        name: 'Paladin'
+      },
+      {
+        name: 'Ranger'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -10813,8 +15005,19 @@ export const spellsDB = [
     casting_time: '1 action',
     level: 1,
     school: {
-      name: 'Transmutation',
+      name: 'Transmutation'
     },
+    classes: [
+      {
+        name: 'Cleric'
+      },
+      {
+        name: 'Druid'
+      },
+      {
+        name: 'Paladin'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -10844,6 +15047,17 @@ export const spellsDB = [
     school: {
       name: 'Necromancy'
     },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Cleric'
+      },
+      {
+        name: 'Paladin'
+      }
+    ],
     subclasses: [
       {
         name: 'Life',
@@ -10869,6 +15083,14 @@ export const spellsDB = [
     school: {
       name: 'Necromancy'
     },
+    classes: [
+      {
+        name: 'Warlock'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -10894,6 +15116,14 @@ export const spellsDB = [
     school: {
       name: 'Evocation'
     },
+    classes: [
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -10919,8 +15149,19 @@ export const spellsDB = [
     casting_time: '1 minute',
     level: 7,
     school: {
-      name: 'Transmutation',
+      name: 'Transmutation'
     },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Cleric'
+      },
+      {
+        name: 'Druid'
+      }
+    ],
     subclasses: [],
   },
   {
@@ -10971,8 +15212,13 @@ export const spellsDB = [
     casting_time: '1 hour',
     level: 5,
     school: {
-      name: 'Transmutation',
+      name: 'Transmutation'
     },
+    classes: [
+      {
+        name: 'Druid'
+      }
+    ],
     subclasses: [],
   },
   {
@@ -10993,6 +15239,20 @@ export const spellsDB = [
     school: {
       name: 'Abjuration'
     },
+    classes: [
+      {
+        name: 'Cleric'
+      },
+      {
+        name: 'Paladin'
+      },
+      {
+        name: 'Warlock'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -11022,6 +15282,11 @@ export const spellsDB = [
     school: {
       name: 'Evocation'
     },
+    classes: [
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [],
   },
   {
@@ -11044,6 +15309,14 @@ export const spellsDB = [
     school: {
       name: 'Abjuration'
     },
+    classes: [
+      {
+        name: 'Cleric'
+      },
+      {
+        name: 'Druid'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -11074,6 +15347,14 @@ export const spellsDB = [
     school: {
       name: 'Necromancy'
     },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Cleric'
+      }
+    ],
     subclasses: [],
   },
   {
@@ -11096,8 +15377,19 @@ export const spellsDB = [
     casting_time: '1 action',
     level: 7,
     school: {
-      name: 'Transmutation',
+      name: 'Transmutation'
     },
+    classes: [
+      {
+        name: 'Druid'
+      },
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [],
   },
   {
@@ -11120,6 +15412,14 @@ export const spellsDB = [
     school: {
       name: 'Conjuration'
     },
+    classes: [
+      {
+        name: 'Cleric'
+      },
+      {
+        name: 'Paladin'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -11150,8 +15450,13 @@ export const spellsDB = [
     casting_time: '1 action',
     level: 2,
     school: {
-      name: 'Transmutation',
+      name: 'Transmutation'
     },
+    classes: [
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -11177,6 +15482,11 @@ export const spellsDB = [
     school: {
       name: 'Evocation'
     },
+    classes: [
+      {
+        name: 'Cleric'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -11204,6 +15514,11 @@ export const spellsDB = [
     school: {
       name: 'Abjuration'
     },
+    classes: [
+      {
+        name: 'Cleric'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -11235,6 +15550,14 @@ export const spellsDB = [
     school: {
       name: 'Evocation'
     },
+    classes: [
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -11277,6 +15600,23 @@ export const spellsDB = [
     school: {
       name: 'Divination'
     },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Cleric'
+      },
+      {
+        name: 'Druid'
+      },
+      {
+        name: 'Warlock'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Land',
@@ -11305,6 +15645,11 @@ export const spellsDB = [
     school: {
       name: 'Conjuration'
     },
+    classes: [
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [],
   },
   {
@@ -11327,6 +15672,17 @@ export const spellsDB = [
     school: {
       name: 'Divination'
     },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -11354,6 +15710,17 @@ export const spellsDB = [
     school: {
       name: 'Illusion'
     },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [],
   },
   {
@@ -11377,6 +15744,17 @@ export const spellsDB = [
     school: {
       name: 'Evocation'
     },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Cleric'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -11403,8 +15781,13 @@ export const spellsDB = [
     casting_time: '1 action',
     level: 7,
     school: {
-      name: 'Transmutation',
+      name: 'Transmutation'
     },
+    classes: [
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [],
   },
   {
@@ -11430,8 +15813,16 @@ export const spellsDB = [
     casting_time: '1 action',
     level: 9,
     school: {
-      name: 'Transmutation',
+      name: 'Transmutation'
     },
+    classes: [
+      {
+        name: 'Druid'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [],
   },
   {
@@ -11458,6 +15849,20 @@ export const spellsDB = [
     school: {
       name: 'Evocation'
     },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Warlock'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -11482,6 +15887,14 @@ export const spellsDB = [
     school: {
       name: 'Abjuration'
     },
+    classes: [
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -11508,6 +15921,14 @@ export const spellsDB = [
     school: {
       name: 'Abjuration'
     },
+    classes: [
+      {
+        name: 'Cleric'
+      },
+      {
+        name: 'Paladin'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -11532,8 +15953,13 @@ export const spellsDB = [
     casting_time: '1 bonus action',
     level: 0,
     school: {
-      name: 'Transmutation',
+      name: 'Transmutation'
     },
+    classes: [
+      {
+        name: 'Druid'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -11559,6 +15985,14 @@ export const spellsDB = [
     school: {
       name: 'Evocation'
     },
+    classes: [
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -11584,6 +16018,17 @@ export const spellsDB = [
     school: {
       name: 'Illusion'
     },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Cleric'
+      },
+      {
+        name: 'Ranger'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -11615,6 +16060,17 @@ export const spellsDB = [
     school: {
       name: 'Illusion'
     },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -11644,6 +16100,11 @@ export const spellsDB = [
     school: {
       name: 'Illusion'
     },
+    classes: [
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [],
   },
   {
@@ -11669,8 +16130,19 @@ export const spellsDB = [
     casting_time: '1 action',
     level: 1,
     school: {
-      name: 'Enchantment',
+      name: 'Enchantment'
     },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -11699,6 +16171,17 @@ export const spellsDB = [
     school: {
       name: 'Conjuration'
     },
+    classes: [
+      {
+        name: 'Druid'
+      },
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -11729,8 +16212,16 @@ export const spellsDB = [
     casting_time: '1 action',
     level: 3,
     school: {
-      name: 'Transmutation',
+      name: 'Transmutation'
     },
+    classes: [
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -11758,6 +16249,17 @@ export const spellsDB = [
     school: {
       name: 'Divination'
     },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Druid'
+      },
+      {
+        name: 'Ranger'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -11785,6 +16287,14 @@ export const spellsDB = [
     school: {
       name: 'Necromancy'
     },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Cleric'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -11811,8 +16321,19 @@ export const spellsDB = [
     casting_time: '1 action',
     level: 3,
     school: {
-      name: 'Transmutation',
+      name: 'Transmutation'
     },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Druid'
+      },
+      {
+        name: 'Ranger'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -11837,8 +16358,19 @@ export const spellsDB = [
     casting_time: '1 action',
     level: 2,
     school: {
-      name: 'Transmutation',
+      name: 'Transmutation'
     },
+    classes: [
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Warlock'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -11867,8 +16399,16 @@ export const spellsDB = [
     casting_time: '1 action',
     level: 2,
     school: {
-      name: 'Transmutation',
+      name: 'Transmutation'
     },
+    classes: [
+      {
+        name: 'Druid'
+      },
+      {
+        name: 'Ranger'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -11902,6 +16442,11 @@ export const spellsDB = [
     school: {
       name: 'Conjuration'
     },
+    classes: [
+      {
+        name: 'Cleric'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -11931,6 +16476,11 @@ export const spellsDB = [
     school: {
       name: 'Evocation'
     },
+    classes: [
+      {
+        name: 'Cleric'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -11962,6 +16512,17 @@ export const spellsDB = [
     school: {
       name: 'Conjuration'
     },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -11992,8 +16553,19 @@ export const spellsDB = [
     casting_time: '1 action',
     level: 4,
     school: {
-      name: 'Transmutation',
+      name: 'Transmutation'
     },
+    classes: [
+      {
+        name: 'Cleric'
+      },
+      {
+        name: 'Druid'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Land',
@@ -12020,6 +16592,20 @@ export const spellsDB = [
     school: {
       name: 'Abjuration'
     },
+    classes: [
+      {
+        name: 'Druid'
+      },
+      {
+        name: 'Ranger'
+      },
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Land',
@@ -12053,6 +16639,11 @@ export const spellsDB = [
     school: {
       name: 'Conjuration'
     },
+    classes: [
+      {
+        name: 'Druid'
+      }
+    ],
     subclasses: [],
   },
   {
@@ -12075,8 +16666,22 @@ export const spellsDB = [
     casting_time: '1 action',
     level: 2,
     school: {
-      name: 'Enchantment',
+      name: 'Enchantment'
     },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Warlock'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -12105,6 +16710,17 @@ export const spellsDB = [
     school: {
       name: 'Evocation'
     },
+    classes: [
+      {
+        name: 'Druid'
+      },
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [],
   },
   {
@@ -12129,6 +16745,17 @@ export const spellsDB = [
     school: {
       name: 'Evocation'
     },
+    classes: [
+      {
+        name: 'Druid'
+      },
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [],
   },
   {
@@ -12171,6 +16798,17 @@ export const spellsDB = [
     school: {
       name: 'Abjuration'
     },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Cleric'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [],
   },
   {
@@ -12196,8 +16834,16 @@ export const spellsDB = [
     casting_time: '1 action',
     level: 5,
     school: {
-      name: 'Transmutation',
+      name: 'Transmutation'
     },
+    classes: [
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [],
   },
   {
@@ -12206,7 +16852,6 @@ export const spellsDB = [
       'You forge a telepathic link among up to eight willing creatures of your choice within range, psychically linking each creature to all the others for the duration. Creatures with Intelligence scores of 2 or less arenâ€™t affected by this spell.',
       'Until the spell ends, the targets can communicate telepathically through the bond whether or not they have a common language. The communication is possible over any distance, though it canâ€™t extend to other planes of existence.'
     ],
-    page: 'srd 183',
     range: '30 feet',
     components: [
       'V',
@@ -12222,6 +16867,11 @@ export const spellsDB = [
     school: {
       name: 'Divination'
     },
+    classes: [
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [],
   },
   {
@@ -12242,6 +16892,17 @@ export const spellsDB = [
     school: {
       name: 'Conjuration'
     },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [],
   },
   {
@@ -12265,6 +16926,17 @@ export const spellsDB = [
     school: {
       name: 'Conjuration'
     },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [],
   },
   {
@@ -12289,8 +16961,13 @@ export const spellsDB = [
     casting_time: '1 action',
     level: 0,
     school: {
-      name: 'Transmutation',
+      name: 'Transmutation'
     },
+    classes: [
+      {
+        name: 'Cleric'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -12319,6 +16996,20 @@ export const spellsDB = [
     school: {
       name: 'Evocation'
     },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Druid'
+      },
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -12341,8 +17032,16 @@ export const spellsDB = [
     casting_time: '1 action',
     level: 9,
     school: {
-      name: 'Transmutation',
+      name: 'Transmutation'
     },
+    classes: [
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [],
   },
   {
@@ -12367,6 +17066,14 @@ export const spellsDB = [
     school: {
       name: 'Evocation'
     },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -12392,6 +17099,23 @@ export const spellsDB = [
     school: {
       name: 'Divination'
     },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Cleric'
+      },
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Warlock'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -12416,6 +17140,11 @@ export const spellsDB = [
     school: {
       name: 'Conjuration'
     },
+    classes: [
+      {
+        name: 'Druid'
+      }
+    ],
     subclasses: [],
   },
   {
@@ -12437,6 +17166,14 @@ export const spellsDB = [
     school: {
       name: 'Conjuration'
     },
+    classes: [
+      {
+        name: 'Druid'
+      },
+      {
+        name: 'Ranger'
+      }
+    ],
     subclasses: [
       {
         name: 'Land',
@@ -12472,8 +17209,19 @@ export const spellsDB = [
     casting_time: '1 action',
     level: 9,
     school: {
-      name: 'Transmutation',
+      name: 'Transmutation'
     },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Warlock'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [],
   },
   {
@@ -12498,6 +17246,14 @@ export const spellsDB = [
     school: {
       name: 'Necromancy'
     },
+    classes: [
+      {
+        name: 'Cleric'
+      },
+      {
+        name: 'Druid'
+      }
+    ],
     subclasses: [],
   },
   {
@@ -12520,6 +17276,23 @@ export const spellsDB = [
     school: {
       name: 'Divination'
     },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Cleric'
+      },
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Warlock'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [],
   },
   {
@@ -12539,6 +17312,20 @@ export const spellsDB = [
     school: {
       name: 'Divination'
     },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Warlock'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -12567,6 +17354,17 @@ export const spellsDB = [
     school: {
       name: 'Conjuration'
     },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Warlock'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -12594,6 +17392,14 @@ export const spellsDB = [
     school: {
       name: 'Necromancy'
     },
+    classes: [
+      {
+        name: 'Warlock'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -12626,6 +17432,17 @@ export const spellsDB = [
     school: {
       name: 'Evocation'
     },
+    classes: [
+      {
+        name: 'Druid'
+      },
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Fiend',
@@ -12653,6 +17470,11 @@ export const spellsDB = [
     school: {
       name: 'Evocation'
     },
+    classes: [
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [],
   },
   {
@@ -12680,6 +17502,11 @@ export const spellsDB = [
     school: {
       name: 'Evocation'
     },
+    classes: [
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [],
   },
   {
@@ -12707,6 +17534,17 @@ export const spellsDB = [
     school: {
       name: 'Evocation'
     },
+    classes: [
+      {
+        name: 'Druid'
+      },
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Land',
@@ -12738,6 +17576,11 @@ export const spellsDB = [
     school: {
       name: 'Conjuration'
     },
+    classes: [
+      {
+        name: 'Druid'
+      }
+    ],
     subclasses: [],
   },
   {
@@ -12762,6 +17605,11 @@ export const spellsDB = [
     school: {
       name: 'Abjuration'
     },
+    classes: [
+      {
+        name: 'Cleric'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -12786,8 +17634,22 @@ export const spellsDB = [
     casting_time: '1 action',
     level: 3,
     school: {
-      name: 'Transmutation',
+      name: 'Transmutation'
     },
+    classes: [
+      {
+        name: 'Druid'
+      },
+      {
+        name: 'Ranger'
+      },
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -12815,8 +17677,22 @@ export const spellsDB = [
     casting_time: '1 action',
     level: 3,
     school: {
-      name: 'Transmutation',
+      name: 'Transmutation'
     },
+    classes: [
+      {
+        name: 'Cleric'
+      },
+      {
+        name: 'Druid'
+      },
+      {
+        name: 'Ranger'
+      },
+      {
+        name: 'Sorcerer'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -12850,6 +17726,14 @@ export const spellsDB = [
     school: {
       name: 'Conjuration'
     },
+    classes: [
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -12877,6 +17761,11 @@ export const spellsDB = [
     school: {
       name: 'Illusion'
     },
+    classes: [
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [],
   },
   {
@@ -12898,8 +17787,13 @@ export const spellsDB = [
     casting_time: '1 minute',
     level: 6,
     school: {
-      name: 'Transmutation',
+      name: 'Transmutation'
     },
+    classes: [
+      {
+        name: 'Druid'
+      }
+    ],
     subclasses: [],
   },
   {
@@ -12924,6 +17818,14 @@ export const spellsDB = [
     school: {
       name: 'Evocation'
     },
+    classes: [
+      {
+        name: 'Druid'
+      },
+      {
+        name: 'Ranger'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -12955,6 +17857,14 @@ export const spellsDB = [
     school: {
       name: 'Conjuration'
     },
+    classes: [
+      {
+        name: 'Sorcerer'
+      },
+      {
+        name: 'Wizard'
+      }
+    ],
     subclasses: [],
   },
   {
@@ -12975,6 +17885,11 @@ export const spellsDB = [
     school: {
       name: 'Conjuration'
     },
+    classes: [
+      {
+        name: 'Cleric'
+      }
+    ],
     subclasses: [],
   },
   {
@@ -12994,8 +17909,19 @@ export const spellsDB = [
     casting_time: '1 action',
     level: 2,
     school: {
-      name: 'Enchantment',
+      name: 'Enchantment'
     },
+    classes: [
+      {
+        name: 'Bard'
+      },
+      {
+        name: 'Cleric'
+      },
+      {
+        name: 'Paladin'
+      }
+    ],
     subclasses: [
       {
         name: 'Lore',
@@ -13003,6 +17929,6 @@ export const spellsDB = [
       {
         name: 'Devotion',
       }
-    ],
+    ]
   }
-]
+];

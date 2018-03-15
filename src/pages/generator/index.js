@@ -218,7 +218,6 @@ export default connect(mapStateToProps, boundActions)(Generator);
 // FIXME: GearDB Normalization
 // FIXME: kitsDB Normalization
 // FIXME: ClassDB Normalization
-// FIXME: AbilityScore point calculator
-// TODO: Create SpellsDB/CantripsDB
 // TODO: Level up characters
 // TODO: Calculate starting money for characters
+// TODO: Create School of Magic DB
