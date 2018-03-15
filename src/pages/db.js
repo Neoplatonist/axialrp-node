@@ -3985,7 +3985,7 @@ export const toolsDB = [
 
 
 
-export const startingEquipment = [
+export const startingEquipmentDB = [
   {
     class: 'Barbarian',
     starting_equipment: [
