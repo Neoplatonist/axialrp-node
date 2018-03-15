@@ -4,7 +4,7 @@ Server Side Rendering with Create React App
 This is the v2.1 version of my react app, checkout my article here: 
 https://medium.com/@benlu/ssr-with-create-react-app-v2-1-ee83fb767327
 
-###For first time setup.
+### For first time setup.
 ```bash
 yarn install
 ```
@@ -15,9 +15,8 @@ Afterwards you only need to start the dev environment.
 yarn start
 ```
 
-###Install
+### Install
 NOTES: Currently does not work since I need to fix the SSR. Please use Development for now.
--------
 ```bash
 yarn build
 yarn start:prod:server
