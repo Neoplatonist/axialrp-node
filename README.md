@@ -14,8 +14,14 @@ yarn install
 yarn start
 ```
 
-### Install
+### Server Side Rendering
 NOTES: Currently does not work since I need to fix the SSR. Please use Development for now.
+#### Development
+```bash
+yarn build
+yarn start:dev:server
+```
+#### Production
 ```bash
 yarn build
 yarn start:prod:server
