@@ -10,7 +10,6 @@ yarn install
 ```
 
 ### Development
-Afterwards you only need to start the dev environment.
 ```bash
 yarn start
 ```
