@@ -220,7 +220,7 @@ export const setAbility = (index, ability) => {
 export const setAbilityPoints = points => {
   if (isNaN(points)) points = 0;
   return { type: SET_ABILITY_POINTS, payload: points };
-}
+};
 
 export const setAbilityBulk = ability => {
   // if (isNaN(ability)) ability = 0;
@@ -357,7 +357,7 @@ export const setRace = race => {
 
 export const setRaceObj = race => {
   return { type: SET_RACE_OBJ, payload: race };
-}
+};
 
 export const setSavingThrows = saves => {
   return { type: SET_SAVING_THROWS, payload: saves };

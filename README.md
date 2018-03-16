@@ -9,12 +9,12 @@ https://medium.com/@benlu/ssr-with-create-react-app-v2-1-ee83fb767327
 yarn install
 ```
 
-### Development
+### UI ReactJS Development
 ```bash
 yarn start
 ```
 
-### Server Side Rendering
+### NodeJS + ReactJS Server Side Rendering
 NOTES: Currently does not work since I need to fix the SSR. Please use Development for now.
 #### Development
 ```bash
