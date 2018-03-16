@@ -1,4 +1,5 @@
-import {setHp} from '../stats';
+import {SET_CLASS, SET_CLASS_OBJ, SET_HP} from '../../types';
+import {classDB} from '../../../pages/db.js';
 
 export const setClass = char_class => {
   return (dispatch, getState) => {

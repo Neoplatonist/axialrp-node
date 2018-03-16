@@ -1,3 +1,12 @@
+import {
+  SET_AC,
+  SET_HP,
+  SET_INITIATIVE,
+  SET_INSPIRATION,
+  SET_PROFICIENCY_BONUS,
+  SET_SPEED
+} from '../../types';
+
 export const setHP = hp => {
   return { type: SET_HP, payload: hp || 0 };
 };

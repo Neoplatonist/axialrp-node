@@ -1,3 +1,5 @@
+import {SET_WEAPON, SET_WEAPON_ACTIVE} from '../../types';
+
 export const setWeapon = weapon => {
   return { type: SET_WEAPON, payload: weapon };
 };

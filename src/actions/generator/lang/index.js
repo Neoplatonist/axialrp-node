@@ -1,3 +1,5 @@
+import {SET_LANGUAGE, SET_LANGUAGE_LIST} from '../../types';
+
 export const setLanguage = lang => {
   return { type: SET_LANGUAGE, payload: lang };
 };

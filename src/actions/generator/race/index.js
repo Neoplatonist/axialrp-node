@@ -1,5 +1,14 @@
-import {setCharacter} from '../desc';
-import {setLanguage, setLanguageList} from '../lang';
+import {
+  SET_ALIGNMENT, 
+  SET_CHARACTER,
+  SET_LANGUAGE, 
+  SET_LANGUAGE_LIST,
+  SET_RACE,
+  SET_RACE_OBJ,
+  SET_SUBRACE,
+  SET_SUBRACE_OBJ
+} from '../../types';
+import {raceDB} from '../../../pages/db.js';
 
 export const setRace = race => {
   return (dispatch, getState) => {
