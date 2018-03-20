@@ -18,6 +18,7 @@ import Description from './components/description';
 import Race from './components/race';
 import SavingThrows from './components/savingThrows';
 import Skills from './components/skills';
+import Spells from './components/spells';
 import Stats from './components/stats';
 import Weapons from './components/weapons';
 
@@ -37,7 +38,8 @@ import {
   selectSubRace,
   selectSavingThrows,
   selectSkills,
-  selectSkillsFilter
+  selectSkillsFilter,
+  selectSpellsFilter
 } from '../../actions';
 
 class Generator extends Component {
@@ -94,6 +96,10 @@ class Generator extends Component {
         mod={skill.ability_score.name} 
         checked={''}/>;
     });
+  }
+
+  renderSpells = () => {
+    return this.props.spellsFilter.length > 0 ? <Spells /> : null;
   }
 
   savingThrows = () => {
@@ -177,6 +183,10 @@ class Generator extends Component {
 
           { this.renderSkills() }
 
+          <br />
+
+          { this.renderSpells() }
+
           <br/>
 
           <Armor />
@@ -200,6 +210,7 @@ const mapStateToProps = state => ({
   skills: selectSkills(state),
   skillsFilter: selectSkillsFilter(state),
   savingThrows: selectSavingThrows(state),
+  spellsFilter: selectSpellsFilter(state),
   subrace: selectSubRace(state)
 });
 
@@ -213,11 +224,18 @@ const boundActions = {
 
 export default connect(mapStateToProps, boundActions)(Generator);
 
-// FIXME: RaceDB Normalization
-// FIXME: MountsDB Normalize
-// FIXME: GearDB Normalization
-// FIXME: kitsDB Normalization
-// FIXME: ClassDB Normalization
-// TODO: Level up characters
-// TODO: Calculate starting money for characters
-// TODO: Create School of Magic DB
+/*
+ * FIXME:
+ * - RaceDB Normalization
+ * - MountsDB Normalization
+ * - GearDB Normalization
+ * - KitsDB Normalization
+ * - ClassDB Normalization
+ */
+
+/*
+ * TODO:
+ * - Level up characters
+ * - Calculate startin money for characters
+ * - Create database for Cantrips by Class
+ */

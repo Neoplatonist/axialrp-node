@@ -77,7 +77,7 @@ export const generatorState = {
       { name: 'Constitution' }
     ],
     starting_equipment: { class: 'Barbarian' },
-    spellcasting: {},
+    spellcasting: false,
     weapons: [
       { name: 'Simple' },
       { name: 'Martial' }
@@ -282,7 +282,7 @@ const generator = (state = generatorState, action) => {
       return {
         ...state,
         classObj: action.payload
-      }
+      };
 
     case SET_DICE: 
       return {
