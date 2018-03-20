@@ -1,5 +1,8 @@
 import {SET_CHARACTER} from '../../types';
 
+/*
+ *  Actions
+ */
 export const setCharacter = character => {
   const char = { 
     ...character, 

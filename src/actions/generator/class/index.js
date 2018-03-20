@@ -1,6 +1,9 @@
-import {SET_CLASS, SET_CLASS_OBJ, SET_HP} from '../../types';
-import {classDB} from '../../../pages/db.js';
+import { SET_CLASS, SET_CLASS_OBJ, SET_HP } from '../../types';
+import { classDB } from '../../../pages/db.js';
 
+/*
+ *  Actions
+ */
 export const setClass = char_class => {
   return (dispatch, getState) => {
     dispatch({ type: SET_CLASS, payload: char_class });

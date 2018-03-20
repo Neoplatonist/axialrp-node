@@ -1,5 +1,8 @@
-import {SET_ARMOR, SET_ARMOR_ACTIVE} from '../../types';
+import { SET_ARMOR, SET_ARMOR_ACTIVE } from '../../types';
 
+/*
+ *  Actions
+ */
 export const setArmor = armor => {
   return { type: SET_ARMOR, payload: armor };
 };

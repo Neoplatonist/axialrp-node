@@ -7,6 +7,9 @@ import {
   SET_SPEED
 } from '../../types';
 
+/*
+ *  Actions
+ */
 export const setHP = hp => {
   return { type: SET_HP, payload: hp || 0 };
 };

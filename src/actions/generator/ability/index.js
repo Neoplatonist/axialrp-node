@@ -1,5 +1,13 @@
-import {SET_ABILITY, SET_ABILITY_MOD, SET_ABILITY_POINTS, SET_ABILITY_TYPE} from '../../types';
+import { 
+  SET_ABILITY, 
+  SET_ABILITY_MOD, 
+  SET_ABILITY_POINTS, 
+  SET_ABILITY_TYPE
+} from '../../types';
 
+/*
+ *  Actions
+ */
 export const setAbility = (index, ability) => {
   // if (isNaN(ability)) ability = 0;
   return (dispatch, getState) => {

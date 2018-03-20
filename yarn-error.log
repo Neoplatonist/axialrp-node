@@ -8,7 +8,7 @@ Yarn version:
   1.5.1
 
 Node version: 
-  9.7.1
+  9.8.0
 
 Platform: 
   linux x64
@@ -6951,7 +6951,7 @@ Lockfile:
 
 Trace: 
   Error: Command failed.
-  Exit signal: SIGHUP
+  Exit code: 127
   Command: sh
   Arguments: -c react-scripts start
   Directory: /mnt/nas/javascript/node/axialrp-node
@@ -6960,6 +6960,6 @@ Trace:
       at ProcessTermError.MessageError (/home/neoplatonist/.yarn/lib/cli.js:186:110)
       at new ProcessTermError (/home/neoplatonist/.yarn/lib/cli.js:226:113)
       at ChildProcess.<anonymous> (/home/neoplatonist/.yarn/lib/cli.js:30281:17)
-      at ChildProcess.emit (events.js:127:13)
+      at ChildProcess.emit (events.js:180:13)
       at maybeClose (internal/child_process.js:936:16)
       at Process.ChildProcess._handle.onexit (internal/child_process.js:220:5)

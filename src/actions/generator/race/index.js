@@ -8,8 +8,11 @@ import {
   SET_SUBRACE,
   SET_SUBRACE_OBJ
 } from '../../types';
-import {raceDB} from '../../../pages/db.js';
+import { raceDB } from '../../../pages/db.js';
 
+/*
+ *  Actions
+ */
 export const setRace = race => {
   return (dispatch, getState) => {
     dispatch({ type: SET_RACE, payload: race });
