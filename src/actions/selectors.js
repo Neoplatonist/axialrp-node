@@ -3,7 +3,7 @@ import {
   AbilityMap, 
   AbilityModifier, 
   ProficiencyBonus 
-} from '../../pages/generator/utils';
+} from '../pages/generator/utils';
 
 // Mock Database
 import { 
@@ -13,7 +13,7 @@ import {
   // raceDB,
   // skillsDB,
   weaponDB
-} from '../../pages/db.js';
+} from '../pages/db.js';
 
 /**
  * selectors
