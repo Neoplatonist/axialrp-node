@@ -1,8 +1,11 @@
 Server Side Rendering with Create React App
 ===========================================
 
-This is the v2.1 version of my react app, checkout my article here: 
-https://medium.com/@benlu/ssr-with-create-react-app-v2-1-ee83fb767327
+__NOTE: This project is currently following the guidelines of the [Open-Gaming License (OGL)](http://dnd.wizards.com/articles/features/systems-reference-document-srd) that Wizards of the Coast kindly provides.__
+
+This is v2.1 version of [Ben Lu's react app](https://github.com/ayroblu/ssr-cra-v2.1), checkout his article [here](https://medium.com/@benlu/ssr-with-create-react-app-v2-1-ee83fb767327).
+
+Currently this app uses a javascript file as it's database for quick prototyping. This is located in src/pages/db.js . Eventually we will port this over to mongoDB or postgresql's json.
 
 ### For first time setup.
 ```bash
@@ -15,7 +18,7 @@ yarn start
 ```
 
 ### NodeJS + ReactJS Server Side Rendering
-NOTES: Currently does not work since I need to fix the SSR. Please use Development for now.
+__NOTES: Currently does not work since I need to fix the SSR. Please use Development for now.__
 #### Development
 ```bash
 yarn build

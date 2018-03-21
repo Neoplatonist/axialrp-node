@@ -686,7 +686,7 @@ export const classDB = [
       { name: 'Constitution' }
     ],
     starting_equipment: { class: 'Barbarian' },
-    spellcasting: false,
+    spellcasting: {},
     weapons: [
       { name: 'Simple' },
       { name: 'Martial' }
@@ -751,7 +751,18 @@ export const classDB = [
         proficiencies: 'tba'
       }
     ],
-    spellcasting: true,
+    spellcasting: {
+      0: ['Dancing Lights', 'Light', 'Mage Hand', 'Mending', 'Message', 'Minor Illusion', 'Prestidigitation', 'True Strike', 'Vicious Mockery'],
+      1: ['Animal Friendship', 'Bane', 'Charm Person', 'Comprehend Languages', 'Cure Wounds', 'Detect Magic', 'Disguise Self', 'Faerie Fire', 'Feather Fall', 'Healing Word', 'Heroism', 'Hideous Laughter', 'Identify', 'Illusory Script', 'Longstrider', 'Silent Image', 'Sleep', 'Speak with Animals', 'Thunderwave', 'Unseen Servant'],
+      2: ['Animal Messenger', 'Blindness/Deafness', 'Calm Emotions', 'Detect Thoughts', 'Enhance Ability', 'Enthrall', 'Heat Metal', 'Hold Person', 'Invisibility', 'Knock', 'Lesser Restoration', 'Locate Animals or Plants', 'Locate Object', 'Magic Mouth', 'See Invisbility', 'Shatter', 'Silence', 'Suggestion', 'Zone of Truth'],
+      3: ['Bestow Curse', 'Clairvoyance', 'Dispel Magic', 'Fear', 'Glyph of Warding', 'Hypnotic Pattern', 'Major Image', 'Nondetection', 'Plant Growth', 'Sending', 'Speak with Dead', 'Speak with Plants', 'Stinking Cloud', 'Tiny Hut', 'Tongues'],
+      4: ['Compulsion', 'Confusion', 'Dimension Door', 'Freedom of Movement', 'Greater Invisibility', 'Hallucinatory Terrain', 'Locate Creature', 'Polymorph'],
+      5: ['Animate Objects', 'Awaken', 'Dominate Person', 'Dream', 'Geas', 'Greater Restoration', 'Hold Monster', 'Legend Lore', 'Mass Cure Wounds', 'Mislead', 'Modify Memory', 'Planar Binding', 'Raise Dead', 'Scrying', 'Seeming', 'Teleportation'],
+      6: ['Eyebite', 'Find the Path', 'Guards and Wards', 'Irresistible Dance', 'Mass Suggestion', 'Programmed Illusion', 'True Seeing'],
+      7: ['Arcane Sword', 'Etherealness', 'Forcecage', 'Magnificent Mansion', 'Mirage Arcane', 'Project Image', 'Regenerate', 'Resurrection', 'Symbol', 'Teleport'],
+      8: ['Dominate Monster', 'Feeblemind', 'Glibness', 'Mind Blank', 'Power Word Stun'],
+      9: ['Foresight', 'Power Word Kill', 'True Polymorph'],
+    },
     weapons: [
       { name: 'Simple' },
       { name: 'Longsword' },
@@ -793,7 +804,18 @@ export const classDB = [
         proficiencies: 'tba'
       }
     ],
-    spellcasting: true,
+    spellcasting: {
+      0: ['Guidance', 'Light', 'Mending', 'Resistance', 'Sacred Flame', 'Spare the Dying', 'Thaumaturgy'],
+      1: ['Bane', 'Bless', 'Command', 'Create or Destroy Water', 'Cure Wounds', 'Detect Evil and Good', 'Detect Magic', 'Detect Poison and Disease', 'Guiding Bolt', 'Healing Word', 'Inflict Wounds', 'Protection from Evil and Good', 'Purify Food and Drink', 'Sanctuary', 'Shield of Faith'],
+      2: ['Animal Messenger', 'Blindness/Deafness', 'Calm Emotions', 'Detect Thoughts', 'Enhance Ability', 'Enthrall', 'Heat Metal', 'Hold Person', 'Invisibility', 'Knock', 'Lesser Restoration', 'Locate Animals or Plants', 'Locate Object', 'Magic Mouth', 'See Invisbility', 'Shatter', 'Silence', 'Suggestion', 'Zone of Truth'],
+      3: ['Animate Dead', 'Beacon of Hope', 'Bestow Curse', 'Clairvoyance', 'Create Food and Water', 'Daylight', 'Dispel Magic', 'Glyph of Warding', 'Magic Circle', 'Mass Healing Word', 'Meld into Stone', 'Protection from Energy', 'Remove Curse', 'Revivify', 'Sending', 'Speak with Dead', 'Spirit Guardians', 'Tongues', 'Water Walk'],
+      4: ['Banishment', 'Control Water', 'Death Ward', 'Divination', 'Freedom of Movement', 'Guardian of Faith', 'Locate Creature', 'Stone Shape'],
+      5: ['Commune', 'Contagion', 'Dispel Evil and Good', 'Flame Strike', 'Geas', 'Greater Restoration', 'Hallow', 'Insect Plague', 'Legend Lore', 'Mass Cure Wounds', 'Planar Binding', 'Raise Dead', 'Scrying'],
+      6: ['Blade Barrier', 'Create Undead', 'Find the Path', 'Forbiddance', 'Harm', 'Heal', 'Heroes’ Feast', 'Planar Ally', 'True Seeing', 'Word of Recall'],
+      7: ['Conjure Celestial', 'Divine Word', 'Etherealness', 'Fire Storm', 'Plane Shift', 'Regenerate', 'Resurrection', 'Symbol'],
+      8: ['Antimagic Field', 'Control Weather', 'Earthquake', 'Holy Aura'],
+      9: ['Astral Projection', 'Gate', 'Mass Heal', 'True Resurrection'],
+    },
     weapons: [
       { name: 'Simple' }
     ]

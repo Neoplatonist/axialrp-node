@@ -1,0 +1,9 @@
+.vscode
+.gitignore
+build
+node_modules
+remote-profile
+server
+Dockerfile
+Makefile
+*/scrap.js
