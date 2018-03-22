@@ -13,6 +13,7 @@ const mimeTypes = {
   '.jpg': 'image/jpeg'
 , '.png': 'image/png'
 }
+
 register(undefined, (mod, filename) => {
   const ext = ['.png', '.jpg'].find(f=>filename.endsWith(f))
   if (!ext) return

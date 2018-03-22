@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
-import { Switch, Route } from 'react-router-dom'
-import NoMatch from '../pages/noMatch'
+import React, { Component } from 'react';
+import { Switch, Route } from 'react-router-dom';
+import NoMatch from '../pages/noMatch';
 
 import Header from './components/header';
 import Sidebar from './components/sidebar';

@@ -1,8 +1,8 @@
-import React from 'react'
-import {renderToString, renderToStaticMarkup} from 'react-dom/server'
-import {Provider} from 'react-redux'
-import {StaticRouter} from 'react-router-dom'
-import App from './app'
+import React from 'react';
+import { renderToString, renderToStaticMarkup } from 'react-dom/server';
+import { Provider } from 'react-redux';
+import { StaticRouter } from 'react-router-dom';
+import App from './app';
 
 export function render(req, store, context){
   return renderToString(
@@ -14,11 +14,11 @@ export function render(req, store, context){
         <App/>
       </StaticRouter>
     </Provider>
-  )
-}
+  );
+};
 
 export function renderHead(context){
   return context.head.map(h=>(
     renderToStaticMarkup(h)
-  )).join('')
-}
+  )).join('');
+};

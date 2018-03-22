@@ -1,4 +1,3 @@
-import { combineReducers } from 'redux';
 import { 
   SET_ABILITY,
   SET_ABILITY_MOD,
@@ -27,7 +26,7 @@ import {
   SET_SUBRACE_OBJ,
   SET_WEAPON,
   SET_WEAPON_ACTIVE
-} from './actions/types';
+} from '../../actions';
 // import {...} from './actions';
 
 export const generatorState = {
@@ -386,8 +385,4 @@ const generator = (state = generatorState, action) => {
   /* eslint-enable indent */
 };
 
-const reducers = combineReducers({
-  generator
-});
-
-export default reducers;
+export default generator;

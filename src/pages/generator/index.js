@@ -237,5 +237,4 @@ export default connect(mapStateToProps, boundActions)(Generator);
  * TODO:
  * - Level up characters
  * - Calculate startin money for characters
- * - Create database for Cantrips by Class
  */

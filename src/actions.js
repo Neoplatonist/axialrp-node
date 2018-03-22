@@ -7,6 +7,7 @@ import {
   classDB, 
   raceDB,
   // skillsDB,
+  spellsDB,
   weaponDB
 } from './pages/db.js';
 
@@ -178,6 +179,14 @@ export const selectSkillsFilter = createSelector(
   selectClassObj,
   classObj => {
     return classObj.proficiency_choices.find( v => v.type === 'Skill');
+  }
+);
+
+export const selectSpellsFilter = createSelector(
+  selectClass,
+  clas => {
+    return [].concat(...spellsDB.map(v => 
+      v.classes.some(f => f.name === clas) ? v : []));
   }
 );
 
