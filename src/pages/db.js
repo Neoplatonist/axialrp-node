@@ -856,7 +856,18 @@ export const classDB = [
         proficiencies: 'tba'
       }
     ],
-    spellcasting: true,
+    spellcasting: {
+      0: ['Druidcraft', 'Guidance', 'Mending', 'Poison Spray', 'Produce Flame', 'Resistance', 'Shillelagh'],
+      1: ['Animal Friendship', 'Charm Person', 'Create or Destroy Water', 'Cure Wounds', 'Detect Magic', 'Detect Poison and Disease', 'Entangle', 'Faerie Fire', 'Fog Cloud', 'Goodberry', 'Healing Word', 'Jump', 'Longstrider', 'Purify Food and Drink', 'Speak with Animals', 'Thunderwave'],
+      2: ['Animal Messenger', 'Barkskin', 'Darkvision', 'Enhance Ability', 'Find Traps', 'Flame Blade', 'Flaming Sphere', 'Gust of Wind', 'Heat Metal', 'Hold Person', 'Lesser Restoration', 'Locate Animals or Plants', 'Locate Object', 'Moonbeam', 'Pass without Trace', 'Protection from Poison', 'Spike Growth'],
+      3: ['Call Lightning', 'Conjure Animals', 'Daylight', 'Dispel Magic', 'Meld into Stone', 'Plant Growth', 'Protection from Energy', 'Sleet Storm', 'Speak with Plants', 'Water Breathing', 'Water Walk', 'Wind Wall'],
+      4: ['Blight', 'Confusion', 'Conjure Minor Elementals', 'Conjure Woodland Beings', 'Control Water', 'Dominate Beast', 'Freedom of Movement', 'Giant Insect', 'Hallucinatory Terrain', 'Ice Storm', 'Locate Creature', 'Polymorph', 'Stone Shape', 'Stoneskin', 'Wall of Fire'],
+      5: ['Antilife Shell', 'Awaken', 'Commune with Nature', 'Conjure Elemental', 'Contagion', 'Geas', 'Greater Restoration', 'Insect Plague', 'Mass Cure Wounds', 'Planar Binding', 'Reincarnate', 'Scrying', 'Tree Stride', 'Wall of Stone'],
+      6: ['Conjure Fey', 'Find the Path', 'Heal', 'Heroes’ Feast', 'Move Earth', 'Sunbeam', 'Transport via Plants', 'Wall of Thorns', 'Wind Walk'],
+      7: ['Fire Storm', 'Mirage Arcane', 'Plane Shift', 'Regenerate', 'Reverse Gravity'],
+      8: ['Animal Shapes', 'Antipathy/Sympathy', 'Control Weather', 'Earthquake', 'Feeblemind', 'Sunburst'],
+      9: ['Foresight', 'Shapechange', 'Storm of Vengeance', 'True Resurrection'],
+    },
     weapons: [
       { name: 'Clubs' },
       { name: 'Dagger' },
@@ -908,7 +919,7 @@ export const classDB = [
         proficiencies: 'tba'
       }
     ],
-    spellcasting: false,
+    spellcasting: {},
     weapons: [
       { name: 'Simple' },
       { name: 'Martial' }
@@ -987,7 +998,7 @@ export const classDB = [
         proficiencies: 'tba'
       }
     ],
-    spellcasting: false,
+    spellcasting: {},
     weapons: [
       { name: 'Simple' },
       { name: 'Shortsword' }
@@ -1028,7 +1039,17 @@ export const classDB = [
         proficiencies: 'tba'
       }
     ],
-    spellcasting: true,
+    spellcasting: {
+      0: [],
+      1: ['Bless', 'Command', 'Cure Wounds', 'Detect Evil and Good', 'Detect Magic', 'Detect Poison and Disease', 'Divine Favor', 'Heroism', 'Protection from Evil and Good', 'Purify Food and Drink', 'Shield of Faith'],
+      2: ['Aid', 'Branding Smite', 'Find Steed', 'Lesser Restoration', 'Locate Object', 'Magic Weapon', 'Protection from Poison', 'Zone of Truth'],
+      3: ['Create Food and Water', 'Daylight', 'Dispel Magic', 'Magic Circle', 'Remove Curse', 'Revivify'],
+      4: ['Banishment', 'Death Ward', 'Locate Creature'],
+      5: ['Dispel Evil and Good', 'Geas', 'Raise Dead'],
+      6: [],
+      7: [],
+      9: [],
+    },
     weapons: [
       { name: 'Simple' },
       { name: 'Martial' }
@@ -1069,7 +1090,18 @@ export const classDB = [
         proficiencies: 'tba'
       }
     ],
-    spellcasting: true,
+    spellcasting: {
+      0: [],
+      1: ['Alarm', 'Animal Friendship', 'Cure Wounds', 'Detect Magic', 'Detect Poison and Disease', 'Fog Cloud', 'Goodberry', 'Hunter\'s Mark', 'Jump', 'Longstrider', 'Speak with Animals'],
+      2: ['Animal Messenger', 'Barkskin', 'Darkvision', 'Enhance Ability', 'Find Traps', 'Flame Blade', 'Flaming Sphere', 'Gust of Wind', 'Heat Metal', 'Hold Person', 'Lesser Restoration', 'Locate Animals or Plants', 'Locate Object', 'Moonbeam', 'Pass without Trace', 'Protection from Poison', 'Spike Growth'],
+      3: ['Conjure Animals', 'Daylight', 'Nondetection', 'Plant Growth', 'Protection from Energy', 'Speak with Plants', 'Water Breathing', 'Water Walk', 'Wind Wall'],
+      4: ['Conjure Woodland Beings', 'Freedom of Movement', 'Locate Creature', 'Stoneskin'],
+      5: ['Commune with Nature', 'Tree Stride'],
+      6: [],
+      7: [],
+      8: [],
+      9: [],
+    },
     weapons: [
       { name: 'Simple' },
       { name: 'Martial' }
@@ -1109,7 +1141,7 @@ export const classDB = [
         proficiencies: 'tba'
       }
     ],
-    spellcasting: false,
+    spellcasting: {},
     weapons: [
       { name: 'Simple' },
       { name: 'Longsword' },
@@ -1148,7 +1180,18 @@ export const classDB = [
         proficiencies: 'tba'
       }
     ],
-    spellcasting: true,
+    spellcasting: {
+      0: ['Acid Splash', 'Chill Touch', 'Dancing Lights', 'Fire Bolt', 'Light', 'Mage Hand', 'Mending', 'Message', 'Minor Illusion', 'Poison Spray', 'Prestidigitation', 'Ray of Frost', 'Shocking Grasp', 'True Strike'],
+      1: ['Burning Hands', 'Charm Person', 'Color Spray', 'Comprehend Languages', 'Detect Magic', 'Disguise Self', 'Expeditious Retreat', 'False Life', 'Feather Fall', 'Fog Cloud', 'Jump', 'Mage Armor', 'Magic Missile', 'Shield', 'Silent Image', 'Sleep', 'Thunderwave'],
+      2: ['Alter Self', 'Blindness/Deafness', 'Blur', 'Darkness', 'Darkvision', 'Detect Thoughts', 'Enhance Ability', 'Enlarge/Reduce', 'Gust of Wind', 'Hold Person', 'Invisibility', 'Knock', 'Levitate', 'Mirror Image', 'Misty Step', 'Scorching Ray', 'See Invisibility', 'Shatter', 'Spider Climb', 'Suggestion', 'Web'],
+      3: ['Blink', 'Clairvoyance', 'Counterspell', 'Daylight', 'Dispel Magic', 'Fear', 'Fireball', 'Fly', 'Gaseous Form', 'Haste', 'Hypnotic Pattern', 'Lightning Bolt', 'Major Image', 'Protection from Energy', 'Sleet Storm', 'Slow', 'Stinking Cloud', 'Tongues', 'Water Breathing', 'Water Walk'],
+      4: ['Banishment', 'Blight', 'Confusion', 'Dimension Door', 'Dominate Beast', 'Greater Invisibility', 'Ice Storm', 'Polymorph', 'Stoneskin', 'Wall of Fire'],
+      5: ['Animate Objects', 'Cloudkill', 'Cone of Cold', 'Creation', 'Dominate Person', 'Hold Monster', 'Insect Plague', 'Seeming', 'Telekinesis', 'Teleportation Circle', 'Wall of Stone'],
+      6: ['Chain Lightning', 'Circle of Death', 'Disintegrate', 'Eyebite', 'Globe of Invulnerability', 'Mass Suggestion', 'Move Earth', 'Sunbeam', 'True Seeing'],
+      7: ['Delayed Blast Fireball', 'Etherealness', 'Finger of Death', 'Fire Storm', 'Plane Shift', 'Prismatic Spray', 'Reverse Gravity', 'Teleport'],
+      8: ['Dominate Monster', 'Earthquake', 'Incendiary Cloud', 'Power Word Stun', 'Sunburst'],
+      9: ['Gate', 'Meteor Swarm', 'Power Word Kill', 'Time Stop', 'Wish'],
+    },
     weapons: [
       { name: 'Dagger' },
       { name: 'Quarterstaff' },
@@ -1186,7 +1229,18 @@ export const classDB = [
         proficiencies: 'tba'
       }
     ],
-    spellcasting: true,
+    spellcasting: {
+      0: ['Chill Touch', 'Eldritch Blast', 'Mage Hand', 'Minor Illusion', 'Poison Spray', 'Prestidigitation', 'True Strike'],
+      1: ['Charm Person', 'Comprehend Languages', 'Expeditious Retreat', 'Hellish Rebuke', 'Illusory Script', 'Protection from Evil and Good', 'Unseen Servant'],
+      2: ['Darkness', 'Enthrall', 'Hold Person', 'Invisibility', 'Mirror Image', 'Misty Step', 'Ray of Enfeeblement', 'Shatter', 'Spider Climb', 'Suggestion'],
+      3: ['Counterspell', 'Dispel Magic', 'Fear', 'Fly', 'Gaseous Form', 'Hypnotic Pattern', 'Magic Circle', 'Major Image', 'Remove Curse', 'Tongues', 'Vampiric Touch'],
+      4: ['Banishment', 'Blight', 'Dimension Door', 'Hallucinatory Terrain'],
+      5: ['Contact Other Plane', 'Dream', 'Hold Monster', 'Scrying'],
+      6: ['Circle of Death', 'Conjure Fey', 'Create Undead', 'Eyebite', 'Flesh to Stone', 'Mass Suggestion', 'True Seeing'],
+      7: ['Etherealness', 'Finger of Death', 'Forcecage', 'Plane Shift'],
+      8: ['Demiplane', 'Dominate Monster', 'Feeblemind', 'Glibness', 'Power Word Stun'],
+      9: ['Astral Projection', 'Foresight', 'Imprisonment', 'Power Word Kill', 'True Polymorph'],
+    },
     weapons: [{ name: 'Simple' }]
   }, {
     name: 'Wizard',
@@ -1218,7 +1272,18 @@ export const classDB = [
         proficiencies: 'tba'
       }
     ],
-    spellcasting: true,
+    spellcasting: {
+      0: ['Acid Splash', 'Chill Touch', 'Dancing Lights', 'Fire Bolt', 'Light', 'Mage Hand', 'Mending', 'Message', 'Minor Illusion', 'Poison Spray', 'Prestidigitation', 'Ray of Frost', 'Shocking Grasp', 'True Strike'],
+      1: ['Alarm', 'Burning Hands', 'Charm Person', 'Color Spray', 'Comprehend Languages', 'Detect Magic', 'Disguise Self', 'Expeditious Retreat', 'False Life', 'Feather Fall', 'Find Familiar', 'Floating Disk', 'Fog Cloud', 'Grease', 'Hideous Laughter', 'Identify', 'Illusory Script', 'Jump', 'Longstrider', 'Mage Armor', 'Magic Missile', 'Protection from Evil and Good', 'Shield', 'Silent Image', 'Sleep', 'Thunderwave', 'Unseen Servant'],
+      2: ['Acid Arrow', 'Alter Self', 'Arcane Lock', 'Arcanist’s Magic Aura', 'Blindness/Deafness', 'Blur', 'Continual Flame', 'Darkness', 'Darkvision', 'Detect Thoughts', 'Enlarge/Reduce', 'Flaming Sphere', 'Gentle Repose', 'Gust of Wind', 'Hold Person', 'Invisibility', 'Knock', 'Levitate', 'Locate Object', 'Magic Mouth', 'Magic Weapon', 'Mirror Image', 'Misty Step', 'Ray of Enfeeblement', 'Rope Trick', 'Scorching Ray', 'See Invisibility', 'Shatter', 'Spider Climb', 'Suggestion', 'Web'],
+      3: ['Animate Dead', 'Bestow Curse', 'Blink', 'Clairvoyance', 'Counterspell', 'Dispel Magic', 'Fear', 'Fireball', 'Fly', 'Gaseous Form', 'Glyph of Warding', 'Haste', 'Hypnotic Pattern', 'Lightning Bolt', 'Magic Circle', 'Major Image', 'Nondetection', 'Phantom Steed', 'Protection from Energy', 'Remove Curse', 'Sending', 'Sleet Storm', 'Slow', 'Stinking Cloud', 'Tiny Hut', 'Tongues', 'Vampiric Touch', 'Water Breathing'],
+      4: ['Arcane Eye', 'Banishment', 'Black Tentacles', 'Blight', 'Confusion', 'Conjure Minor Elementals', 'Control Water', 'Dimension Door', 'Fabricate', 'Faithful Hound', 'Fire Shield', 'Greater Invisibility', 'Hallucinatory Terrain', 'Ice Storm', 'Locate Creature', 'Phantasmal Killer', 'Polymorph', 'Private Sanctum', 'Resilient Sphere', 'Secret Chest', 'Stone Shape', 'Stoneskin', 'Wall of Fire'],
+      5: ['Animate Objects', 'Arcane Hand', 'Cloudkill', 'Cone of Cold', 'Conjure Elemental', 'Contact Other Plane', 'Creation', 'Dominate Person', 'Dream', 'Geas', 'Hold Monster', 'Legend Lore', 'Mislead', 'Modify Memory', 'Passwall', 'Planar Binding', 'Scrying', 'Seeming', 'Telekinesis', 'Telepathic Bond', 'Teleportation Circle', 'Wall of Force', 'Wall of Stone'],
+      6: ['Chain Lightning', 'Circle of Death', 'Contingency', 'Create Undead', 'Disintegrate', 'Eyebite', 'Flesh to Stone', 'Freezing Sphere', 'Globe of Invulnerability', 'Guards and Wards', 'Instant Summons', 'Irresistible Dance', 'Magic Jar', 'Mass Suggestion', 'Move Earth', 'Programmed Illusion', 'Sunbeam', 'True Seeing', 'Wall of Ice'],
+      7: ['Arcane Sword', 'Delayed Blast Fireball', 'Etherealness', 'Finger of Death', 'Forcecage', 'Magnificent Mansion', 'Mirage Arcane', 'Plane Shift', 'Prismatic Spray', 'Project Image', 'Reverse Gravity', 'Sequester', 'Simulacrum', 'Symbol', 'Teleport'],
+      8: ['Antimagic Field', 'Antipathy/Sympathy', 'Clone', 'Control Weather', 'Demiplane', 'Dominate Monster', 'Feeblemind', 'Incendiary Cloud', 'Maze', 'Mind Blank', 'Power Word Stun', 'Sunburst'],
+      9: ['Astral Projection', 'Foresight', 'Gate', 'Imprisonment', 'Meteor Swarm', 'Power Word Kill', 'Prismatic Wall', 'Shapechange', 'Time Stop', 'True Polymorph', 'Weird', 'Wish'],
+    },
     weapons: [
       { name: 'Dagger' },
       { name: 'Quarterstaff' },
