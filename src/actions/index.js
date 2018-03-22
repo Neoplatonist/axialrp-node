@@ -27,7 +27,6 @@ export * from './generator/ability';
 export * from './generator/armor';
 export * from './generator/class';
 export * from './generator/desc';
-export * from './generator/lang';
 export * from './generator/race';
 export * from './generator/savingThrows';
 export * from './generator/skills';

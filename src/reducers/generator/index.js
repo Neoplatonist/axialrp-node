@@ -27,6 +27,35 @@ import {
   SET_WEAPON,
   SET_WEAPON_ACTIVE
 } from '../../actions';
+export { 
+  SET_ABILITY,
+  SET_ABILITY_MOD,
+  SET_ABILITY_POINTS,
+  SET_ABILITY_TYPE,
+  SET_AC,
+  SET_ALIGNMENT,
+  SET_ARMOR,
+  SET_ARMOR_ACTIVE,
+  SET_CHARACTER,
+  SET_CLASS,
+  SET_CLASS_OBJ,
+  SET_DICE,
+  SET_HP,
+  SET_INITIATIVE,
+  SET_INSPIRATION,
+  SET_LANGUAGE,
+  SET_LANGUAGE_LIST,
+  SET_LEVEL,
+  SET_PROFICIENCY_BONUS,
+  SET_RACE,
+  SET_RACE_OBJ,
+  SET_SKILLS,
+  SET_SPEED,
+  SET_SUBRACE,
+  SET_SUBRACE_OBJ,
+  SET_WEAPON,
+  SET_WEAPON_ACTIVE
+} from '../../actions';
 // import {...} from './actions';
 
 export const generatorState = {
