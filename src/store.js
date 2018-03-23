@@ -20,7 +20,7 @@ const configureStore = (initialState = {}) => {
 
   const enhancers = [
     applyMiddleware(...middlewares)
-    // window.devToolsExtension 
+    // window.devToolsExtension
     //   ? window.devToolsExtension() 
     //     : f => f
   ];
