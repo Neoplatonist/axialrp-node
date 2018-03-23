@@ -19,10 +19,10 @@ const configureStore = (initialState = {}) => {
   ];
 
   const enhancers = [
-    applyMiddleware(...middlewares)
-    // window.devToolsExtension
-    //   ? window.devToolsExtension() 
-    //     : f => f
+    applyMiddleware(...middlewares),
+    typeof window !== 'undefined' && window.devToolsExtension
+      ? window.devToolsExtension() 
+        : f => f
   ];
 
   const store = createStore(
