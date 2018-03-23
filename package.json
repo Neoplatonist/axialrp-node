@@ -1,5 +1,5 @@
 {
-  "name": "ssr-cra-v2.1",
+  "name": "axialrp-node-ssr",
   "version": "2.1.0",
   "proxy": "http://localhost:3001",
   "private": true,
