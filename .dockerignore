@@ -4,7 +4,6 @@ babel-src
 build
 node_modules
 remote-profile
-server
 Dockerfile
 Makefile
 yarn-error.log
