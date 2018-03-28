@@ -120,6 +120,18 @@ class MyDB{
       res(db.Kit.find(v => v.name === name))
     }, 200));
   }
+  /* ---------------------------------------- */
+  async getToolAll() {
+    return new Promise(res => setTimeout(() => {
+      res(db.Tool)
+    }, 200));
+  }
+
+  async getToolName(name) {
+    return new Promise(res => setTimeout(() => {
+      res(db.Tool.find(v => v.name === name))
+    }, 200));
+  }
 }
   
 module.exports = {
