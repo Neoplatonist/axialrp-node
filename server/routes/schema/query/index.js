@@ -8,7 +8,7 @@ const { getFeatName } = require('./feat.js');
 // const Mount = require('./mount.js');
 const { getRaceName } = require('./race.js');
 // const SchoolOfMagic = require('./schoolofmagic.js');
-// const Skill = require('./skill.js');
+const { getSkillName } = require('./skill.js');
 // const Spell = require('./spell.js');
 // const StartingEquipment = require('./startingequipment.js');
 const { getSubRaceName } = require('./subrace.js');
@@ -27,7 +27,7 @@ const RootQuery = new GraphQLObjectType({
     // mount: Mount,
     getRaceName: getRaceName,
     // schoolOfMagic: SchoolOfMagic,
-    // skill: Skill,
+    getSkillName: getSkillName,
     // spell: Spell,
     // startingEquipment: StartingEquipment,
     getSubRaceName: getSubRaceName,

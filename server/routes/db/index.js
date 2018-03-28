@@ -60,6 +60,18 @@ class MyDB{
       res(db.Feat.find(v => v.name === name))
     }, 200));
   }
+  /* ---------------------------------------- */
+  async getSkillAll() {
+    return new Promise(res => setTimeout(() => {
+      res(db.Skill)
+    }, 200));
+  }
+
+  async getSkillName(name) {
+    return new Promise(res => setTimeout(() => {
+      res(db.Skill.find(v => v.name === name))
+    }, 200));
+  }
 }
   
 module.exports = {
