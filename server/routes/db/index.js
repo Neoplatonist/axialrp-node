@@ -156,6 +156,18 @@ class MyDB{
       res(db.Mount.find(v => v.name === name))
     }, 200));
   }
+  /* ---------------------------------------- */
+  async getSchoOfMagAll() {
+    return new Promise(res => setTimeout(() => {
+      res(db.SchoolOfMagic)
+    }, 200));
+  }
+
+  async getSchoOfMagName(name) {
+    return new Promise(res => setTimeout(() => {
+      res(db.SchoolOfMagic.find(v => v.name === name))
+    }, 200));
+  }
 }
   
 module.exports = {
