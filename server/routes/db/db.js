@@ -33,20 +33,23 @@ const raceDB = [
         { name: 'Dwarvish' }
       ]
     },
-    traits: [
-      { 
-        name: 'Darkvision',
-        description: 'Accustomed to life underground, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.'
-      },
-      { 
-        name: 'Dwarven Resilience',
-        description: 'You have advantage on saving throws against poison, and you have resistance against poison damage.'
-      },
-      { 
-        name: 'Stonecunning',
-        description: 'Whenever you make an Intelligence (History) check related to the origin of stonework, you are considered proficient in the History skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus.'
-      }
-    ],
+    traits: {
+      options: {},
+      type: [
+        { 
+          name: 'Darkvision',
+          description: 'Accustomed to life underground, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.'
+        },
+        { 
+          name: 'Dwarven Resilience',
+          description: 'You have advantage on saving throws against poison, and you have resistance against poison damage.'
+        },
+        { 
+          name: 'Stonecunning',
+          description: 'Whenever you make an Intelligence (History) check related to the origin of stonework, you are considered proficient in the History skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus.'
+        }
+      ]
+    },
     sub_races: [ {name: 'Hill Dwarf'} ],
     saving_throws: {
       against: 'Poison',
@@ -91,20 +94,23 @@ const raceDB = [
         { name: 'Elvish' }
       ]
     },
-    traits: [
-      { 
-        name: 'Darkvision',
-        description: 'Accustomed to twilit forests and the night sky, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You canâ€™t discern color in darkness, only shades of gray.'
-      },
-      { 
-        name: 'Fey Ancestry',
-        description: 'You have advantage on saving throws against being charmed, and magic can’t put you to sleep.'
-      },
-      { 
-        name: 'Trance',
-        description: 'Elves don’t need to sleep. Instead, they meditate deeply, remaining semiconscious, for 4 hours a day. (The Common word for such meditation is “trance.”) While meditating, you can dream after a fashion; such dreams are actually mental exercises that have become reflexive through years of practice. After resting in this way, you gain the same benefit that a human does from 8 hours of sleep.'
-      }
-    ],
+    traits: {
+      options: {},
+      type: [
+        { 
+          name: 'Darkvision',
+          description: 'Accustomed to twilit forests and the night sky, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You canâ€™t discern color in darkness, only shades of gray.'
+        },
+        { 
+          name: 'Fey Ancestry',
+          description: 'You have advantage on saving throws against being charmed, and magic can’t put you to sleep.'
+        },
+        { 
+          name: 'Trance',
+          description: 'Elves don’t need to sleep. Instead, they meditate deeply, remaining semiconscious, for 4 hours a day. (The Common word for such meditation is “trance.”) While meditating, you can dream after a fashion; such dreams are actually mental exercises that have become reflexive through years of practice. After resting in this way, you gain the same benefit that a human does from 8 hours of sleep.'
+        }
+      ]
+    },
     sub_races: [ {name: 'High Elf'} ],
     saving_throws: {
       against: 'Poison',
@@ -271,16 +277,16 @@ const raceDB = [
       options: {
         choose: 1,
         from: [
-          {name: 'Breath Weapon (Black)'},
-          {name: 'Breath Weapon (Blue)'},
-          {name: 'Breath Weapon (Brass)'},
-          {name: 'Breath Weapon (Bronze)'},
-          {name: 'Breath Weapon (Copper)'},
-          {name: 'Breath Weapon (Gold)'},
-          {name: 'Breath Weapon (Green)'},
-          {name: 'Breath Weapon (Red)'},
-          {name: 'Breath Weapon (Silver)'},
-          {name: 'Breath Weapon (White)'}
+          'Breath Weapon (Black)',
+          'Breath Weapon (Blue)',
+          'Breath Weapon (Brass)',
+          'Breath Weapon (Bronze)',
+          'Breath Weapon (Copper)',
+          'Breath Weapon (Gold)',
+          'Breath Weapon (Green)',
+          'Breath Weapon (Red)',
+          'Breath Weapon (Silver)',
+          'Breath Weapon (White)'
         ],
         type: 'trait'
       },

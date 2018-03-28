@@ -7,6 +7,7 @@ const {
   GraphQLNonNull
 } = require('graphql');
 const { 
+  NameDescType,
   NameListType, 
   OptionsIntType, 
   OptionsStringType 
@@ -79,8 +80,8 @@ const RaceType = new GraphQLObjectType({
       name: 'Traits',
 
       fields: () => ({
-        options: { type: OptionsIntType },
-        type: { type: new GraphQLList(NameListType) }
+        options: { type: OptionsStringType },
+        type: { type: new GraphQLList(NameDescType) }
       })
     })},
 

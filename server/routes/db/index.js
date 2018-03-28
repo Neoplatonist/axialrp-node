@@ -1,7 +1,7 @@
 const db = require('./db');
 
 class MyDB{
-  async getRaceAll() {
+  async getRaces() {
     return new Promise(res => setTimeout(() => {
       res(db.Race)
     }, 200));
