@@ -49,7 +49,7 @@ class MyDB{
     }, 200));
   }
   /* ---------------------------------------- */
-  async getFeatAll() {
+  async getFeats() {
     return new Promise(res => setTimeout(() => {
       res(db.Feat)
     }, 200));
