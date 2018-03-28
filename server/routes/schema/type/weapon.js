@@ -7,6 +7,7 @@ const {
   GraphQLNonNull
 } = require('graphql');
 const { 
+  CostType,
   NameDescType,
   NameListType, 
   OptionsIntType, 
@@ -22,14 +23,7 @@ const WeaponType = new GraphQLObjectType({
     name: { type: GraphQLString },
     category: { type: GraphQLString },
     range: { type: GraphQLString },
-    cost: { type: new GraphQLObjectType({
-      name: 'WeaponCost',
-
-      fields: () => ({
-        quantity: { type: GraphQLInt },
-        unit: { type: GraphQLString },
-      })
-    })},
+    cost: { type: CostType },
 
     damage: { type: new GraphQLObjectType({
       name: 'WeaponDamage',

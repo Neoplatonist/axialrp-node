@@ -10,7 +10,14 @@ const {
 
 
 
+const CostType = new GraphQLObjectType({
+  name: 'Cost',
 
+  fields: () => ({
+    quantity: { type: GraphQLInt },
+    unit: { type: GraphQLString }
+  })
+});
 
 const NameDescType = new GraphQLObjectType({
   name: 'NameDesc',
@@ -50,6 +57,7 @@ const OptionsStringType = new GraphQLObjectType({
 });
 
 module.exports = {
+  CostType,
   NameDescType,
   NameListType,
   OptionsIntType,

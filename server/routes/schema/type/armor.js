@@ -8,6 +8,7 @@ const {
   GraphQLNonNull
 } = require('graphql');
 const { 
+  CostType,
   NameDescType,
   NameListType, 
   OptionsIntType, 
@@ -36,14 +37,7 @@ const ArmorType = new GraphQLObjectType({
     stealth_disadvantage: { type: GraphQLBoolean },
     weight: { type: GraphQLInt },
 
-    cost: { type: new GraphQLObjectType({
-      name: 'ArmorCost',
-
-      fields: () => ({
-        quantity: { type: GraphQLInt },
-        unit: { type: GraphQLString },
-      })
-    })}
+    cost: { type: CostType }
   })
 });
 
