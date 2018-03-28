@@ -37,7 +37,7 @@ class MyDB{
     }, 200));
   }
 /* ---------------------------------------- */
-  async getClassAll() {
+  async getClasses() {
     return new Promise(res => setTimeout(() => {
       res(db.Class)
     }, 200));

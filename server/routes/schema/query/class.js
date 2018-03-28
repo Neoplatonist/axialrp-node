@@ -6,6 +6,16 @@ const { MyDB } = require('../../db');
 const db = new MyDB();
 
 // Race Query
+const getClasses = {
+  type: new GraphQLList(ClassType),
+
+  resolve(val, args) {
+    return new Promise(res => setTimeout(() => {
+      res(db.getClasses());
+    }, 200))
+  }
+};
+
 const getClassName = {
   type: ClassType,
   args: { name: { type: GraphQLString } },
@@ -18,5 +28,6 @@ const getClassName = {
 };
 
 module.exports = {
+  getClasses,
   getClassName
 };
