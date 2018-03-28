@@ -108,6 +108,18 @@ class MyDB{
       res(db.Gear.find(v => v.name === name))
     }, 200));
   }
+  /* ---------------------------------------- */
+  async getKitAll() {
+    return new Promise(res => setTimeout(() => {
+      res(db.Kit)
+    }, 200));
+  }
+
+  async getKitName(name) {
+    return new Promise(res => setTimeout(() => {
+      res(db.Kit.find(v => v.name === name))
+    }, 200));
+  }
 }
   
 module.exports = {
