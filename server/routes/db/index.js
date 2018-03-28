@@ -72,6 +72,18 @@ class MyDB{
       res(db.Skill.find(v => v.name === name))
     }, 200));
   }
+  /* ---------------------------------------- */
+  async getWeaponAll() {
+    return new Promise(res => setTimeout(() => {
+      res(db.Weapon)
+    }, 200));
+  }
+
+  async getWeaponName(name) {
+    return new Promise(res => setTimeout(() => {
+      res(db.Weapon.find(v => v.name === name))
+    }, 200));
+  }
 }
   
 module.exports = {
