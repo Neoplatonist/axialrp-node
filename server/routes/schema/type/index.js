@@ -10,12 +10,32 @@ const {
 
 
 
+
+
 const CostType = new GraphQLObjectType({
   name: 'Cost',
 
   fields: () => ({
     quantity: { type: GraphQLInt },
     unit: { type: GraphQLString }
+  })
+});
+
+const EquipChoicesType = new GraphQLObjectType({
+  name: 'EquipChoices',
+
+  fields: () => ({
+    choice:{ type: new GraphQLList(EquipChoicesArrayType) }
+  })
+});
+
+const EquipChoicesArrayType = new GraphQLObjectType({
+  name: 'EquipChoicesArray',
+
+  fields: () => ({
+    choose: { type: GraphQLInt },
+    type: { type: GraphQLString },
+    from: { type: new GraphQLList(NameQuantType) }
   })
 });
 
@@ -35,6 +55,15 @@ const NameListType = new GraphQLObjectType({
     name: { type: GraphQLString }
   })
 });
+
+const NameQuantType = new GraphQLObjectType({
+  name: 'NameQuant',
+
+  fields: () => ({
+    name: { type: GraphQLString },
+    quantity: { type: GraphQLInt }
+  })
+}); 
 
 const OptionsIntType = new GraphQLObjectType({
   name: 'OptionsInt',
@@ -58,8 +87,10 @@ const OptionsStringType = new GraphQLObjectType({
 
 module.exports = {
   CostType,
+  EquipChoicesType,
   NameDescType,
   NameListType,
+  NameQuantType,
   OptionsIntType,
   OptionsStringType
 };

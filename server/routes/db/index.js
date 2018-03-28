@@ -132,6 +132,18 @@ class MyDB{
       res(db.Tool.find(v => v.name === name))
     }, 200));
   }
+  /* ---------------------------------------- */
+  async getStartEquipAll() {
+    return new Promise(res => setTimeout(() => {
+      res(db.StartingEquipment)
+    }, 200));
+  }
+
+  async getStartEquipName(name) {
+    return new Promise(res => setTimeout(() => {
+      res(db.StartingEquipment.find(v => v.class === name))
+    }, 200));
+  }
 }
   
 module.exports = {
