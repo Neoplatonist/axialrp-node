@@ -61,7 +61,7 @@ class MyDB{
     }, 200));
   }
   /* ---------------------------------------- */
-  async getSkillAll() {
+  async getSkills() {
     return new Promise(res => setTimeout(() => {
       res(db.Skill)
     }, 200));
