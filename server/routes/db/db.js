@@ -6289,11 +6289,11 @@ const mountsDB = [
       quantity: 50,
       unit: 'gp'
     },
-    'speed': {
+    speed: {
       quantity: 50,
       unit: 'ft/round'
     },
-    'capacity': '480 lb.'
+    capacity: '480 lb.'
   }, {
     name: 'Donkey',
     category: 'Mounts and Other Animals',
@@ -6301,11 +6301,11 @@ const mountsDB = [
       quantity: 8,
       unit: 'gp'
     },
-    'speed': {
+    speed: {
       quantity: 40,
       unit: 'ft/round'
     },
-    'capacity': '420 lb.'
+    capacity: '420 lb.'
   }, {
     name: 'Mule',
     category: 'Mounts and Other Animals',
@@ -6313,11 +6313,11 @@ const mountsDB = [
       quantity: 8,
       unit: 'gp'
     },
-    'speed': {
+    speed: {
       quantity: 40,
       unit: 'ft/round'
     },
-    'capacity': '420 lb.'
+    capacity: '420 lb.'
   }, {
     name: 'Elephant',
     category: 'Mounts and Other Animals',
@@ -6325,11 +6325,11 @@ const mountsDB = [
       quantity: 200,
       unit: 'gp'
     },
-    'speed': {
+    speed: {
       quantity: 40,
       unit: 'ft/round'
     },
-    'capacity': '1,320 lb.'
+    capacity: '1,320 lb.'
   }, {
     name: 'Horse, draft',
     category: 'Mounts and Other Animals',
@@ -6337,11 +6337,11 @@ const mountsDB = [
       quantity: 50,
       unit: 'gp'
     },
-    'speed': {
+    speed: {
       quantity: 40,
       unit: 'ft/round'
     },
-    'capacity': '540 lb.'
+    capacity: '540 lb.'
   }, {
     name: 'Horse, riding',
     category: 'Mounts and Other Animals',
@@ -6349,11 +6349,11 @@ const mountsDB = [
       quantity: 75,
       unit: 'gp'
     },
-    'speed': {
+    speed: {
       quantity: 60,
       unit: 'ft/round'
     },
-    'capacity': '480 lb.'
+    capacity: '480 lb.'
   }, {
     name: 'Mastiff',
     category: 'Mounts and Other Animals',
@@ -6361,11 +6361,11 @@ const mountsDB = [
       quantity: 25,
       unit: 'gp'
     },
-    'speed': {
+    speed: {
       quantity: 40,
       unit: 'ft/round'
     },
-    'capacity': '195 lb.'
+    capacity: '195 lb.'
   }, {
     name: 'Pony',
     category: 'Mounts and Other Animals',
@@ -6373,11 +6373,11 @@ const mountsDB = [
       quantity: 30,
       unit: 'gp'
     },
-    'speed': {
+    speed: {
       quantity: 40,
       unit: 'ft/round'
     },
-    'capacity': '225 lb.'
+    capacity: '225 lb.'
   }, {
     name: 'Warhorse',
     category: 'Mounts and Other Animals',
@@ -6385,11 +6385,11 @@ const mountsDB = [
       quantity: 400,
       unit: 'gp'
     },
-    'speed': {
+    speed: {
       quantity: 60,
       unit: 'ft/round'
     },
-    'capacity': '540 lb.'
+    capacity: '540 lb.'
   }, {
     name: 'Barding: Padded',
     category: 'Tack, Harness, and Drawn Vehicles',
@@ -6827,7 +6827,7 @@ const mountsDB = [
       quantity: 30000,
       unit: 'gp'
     },
-    'speed': {
+    speed: {
       quantity: 4,
       unit: 'mph'
     }
@@ -6838,7 +6838,7 @@ const mountsDB = [
       quantity: 3000,
       unit: 'gp'
     },
-    'speed': {
+    speed: {
       quantity: 1,
       unit: 'mph'
     },
@@ -6850,7 +6850,7 @@ const mountsDB = [
       quantity: 10000,
       unit: 'gp'
     },
-    'speed': {
+    speed: {
       quantity: 3,
       unit: 'mph'
     }
@@ -6861,7 +6861,7 @@ const mountsDB = [
       quantity: 50,
       unit: 'gp'
     },
-    'speed': {
+    speed: {
       quantity: 1.5,
       unit: 'mph'
     },
@@ -6873,7 +6873,7 @@ const mountsDB = [
       quantity: 10000,
       unit: 'gp'
     },
-    'speed': {
+    speed: {
       quantity: 2,
       unit: 'mph'
     }
@@ -6884,7 +6884,7 @@ const mountsDB = [
       quantity: 25000,
       unit: 'gp'
     },
-    'speed': {
+    speed: {
       quantity: 2.5,
       unit: 'mph'
     }

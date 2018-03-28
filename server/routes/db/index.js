@@ -144,6 +144,18 @@ class MyDB{
       res(db.StartingEquipment.find(v => v.class === name))
     }, 200));
   }
+  /* ---------------------------------------- */
+  async getMountAll() {
+    return new Promise(res => setTimeout(() => {
+      res(db.Mount)
+    }, 200));
+  }
+
+  async getMountName(name) {
+    return new Promise(res => setTimeout(() => {
+      res(db.Mount.find(v => v.name === name))
+    }, 200));
+  }
 }
   
 module.exports = {
