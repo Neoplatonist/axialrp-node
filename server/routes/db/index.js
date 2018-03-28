@@ -25,7 +25,7 @@ class MyDB{
     }, 200));
   }
 /* ---------------------------------------- */
-  async getAlignmentAll() {
+  async getAlignments() {
     return new Promise(res => setTimeout(() => {
       res(db.Alignment)
     }, 200));

@@ -1,5 +1,5 @@
 const { GraphQLObjectType } = require('graphql');
-const { getAlignmentName } = require('./alignment.js');
+const { getAlignments, getAlignmentName } = require('./alignment.js');
 const { getArmorName } = require('./armor.js');
 const { getClassName } = require('./class.js');
 const { getFeatName } = require('./feat.js');
@@ -20,6 +20,7 @@ const { getWeaponName } = require('./weapon.js');
 const RootQuery = new GraphQLObjectType({
   name: 'RootQueryType',
   fields: {
+    getAlignments: getAlignments,
     getAlignmentName: getAlignmentName,
     getArmorName: getArmorName,
     getClassName: getClassName,

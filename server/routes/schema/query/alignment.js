@@ -6,6 +6,16 @@ const { MyDB } = require('../../db');
 const db = new MyDB();
 
 // Race Query
+const getAlignments = {
+  type: new GraphQLList(NameDescType),
+
+  resolve(val, args) {
+    return new Promise(res => setTimeout(() => {
+      res(db.getAlignments());
+    }, 200))
+  }
+};
+
 const getAlignmentName = {
   type: NameDescType,
   args: { name: { type: GraphQLString } },
@@ -18,5 +28,6 @@ const getAlignmentName = {
 };
 
 module.exports = {
+  getAlignments,
   getAlignmentName
 };
