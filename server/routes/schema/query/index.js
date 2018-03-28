@@ -2,7 +2,7 @@ const { GraphQLObjectType } = require('graphql');
 const { getAlignmentName } = require('./alignment.js');
 // const Armor = require('./armor.js');
 const { getClassName } = require('./class.js');
-// const Feat = require('./feat.js');
+const { getFeatName } = require('./feat.js');
 // const Gear = require('./gear.js');
 // const Kit = require('./kit.js');
 // const Mount = require('./mount.js');
@@ -21,7 +21,7 @@ const RootQuery = new GraphQLObjectType({
     getAlignmentName: getAlignmentName,
     // armor: Armor,
     getClassName: getClassName,
-    // feat: Feat,
+    getFeatName: getFeatName,
     // gear: Gear,
     // kit: Kit,
     // mount: Mount,

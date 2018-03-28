@@ -48,6 +48,18 @@ class MyDB{
       res(db.Class.find(v => v.name === name))
     }, 200));
   }
+  /* ---------------------------------------- */
+  async getFeatAll() {
+    return new Promise(res => setTimeout(() => {
+      res(db.Feat)
+    }, 200));
+  }
+
+  async getFeatName(name) {
+    return new Promise(res => setTimeout(() => {
+      res(db.Feat.find(v => v.name === name))
+    }, 200));
+  }
 }
   
 module.exports = {

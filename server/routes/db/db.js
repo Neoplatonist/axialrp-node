@@ -1295,7 +1295,7 @@ const featsDB = [
     description: 'You’ve developed the skills necessary to hold your own in close-quarters grappling.',
     prerequisite: {
       ability: 'Strength',
-      abilityScore: 13
+      ability_score: 13
     },
     benefits: [
       'You have advantage on attack rolls against a creature you are grappling.',
