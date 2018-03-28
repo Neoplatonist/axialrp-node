@@ -6962,9 +6962,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 2,
-    school: {
-      name: 'Evocation'
-    },
+    school: 'Evocation',
     classes: [
       {
         name: 'Wizard'
@@ -6995,9 +6993,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 0,
-    school: {
-      name: 'Conjuration'
-    },
+    school: 'Conjuration',
     classes: [
       {
         name: 'Sorcerer'
@@ -7032,9 +7028,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 2,
-    school: {
-      name: 'Abjuration'
-    },
+    school: 'Abjuration',
     classes: [
       {
         name: 'Cleric'
@@ -7068,9 +7062,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 minute',
     level: 1,
-    school: {
-      name: 'Abjuration'
-    },
+    school: 'Abjuration',
     classes: [
       {
         name: 'Ranger'
@@ -7106,8 +7098,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 2,
-    school: {
-      name: 'Transmutation',    },
+    school: 'Transmutation',
     classes: [
       {
         name: 'Sorcerer'
@@ -7142,8 +7133,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 2,
-    school: {
-      name: 'Enchantment',    },
+    school: 'Enchantment',
     classes: [
       {
         name: 'Bard'
@@ -7182,8 +7172,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 2,
-    school: {
-      name: 'Enchantment',    },
+    school: 'Enchantment',
     classes: [
       {
         name: 'Bard'
@@ -7218,8 +7207,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 8,
-    school: {
-      name: 'Transmutation',    },
+    school: 'Transmutation',
     classes: [
       {
         name: 'Druid'
@@ -7249,9 +7237,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 minute',
     level: 3,
-    school: {
-      name: 'Necromancy'
-    },
+    school: 'Necromancy',
     classes: [
       {
         name: 'Cleric'
@@ -7287,8 +7273,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 5,
-    school: {
-      name: 'Transmutation',    },
+    school: 'Transmutation',
     classes: [
       {
         name: 'Bard'
@@ -7319,9 +7304,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 5,
-    school: {
-      name: 'Abjuration'
-    },
+    school: 'Abjuration',
     classes: [
       {
         name: 'Druid'
@@ -7355,9 +7338,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 8,
-    school: {
-      name: 'Abjuration'
-    },
+    school: 'Abjuration',
     classes: [
       {
         name: 'Cleric'
@@ -7392,8 +7373,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 hour',
     level: 8,
-    school: {
-      name: 'Enchantment',    },
+    school: 'Enchantment',
     classes: [
       {
         name: 'Druid'
@@ -7423,9 +7403,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 4,
-    school: {
-      name: 'Divination'
-    },
+    school: 'Divination',
     classes: [
       {
         name: 'Cleric'
@@ -7466,9 +7444,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 5,
-    school: {
-      name: 'Evocation'
-    },
+    school: 'Evocation',
     classes: [
       {
         name: 'Wizard'
@@ -7494,9 +7470,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 2,
-    school: {
-      name: 'Abjuration'
-    },
+    school: 'Abjuration',
     classes: [
       {
         name: 'Wizard'
@@ -7526,9 +7500,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 7,
-    school: {
-      name: 'Evocation'
-    },
+    school: 'Evocation',
     classes: [
       {
         name: 'Bard'
@@ -7561,9 +7533,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 2,
-    school: {
-      name: 'Illusion'
-    },
+    school: 'Illusion',
     classes: [
       {
         name: 'Wizard'
@@ -7597,9 +7567,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 hour',
     level: 9,
-    school: {
-      name: 'Necromancy'
-    },
+    school: 'Necromancy',
     classes: [
       {
         name: 'Cleric'
@@ -7636,9 +7604,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 minute',
     level: 2,
-    school: {
-      name: 'Divination'
-    },
+    school: 'Divination',
     classes: [
       {
         name: 'Cleric'
@@ -7668,8 +7634,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '8 hours',
     level: 5,
-    school: {
-      name: 'Transmutation',    },
+    school: 'Transmutation',
     classes: [
       {
         name: 'Bard'
@@ -7700,8 +7665,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 1,
-    school: {
-      name: 'Enchantment',    },
+    school: 'Enchantment',
     classes: [
       {
         name: 'Bard'
@@ -7738,9 +7702,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 4,
-    school: {
-      name: 'Abjuration'
-    },
+    school: 'Abjuration',
     classes: [
       {
         name: 'Cleric'
@@ -7777,8 +7739,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 2,
-    school: {
-      name: 'Transmutation',    },
+    school: 'Transmutation',
     classes: [
       {
         name: 'Druid'
@@ -7811,9 +7772,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 3,
-    school: {
-      name: 'Abjuration'
-    },
+    school: 'Abjuration',
     classes: [
       {
         name: 'Cleric'
@@ -7854,9 +7813,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 3,
-    school: {
-      name: 'Necromancy'
-    },
+    school: 'Necromancy',
     classes: [
       {
         name: 'Bard'
@@ -7893,9 +7850,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 4,
-    school: {
-      name: 'Conjuration'
-    },
+    school: 'Conjuration',
     classes: [
       {
         name: 'Wizard'
@@ -7919,9 +7874,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 6,
-    school: {
-      name: 'Evocation'
-    },
+    school: 'Evocation',
     classes: [
       {
         name: 'Cleric'
@@ -7949,8 +7902,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 1,
-    school: {
-      name: 'Enchantment',    },
+    school: 'Enchantment',
     classes: [
       {
         name: 'Cleric'
@@ -7988,9 +7940,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 4,
-    school: {
-      name: 'Necromancy'
-    },
+    school: 'Necromancy',
     classes: [
       {
         name: 'Druid'
@@ -8028,9 +7978,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 2,
-    school: {
-      name: 'Necromancy'
-    },
+    school: 'Necromancy',
     classes: [
       {
         name: 'Bard'
@@ -8070,8 +8018,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 3,
-    school: {
-      name: 'Transmutation',    },
+    school: 'Transmutation',
     classes: [
       {
         name: 'Sorcerer'
@@ -8100,9 +8047,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 2,
-    school: {
-      name: 'Illusion'
-    },
+    school: 'Illusion',
     classes: [
       {
         name: 'Sorcerer'
@@ -8139,9 +8084,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 1,
-    school: {
-      name: 'Evocation'
-    },
+    school: 'Evocation',
     classes: [
       {
         name: 'Sorcerer'
@@ -8179,9 +8122,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 3,
-    school: {
-      name: 'Conjuration'
-    },
+    school: 'Conjuration',
     classes: [
       {
         name: 'Druid'
@@ -8212,8 +8153,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 2,
-    school: {
-      name: 'Enchantment',    },
+    school: 'Enchantment',
     classes: [
       {
         name: 'Bard'
@@ -8249,9 +8189,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 6,
-    school: {
-      name: 'Evocation'
-    },
+    school: 'Evocation',
     classes: [
       {
         name: 'Sorcerer'
@@ -8280,8 +8218,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 1,
-    school: {
-      name: 'Enchantment',    },
+    school: 'Enchantment',
     classes: [
       {
         name: 'Bard'
@@ -8322,9 +8259,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 0,
-    school: {
-      name: 'Necromancy'
-    },
+    school: 'Necromancy',
     classes: [
       {
         name: 'Sorcerer'
@@ -8362,9 +8297,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 6,
-    school: {
-      name: 'Necromancy'
-    },
+    school: 'Necromancy',
     classes: [
       {
         name: 'Sorcerer'
@@ -8397,9 +8330,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '10 minutes',
     level: 3,
-    school: {
-      name: 'Divination'
-    },
+    school: 'Divination',
     classes: [
       {
         name: 'Bard'
@@ -8438,9 +8369,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 hour',
     level: 8,
-    school: {
-      name: 'Necromancy'
-    },
+    school: 'Necromancy',
     classes: [
       {
         name: 'Wizard'
@@ -8468,9 +8397,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 5,
-    school: {
-      name: 'Conjuration'
-    },
+    school: 'Conjuration',
     classes: [
       {
         name: 'Sorcerer'
@@ -8506,9 +8433,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 1,
-    school: {
-      name: 'Illusion'
-    },
+    school: 'Illusion',
     classes: [
       {
         name: 'Sorcerer'
@@ -8551,8 +8476,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 1,
-    school: {
-      name: 'Enchantment',    },
+    school: 'Enchantment',
     classes: [
       {
         name: 'Cleric'
@@ -8589,9 +8513,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 minute',
     level: 5,
-    school: {
-      name: 'Divination'
-    },
+    school: 'Divination',
     classes: [
       {
         name: 'Cleric'
@@ -8625,9 +8547,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 minute',
     level: 5,
-    school: {
-      name: 'Divination'
-    },
+    school: 'Divination',
     classes: [
       {
         name: 'Druid'
@@ -8660,9 +8580,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 1,
-    school: {
-      name: 'Divination'
-    },
+    school: 'Divination',
     classes: [
       {
         name: 'Bard'
@@ -8704,9 +8622,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 5,
-    school: {
-      name: 'Evocation'
-    },
+    school: 'Evocation',
     classes: [
       {
         name: 'Sorcerer'
@@ -8743,8 +8659,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 4,
-    school: {
-      name: 'Enchantment',    },
+    school: 'Enchantment',
     classes: [
       {
         name: 'Bard'
@@ -8786,9 +8701,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 3,
-    school: {
-      name: 'Conjuration'
-    },
+    school: 'Conjuration',
     classes: [
       {
         name: 'Druid'
@@ -8823,9 +8736,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 minute',
     level: 7,
-    school: {
-      name: 'Conjuration'
-    },
+    school: 'Conjuration',
     classes: [
       {
         name: 'Cleric'
@@ -8856,9 +8767,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 minute',
     level: 5,
-    school: {
-      name: 'Conjuration'
-    },
+    school: 'Conjuration',
     classes: [
       {
         name: 'Druid'
@@ -8894,9 +8803,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 minute',
     level: 6,
-    school: {
-      name: 'Conjuration'
-    },
+    school: 'Conjuration',
     classes: [
       {
         name: 'Druid'
@@ -8932,9 +8839,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 minute',
     level: 4,
-    school: {
-      name: 'Conjuration'
-    },
+    school: 'Conjuration',
     classes: [
       {
         name: 'Druid'
@@ -8972,9 +8877,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 4,
-    school: {
-      name: 'Conjuration'
-    },
+    school: 'Conjuration',
     classes: [
       {
         name: 'Druid'
@@ -9000,9 +8903,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 minute',
     level: 5,
-    school: {
-      name: 'Divination'
-    },
+    school: 'Divination',
     classes: [
       {
         name: 'Warlock'
@@ -9042,9 +8943,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 5,
-    school: {
-      name: 'Necromancy'
-    },
+    school: 'Necromancy',
     classes: [
       {
         name: 'Cleric'
@@ -9074,9 +8973,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '10 minutes',
     level: 6,
-    school: {
-      name: 'Evocation'
-    },
+    school: 'Evocation',
     classes: [
       {
         name: 'Wizard'
@@ -9101,9 +8998,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 2,
-    school: {
-      name: 'Evocation'
-    },
+    school: 'Evocation',
     classes: [
       {
         name: 'Cleric'
@@ -9147,8 +9042,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 4,
-    school: {
-      name: 'Transmutation',    },
+    school: 'Transmutation',
     classes: [
       {
         name: 'Cleric'
@@ -9181,8 +9075,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '10 minutes',
     level: 8,
-    school: {
-      name: 'Transmutation',    },
+    school: 'Transmutation',
     classes: [
       {
         name: 'Cleric'
@@ -9215,9 +9108,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 3,
-    school: {
-      name: 'Conjuration'
-    },
+    school: 'Conjuration',
     classes: [
       {
         name: 'Cleric'
@@ -9262,8 +9153,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 1,
-    school: {
-      name: 'Transmutation',    },
+    school: 'Transmutation',
     classes: [
       {
         name: 'Cleric'
@@ -9300,9 +9190,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 minute',
     level: 6,
-    school: {
-      name: 'Necromancy'
-    },
+    school: 'Necromancy',
     classes: [
       {
         name: 'Cleric'
@@ -9348,9 +9236,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 minute',
     level: 5,
-    school: {
-      name: 'Illusion'
-    },
+    school: 'Illusion',
     classes: [
       {
         name: 'Sorcerer'
@@ -9379,9 +9265,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 1,
-    school: {
-      name: 'Evocation'
-    },
+    school: 'Evocation',
     classes: [
       {
         name: 'Bard'
@@ -9426,9 +9310,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 0,
-    school: {
-      name: 'Evocation'
-    },
+    school: 'Evocation',
     classes: [
       {
         name: 'Bard'
@@ -9464,9 +9346,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 2,
-    school: {
-      name: 'Evocation'
-    },
+    school: 'Evocation',
     classes: [
       {
         name: 'Sorcerer'
@@ -9504,8 +9384,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 2,
-    school: {
-      name: 'Transmutation',    },
+    school: 'Transmutation',
     classes: [
       {
         name: 'Druid'
@@ -9543,9 +9422,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 3,
-    school: {
-      name: 'Evocation'
-    },
+    school: 'Evocation',
     classes: [
       {
         name: 'Cleric'
@@ -9589,9 +9466,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 4,
-    school: {
-      name: 'Abjuration'
-    },
+    school: 'Abjuration',
     classes: [
       {
         name: 'Cleric'
@@ -9629,9 +9504,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 7,
-    school: {
-      name: 'Evocation'
-    },
+    school: 'Evocation',
     classes: [
       {
         name: 'Sorcerer'
@@ -9657,9 +9530,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 8,
-    school: {
-      name: 'Conjuration'
-    },
+    school: 'Conjuration',
     classes: [
       {
         name: 'Warlock'
@@ -9686,9 +9557,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 1,
-    school: {
-      name: 'Divination'
-    },
+    school: 'Divination',
     classes: [
       {
         name: 'Cleric'
@@ -9719,9 +9588,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 1,
-    school: {
-      name: 'Divination'
-    },
+    school: 'Divination',
     classes: [
       {
         name: 'Bard'
@@ -9769,9 +9636,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 1,
-    school: {
-      name: 'Divination'
-    },
+    school: 'Divination',
     classes: [
       {
         name: 'Cleric'
@@ -9813,9 +9678,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 2,
-    school: {
-      name: 'Divination'
-    },
+    school: 'Divination',
     classes: [
       {
         name: 'Bard'
@@ -9849,9 +9712,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 4,
-    school: {
-      name: 'Conjuration'
-    },
+    school: 'Conjuration',
     classes: [
       {
         name: 'Bard'
@@ -9885,9 +9746,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 1,
-    school: {
-      name: 'Illusion'
-    },
+    school: 'Illusion',
     classes: [
       {
         name: 'Bard'
@@ -9928,8 +9787,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 6,
-    school: {
-      name: 'Transmutation',    },
+    school: 'Transmutation',
     classes: [
       {
         name: 'Sorcerer'
@@ -9962,9 +9820,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 5,
-    school: {
-      name: 'Abjuration'
-    },
+    school: 'Abjuration',
     classes: [
       {
         name: 'Cleric'
@@ -9993,9 +9849,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 3,
-    school: {
-      name: 'Abjuration'
-    },
+    school: 'Abjuration',
     classes: [
       {
         name: 'Bard'
@@ -10047,9 +9901,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 4,
-    school: {
-      name: 'Divination'
-    },
+    school: 'Divination',
     classes: [
       {
         name: 'Druid'
@@ -10076,9 +9928,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 bonus action',
     level: 1,
-    school: {
-      name: 'Evocation'
-    },
+    school: 'Evocation',
     classes: [
       {
         name: 'Paladin'
@@ -10109,9 +9959,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 bonus action',
     level: 7,
-    school: {
-      name: 'Evocation'
-    },
+    school: 'Evocation',
     classes: [
       {
         name: 'Cleric'
@@ -10139,8 +9987,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 4,
-    school: {
-      name: 'Enchantment',    },
+    school: 'Enchantment',
     classes: [
       {
         name: 'Druid'
@@ -10172,8 +10019,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 8,
-    school: {
-      name: 'Enchantment',    },
+    school: 'Enchantment',
     classes: [
       {
         name: 'Bard'
@@ -10211,8 +10057,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 5,
-    school: {
-      name: 'Enchantment',    },
+    school: 'Enchantment',
     classes: [
       {
         name: 'Bard'
@@ -10247,9 +10092,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 minute',
     level: 5,
-    school: {
-      name: 'Illusion'
-    },
+    school: 'Illusion',
     classes: [
       {
         name: 'Bard'
@@ -10290,9 +10133,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 8,
-    school: {
-      name: 'Evocation'
-    },
+    school: 'Evocation',
     classes: [
       {
         name: 'Cleric'
@@ -10324,9 +10165,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 0,
-    school: {
-      name: 'Evocation'
-    },
+    school: 'Evocation',
     classes: [
       {
         name: 'Warlock'
@@ -10370,8 +10209,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 2,
-    school: {
-      name: 'Transmutation',    },
+    school: 'Transmutation',
     classes: [
       {
         name: 'Bard'
@@ -10414,8 +10252,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 2,
-    school: {
-      name: 'Transmutation',    },
+    school: 'Transmutation',
     classes: [
       {
         name: 'Sorcerer'
@@ -10447,9 +10284,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 1,
-    school: {
-      name: 'Conjuration'
-    },
+    school: 'Conjuration',
     classes: [
       {
         name: 'Druid'
@@ -10476,8 +10311,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 2,
-    school: {
-      name: 'Enchantment',    },
+    school: 'Enchantment',
     classes: [
       {
         name: 'Bard'
@@ -10514,8 +10348,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 7,
-    school: {
-      name: 'Transmutation',    },
+    school: 'Transmutation',
     classes: [
       {
         name: 'Bard'
@@ -10550,8 +10383,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 bonus action',
     level: 1,
-    school: {
-      name: 'Transmutation',    },
+    school: 'Transmutation',
     classes: [
       {
         name: 'Sorcerer'
@@ -10590,9 +10422,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 6,
-    school: {
-      name: 'Necromancy'
-    },
+    school: 'Necromancy',
     classes: [
       {
         name: 'Bard'
@@ -10626,8 +10456,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '10 minutes',
     level: 4,
-    school: {
-      name: 'Transmutation',    },
+    school: 'Transmutation',
     classes: [
       {
         name: 'Wizard'
@@ -10650,9 +10479,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 1,
-    school: {
-      name: 'Evocation'
-    },
+    school: 'Evocation',
     classes: [
       {
         name: 'Druid'
@@ -10683,9 +10510,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 4,
-    school: {
-      name: 'Conjuration'
-    },
+    school: 'Conjuration',
     classes: [
       {
         name: 'Wizard'
@@ -10713,9 +10538,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 1,
-    school: {
-      name: 'Necromancy'
-    },
+    school: 'Necromancy',
     classes: [
       {
         name: 'Sorcerer'
@@ -10748,9 +10571,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 3,
-    school: {
-      name: 'Illusion'
-    },
+    school: 'Illusion',
     classes: [
       {
         name: 'Bard'
@@ -10787,8 +10608,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 reaction',
     level: 1,
-    school: {
-      name: 'Transmutation',    },
+    school: 'Transmutation',
     classes: [
       {
         name: 'Bard'
@@ -10826,8 +10646,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 8,
-    school: {
-      name: 'Enchantment',    },
+    school: 'Enchantment',
     classes: [
       {
         name: 'Bard'
@@ -10863,9 +10682,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '10 minutes',
     level: 2,
-    school: {
-      name: 'Conjuration'
-    },
+    school: 'Conjuration',
     classes: [
       {
         name: 'Paladin'
@@ -10895,9 +10712,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 minute',
     level: 6,
-    school: {
-      name: 'Divination'
-    },
+    school: 'Divination',
     classes: [
       {
         name: 'Bard'
@@ -10924,9 +10739,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 2,
-    school: {
-      name: 'Divination'
-    },
+    school: 'Divination',
     classes: [
       {
         name: 'Cleric'
@@ -10960,9 +10773,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 7,
-    school: {
-      name: 'Necromancy'
-    },
+    school: 'Necromancy',
     classes: [
       {
         name: 'Sorcerer'
@@ -10997,9 +10808,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 3,
-    school: {
-      name: 'Evocation'
-    },
+    school: 'Evocation',
     classes: [
       {
         name: 'Sorcerer'
@@ -11036,9 +10845,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 4,
-    school: {
-      name: 'Evocation'
-    },
+    school: 'Evocation',
     classes: [
       {
         name: 'Wizard'
@@ -11066,9 +10873,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 7,
-    school: {
-      name: 'Evocation'
-    },
+    school: 'Evocation',
     classes: [
       {
         name: 'Cleric'
@@ -11104,9 +10909,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 bonus action',
     level: 2,
-    school: {
-      name: 'Evocation'
-    },
+    school: 'Evocation',
     classes: [
       {
         name: 'Druid'
@@ -11138,9 +10941,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 5,
-    school: {
-      name: 'Evocation'
-    },
+    school: 'Evocation',
     classes: [
       {
         name: 'Cleric'
@@ -11177,9 +10978,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 2,
-    school: {
-      name: 'Conjuration'
-    },
+    school: 'Conjuration',
     classes: [
       {
         name: 'Druid'
@@ -11214,8 +11013,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 6,
-    school: {
-      name: 'Transmutation',    },
+    school: 'Transmutation',
     classes: [
       {
         name: 'Warlock'
@@ -11245,9 +11043,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 1,
-    school: {
-      name: 'Conjuration'
-    },
+    school: 'Conjuration',
     classes: [
       {
         name: 'Wizard'
@@ -11279,8 +11075,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 3,
-    school: {
-      name: 'Transmutation',    },
+    school: 'Transmutation',
     classes: [
       {
         name: 'Sorcerer'
@@ -11316,9 +11111,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 1,
-    school: {
-      name: 'Conjuration'
-    },
+    school: 'Conjuration',
     classes: [
       {
         name: 'Druid'
@@ -11359,9 +11152,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '10 minutes',
     level: 6,
-    school: {
-      name: 'Abjuration'
-    },
+    school: 'Abjuration',
     classes: [
       {
         name: 'Cleric'
@@ -11391,9 +11182,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 7,
-    school: {
-      name: 'Evocation'
-    },
+    school: 'Evocation',
     classes: [
       {
         name: 'Bard'
@@ -11425,9 +11214,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 minute',
     level: 9,
-    school: {
-      name: 'Divination'
-    },
+    school: 'Divination',
     classes: [
       {
         name: 'Bard'
@@ -11462,9 +11249,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 4,
-    school: {
-      name: 'Abjuration'
-    },
+    school: 'Abjuration',
     classes: [
       {
         name: 'Bard'
@@ -11510,9 +11295,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 6,
-    school: {
-      name: 'Evocation'
-    },
+    school: 'Evocation',
     classes: [
       {
         name: 'Wizard'
@@ -11539,8 +11322,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 3,
-    school: {
-      name: 'Transmutation',    },
+    school: 'Transmutation',
     classes: [
       {
         name: 'Sorcerer'
@@ -11581,9 +11363,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 9,
-    school: {
-      name: 'Conjuration'
-    },
+    school: 'Conjuration',
     classes: [
       {
         name: 'Cleric'
@@ -11616,8 +11396,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 minute',
     level: 5,
-    school: {
-      name: 'Enchantment',    },
+    school: 'Enchantment',
     classes: [
       {
         name: 'Bard'
@@ -11655,9 +11434,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 2,
-    school: {
-      name: 'Necromancy'
-    },
+    school: 'Necromancy',
     classes: [
       {
         name: 'Cleric'
@@ -11690,8 +11467,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 4,
-    school: {
-      name: 'Transmutation',    },
+    school: 'Transmutation',
     classes: [
       {
         name: 'Druid'
@@ -11713,8 +11489,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 8,
-    school: {
-      name: 'Transmutation',    },
+    school: 'Transmutation',
     classes: [
       {
         name: 'Bard'
@@ -11746,9 +11521,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 6,
-    school: {
-      name: 'Abjuration'
-    },
+    school: 'Abjuration',
     classes: [
       {
         name: 'Sorcerer'
@@ -11787,9 +11560,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 hour',
     level: 3,
-    school: {
-      name: 'Abjuration'
-    },
+    school: 'Abjuration',
     classes: [
       {
         name: 'Bard'
@@ -11825,9 +11596,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 1,
-    school: {
-      name: 'Conjuration'
-    },
+    school: 'Conjuration',
     classes: [
       {
         name: 'Wizard'
@@ -11854,9 +11623,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 4,
-    school: {
-      name: 'Illusion'
-    },
+    school: 'Illusion',
     classes: [
       {
         name: 'Bard'
@@ -11895,9 +11662,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 5,
-    school: {
-      name: 'Abjuration'
-    },
+    school: 'Abjuration',
     classes: [
       {
         name: 'Bard'
@@ -11945,9 +11710,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '10 minutes',
     level: 6,
-    school: {
-      name: 'Abjuration'
-    },
+    school: 'Abjuration',
     classes: [
       {
         name: 'Bard'
@@ -11973,9 +11736,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 0,
-    school: {
-      name: 'Divination'
-    },
+    school: 'Divination',
     classes: [
       {
         name: 'Cleric'
@@ -12008,9 +11769,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 1,
-    school: {
-      name: 'Evocation'
-    },
+    school: 'Evocation',
     classes: [
       {
         name: 'Cleric'
@@ -12042,9 +11801,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 2,
-    school: {
-      name: 'Evocation'
-    },
+    school: 'Evocation',
     classes: [
       {
         name: 'Druid'
@@ -12101,9 +11858,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '24 hours',
     level: 5,
-    school: {
-      name: 'Evocation'
-    },
+    school: 'Evocation',
     classes: [
       {
         name: 'Cleric'
@@ -12133,9 +11888,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '10 minutes',
     level: 4,
-    school: {
-      name: 'Illusion'
-    },
+    school: 'Illusion',
     classes: [
       {
         name: 'Bard'
@@ -12171,9 +11924,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 6,
-    school: {
-      name: 'Necromancy'
-    },
+    school: 'Necromancy',
     classes: [
       {
         name: 'Cleric'
@@ -12199,8 +11950,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 3,
-    school: {
-      name: 'Transmutation',    },
+    school: 'Transmutation',
     classes: [
       {
         name: 'Sorcerer'
@@ -12236,9 +11986,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 6,
-    school: {
-      name: 'Evocation'
-    },
+    school: 'Evocation',
     classes: [
       {
         name: 'Cleric'
@@ -12266,9 +12014,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 bonus action',
     level: 1,
-    school: {
-      name: 'Evocation'
-    },
+    school: 'Evocation',
     classes: [
       {
         name: 'Bard'
@@ -12307,8 +12053,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 2,
-    school: {
-      name: 'Transmutation',    },
+    school: 'Transmutation',
     classes: [
       {
         name: 'Bard'
@@ -12341,9 +12086,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '10 minutes',
     level: 6,
-    school: {
-      name: 'Conjuration'
-    },
+    school: 'Conjuration',
     classes: [
       {
         name: 'Cleric'
@@ -12369,9 +12112,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 1,
-    school: {
-      name: 'Enchantment'
-    },
+    school: 'Enchantment',
     classes: [
       {
         name: 'Bard'
@@ -12404,8 +12145,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 1,
-    school: {
-      name: 'Enchantment',    },
+    school: 'Enchantment',
     classes: [
       {
         name: 'Bard'
@@ -12440,8 +12180,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 5,
-    school: {
-      name: 'Enchantment',    },
+    school: 'Enchantment',
     classes: [
       {
         name: 'Bard'
@@ -12478,8 +12217,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 2,
-    school: {
-      name: 'Enchantment',    },
+    school: 'Enchantment',
     classes: [
       {
         name: 'Bard'
@@ -12526,9 +12264,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 8,
-    school: {
-      name: 'Abjuration'
-    },
+    school: 'Abjuration',
     classes: [
       {
         name: 'Cleric'
@@ -12553,9 +12289,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 3,
-    school: {
-      name: 'Illusion'
-    },
+    school: 'Illusion',
     classes: [
       {
         name: 'Bard'
@@ -12597,9 +12331,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 4,
-    school: {
-      name: 'Evocation'
-    },
+    school: 'Evocation',
     classes: [
       {
         name: 'Druid'
@@ -12635,9 +12367,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 minute',
     level: 1,
-    school: {
-      name: 'Divination'
-    },
+    school: 'Divination',
     classes: [
       {
         name: 'Bard'
@@ -12671,9 +12401,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 minute',
     level: 1,
-    school: {
-      name: 'Illusion'
-    },
+    school: 'Illusion',
     classes: [
       {
         name: 'Bard'
@@ -12722,9 +12450,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 minute',
     level: 9,
-    school: {
-      name: 'Abjuration'
-    },
+    school: 'Abjuration',
     classes: [
       {
         name: 'Warlock'
@@ -12752,9 +12478,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 8,
-    school: {
-      name: 'Conjuration'
-    },
+    school: 'Conjuration',
     classes: [
       {
         name: 'Sorcerer'
@@ -12783,9 +12507,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 1,
-    school: {
-      name: 'Necromancy'
-    },
+    school: 'Necromancy',
     classes: [
       {
         name: 'Cleric'
@@ -12818,9 +12540,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 5,
-    school: {
-      name: 'Conjuration'
-    },
+    school: 'Conjuration',
     classes: [
       {
         name: 'Cleric'
@@ -12858,9 +12578,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 minute',
     level: 6,
-    school: {
-      name: 'Conjuration'
-    },
+    school: 'Conjuration',
     classes: [
       {
         name: 'Wizard'
@@ -12888,9 +12606,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 2,
-    school: {
-      name: 'Illusion'
-    },
+    school: 'Illusion',
     classes: [
       {
         name: 'Bard'
@@ -12929,8 +12645,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 6,
-    school: {
-      name: 'Enchantment',    },
+    school: 'Enchantment',
     classes: [
       {
         name: 'Bard'
@@ -12958,9 +12673,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 1,
-    school: {
-      name: 'Transmutation'
-    },
+    school: 'Transmutation',
     classes: [
       {
         name: 'Druid'
@@ -12998,8 +12711,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 2,
-    school: {
-      name: 'Transmutation',    },
+    school: 'Transmutation',
     classes: [
       {
         name: 'Bard'
@@ -13035,9 +12747,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '10 minutes',
     level: 5,
-    school: {
-      name: 'Divination'
-    },
+    school: 'Divination',
     classes: [
       {
         name: 'Bard'
@@ -13066,9 +12776,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 2,
-    school: {
-      name: 'Abjuration'
-    },
+    school: 'Abjuration',
     classes: [
       {
         name: 'Bard'
@@ -13117,8 +12825,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 2,
-    school: {
-      name: 'Transmutation',    },
+    school: 'Transmutation',
     classes: [
       {
         name: 'Sorcerer'
@@ -13150,9 +12857,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 0,
-    school: {
-      name: 'Evocation'
-    },
+    school: 'Evocation',
     classes: [
       {
         name: 'Bard'
@@ -13194,9 +12899,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 3,
-    school: {
-      name: 'Evocation'
-    },
+    school: 'Evocation',
     classes: [
       {
         name: 'Sorcerer'
@@ -13231,9 +12934,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 2,
-    school: {
-      name: 'Divination'
-    },
+    school: 'Divination',
     classes: [
       {
         name: 'Bard'
@@ -13270,9 +12971,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 4,
-    school: {
-      name: 'Divination'
-    },
+    school: 'Divination',
     classes: [
       {
         name: 'Bard'
@@ -13318,9 +13017,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 2,
-    school: {
-      name: 'Divination'
-    },
+    school: 'Divination',
     classes: [
       {
         name: 'Bard'
@@ -13367,8 +13064,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 1,
-    school: {
-      name: 'Transmutation',    },
+    school: 'Transmutation',
     classes: [
       {
         name: 'Bard'
@@ -13406,9 +13102,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 1,
-    school: {
-      name: 'Abjuration'
-    },
+    school: 'Abjuration',
     classes: [
       {
         name: 'Sorcerer'
@@ -13440,9 +13134,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 0,
-    school: {
-      name: 'Conjuration'
-    },
+    school: 'Conjuration',
     classes: [
       {
         name: 'Bard'
@@ -13487,9 +13179,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 minute',
     level: 3,
-    school: {
-      name: 'Abjuration'
-    },
+    school: 'Abjuration',
     classes: [
       {
         name: 'Cleric'
@@ -13533,9 +13223,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 minute',
     level: 6,
-    school: {
-      name: 'Necromancy'
-    },
+    school: 'Necromancy',
     classes: [
       {
         name: 'Wizard'
@@ -13561,9 +13249,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 1,
-    school: {
-      name: 'Evocation'
-    },
+    school: 'Evocation',
     classes: [
       {
         name: 'Sorcerer'
@@ -13598,9 +13284,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 minute',
     level: 2,
-    school: {
-      name: 'Illusion'
-    },
+    school: 'Illusion',
     classes: [
       {
         name: 'Bard'
@@ -13633,8 +13317,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 bonus action',
     level: 2,
-    school: {
-      name: 'Transmutation',    },
+    school: 'Transmutation',
     classes: [
       {
         name: 'Paladin'
@@ -13668,9 +13351,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 minute',
     level: 7,
-    school: {
-      name: 'Conjuration'
-    },
+    school: 'Conjuration',
     classes: [
       {
         name: 'Bard'
@@ -13703,9 +13384,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 3,
-    school: {
-      name: 'Illusion'
-    },
+    school: 'Illusion',
     classes: [
       {
         name: 'Bard'
@@ -13744,9 +13423,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 5,
-    school: {
-      name: 'Conjuration'
-    },
+    school: 'Conjuration',
     classes: [
       {
         name: 'Bard'
@@ -13779,9 +13456,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 9,
-    school: {
-      name: 'Conjuration'
-    },
+    school: 'Conjuration',
     classes: [
       {
         name: 'Cleric'
@@ -13806,9 +13481,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 bonus action',
     level: 3,
-    school: {
-      name: 'Evocation'
-    },
+    school: 'Evocation',
     classes: [
       {
         name: 'Cleric'
@@ -13842,8 +13515,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 6,
-    school: {
-      name: 'Enchantment',    },
+    school: 'Enchantment',
     classes: [
       {
         name: 'Bard'
@@ -13877,9 +13549,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 8,
-    school: {
-      name: 'Conjuration'
-    },
+    school: 'Conjuration',
     classes: [
       {
         name: 'Wizard'
@@ -13904,8 +13574,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 3,
-    school: {
-      name: 'Transmutation',    },
+    school: 'Transmutation',
     classes: [
       {
         name: 'Cleric'
@@ -13938,8 +13607,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 minute',
     level: 0,
-    school: {
-      name: 'Transmutation',    },
+    school: 'Transmutation',
     classes: [
       {
         name: 'Cleric'
@@ -13981,9 +13649,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 0,
-    school: {
-      name: 'Transmutation'
-    },
+    school: 'Transmutation',
     classes: [
       {
         name: 'Bard'
@@ -14017,9 +13683,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 9,
-    school: {
-      name: 'Evocation'
-    },
+    school: 'Evocation',
     classes: [
       {
         name: 'Sorcerer'
@@ -14045,9 +13709,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 8,
-    school: {
-      name: 'Abjuration'
-    },
+    school: 'Abjuration',
     classes: [
       {
         name: 'Bard'
@@ -14077,9 +13739,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 0,
-    school: {
-      name: 'Illusion'
-    },
+    school: 'Illusion',
     classes: [
       {
         name: 'Bard'
@@ -14118,9 +13778,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '10 minutes',
     level: 7,
-    school: {
-      name: 'Illusion'
-    },
+    school: 'Illusion',
     classes: [
       {
         name: 'Bard'
@@ -14153,9 +13811,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 2,
-    school: {
-      name: 'Illusion'
-    },
+    school: 'Illusion',
     classes: [
       {
         name: 'Sorcerer'
@@ -14192,9 +13848,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 5,
-    school: {
-      name: 'Illusion'
-    },
+    school: 'Illusion',
     classes: [
       {
         name: 'Bard'
@@ -14219,9 +13873,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 bonus action',
     level: 2,
-    school: {
-      name: 'Conjuration'
-    },
+    school: 'Conjuration',
     classes: [
       {
         name: 'Sorcerer'
@@ -14264,9 +13916,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 5,
-    school: {
-      name: 'Enchantment'
-    },
+    school: 'Enchantment',
     classes: [
       {
         name: 'Bard'
@@ -14300,9 +13950,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 2,
-    school: {
-      name: 'Evocation'
-    },
+    school: 'Evocation',
     classes: [
       {
         name: 'Druid'
@@ -14335,9 +13983,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 6,
-    school: {
-      name: 'Transmutation'
-    },
+    school: 'Transmutation',
     classes: [
       {
         name: 'Druid'
@@ -14368,9 +14014,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 3,
-    school: {
-      name: 'Abjuration'
-    },
+    school: 'Abjuration',
     classes: [
       {
         name: 'Bard'
@@ -14405,9 +14049,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 2,
-    school: {
-      name: 'Abjuration'
-    },
+    school: 'Abjuration',
     classes: [
       {
         name: 'Druid'
@@ -14443,9 +14085,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 5,
-    school: {
-      name: 'Transmutation'
-    },
+    school: 'Transmutation',
     classes: [
       {
         name: 'Wizard'
@@ -14475,9 +14115,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 4,
-    school: {
-      name: 'Illusion'
-    },
+    school: 'Illusion',
     classes: [
       {
         name: 'Wizard'
@@ -14501,9 +14139,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 minute',
     level: 3,
-    school: {
-      name: 'Illusion'
-    },
+    school: 'Illusion',
     classes: [
       {
         name: 'Wizard'
@@ -14535,9 +14171,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '10 minutes',
     level: 6,
-    school: {
-      name: 'Conjuration'
-    },
+    school: 'Conjuration',
     classes: [
       {
         name: 'Cleric'
@@ -14566,9 +14200,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 hour',
     level: 5,
-    school: {
-      name: 'Abjuration'
-    },
+    school: 'Abjuration',
     classes: [
       {
         name: 'Bard'
@@ -14604,9 +14236,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 7,
-    school: {
-      name: 'Conjuration'
-    },
+    school: 'Conjuration',
     classes: [
       {
         name: 'Cleric'
@@ -14644,9 +14274,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 3,
-    school: {
-      name: 'Transmutation'
-    },
+    school: 'Transmutation',
     classes: [
       {
         name: 'Bard'
@@ -14688,9 +14316,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 4,
-    school: {
-      name: 'Transmutation'
-    },
+    school: 'Transmutation',
     classes: [
       {
         name: 'Bard'
@@ -14721,9 +14347,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 9,
-    school: {
-      name: 'Enchantment'
-    },
+    school: 'Enchantment',
     classes: [
       {
         name: 'Bard'
@@ -14755,9 +14379,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 8,
-    school: {
-      name: 'Enchantment'
-    },
+    school: 'Enchantment',
     classes: [
       {
         name: 'Bard'
@@ -14791,9 +14413,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '10 minutes',
     level: 2,
-    school: {
-      name: 'Evocation'
-    },
+    school: 'Evocation',
     classes: [
       {
         name: 'Cleric'
@@ -14827,9 +14447,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 0,
-    school: {
-      name: 'Transmutation'
-    },
+    school: 'Transmutation',
     classes: [
       {
         name: 'Bard'
@@ -14881,9 +14499,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 7,
-    school: {
-      name: 'Evocation'
-    },
+    school: 'Evocation',
     classes: [
       {
         name: 'Sorcerer'
@@ -14927,9 +14543,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 9,
-    school: {
-      name: 'Abjuration'
-    },
+    school: 'Abjuration',
     classes: [
       {
         name: 'Wizard'
@@ -14965,9 +14579,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '10 minutes',
     level: 4,
-    school: {
-      name: 'Abjuration'
-    },
+    school: 'Abjuration',
     classes: [
       {
         name: 'Wizard'
@@ -14992,9 +14604,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 0,
-    school: {
-      name: 'Conjuration'
-    },
+    school: 'Conjuration',
     classes: [
       {
         name: 'Druid'
@@ -15026,9 +14636,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 6,
-    school: {
-      name: 'Illusion'
-    },
+    school: 'Illusion',
     classes: [
       {
         name: 'Bard'
@@ -15059,9 +14667,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 7,
-    school: {
-      name: 'Illusion'
-    },
+    school: 'Illusion',
     classes: [
       {
         name: 'Bard'
@@ -15087,9 +14693,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 3,
-    school: {
-      name: 'Abjuration'
-    },
+    school: 'Abjuration',
     classes: [
       {
         name: 'Cleric'
@@ -15134,9 +14738,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 1,
-    school: {
-      name: 'Abjuration'
-    },
+    school: 'Abjuration',
     classes: [
       {
         name: 'Cleric'
@@ -15176,9 +14778,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 2,
-    school: {
-      name: 'Abjuration'
-    },
+    school: 'Abjuration',
     classes: [
       {
         name: 'Cleric'
@@ -15214,9 +14814,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 1,
-    school: {
-      name: 'Transmutation'
-    },
+    school: 'Transmutation',
     classes: [
       {
         name: 'Cleric'
@@ -15254,9 +14852,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 hour',
     level: 5,
-    school: {
-      name: 'Necromancy'
-    },
+    school: 'Necromancy',
     classes: [
       {
         name: 'Bard'
@@ -15290,9 +14886,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 2,
-    school: {
-      name: 'Necromancy'
-    },
+    school: 'Necromancy',
     classes: [
       {
         name: 'Warlock'
@@ -15323,9 +14917,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 0,
-    school: {
-      name: 'Evocation'
-    },
+    school: 'Evocation',
     classes: [
       {
         name: 'Sorcerer'
@@ -15358,9 +14950,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 minute',
     level: 7,
-    school: {
-      name: 'Transmutation'
-    },
+    school: 'Transmutation',
     classes: [
       {
         name: 'Bard'
@@ -15421,9 +15011,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 hour',
     level: 5,
-    school: {
-      name: 'Transmutation'
-    },
+    school: 'Transmutation',
     classes: [
       {
         name: 'Druid'
@@ -15446,9 +15034,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 3,
-    school: {
-      name: 'Abjuration'
-    },
+    school: 'Abjuration',
     classes: [
       {
         name: 'Cleric'
@@ -15489,9 +15075,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 4,
-    school: {
-      name: 'Evocation'
-    },
+    school: 'Evocation',
     classes: [
       {
         name: 'Wizard'
@@ -15516,9 +15100,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 0,
-    school: {
-      name: 'Abjuration'
-    },
+    school: 'Abjuration',
     classes: [
       {
         name: 'Cleric'
@@ -15554,9 +15136,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 hour',
     level: 7,
-    school: {
-      name: 'Necromancy'
-    },
+    school: 'Necromancy',
     classes: [
       {
         name: 'Bard'
@@ -15586,9 +15166,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 7,
-    school: {
-      name: 'Transmutation'
-    },
+    school: 'Transmutation',
     classes: [
       {
         name: 'Druid'
@@ -15619,9 +15197,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 3,
-    school: {
-      name: 'Conjuration'
-    },
+    school: 'Conjuration',
     classes: [
       {
         name: 'Cleric'
@@ -15659,9 +15235,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 2,
-    school: {
-      name: 'Transmutation'
-    },
+    school: 'Transmutation',
     classes: [
       {
         name: 'Wizard'
@@ -15689,9 +15263,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 0,
-    school: {
-      name: 'Evocation'
-    },
+    school: 'Evocation',
     classes: [
       {
         name: 'Cleric'
@@ -15721,9 +15293,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 bonus action',
     level: 1,
-    school: {
-      name: 'Abjuration'
-    },
+    school: 'Abjuration',
     classes: [
       {
         name: 'Cleric'
@@ -15757,9 +15327,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 2,
-    school: {
-      name: 'Evocation'
-    },
+    school: 'Evocation',
     classes: [
       {
         name: 'Sorcerer'
@@ -15807,9 +15375,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '10 minutes',
     level: 5,
-    school: {
-      name: 'Divination'
-    },
+    school: 'Divination',
     classes: [
       {
         name: 'Bard'
@@ -15852,9 +15418,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 4,
-    school: {
-      name: 'Conjuration'
-    },
+    school: 'Conjuration',
     classes: [
       {
         name: 'Wizard'
@@ -15879,9 +15443,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 2,
-    school: {
-      name: 'Divination'
-    },
+    school: 'Divination',
     classes: [
       {
         name: 'Bard'
@@ -15917,9 +15479,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 5,
-    school: {
-      name: 'Illusion'
-    },
+    school: 'Illusion',
     classes: [
       {
         name: 'Bard'
@@ -15951,9 +15511,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 3,
-    school: {
-      name: 'Evocation'
-    },
+    school: 'Evocation',
     classes: [
       {
         name: 'Bard'
@@ -15990,9 +15548,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 7,
-    school: {
-      name: 'Transmutation'
-    },
+    school: 'Transmutation',
     classes: [
       {
         name: 'Wizard'
@@ -16022,9 +15578,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 9,
-    school: {
-      name: 'Transmutation'
-    },
+    school: 'Transmutation',
     classes: [
       {
         name: 'Druid'
@@ -16056,9 +15610,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 2,
-    school: {
-      name: 'Evocation'
-    },
+    school: 'Evocation',
     classes: [
       {
         name: 'Bard'
@@ -16094,9 +15646,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 reaction',
     level: 1,
-    school: {
-      name: 'Abjuration'
-    },
+    school: 'Abjuration',
     classes: [
       {
         name: 'Sorcerer'
@@ -16128,9 +15678,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 bonus action',
     level: 1,
-    school: {
-      name: 'Abjuration'
-    },
+    school: 'Abjuration',
     classes: [
       {
         name: 'Cleric'
@@ -16162,9 +15710,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 bonus action',
     level: 0,
-    school: {
-      name: 'Transmutation'
-    },
+    school: 'Transmutation',
     classes: [
       {
         name: 'Druid'
@@ -16192,9 +15738,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 0,
-    school: {
-      name: 'Evocation'
-    },
+    school: 'Evocation',
     classes: [
       {
         name: 'Sorcerer'
@@ -16225,9 +15769,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 2,
-    school: {
-      name: 'Illusion'
-    },
+    school: 'Illusion',
     classes: [
       {
         name: 'Bard'
@@ -16267,9 +15809,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 1,
-    school: {
-      name: 'Illusion'
-    },
+    school: 'Illusion',
     classes: [
       {
         name: 'Bard'
@@ -16307,9 +15847,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '12 hours',
     level: 7,
-    school: {
-      name: 'Illusion'
-    },
+    school: 'Illusion',
     classes: [
       {
         name: 'Wizard'
@@ -16339,9 +15877,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 1,
-    school: {
-      name: 'Enchantment'
-    },
+    school: 'Enchantment',
     classes: [
       {
         name: 'Bard'
@@ -16378,9 +15914,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 3,
-    school: {
-      name: 'Conjuration'
-    },
+    school: 'Conjuration',
     classes: [
       {
         name: 'Druid'
@@ -16421,9 +15955,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 3,
-    school: {
-      name: 'Transmutation'
-    },
+    school: 'Transmutation',
     classes: [
       {
         name: 'Sorcerer'
@@ -16456,9 +15988,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 1,
-    school: {
-      name: 'Divination'
-    },
+    school: 'Divination',
     classes: [
       {
         name: 'Bard'
@@ -16494,9 +16024,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 3,
-    school: {
-      name: 'Necromancy'
-    },
+    school: 'Necromancy',
     classes: [
       {
         name: 'Bard'
@@ -16530,9 +16058,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 3,
-    school: {
-      name: 'Transmutation'
-    },
+    school: 'Transmutation',
     classes: [
       {
         name: 'Bard'
@@ -16567,9 +16093,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 2,
-    school: {
-      name: 'Transmutation'
-    },
+    school: 'Transmutation',
     classes: [
       {
         name: 'Sorcerer'
@@ -16608,9 +16132,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 2,
-    school: {
-      name: 'Transmutation'
-    },
+    school: 'Transmutation',
     classes: [
       {
         name: 'Druid'
@@ -16649,9 +16171,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 3,
-    school: {
-      name: 'Conjuration'
-    },
+    school: 'Conjuration',
     classes: [
       {
         name: 'Cleric'
@@ -16683,9 +16203,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 bonus action',
     level: 2,
-    school: {
-      name: 'Evocation'
-    },
+    school: 'Evocation',
     classes: [
       {
         name: 'Cleric'
@@ -16719,9 +16237,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 3,
-    school: {
-      name: 'Conjuration'
-    },
+    school: 'Conjuration',
     classes: [
       {
         name: 'Bard'
@@ -16762,9 +16278,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 4,
-    school: {
-      name: 'Transmutation'
-    },
+    school: 'Transmutation',
     classes: [
       {
         name: 'Cleric'
@@ -16799,9 +16313,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 4,
-    school: {
-      name: 'Abjuration'
-    },
+    school: 'Abjuration',
     classes: [
       {
         name: 'Druid'
@@ -16846,9 +16358,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 9,
-    school: {
-      name: 'Conjuration'
-    },
+    school: 'Conjuration',
     classes: [
       {
         name: 'Druid'
@@ -16875,9 +16385,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 2,
-    school: {
-      name: 'Enchantment'
-    },
+    school: 'Enchantment',
     classes: [
       {
         name: 'Bard'
@@ -16917,9 +16425,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 6,
-    school: {
-      name: 'Evocation'
-    },
+    school: 'Evocation',
     classes: [
       {
         name: 'Druid'
@@ -16952,9 +16458,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 8,
-    school: {
-      name: 'Evocation'
-    },
+    school: 'Evocation',
     classes: [
       {
         name: 'Druid'
@@ -17005,9 +16509,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 minute',
     level: 7,
-    school: {
-      name: 'Abjuration'
-    },
+    school: 'Abjuration',
     classes: [
       {
         name: 'Bard'
@@ -17043,9 +16545,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 5,
-    school: {
-      name: 'Transmutation'
-    },
+    school: 'Transmutation',
     classes: [
       {
         name: 'Sorcerer'
@@ -17074,9 +16574,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 5,
-    school: {
-      name: 'Divination'
-    },
+    school: 'Divination',
     classes: [
       {
         name: 'Wizard'
@@ -17099,9 +16597,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 7,
-    school: {
-      name: 'Conjuration'
-    },
+    school: 'Conjuration',
     classes: [
       {
         name: 'Bard'
@@ -17133,9 +16629,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 minute',
     level: 5,
-    school: {
-      name: 'Conjuration'
-    },
+    school: 'Conjuration',
     classes: [
       {
         name: 'Bard'
@@ -17170,9 +16664,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 0,
-    school: {
-      name: 'Transmutation'
-    },
+    school: 'Transmutation',
     classes: [
       {
         name: 'Cleric'
@@ -17203,9 +16695,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 1,
-    school: {
-      name: 'Evocation'
-    },
+    school: 'Evocation',
     classes: [
       {
         name: 'Bard'
@@ -17241,9 +16731,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 9,
-    school: {
-      name: 'Transmutation'
-    },
+    school: 'Transmutation',
     classes: [
       {
         name: 'Sorcerer'
@@ -17273,9 +16761,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 minute',
     level: 3,
-    school: {
-      name: 'Evocation'
-    },
+    school: 'Evocation',
     classes: [
       {
         name: 'Bard'
@@ -17306,9 +16792,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 3,
-    school: {
-      name: 'Divination'
-    },
+    school: 'Divination',
     classes: [
       {
         name: 'Bard'
@@ -17347,9 +16831,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 6,
-    school: {
-      name: 'Conjuration'
-    },
+    school: 'Conjuration',
     classes: [
       {
         name: 'Druid'
@@ -17373,9 +16855,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 5,
-    school: {
-      name: 'Conjuration'
-    },
+    school: 'Conjuration',
     classes: [
       {
         name: 'Druid'
@@ -17418,9 +16898,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 9,
-    school: {
-      name: 'Transmutation'
-    },
+    school: 'Transmutation',
     classes: [
       {
         name: 'Bard'
@@ -17453,9 +16931,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 hour',
     level: 9,
-    school: {
-      name: 'Necromancy'
-    },
+    school: 'Necromancy',
     classes: [
       {
         name: 'Cleric'
@@ -17483,9 +16959,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 6,
-    school: {
-      name: 'Divination'
-    },
+    school: 'Divination',
     classes: [
       {
         name: 'Bard'
@@ -17519,9 +16993,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 0,
-    school: {
-      name: 'Divination'
-    },
+    school: 'Divination',
     classes: [
       {
         name: 'Bard'
@@ -17561,9 +17033,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 1,
-    school: {
-      name: 'Conjuration'
-    },
+    school: 'Conjuration',
     classes: [
       {
         name: 'Bard'
@@ -17599,9 +17069,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 3,
-    school: {
-      name: 'Necromancy'
-    },
+    school: 'Necromancy',
     classes: [
       {
         name: 'Warlock'
@@ -17639,9 +17107,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 4,
-    school: {
-      name: 'Evocation'
-    },
+    school: 'Evocation',
     classes: [
       {
         name: 'Druid'
@@ -17677,9 +17143,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 5,
-    school: {
-      name: 'Evocation'
-    },
+    school: 'Evocation',
     classes: [
       {
         name: 'Wizard'
@@ -17709,9 +17173,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 6,
-    school: {
-      name: 'Evocation'
-    },
+    school: 'Evocation',
     classes: [
       {
         name: 'Wizard'
@@ -17741,9 +17203,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 5,
-    school: {
-      name: 'Evocation'
-    },
+    school: 'Evocation',
     classes: [
       {
         name: 'Druid'
@@ -17783,9 +17243,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 6,
-    school: {
-      name: 'Conjuration'
-    },
+    school: 'Conjuration',
     classes: [
       {
         name: 'Druid'
@@ -17812,9 +17270,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 2,
-    school: {
-      name: 'Abjuration'
-    },
+    school: 'Abjuration',
     classes: [
       {
         name: 'Cleric'
@@ -17843,9 +17299,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 3,
-    school: {
-      name: 'Transmutation'
-    },
+    school: 'Transmutation',
     classes: [
       {
         name: 'Druid'
@@ -17886,9 +17340,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 3,
-    school: {
-      name: 'Transmutation'
-    },
+    school: 'Transmutation',
     classes: [
       {
         name: 'Cleric'
@@ -17933,9 +17385,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 2,
-    school: {
-      name: 'Conjuration'
-    },
+    school: 'Conjuration',
     classes: [
       {
         name: 'Sorcerer'
@@ -17968,9 +17418,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 9,
-    school: {
-      name: 'Illusion'
-    },
+    school: 'Illusion',
     classes: [
       {
         name: 'Wizard'
@@ -17996,9 +17444,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 minute',
     level: 6,
-    school: {
-      name: 'Transmutation'
-    },
+    school: 'Transmutation',
     classes: [
       {
         name: 'Druid'
@@ -18025,9 +17471,7 @@ const spellsDB = [
     concentration: 'yes',
     casting_time: '1 action',
     level: 3,
-    school: {
-      name: 'Evocation'
-    },
+    school: 'Evocation',
     classes: [
       {
         name: 'Druid'
@@ -18064,9 +17508,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 9,
-    school: {
-      name: 'Conjuration'
-    },
+    school: 'Conjuration',
     classes: [
       {
         name: 'Sorcerer'
@@ -18092,9 +17534,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 6,
-    school: {
-      name: 'Conjuration'
-    },
+    school: 'Conjuration',
     classes: [
       {
         name: 'Cleric'
@@ -18118,9 +17558,7 @@ const spellsDB = [
     concentration: 'no',
     casting_time: '1 action',
     level: 2,
-    school: {
-      name: 'Enchantment'
-    },
+    school: 'Enchantment',
     classes: [
       {
         name: 'Bard'

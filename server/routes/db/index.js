@@ -168,6 +168,18 @@ class MyDB{
       res(db.SchoolOfMagic.find(v => v.name === name))
     }, 200));
   }
+  /* ---------------------------------------- */
+  async getSpellAll() {
+    return new Promise(res => setTimeout(() => {
+      res(db.Spell)
+    }, 200));
+  }
+
+  async getSpellName(name) {
+    return new Promise(res => setTimeout(() => {
+      res(db.Spell.find(v => v.name === name))
+    }, 200));
+  }
 }
   
 module.exports = {
