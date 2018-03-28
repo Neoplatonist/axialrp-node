@@ -512,24 +512,16 @@ const subracesDB = [
     description: 'As a hill dwarf, you have keen senses, deep intuition, and remarkable resilience.',
     ability_bonus: [0, 0, 0, 0, 0, 0],
     hit_points: 1,
-    age: {},
-    alignment: {},
-    size: {},
-    speed: {},
-    darkvision: {
-      distance: 60,
-      description: 'Accustomed to life underground, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You canâ€™t discern color in darkness, only shades of gray.'
-    },
-    languages: {},
     traits: [
+      {
+        name: 'darkvision',
+        description: 'Accustomed to life underground, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You canâ€™t discern color in darkness, only shades of gray.'
+      },
       { 
         name: 'Dwarven Toughness',
         description: 'Your hit point maximum increases by 1, and it increases by 1 every time you gain a level.'
       }
-    ],
-    saving_throws: {},
-    tools: {},
-    weapons: [],
+    ]
   },
   {
     name: 'High Elf',

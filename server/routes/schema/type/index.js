@@ -12,6 +12,15 @@ const {
 
 
 
+const NameDescType = new GraphQLObjectType({
+  name: 'NameDesc',
+
+  fields: () => ({
+    name: { type: GraphQLString },
+    description: { type: GraphQLString }
+  })
+});
+
 const NameListType = new GraphQLObjectType({
   name: 'NameList',
 
@@ -19,7 +28,6 @@ const NameListType = new GraphQLObjectType({
     name: { type: GraphQLString }
   })
 });
-
 
 const OptionsIntType = new GraphQLObjectType({
   name: 'OptionsInt',
@@ -42,6 +50,7 @@ const OptionsStringType = new GraphQLObjectType({
 });
 
 module.exports = {
+  NameDescType,
   NameListType,
   OptionsIntType,
   OptionsStringType
