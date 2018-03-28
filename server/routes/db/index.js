@@ -13,7 +13,7 @@ class MyDB{
     }, 200));
   }
 /* ---------------------------------------- */
-  async getSubRaceAll() {
+  async getSubRaces() {
     return new Promise(res => setTimeout(() => {
       res(db.Subrace)
     }, 200));

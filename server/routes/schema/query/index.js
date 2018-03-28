@@ -11,7 +11,7 @@ const { getSchoOfMagName } = require('./schoOfMag.js');
 const { getSkillName } = require('./skill.js');
 const { getSpellName } = require('./spell.js');
 const { getStartEquipName } = require('./startEquip.js');
-const { getSubRaceName } = require('./subrace.js');
+const { getSubRaces, getSubRaceName } = require('./subrace.js');
 const { getToolName } = require('./tool.js');
 const { getWeaponName } = require('./weapon.js');
 
@@ -33,6 +33,7 @@ const RootQuery = new GraphQLObjectType({
     getSkillName: getSkillName,
     getSpellName: getSpellName,
     getStartEquipName: getStartEquipName,
+    getSubRaces: getSubRaces,
     getSubRaceName: getSubRaceName,
     getToolName: getToolName,
     getWeaponName: getWeaponName

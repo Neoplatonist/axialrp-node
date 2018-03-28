@@ -1,4 +1,4 @@
-const { GraphQLString } = require('graphql');
+const { GraphQLList, GraphQLString } = require('graphql');
 const { SubRaceType } = require('../type/subrace');
 const { MyDB } = require('../../db');
 
@@ -6,6 +6,16 @@ const { MyDB } = require('../../db');
 const db = new MyDB();
 
 // Race Query
+const getSubRaces = {
+  type: new GraphQLList(SubRaceType),
+
+  resolve(val, args) {
+    return new Promise(res => setTimeout(() => {
+      res(db.getSubRaces());
+    }, 200))
+  }
+};
+
 const getSubRaceName = {
   type: SubRaceType,
   args: { name: { type: GraphQLString } },
@@ -18,5 +28,6 @@ const getSubRaceName = {
 };
 
 module.exports = {
+  getSubRaces,
   getSubRaceName
 };
