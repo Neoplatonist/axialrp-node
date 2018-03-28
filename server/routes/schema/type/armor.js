@@ -14,8 +14,6 @@ const {
   OptionsStringType 
 } = require('./index');
 
-const { makeExecutableSchema } = require('graphql-tools');
-
 
 
 const ArmorType = new GraphQLObjectType({
