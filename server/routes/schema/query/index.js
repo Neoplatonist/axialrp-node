@@ -1,6 +1,6 @@
 const { GraphQLObjectType } = require('graphql');
 const { getAlignmentName } = require('./alignment.js');
-// const Armor = require('./armor.js');
+const { getArmorName } = require('./armor.js');
 const { getClassName } = require('./class.js');
 const { getFeatName } = require('./feat.js');
 // const Gear = require('./gear.js');
@@ -15,11 +15,13 @@ const { getSubRaceName } = require('./subrace.js');
 // const Tool = require('./tool.js');
 const { getWeaponName } = require('./weapon.js');
 
+
+
 const RootQuery = new GraphQLObjectType({
   name: 'RootQueryType',
   fields: {
     getAlignmentName: getAlignmentName,
-    // armor: Armor,
+    getArmorName: getArmorName,
     getClassName: getClassName,
     getFeatName: getFeatName,
     // gear: Gear,
@@ -35,6 +37,8 @@ const RootQuery = new GraphQLObjectType({
     getWeaponName: getWeaponName
   }
 });
+
+
 
 module.exports = {
   RootQuery
