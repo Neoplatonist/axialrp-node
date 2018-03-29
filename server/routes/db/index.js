@@ -85,7 +85,7 @@ class MyDB{
     }, 200));
   }
   /* ---------------------------------------- */
-  async getArmorAll() {
+  async getArmors() {
     return new Promise(res => setTimeout(() => {
       res(db.Armor)
     }, 200));
