@@ -121,7 +121,7 @@ class MyDB{
     }, 200));
   }
   /* ---------------------------------------- */
-  async getToolAll() {
+  async getTools() {
     return new Promise(res => setTimeout(() => {
       res(db.Tool)
     }, 200));
