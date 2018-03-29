@@ -1,4 +1,4 @@
-const { GraphQLString } = require('graphql');
+const { GraphQLList, GraphQLString } = require('graphql');
 const { WeaponType } = require('../type/weapon');
 const { MyDB } = require('../../db');
 
@@ -6,6 +6,16 @@ const { MyDB } = require('../../db');
 const db = new MyDB();
 
 // Race Query
+const getWeapons = {
+  type: new GraphQLList(WeaponType),
+
+  resolve(val, args) {
+    return new Promise(res => setTimeout(() => {
+      res(db.getWeapons());
+    }, 200))
+  }
+};
+
 const getWeaponName = {
   type: WeaponType,
   args: { name: { type: GraphQLString } },
@@ -18,5 +28,6 @@ const getWeaponName = {
 };
 
 module.exports = {
+  getWeapons,
   getWeaponName
 };
