@@ -1,4 +1,4 @@
-const { GraphQLString } = require('graphql');
+const { GraphQLList, GraphQLString } = require('graphql');
 const { StartingEquipmentType } = require('../type/startEquip');
 const { MyDB } = require('../../db');
 
@@ -6,6 +6,17 @@ const { MyDB } = require('../../db');
 const db = new MyDB();
 
 // Race Query
+const getStartEquips = {
+  type: new GraphQLList(StartingEquipmentType),
+  args: { class: { type: GraphQLString } },
+
+  resolve(val, args) {
+    return new Promise(res => setTimeout(() => {
+      res(db.getStartEquips());
+    }, 200))
+  }
+};
+
 const getStartEquipName = {
   type: StartingEquipmentType,
   args: { class: { type: GraphQLString } },
@@ -18,5 +29,6 @@ const getStartEquipName = {
 };
 
 module.exports = {
+  getStartEquips,
   getStartEquipName
 };

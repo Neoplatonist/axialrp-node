@@ -133,7 +133,7 @@ class MyDB{
     }, 200));
   }
   /* ---------------------------------------- */
-  async getStartEquipAll() {
+  async getStartEquips() {
     return new Promise(res => setTimeout(() => {
       res(db.StartingEquipment)
     }, 200));
