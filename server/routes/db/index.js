@@ -109,7 +109,7 @@ class MyDB{
     }, 200));
   }
   /* ---------------------------------------- */
-  async getKitAll() {
+  async getKits() {
     return new Promise(res => setTimeout(() => {
       res(db.Kit)
     }, 200));

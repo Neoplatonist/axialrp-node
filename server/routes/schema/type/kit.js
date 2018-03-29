@@ -3,7 +3,7 @@ const {
   GraphQLSchema,
   GraphQLObjectType,
   GraphQLString,
-  GraphQLInt,
+  GraphQLFloat,
   GraphQLList,
   GraphQLNonNull
 } = require('graphql');
@@ -24,7 +24,7 @@ const KitType = new GraphQLObjectType({
     name: { type: GraphQLString },
     category: { type: GraphQLString },
     cost: { type: CostType },
-    weight: { type: GraphQLInt },
+    weight: { type: GraphQLFloat },
     description: { type: new GraphQLList(GraphQLString) },
   })
 });
