@@ -157,7 +157,7 @@ class MyDB{
     }, 200));
   }
   /* ---------------------------------------- */
-  async getSchoOfMagAll() {
+  async getSchoOfMags() {
     return new Promise(res => setTimeout(() => {
       res(db.SchoolOfMagic)
     }, 200));
