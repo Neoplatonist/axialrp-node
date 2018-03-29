@@ -1,10 +1,8 @@
 const {
-  GraphQLSchema,
   GraphQLObjectType,
   GraphQLString,
   GraphQLInt,
   GraphQLList,
-  GraphQLNonNull
 } = require('graphql');
 const { NameDescType } = require('./index');
 
@@ -12,6 +10,7 @@ const { NameDescType } = require('./index');
 
 const SubRaceType = new GraphQLObjectType({
   name: 'SubRace',
+  description: 'SubRace database structure',
 
   fields: () => ({
     name: { type: GraphQLString },

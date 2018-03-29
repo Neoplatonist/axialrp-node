@@ -8,9 +8,9 @@ const db = new MyDB();
 // Race Query
 const getTools = {
   type: new GraphQLList(ToolType),
-  args: { name: { type: GraphQLString } },
+  description: 'GETS all Tools',
 
-  resolve(val, args) {
+  resolve() {
     return new Promise(res => setTimeout(() => {
       res(db.getTools());
     }, 200))
@@ -20,6 +20,7 @@ const getTools = {
 const getToolName = {
   type: ToolType,
   args: { name: { type: GraphQLString } },
+  description: 'GETS one Tool by Name',
 
   resolve(val, args) {
     return new Promise(res => setTimeout(() => {

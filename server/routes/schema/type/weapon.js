@@ -1,23 +1,19 @@
 const {
-  GraphQLSchema,
   GraphQLObjectType,
   GraphQLString,
   GraphQLInt,
-  GraphQLList,
-  GraphQLNonNull
+  GraphQLList
 } = require('graphql');
 const { 
   CostType,
-  NameDescType,
-  NameListType, 
-  OptionsIntType, 
-  OptionsStringType 
+  NameListType 
 } = require('./index');
 
 
 
 const WeaponType = new GraphQLObjectType({
   name: 'Weapon',
+  description: 'Weapon database structure',
 
   fields: () => ({
     name: { type: GraphQLString },
@@ -56,6 +52,8 @@ const WeaponType = new GraphQLObjectType({
     })}
   })
 });
+
+
 
 module.exports = {
   WeaponType

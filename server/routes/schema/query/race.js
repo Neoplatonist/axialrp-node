@@ -8,6 +8,7 @@ const db = new MyDB();
 // Race Query
 const getRaces = {
   type: new GraphQLList(RaceType),
+  description: 'GETS all Races',
 
   resolve() {
     return new Promise(res => setTimeout(() => {
@@ -19,6 +20,7 @@ const getRaces = {
 const getRaceName = {
   type: RaceType,
   args: { name: { type: GraphQLString } },
+  description: 'GETS one Race by Name',
 
   resolve(val, args) {
     return new Promise(res => setTimeout(() => {

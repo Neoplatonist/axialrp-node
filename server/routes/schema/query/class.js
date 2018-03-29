@@ -8,8 +8,9 @@ const db = new MyDB();
 // Race Query
 const getClasses = {
   type: new GraphQLList(ClassType),
+  description: 'GETS all Classes',
 
-  resolve(val, args) {
+  resolve() {
     return new Promise(res => setTimeout(() => {
       res(db.getClasses());
     }, 200))
@@ -19,6 +20,7 @@ const getClasses = {
 const getClassName = {
   type: ClassType,
   args: { name: { type: GraphQLString } },
+  description: 'GETS one Class by Name',
 
   resolve(val, args) {
     return new Promise(res => setTimeout(() => {

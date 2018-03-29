@@ -1,15 +1,12 @@
 const {
-  GraphQLSchema,
   GraphQLObjectType,
   GraphQLString,
   GraphQLInt,
-  GraphQLList,
-  GraphQLNonNull
+  GraphQLList
 } = require('graphql');
 const { 
   NameDescType,
   NameListType, 
-  OptionsIntType, 
   OptionsStringType 
 } = require('./index');
 
@@ -17,6 +14,7 @@ const {
 
 const ClassType = new GraphQLObjectType({
   name: 'Class',
+  description: 'Class database structure',
 
   fields: () => ({
     name: { type: GraphQLString },
@@ -44,6 +42,8 @@ const ClassType = new GraphQLObjectType({
     weapons: { type: new GraphQLList(NameListType) }
   })
 });
+
+
 
 module.exports = {
   ClassType

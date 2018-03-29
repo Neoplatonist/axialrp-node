@@ -8,9 +8,9 @@ const db = new MyDB();
 // Race Query
 const getMounts = {
   type: new GraphQLList(MountType),
-  args: { name: { type: GraphQLString } },
+  description: 'GETS all Mounts',
 
-  resolve(val, args) {
+  resolve() {
     return new Promise(res => setTimeout(() => {
       res(db.getMounts());
     }, 200))
@@ -20,6 +20,7 @@ const getMounts = {
 const getMountName = {
   type: MountType,
   args: { name: { type: GraphQLString } },
+  description: 'GETS one Mount by Name',
 
   resolve(val, args) {
     return new Promise(res => setTimeout(() => {

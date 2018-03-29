@@ -1,25 +1,18 @@
 const {
-  GraphQLBoolean,
-  GraphQLSchema,
   GraphQLObjectType,
   GraphQLString,
-  GraphQLInt,
   GraphQLFloat,
-  GraphQLList,
-  GraphQLNonNull
+  GraphQLList
 } = require('graphql');
 const { 
-  CostType,
-  NameDescType,
-  NameListType, 
-  OptionsIntType, 
-  OptionsStringType 
+  CostType
 } = require('./index');
 
 
 
 const GearType = new GraphQLObjectType({
   name: 'Gear',
+  description: 'Gear database structure',
 
   fields: () => ({
     name: { type: GraphQLString },

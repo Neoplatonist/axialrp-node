@@ -1,10 +1,6 @@
 const {
-  GraphQLSchema,
   GraphQLObjectType,
-  GraphQLString,
-  GraphQLInt,
-  GraphQLList,
-  GraphQLNonNull
+  GraphQLString
 } = require('graphql');
 const { 
   NameDescType,
@@ -17,6 +13,7 @@ const {
 
 const SkillType = new GraphQLObjectType({
   name: 'Skill',
+  description: 'Skill database structure',
 
   fields: () => ({
     name: { type: GraphQLString },
@@ -30,6 +27,8 @@ const SkillType = new GraphQLObjectType({
     })}
   })
 });
+
+
 
 module.exports = {
   SkillType

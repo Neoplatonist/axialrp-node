@@ -1,24 +1,17 @@
 const {
-  GraphQLBoolean,
-  GraphQLSchema,
   GraphQLObjectType,
   GraphQLString,
-  GraphQLInt,
-  GraphQLList,
-  GraphQLNonNull
+  GraphQLList
 } = require('graphql');
 const { 
   CostType,
-  NameDescType,
-  NameListType, 
-  OptionsIntType, 
-  OptionsStringType 
 } = require('./index');
 
 
 
 const MountType = new GraphQLObjectType({
   name: 'Mount',
+  description: 'Mount database structure',
 
   fields: () => ({
     name: { type: GraphQLString },

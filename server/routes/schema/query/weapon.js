@@ -8,8 +8,9 @@ const db = new MyDB();
 // Race Query
 const getWeapons = {
   type: new GraphQLList(WeaponType),
+  description: 'GETS all Weapons',
 
-  resolve(val, args) {
+  resolve() {
     return new Promise(res => setTimeout(() => {
       res(db.getWeapons());
     }, 200))
@@ -19,6 +20,7 @@ const getWeapons = {
 const getWeaponName = {
   type: WeaponType,
   args: { name: { type: GraphQLString } },
+  description: 'GETS one Weapon by Name',
 
   resolve(val, args) {
     return new Promise(res => setTimeout(() => {

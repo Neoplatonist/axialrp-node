@@ -8,9 +8,9 @@ const db = new MyDB();
 // Race Query
 const getSpells = {
   type: new GraphQLList(SpellType),
-  args: { name: { type: GraphQLString } },
+  description: 'GETS all Spells',
 
-  resolve(val, args) {
+  resolve() {
     return new Promise(res => setTimeout(() => {
       res(db.getSpells());
     }, 200))
@@ -20,6 +20,7 @@ const getSpells = {
 const getSpellName = {
   type: SpellType,
   args: { name: { type: GraphQLString } },
+  description: 'GETS one Skill by Name',
 
   resolve(val, args) {
     return new Promise(res => setTimeout(() => {

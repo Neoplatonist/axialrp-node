@@ -1,22 +1,15 @@
 const {
-  GraphQLSchema,
   GraphQLObjectType,
   GraphQLString,
   GraphQLInt,
-  GraphQLList,
-  GraphQLNonNull
+  GraphQLList
 } = require('graphql');
-const { 
-  NameDescType,
-  NameListType, 
-  OptionsIntType, 
-  OptionsStringType 
-} = require('./index');
 
 
 
 const FeatType = new GraphQLObjectType({
   name: 'Feat',
+  description: 'Feat database structure',
 
   fields: () => ({
     name: { type: GraphQLString },
@@ -33,6 +26,8 @@ const FeatType = new GraphQLObjectType({
     benefits: { type: new GraphQLList(GraphQLString) }
   })
 });
+
+
 
 module.exports = {
   FeatType

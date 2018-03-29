@@ -1,14 +1,9 @@
 const {
-  GraphQLSchema,
   GraphQLObjectType,
   GraphQLString,
   GraphQLInt,
-  GraphQLList,
-  GraphQLNonNull
+  GraphQLList
 } = require('graphql');
-
-
-
 
 
 
@@ -84,6 +79,8 @@ const OptionsStringType = new GraphQLObjectType({
     from: { type: new GraphQLList(GraphQLString) }
   })
 });
+
+
 
 module.exports = {
   CostType,

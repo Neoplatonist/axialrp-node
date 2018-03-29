@@ -1,10 +1,8 @@
 const {
-  GraphQLSchema,
   GraphQLObjectType,
   GraphQLString,
   GraphQLInt,
-  GraphQLList,
-  GraphQLNonNull
+  GraphQLList
 } = require('graphql');
 const { 
   NameDescType,
@@ -17,6 +15,7 @@ const {
 
 const RaceType = new GraphQLObjectType({
   name: 'Race',
+  description: 'Race database structure',
 
   fields: () => ({
     name: { type: GraphQLString },
