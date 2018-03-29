@@ -1,4 +1,4 @@
-const { GraphQLString } = require('graphql');
+const { GraphQLList, GraphQLString } = require('graphql');
 const { SpellType } = require('../type/spell');
 const { MyDB } = require('../../db');
 
@@ -6,6 +6,17 @@ const { MyDB } = require('../../db');
 const db = new MyDB();
 
 // Race Query
+const getSpells = {
+  type: new GraphQLList(SpellType),
+  args: { name: { type: GraphQLString } },
+
+  resolve(val, args) {
+    return new Promise(res => setTimeout(() => {
+      res(db.getSpells());
+    }, 200))
+  }
+};
+
 const getSpellName = {
   type: SpellType,
   args: { name: { type: GraphQLString } },
@@ -18,5 +29,6 @@ const getSpellName = {
 };
 
 module.exports = {
+  getSpells,
   getSpellName
 };

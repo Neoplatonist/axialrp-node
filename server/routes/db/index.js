@@ -169,7 +169,7 @@ class MyDB{
     }, 200));
   }
   /* ---------------------------------------- */
-  async getSpellAll() {
+  async getSpells() {
     return new Promise(res => setTimeout(() => {
       res(db.Spell)
     }, 200));
