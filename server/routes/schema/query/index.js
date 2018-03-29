@@ -5,7 +5,7 @@ const { getClasses, getClassName } = require('./class.js');
 const { getFeats, getFeatName } = require('./feat.js');
 const { getGears, getGearName } = require('./gear.js');
 const { getKits, getKitName } = require('./kit.js');
-const { getMountName } = require('./mount.js');
+const { getMounts, getMountName } = require('./mount.js');
 const { getRaces, getRaceName } = require('./race.js');
 const { getSchoOfMagName } = require('./schoOfMag.js');
 const { getSkills, getSkillName } = require('./skill.js');
@@ -32,6 +32,7 @@ const RootQuery = new GraphQLObjectType({
     getGearName: getGearName,
     getKits: getKits,
     getKitName: getKitName,
+    getMounts: getMounts,
     getMountName: getMountName,
     getRaces: getRaces,
     getRaceName: getRaceName,

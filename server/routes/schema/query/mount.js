@@ -1,4 +1,4 @@
-const { GraphQLString } = require('graphql');
+const { GraphQLList, GraphQLString } = require('graphql');
 const { MountType } = require('../type/mount');
 const { MyDB } = require('../../db');
 
@@ -6,6 +6,17 @@ const { MyDB } = require('../../db');
 const db = new MyDB();
 
 // Race Query
+const getMounts = {
+  type: new GraphQLList(MountType),
+  args: { name: { type: GraphQLString } },
+
+  resolve(val, args) {
+    return new Promise(res => setTimeout(() => {
+      res(db.getMounts());
+    }, 200))
+  }
+};
+
 const getMountName = {
   type: MountType,
   args: { name: { type: GraphQLString } },
@@ -18,5 +29,6 @@ const getMountName = {
 };
 
 module.exports = {
+  getMounts, 
   getMountName
 };

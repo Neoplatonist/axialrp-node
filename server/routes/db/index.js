@@ -145,7 +145,7 @@ class MyDB{
     }, 200));
   }
   /* ---------------------------------------- */
-  async getMountAll() {
+  async getMounts() {
     return new Promise(res => setTimeout(() => {
       res(db.Mount)
     }, 200));
