@@ -4,6 +4,7 @@ const {
   GraphQLObjectType,
   GraphQLString,
   GraphQLInt,
+  GraphQLFloat,
   GraphQLList,
   GraphQLNonNull
 } = require('graphql');
@@ -25,7 +26,7 @@ const GearType = new GraphQLObjectType({
     category: { type: GraphQLString },
     cost: { type: CostType },
     description: { type: new GraphQLList(GraphQLString) },
-    weight: { type: GraphQLInt }
+    weight: { type: GraphQLFloat }
   })
 });
 

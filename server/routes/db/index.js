@@ -97,7 +97,7 @@ class MyDB{
     }, 200));
   }
   /* ---------------------------------------- */
-  async getGearAll() {
+  async getGears() {
     return new Promise(res => setTimeout(() => {
       res(db.Gear)
     }, 200));
