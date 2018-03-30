@@ -36,6 +36,7 @@ const graphqlHTTP = require('express-graphql');
 const { buildSchema } = require('graphql');
 const schema = require('./routes/schema');
 const universalLoader = require('./universal');
+const cors = require('cors');
 
 
 // App setup
@@ -43,6 +44,7 @@ const app = express();
 
 // Support Gzip
 app.use(compression())
+app.use(cors())
 
 // Support post requests with body data (doesn't support multipart, use multer)
 app.use(bodyParser.json())

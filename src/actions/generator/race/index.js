@@ -8,29 +8,35 @@ import {
   SET_SUBRACE,
   SET_SUBRACE_OBJ
 } from '../../types';
-import { raceDB } from '../../../pages/db.js';
+import { raceQuery, raceNameQuery } from '../../../db/race';
+// import { raceDB } from '../../../pages/db.js';
 
 /*
  *  Actions
  */
 export const setRace = race => {
-  return (dispatch, getState) => {
+  return async (dispatch, getState) => {
     dispatch({ type: SET_RACE, payload: race });
 
-    const r = raceDB.find(v => v.name === race);
-    dispatch({ type: SET_RACE_OBJ, payload: r });
-    dispatch({ type: SET_ALIGNMENT, payload: r.alignment.main });
-    dispatch({ type: SET_LANGUAGE, payload: '' })
-    dispatch({ 
-      type: SET_LANGUAGE_LIST,
-      payload: r.languages.type.map(v => v.name) 
-    });
+    try {
+      const r = await raceNameQuery(race);
 
-    const char = getState().generator.character;
-    dispatch({ 
-      type: SET_CHARACTER, 
-      payload: {...char, age: r.age.adult, height: JSON.stringify(r.size.height.min) + 'ft'} 
-    });
+      dispatch({ type: SET_RACE_OBJ, payload: r });
+      dispatch({ type: SET_ALIGNMENT, payload: r.alignment.main });
+      dispatch({ type: SET_LANGUAGE, payload: '' })
+      dispatch({ 
+        type: SET_LANGUAGE_LIST,
+        payload: r.languages.type.map(v => v.name) 
+      });
+  
+      const char = getState().generator.character;
+      dispatch({ 
+        type: SET_CHARACTER, 
+        payload: {...char, age: r.age.adult, height: JSON.stringify(r.size.height.min) + 'ft'} 
+      });
+    } catch (err) {
+      console.log(err);
+    };
   };
 };
 

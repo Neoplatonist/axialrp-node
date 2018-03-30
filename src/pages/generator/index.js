@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { AbilityMap, Option, isEmpty } from './utils';
+import { AbilityMap, Option } from './utils';
 import './styles.css';
 
 // Mock Database
@@ -71,18 +71,20 @@ class Generator extends Component {
   }
 
   renderLanguageOptions = () => {
-    if (!isEmpty(this.props.raceObj.languages.options)) {
-      return <div>
-        <select 
-          name="lang" 
-          className="input"
-          onChange={ e => this.props.setLanguage(e.target.value)}
-          value={this.props.language} 
-        >
-          { 'Choose: ' + JSON.stringify(this.props.raceObj.languages.options.choose) }
-          { this.renderLO() }
-        </select>
-      </div>
+    if (this.props.raceObj.languages.options.choose) {
+      return (
+        <div>
+          <select 
+            name="lang" 
+            className="input"
+            onChange={ e => this.props.setLanguage(e.target.value)}
+            value={this.props.language} 
+          >
+            { 'Choose: ' + JSON.stringify(this.props.raceObj.languages.options.choose) }
+            { this.renderLO() }
+          </select>
+        </div>
+      )
     }
   }
 

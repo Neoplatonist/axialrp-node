@@ -76,7 +76,7 @@ const OptionsStringType = new GraphQLObjectType({
   fields: () => ({
     choose: { type: GraphQLInt },
     type: { type: GraphQLString },
-    from: { type: new GraphQLList(GraphQLString) }
+    from: { type: new GraphQLList(NameListType) }
   })
 });
 

@@ -7,7 +7,6 @@ const {
 const { 
   NameDescType,
   NameListType, 
-  OptionsIntType, 
   OptionsStringType 
 } = require('./index');
 
@@ -70,7 +69,7 @@ const RaceType = new GraphQLObjectType({
 
       fields: () => ({
         description: { type: GraphQLString },
-        options: { type: OptionsIntType },
+        options: { type: OptionsStringType },
         type: { type: new GraphQLList(NameListType) }
       })
     })},
