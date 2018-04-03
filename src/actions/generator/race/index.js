@@ -8,7 +8,7 @@ import {
   SET_SUBRACE,
   SET_SUBRACE_OBJ
 } from '../../types';
-import { raceQuery, raceNameQuery } from '../../../db/race';
+import { raceNameQuery } from '../../../db/race';
 // import { raceDB } from '../../../pages/db.js';
 
 /*

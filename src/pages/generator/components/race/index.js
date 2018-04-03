@@ -15,9 +15,35 @@ import {
   setSubRaceObj
 } from '../../../../actions';
 
+// // Mock Database
+// import { 
+//   raceDB,
+//   subracesDB
+// } from '../../../db.js';
+
+// graphQL Queries
+import {
+  raceQuery,
+  raceNameQuery,
+  sub_raceNameQuery
+} from '../../../../db';
+
 class Race extends Component {
+  state = {
+    race: [{name: ''}]
+  };
+
+  componentDidMount() {
+    this.getRace()
+  }
+
+  getRace = async () => {
+    const race = await raceQuery();
+    this.setState({ race: race });
+  }
+
   handleRace = e => {
-    return this.props.raceDB.map((v, k) => {
+    return this.state.race.map((v, k) => {
       return <Option key={k} {...v} />;
     });
   }
@@ -29,25 +55,45 @@ class Race extends Component {
     });
   }
 
-  onRaceChange = e => {
+  onRaceChange = async e => {
     // TODO: Doesn't update on first loop
-    const r = this.props.raceDB.find(v => v.name === e.target.value);
+    // const r = raceDB.find(v => v.name === e.target.value);
     this.props.setRace(e.target.value);
-    if (isEmpty(r.sub_races)) {
-      this.props.setSubRace('')
-    } else {
-      this.props.setSubRace(r.sub_races[0].name);
-      this.props.setSubRaceObj(
-        this.props.subracesDB.find(v => v.name === r.sub_races[0].name)
-      );
+
+    let r;
+    try {
+      r = await raceNameQuery(e.target.value);
+
+      if (isEmpty(r.sub_races)) {
+        this.props.setSubRace('')
+      } else {
+        this.props.setSubRace(r.sub_races[0].name);
+  
+        let subrace;
+        try {
+          subrace = await sub_raceNameQuery(r.sub_races[0].name);
+          this.props.setSubRaceObj(subrace);
+        } catch (err) {
+          console.warn(err)
+          this.props.setSubRaceObj({});
+        }
+      }
+    } catch (err) {
+      console.warn(err)
     } 
   }
 
-  onSubRaceChange = e => {
+  onSubRaceChange = async e => {
     this.props.setSubRace(e.target.value);
-    this.props.setSubRaceObj(
-      this.props.subracesDB.find(v => v.name === e.target.value)
-    );
+
+    let subrace;
+    try {
+      subrace = await sub_raceNameQuery(e.target.value);
+      this.props.setSubRaceObj(subrace);
+    } catch (err) {
+      console.warn(err)
+      subrace = [];
+    }
   }
 
   renderSubRace = () => {

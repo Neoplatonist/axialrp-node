@@ -6,8 +6,6 @@ import './styles.css';
 import { 
   alignmentDB, 
   classDB, 
-  raceDB,
-  subracesDB,
   skillsDB
 } from '../db.js';
 
@@ -131,7 +129,7 @@ class Generator extends Component {
 
           <br/>
 
-          <Race raceDB={raceDB} subracesDB={subracesDB}/>
+          <Race />
 
           <br/>
 

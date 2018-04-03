@@ -4,3 +4,6 @@ const Transport = require('lokka-transport-http').Transport;
 export const client = new Lokka({
   transport: new Transport('/graphql')
 });
+
+export * from './race';
+export * from './subrace';
