@@ -13,12 +13,8 @@ import List from '../pages/list';
 import Wiki from '../pages/wiki';
 
 export default class App extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      mobile: false
-    };
+  state = {
+    mobile: false
   }
 
   componentDidMount() {

@@ -10,13 +10,9 @@ import {
 
 
 class Description extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      ageDesc: false,
-      heightDesc: false
-    };
+  state = {
+    ageDesc: false,
+    heightDesc: false
   }
 
   showDesc = desc => e => {

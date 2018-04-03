@@ -13,13 +13,9 @@ import {
 } from '../../../../../../actions';
 
 class Ability extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      downLock: false,
-      upLock: false
-    };
+  state = {
+    downLock: false,
+    upLock: false
   }
 
   moveDown = e => {

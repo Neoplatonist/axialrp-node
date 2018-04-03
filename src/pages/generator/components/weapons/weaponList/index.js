@@ -9,12 +9,8 @@ import {
 } from '../../../../../actions';
 
 class WeaponList extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      showDesc: false
-    };
+  state = {
+    showDesc: false
   }
 
   deleteItem = (name, e) => {
