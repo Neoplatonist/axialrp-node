@@ -5,5 +5,6 @@ export const client = new Lokka({
   transport: new Transport('/graphql')
 });
 
+export * from './alignment';
 export * from './race';
 export * from './subrace';

@@ -4,10 +4,14 @@ import './styles.css';
 
 // Mock Database
 import { 
-  alignmentDB, 
   classDB, 
   skillsDB
 } from '../db.js';
+
+// graphQL Queries
+import {
+  alignmentQuery
+} from '../../db';
 
 import AbilityList from './components/abilityList';
 import Armor from './components/armor';
@@ -41,8 +45,21 @@ import {
 } from '../../actions';
 
 class Generator extends Component {
+  state = {
+    alignment: []
+  }
+
+  componentDidMount() {
+    this.getAlignment()
+  }
+
+  getAlignment = async () => {
+    const alignment = await alignmentQuery();
+    this.setState({ alignment: alignment });
+  }
+
   handleAlignment = () => {
-    return alignmentDB.map((v, k) => {
+    return this.state.alignment.map((v, k) => {
       return <Option key={k} {...v} />;
     });
   }
@@ -155,7 +172,9 @@ class Generator extends Component {
             onChange={ e => this.props.setAlignment(e.target.value) }
             value={this.props.alignment}
           >
-            { this.handleAlignment() }
+            { this.state.alignment.length 
+              ? this.handleAlignment() 
+              : <option value="">...Loading</option> }
           </select>
 
           <AbilityList />

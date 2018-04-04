@@ -1,6 +1,6 @@
 import { client } from './index';
 
-const raceType = `
+export const raceType = `
   name
   description
   ability_bonus
@@ -85,6 +85,15 @@ export const raceNameQuery = async name => {
   return result;
 };
 
+// export const raceNameQuery = name => {
+//     return client.query(`
+//       query getRaceNameNow($race: String) {
+//         getRaceName(name: $race) {
+//           ${raceType}
+//         }
+//       }
+//     `, { race: name }).then(result => result.getRaceName);
+// };
 
 export const raceQuery = async () => {
   let result;
@@ -103,3 +112,17 @@ export const raceQuery = async () => {
 
   return result;
 };
+
+// export const raceQuery = () => {
+//   return new Promise(async(resolve, reject) => {
+//     const query = await client.query(`
+//       {
+//         getRaces {
+//           ${raceType}
+//         }
+//       }
+//     `).then(result => result.getRaces);
+
+//     resolve(query)
+//   });
+// };

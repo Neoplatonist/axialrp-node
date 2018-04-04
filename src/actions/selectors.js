@@ -7,11 +7,7 @@ import {
 
 // Mock Database
 import { 
-  // alignmentDB,
   armorDB, 
-  // classDB, 
-  // raceDB,
-  // skillsDB,
   spellsDB,
   weaponDB
 } from '../pages/db.js';

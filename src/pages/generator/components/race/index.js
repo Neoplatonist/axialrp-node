@@ -15,12 +15,6 @@ import {
   setSubRaceObj
 } from '../../../../actions';
 
-// // Mock Database
-// import { 
-//   raceDB,
-//   subracesDB
-// } from '../../../db.js';
-
 // graphQL Queries
 import {
   raceQuery,
@@ -30,7 +24,7 @@ import {
 
 class Race extends Component {
   state = {
-    race: [{name: ''}]
+    race: []
   };
 
   componentDidMount() {
@@ -42,13 +36,7 @@ class Race extends Component {
     this.setState({ race: race });
   }
 
-  handleRace = e => {
-    return this.state.race.map((v, k) => {
-      return <Option key={k} {...v} />;
-    });
-  }
-
-  handleSubRace = e => {
+  getSubRace = e => {
     const subraces = this.props.raceObj.sub_races || [];
     return subraces.map((v, k) => {
       return <Option key={k} {...v} />;
@@ -56,8 +44,6 @@ class Race extends Component {
   }
 
   onRaceChange = async e => {
-    // TODO: Doesn't update on first loop
-    // const r = raceDB.find(v => v.name === e.target.value);
     this.props.setRace(e.target.value);
 
     let r;
@@ -96,7 +82,13 @@ class Race extends Component {
     }
   }
 
-  renderSubRace = () => {
+  renderRace = () => {
+    return this.state.race.map((v, k) => {
+      return <Option key={k} {...v} />;
+    });
+  }
+
+  renderSubRaceSelect = () => {
     return this.props.subrace ?
       (
         <select
@@ -105,7 +97,9 @@ class Race extends Component {
           onChange={this.onSubRaceChange}
           value={this.props.subrace}
         >
-          { this.handleSubRace() }
+          { this.state.race.length 
+            ? this.getSubRace() 
+            : <option value="">...Loading</option> }
         </select>
       ) :
       'None';
@@ -121,13 +115,15 @@ class Race extends Component {
           onChange={this.onRaceChange}
           value={this.props.race}
         >
-          { this.handleRace() }
+          { this.state.race.length 
+            ? this.renderRace() 
+            : <option value="">...Loading</option> }
         </select>
 
         <br/>
 
         <label htmlFor="sub-races">Sub-Race: </label>
-        { this.renderSubRace() }
+        { this.renderSubRaceSelect() }
       </div>
     );
   }

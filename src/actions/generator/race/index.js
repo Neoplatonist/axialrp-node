@@ -9,7 +9,6 @@ import {
   SET_SUBRACE_OBJ
 } from '../../types';
 import { raceNameQuery } from '../../../db/race';
-// import { raceDB } from '../../../pages/db.js';
 
 /*
  *  Actions
