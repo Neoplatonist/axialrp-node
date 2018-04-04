@@ -142,7 +142,7 @@ export const selectSavingThrows = createSelector(
 export const selectSkillsFilter = createSelector(
   selectClassObj,
   classObj => {
-    return classObj.proficiency_choices.find( v => v.type === 'Skill');
+    return classObj.proficiency_choices.find(v => v.type === 'Skill');
   }
 );
 

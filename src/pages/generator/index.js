@@ -4,7 +4,6 @@ import './styles.css';
 
 // Mock Database
 import { 
-  classDB, 
   skillsDB
 } from '../db.js';
 
@@ -150,7 +149,7 @@ class Generator extends Component {
 
           <br/>
 
-          <Class classDB={classDB} />
+          <Class />
 
           <br/>
 
@@ -256,4 +255,5 @@ export default connect(mapStateToProps, boundActions)(Generator);
  * TODO:
  * - Level up characters
  * - Calculate startin money for characters
+ * - In Classes: Constitution is for level 1 only.
  */

@@ -20,7 +20,7 @@ const ClassType = new GraphQLObjectType({
     name: { type: GraphQLString },
     hit_die: { type: GraphQLInt },
     armor: { type: new GraphQLList(NameListType) },
-    proficiency_choices: { type: OptionsStringType },
+    proficiency_choices: { type: new GraphQLList(OptionsStringType) },
     saving_throws: { type: new GraphQLList(NameListType) },
     sub_classes: { type: new GraphQLList(NameDescType) },
     spellcasting: { type: new GraphQLObjectType({

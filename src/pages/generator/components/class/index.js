@@ -10,23 +10,37 @@ import {
   setHP 
 } from '../../../../actions';
 
+// graphQL Queries
+import {
+  classQuery
+} from '../../../../db';
+
 class Class extends Component {
+  state = {
+    classes: []
+  }
+
+  componentDidMount() {
+    this.getClasses()
+  }
+
+  getClasses = async () => {
+    const classes = await classQuery();
+    this.setState({ classes: classes });
+  }
+
   handleClass = e => {
-    return this.props.classDB.map((v, k) => {
+    return this.state.classes.map((v, k) => {
       return <Option key={k} {...v} />;
     })
   }
 
   onClassChange = e => {
     this.props.setClass(e.target.value);
-    const hit_die = this.props.classDB
-      .find( v => v.name === e.target.value).hit_die;
+    const hit_die = this.state.classes
+      .find(v => v.name === e.target.value).hit_die;
 
-    // TODO: Constitution is for level 1 only.
     this.props.setHP(hit_die + this.props.abilityMod[2]);
-    
-    // this.updateFeatures();
-    // this.updateSpells();
   }
 
   render() {
@@ -39,18 +53,10 @@ class Class extends Component {
           onChange={this.onClassChange}
           value={this.props.class}
         >
-          { this.handleClass() }
+          { this.state.classes.length 
+            ? this.handleClass() 
+            : <option value="">...Loading</option> }
         </select>
-
-        {/* <label htmlFor="sub-class">SubClass: </label>
-          <select 
-            name="sub-class"
-            className="input"
-            onChange={this.onSubRaceChange}
-            value={this.props.subrace}
-          >
-            { this.handleSubRace() }
-          </select> */}
       </div>
     );
   }
