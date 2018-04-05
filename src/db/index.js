@@ -6,6 +6,7 @@ export const client = new Lokka({
 });
 
 export * from './alignment';
+export * from './armor';
 export * from './class';
 export * from './race';
 export * from './subrace';

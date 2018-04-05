@@ -17,6 +17,19 @@ const getArmors = {
   }
 };
 
+const getArmorByCategory = {
+  type: new GraphQLList(ArmorType),
+  args: { category: { type: GraphQLString } },
+  description: 'GETS all Armor by Category',
+
+  resolve(val, args) {
+    console.log(args.category)
+    return new Promise(res => setTimeout(() => {
+      res(db.getArmorByCategory(args.category));
+    }, 200))
+  }
+};
+
 const getArmorName = {
   type: ArmorType,
   args: { name: { type: GraphQLString } },
@@ -31,5 +44,6 @@ const getArmorName = {
 
 module.exports = {
   getArmors,
+  getArmorByCategory,
   getArmorName
 };

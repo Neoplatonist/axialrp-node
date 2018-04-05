@@ -253,6 +253,7 @@ export default connect(mapStateToProps, boundActions)(Generator);
 
 /*
  * TODO:
+ * - Setup proper error handling
  * - Level up characters
  * - Calculate startin money for characters
  * - In Classes: Constitution is for level 1 only.

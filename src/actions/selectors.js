@@ -7,10 +7,11 @@ import {
 
 // Mock Database
 import { 
-  armorDB, 
   spellsDB,
   weaponDB
 } from '../pages/db.js';
+
+import { armorByCategoryQuery, armorNameQuery } from '../db';
 
 /**
  * selectors
@@ -72,22 +73,40 @@ export const selectAC = createSelector(
   state => state.generator.ac,
   state => state.generator.armor,
   state => state.generator.abilityMod,
-  (ac, list, abilityMod) => {
+  async(ac, list, abilityMod) => {
     if (isNaN(ac)) ac = 0;
-    const a = list.map(v => armorDB.find(j => v === j.name));
-    return a.reduce((v, k) =>
-      v + k.armor_class.base + 
-      (k.armor_class.max_bonus || 0) + 
-      (k.armor_class.max_bonus ? abilityMod[1] : 0), ac);
+    let result = 0;
+
+    try {
+      const a = await Promise.all(list.map(async v => await armorNameQuery(v)));
+      result = a.reduce((v, k) =>
+        v + k.armor_class.base + 
+        (k.armor_class.max_bonus || 0) + 
+        (k.armor_class.max_bonus ? abilityMod[1] : 0), ac);
+    } catch (err) {
+      console.log(err)
+      result = await new Promise(resolve =>  resolve(0));
+    }
+
+    return result;
   }
 );
 
 export const selectArmorProficiency = createSelector(
   selectClassObj,
-  classObj => {
-    const list = classObj.armor.map(v => 
-      armorDB.filter(j => j.armor_category === v.name));
-    return [].concat(...list);
+  async(classObj) => {
+    let result;
+
+    try {
+      const list = await Promise.all(classObj.armor.map(async v => 
+        await armorByCategoryQuery(v.name)));
+      result = [].concat(...list);
+    } catch (err) {
+      console.log(err)
+      result = await new Promise(resolve =>  resolve([]));
+    }
+
+    return result;
   }
 );
 
