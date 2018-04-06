@@ -1,13 +1,11 @@
 import { 
   SET_ARMOR, 
   SET_ARMOR_ACTIVE,
-  SET_ARMOR_ALL,
-  SET_ARMOR_PROFICIENCY
+  SET_ARMOR_ALL
 } from '../../types';
 
 import {
-  armorQuery,
-  armorByCategoryQuery
+  armorQuery
 } from '../../../db';
 
 /*
@@ -39,20 +37,6 @@ export const setArmorAll = () => {
       dispatch({ type: SET_ARMOR_ALL, payload: armor });
     } catch (err) {
       console.log('setArmorAll armorQuery', err)
-    }
-  };
-};
-
-export const setArmorProficiency = clas => {
-  return async(dispatch, getState) => {
-    clas = clas || getState().generator.classObj;
-
-    try {
-      const list = await Promise.all(clas.armor.map(async v => 
-        await armorByCategoryQuery(v.name)));
-      dispatch({ type: SET_ARMOR_PROFICIENCY, payload: [].concat(...list) });
-    } catch (err) {
-      console.log('setClass armorByCategoryQuery failed', err)
     }
   };
 };

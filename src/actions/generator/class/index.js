@@ -1,4 +1,3 @@
-import { setArmorProficiency } from '../../index';
 import { 
   SET_CLASS, 
   SET_CLASS_OBJ, 
@@ -22,8 +21,6 @@ export const setClass = char_class => {
       const clas = await classNameQuery(char_class);
       dispatch({ type: SET_CLASS_OBJ, payload: clas });
       dispatch({ type: SET_HP, payload: clas.hit_die });
-
-      setArmorProficiency(clas);
 
       try {
         const list = await spellByClassQuery(char_class);
