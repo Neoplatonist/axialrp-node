@@ -12,10 +12,7 @@ import {
   setArmorActive
 } from '../../../../actions';
 
-import { 
-  armorDB
-} from '../../../db.js';
-
+// graphQL Queries
 import { armorNameQuery, armorQuery } from '../../../../db';
 
 class Armor extends Component {

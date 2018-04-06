@@ -128,30 +128,6 @@ class MyDB{
     }, 200));
   }
   /* ---------------------------------------- */
-  async getTools() {
-    return new Promise(res => setTimeout(() => {
-      res(db.Tool)
-    }, 200));
-  }
-
-  async getToolName(name) {
-    return new Promise(res => setTimeout(() => {
-      res(db.Tool.find(v => v.name === name))
-    }, 200));
-  }
-  /* ---------------------------------------- */
-  async getStartEquips() {
-    return new Promise(res => setTimeout(() => {
-      res(db.StartingEquipment)
-    }, 200));
-  }
-
-  async getStartEquipName(name) {
-    return new Promise(res => setTimeout(() => {
-      res(db.StartingEquipment.find(v => v.class === name))
-    }, 200));
-  }
-  /* ---------------------------------------- */
   async getMounts() {
     return new Promise(res => setTimeout(() => {
       res(db.Mount)
@@ -187,8 +163,39 @@ class MyDB{
       res(db.Spell.find(v => v.name === name))
     }, 200));
   }
+
+  async getSpellByClass(clas) {
+    return new Promise(res => setTimeout(() => {
+      res([].concat(...db.Spell.map(v => 
+        v.classes.some(f => f.name === clas) ? v : [])))
+    }, 200));
+  }
+  /* ---------------------------------------- */
+  async getStartEquips() {
+    return new Promise(res => setTimeout(() => {
+      res(db.StartingEquipment)
+    }, 200));
+  }
+
+  async getStartEquipName(name) {
+    return new Promise(res => setTimeout(() => {
+      res(db.StartingEquipment.find(v => v.class === name))
+    }, 200));
+  }
+  /* ---------------------------------------- */
+  async getTools() {
+    return new Promise(res => setTimeout(() => {
+      res(db.Tool)
+    }, 200));
+  }
+
+  async getToolName(name) {
+    return new Promise(res => setTimeout(() => {
+      res(db.Tool.find(v => v.name === name))
+    }, 200));
+  }
 }
-  
+
 module.exports = {
   MyDB
 };

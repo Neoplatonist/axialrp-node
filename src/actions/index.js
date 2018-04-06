@@ -30,6 +30,7 @@ export * from './generator/desc';
 export * from './generator/race';
 export * from './generator/savingThrows';
 export * from './generator/skills';
+export * from './generator/spells';
 export * from './generator/stats';
 export * from './generator/weapons';
 export * from './generator/main';

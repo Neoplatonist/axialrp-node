@@ -9,4 +9,5 @@ export * from './alignment';
 export * from './armor';
 export * from './class';
 export * from './race';
+export * from './spell';
 export * from './subrace';

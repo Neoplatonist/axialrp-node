@@ -1,6 +1,6 @@
 import { client } from './index';
 
-export const raceType = `
+const raceType = `
   name
   description
   ability_bonus

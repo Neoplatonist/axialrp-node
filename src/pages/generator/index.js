@@ -27,6 +27,7 @@ import { connect } from 'react-redux';
 import {
   selectAlignment,
   setAlignment,
+  selectClass,
   setHP,
   setLanguage,
   selectLanguage,
@@ -40,16 +41,15 @@ import {
   selectSavingThrows,
   selectSkills,
   selectSkillsFilter,
-  selectSpellsFilter
 } from '../../actions';
 
 class Generator extends Component {
   state = {
-    alignment: []
+    alignment: [],
   }
 
   componentDidMount() {
-    this.getAlignment()
+    this.getAlignment();
   }
 
   getAlignment = async () => {
@@ -115,7 +115,7 @@ class Generator extends Component {
   }
 
   renderSpells = () => {
-    return this.props.spellsFilter.length > 0 ? <Spells /> : null;
+    return this.props.spellsList.length > 0 ? <Spells /> : null;
   }
 
   savingThrows = () => {
@@ -220,6 +220,7 @@ class Generator extends Component {
 
 const mapStateToProps = state => ({
   alignment: selectAlignment(state),
+  class: selectClass(state),
   language: selectLanguage(state),
   languageList: selectLanguageList(state),
   level: selectLevel(state),
@@ -228,7 +229,7 @@ const mapStateToProps = state => ({
   skills: selectSkills(state),
   skillsFilter: selectSkillsFilter(state),
   savingThrows: selectSavingThrows(state),
-  spellsFilter: selectSpellsFilter(state),
+  spellsList: state.generator.spellsList,
   subrace: selectSubRace(state)
 });
 

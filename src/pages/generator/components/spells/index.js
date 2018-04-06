@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
 
 import { connect } from 'react-redux';
-import {
-  selectSpellsFilter
-} from '../../../../actions';
 
 class Spells extends Component {
   render() {
+    console.log(this.props.spellsList)
     return (
       <div>
         <h3>Spells List</h3>
@@ -18,7 +16,7 @@ class Spells extends Component {
 }
 
 const mapStateToProps = state => ({
-  spellsList: selectSpellsFilter(state)
+  spellsList: state.generator.spellsList
 });
 
 const boundActions = {

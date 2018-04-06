@@ -26,6 +26,7 @@ export const SET_RACE_OBJ = 'SET_RACE_OBJ';
 export const SET_SAVING_THROWS = 'SET_SAVING_THROWS';
 export const SET_SPEED = 'SET_SPEED';
 export const SET_SKILLS = 'SET_SKILLS'; 
+export const SET_SPELLS_LIST = 'SET_SPELLS_LIST';
 export const SET_SUBRACE = 'SET_SUBRACE';
 export const SET_SUBRACE_OBJ = 'SET_SUBRACE_OBJ';
 export const SET_WEAPON = 'SET_WEAPON';

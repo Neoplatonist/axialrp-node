@@ -17,6 +17,18 @@ const getSpells = {
   }
 };
 
+const getSpellByClass = {
+  type: new GraphQLList(SpellType),
+  args: { name: { type: GraphQLString } },
+  description: 'GETS all Skills by Class',
+
+  resolve(val, args) {
+    return new Promise(res => setTimeout(() => {
+      res(db.getSpellByClass(args.name));
+    }, 200))
+  }
+};
+
 const getSpellName = {
   type: SpellType,
   args: { name: { type: GraphQLString } },
@@ -31,5 +43,6 @@ const getSpellName = {
 
 module.exports = {
   getSpells,
+  getSpellByClass,
   getSpellName
 };

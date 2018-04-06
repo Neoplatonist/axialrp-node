@@ -22,6 +22,7 @@ import {
   SET_RACE_OBJ,
   SET_SKILLS,
   SET_SPEED,
+  SET_SPELLS_LIST,
   SET_SUBRACE,
   SET_SUBRACE_OBJ,
   SET_WEAPON,
@@ -51,6 +52,7 @@ export {
   SET_RACE_OBJ,
   SET_SKILLS,
   SET_SPEED,
+  SET_SPELLS_LIST,
   SET_SUBRACE,
   SET_SUBRACE_OBJ,
   SET_WEAPON,
@@ -209,6 +211,7 @@ export const generatorState = {
   },
 
   speed: 25,
+  spellsList: [],
   subrace: 'Hill Dwarf',
   subraceObj: {
     name: 'Hill Dwarf',
@@ -382,6 +385,12 @@ const generator = (state = generatorState, action) => {
       return { 
         ...state,
         speed: action.payload
+      };
+
+    case SET_SPELLS_LIST:
+      return {
+        ...state,
+        spellsList: action.payload
       };
 
     case SET_SUBRACE: 
