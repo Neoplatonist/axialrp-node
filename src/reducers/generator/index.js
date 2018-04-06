@@ -7,6 +7,7 @@ import {
   SET_ALIGNMENT,
   SET_ARMOR,
   SET_ARMOR_ACTIVE,
+  SET_ARMOR_ALL,
   SET_CHARACTER,
   SET_CLASS,
   SET_CLASS_OBJ,
@@ -37,6 +38,7 @@ export {
   SET_ALIGNMENT,
   SET_ARMOR,
   SET_ARMOR_ACTIVE,
+  SET_ARMOR_ALL,
   SET_CHARACTER,
   SET_CLASS,
   SET_CLASS_OBJ,
@@ -70,6 +72,7 @@ export const generatorState = {
 
   armor: [],
   armorActive: 'proficiency',
+  armorAll: [],
 
   character: {
     name: '',
@@ -292,6 +295,12 @@ const generator = (state = generatorState, action) => {
       return {
         ...state,
         armorActive: action.payload
+      };
+
+    case SET_ARMOR_ALL:
+      return {
+        ...state,
+        armorAll: action.payload
       };
 
     case SET_CHARACTER: 

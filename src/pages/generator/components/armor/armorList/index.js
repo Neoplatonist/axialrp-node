@@ -4,8 +4,8 @@ import '../../../styles.css';
 
 import { connect } from 'react-redux';
 import {
-  selectArmor,
-  setArmor
+  removeArmor,
+  selectArmor
 } from '../../../../../actions';
 
 class ArmorList extends Component {
@@ -14,7 +14,7 @@ class ArmorList extends Component {
   }
 
   deleteItem = (name, e) => {
-    this.props.setArmor(this.props.armor.filter(v => v !== name));
+    this.props.removeArmor(name);
   }
 
   showDesc = e => {
@@ -49,7 +49,7 @@ const mapStateToProps = state => ({
 });
 
 const boundActions = {
-  setArmor
+  removeArmor
 };
 
 export default connect(mapStateToProps, boundActions)(ArmorList);

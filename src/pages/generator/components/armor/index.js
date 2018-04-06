@@ -5,84 +5,32 @@ import ArmorList from './armorList';
 
 import { connect } from 'react-redux';
 import {
+  addArmor,
   selectArmor,
-  setArmor,
-  selectArmorProficiency,
   selectArmorActive,
-  setArmorActive
+  setArmorActive,
+  setArmorAll,
+  selectArmorProficiency
 } from '../../../../actions';
 
-// graphQL Queries
-import { armorNameQuery, armorQuery } from '../../../../db';
-
 class Armor extends Component {
-  state = {
-    lock: false,
-    armor: [],
-    armorAll: [],
-    armorListName: [],
-    armorProficiency: []
+  componentWillMount() {
+    this.props.setArmorAll();
   }
 
   componentDidMount() {
     ReactDOM.findDOMNode(this.armorProf).className = 'tab-item tab-active';
-    this.getArmor();
-    this.getArmorAll();
-    this.getArmorProf();
-  }
-
-  async shouldComponentUpdate(props, state) {
-    const al = await props.armor;
-    const ap = await props.armorProficiency;
-    let bool = false;
-
-    if (al !== state.armorListName) {
-      this.getArmor();
-      bool = true;
-    }
-
-    if (ap !== state.armorProficiency) {
-      this.getArmorProf();
-      bool = true;
-    }
-
-    return bool;
-  }
-
-  getArmor = async () => {
-    const armor = await Promise.all(this.props.armor.map(async v => {
-      const test = await armorNameQuery(v);
-      return test;
-    }));
-
-    this.setState({ armorListName: this.props.armor });
-    this.setState({ armor: armor });
-  }
-
-  getArmorAll = async () => {
-    const armor = await armorQuery();
-    this.setState({ armorAll: armor });
-  }
-
-  getArmorProf = async () => {
-    this.setState({ armorProficiency: await this.props.armorProficiency });
-  }
-
-  addArmor = e => {
-    const list = [...this.props.armor].filter(v => v !== e.target.value);
-    this.props.setArmor([...list, e.target.value]);
-    this.getArmor()
   }
 
   armorList = () => {
-    return this.state.armor.map((v, k) => {
+    return this.props.armor.map((v, k) => {
       return <ArmorList key={k} desc={v} />;
     });
   }
 
   handleArmor = () => {
     if (this.props.armorActive === 'proficiency') {
-      const armorProficiency = [{name: '---'}, ...this.state.armorProficiency];
+      const armorProficiency = [{name: '---'}, ...this.props.armorProficiency];
       return armorProficiency.map((v, k) => {
         return <Option key={k} {...v} />;
       });
@@ -129,7 +77,7 @@ class Armor extends Component {
         <select 
           name="armor"
           className="input"
-          onChange={this.addArmor}
+          onChange={this.props.addArmor}
           value=""
         >
           { this.handleArmor() }
@@ -146,12 +94,14 @@ class Armor extends Component {
 const mapStateToProps = state => ({
   armor: selectArmor(state),
   armorActive: selectArmorActive(state),
+  armorAll: state.generator.armorAll,
   armorProficiency: selectArmorProficiency(state)
 });
 
 const boundActions = {
-  setArmor,
-  setArmorActive
+  addArmor,
+  setArmorActive,
+  setArmorAll
 };
 
 export default connect(mapStateToProps, boundActions)(Armor);

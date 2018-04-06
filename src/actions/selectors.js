@@ -10,11 +10,6 @@ import {
   weaponDB
 } from '../pages/db.js';
 
-import { 
-  armorByCategoryQuery, 
-  armorNameQuery, 
-} from '../db';
-
 /**
  * selectors
 **/
@@ -75,40 +70,12 @@ export const selectAC = createSelector(
   state => state.generator.ac,
   state => state.generator.armor,
   state => state.generator.abilityMod,
-  async(ac, list, abilityMod) => {
+  async(ac, armor, abilityMod) => {
     if (isNaN(ac)) ac = 0;
-    let result = 0;
-
-    try {
-      const a = await Promise.all(list.map(async v => await armorNameQuery(v)));
-      result = a.reduce((v, k) =>
-        v + k.armor_class.base + 
-        (k.armor_class.max_bonus || 0) + 
-        (k.armor_class.max_bonus ? abilityMod[1] : 0), ac);
-    } catch (err) {
-      console.log(err)
-      result = await new Promise(resolve =>  resolve(0));
-    }
-
-    return result;
-  }
-);
-
-export const selectArmorProficiency = createSelector(
-  selectClassObj,
-  async(classObj) => {
-    let result;
-
-    try {
-      const list = await Promise.all(classObj.armor.map(async v => 
-        await armorByCategoryQuery(v.name)));
-      result = [].concat(...list);
-    } catch (err) {
-      console.log(err)
-      result = await new Promise(resolve =>  resolve([]));
-    }
-
-    return result;
+    return armor.reduce((v, k) =>
+      v + k.armor_class.base +  
+      (k.armor_class.max_bonus || 0) + 
+      (k.armor_class.max_bonus ? abilityMod[1] : 0), ac);
   }
 );
 
@@ -157,6 +124,16 @@ export const selectSavingThrows = createSelector(
         classObj.saving_throws.some(s => s.name === k) ? 
           abilityMod[i] : 0
       ], []);
+  }
+);
+
+export const selectArmorProficiency = createSelector(
+  state => state.generator.armorAll,
+  state => state.generator.classObj,
+  (armor, classObj) => {
+    const list = classObj.armor.map(v => 
+      armor.filter(j => j.category === v.name));
+    return [].concat(...list);
   }
 );
 
