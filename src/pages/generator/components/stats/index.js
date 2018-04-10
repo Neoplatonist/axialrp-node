@@ -38,7 +38,6 @@ class Stats extends Component {
   render() {
     return (
       <div>
-        <button onClick={this.getAc}>test</button>
         <div className="statsContainer">
           <label htmlFor="hp">Hit Points (+CON): </label>
           <input

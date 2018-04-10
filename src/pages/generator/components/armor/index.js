@@ -30,12 +30,12 @@ class Armor extends Component {
 
   handleArmor = () => {
     if (this.props.armorActive === 'proficiency') {
-      const armorProficiency = [{name: '---'}, ...this.props.armorProficiency];
+      const armorProficiency = [{}, ...this.props.armorProficiency];
       return armorProficiency.map((v, k) => {
         return <Option key={k} {...v} />;
       });
     } else {
-      const armorProficiency = [{name: '---'}, ...this.state.armorAll];
+      const armorProficiency = [{}, ...this.state.armorAll];
       return armorProficiency.map((v, k) => {
         return <Option key={k} {...v} />;
       });

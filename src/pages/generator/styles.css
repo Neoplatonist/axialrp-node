@@ -1,9 +1,7 @@
-/* .abilityScores {
-  width: 5rem;
-} */
+
 
 /* Portrait and Landscape */
-@media only screen and (max-device-width: 425px)  {
+/* @media only screen and (max-device-width: 425px)  { */
   #modal {
     display: none;
     position: fixed;
@@ -81,14 +79,8 @@
     text-align: center;
   }
 
-  /* .ability-text::-webkit-inner-spin-button {
-    opacity: 1;
-  } */
-
   .ability, .stats {
-    /* width: 5rem; */
     flex: 1 1 auto;
-    /* justify-self: left; */
   }
 
 
@@ -106,9 +98,7 @@
 
   .skill-prepend, .skill-append, .armor-append {
     display: flex;
-    /* background-color: lightgray; */
     padding: 2% 0;
-    /* border: 1px solid grey; */
     width: 3rem;
     justify-content: center;
     align-items: center;
@@ -123,9 +113,7 @@
   }
 
   .skill {
-    /* width: 5rem; */
     flex: 1 1 auto;
-    /* justify-self: left; */
   }
 
   .skillDesc, .armorDesc {
@@ -166,4 +154,4 @@
   .ageDesc, .heightDesc {
     display: none;
   }
-}
+/* } */

@@ -38,7 +38,8 @@ export const AbilityPointMap = {
   16: 0
 }
 
-export const Option = ({ name }) => <option value={name}>{name}</option>;
+export const Option = ({ name = '' } = {}) => 
+  <option value={name}>{name || '---'}</option>;
 
 export const ProficiencyBonus = level => Math.ceil(level / 4) + 1;
 
