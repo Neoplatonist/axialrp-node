@@ -35,7 +35,7 @@ class Armor extends Component {
         return <Option key={k} {...v} />;
       });
     } else {
-      const armorProficiency = [{}, ...this.state.armorAll];
+      const armorProficiency = [{}, ...this.props.armorAll];
       return armorProficiency.map((v, k) => {
         return <Option key={k} {...v} />;
       });

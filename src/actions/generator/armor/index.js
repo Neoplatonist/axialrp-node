@@ -32,8 +32,18 @@ export const setArmorActive = active => {
 
 export const setArmorAll = () => {
   return async dispatch => {
+    // let load = {
+    //   loading: true,
+    //   expire: 12,
+    //   data: []
+    // };
+
+    // dispatch({ type: SET_ARMOR_ALL_LOADING, payload: load })
+
     try {
       const armor = await armorQuery();
+      // load = {...load, loading: false, data: armor}
+      // console.log(load)
       dispatch({ type: SET_ARMOR_ALL, payload: armor });
     } catch (err) {
       console.log('setArmorAll armorQuery', err)
