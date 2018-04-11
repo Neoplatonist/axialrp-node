@@ -17,6 +17,18 @@ const getWeapons = {
   }
 };
 
+const getWeaponByCategory = {
+  type: new GraphQLList(WeaponType),
+  args: { category: { type: GraphQLString } },
+  description: 'GETS all Weapons by Category',
+
+  resolve(val, args) {
+    return new Promise(res => setTimeout(() => {
+      res(db.getWeaponByCategory(args.category));
+    }, 200))
+  }
+};
+
 const getWeaponName = {
   type: WeaponType,
   args: { name: { type: GraphQLString } },
@@ -31,5 +43,6 @@ const getWeaponName = {
 
 module.exports = {
   getWeapons,
+  getWeaponByCategory,
   getWeaponName
 };

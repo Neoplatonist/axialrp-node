@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 
 class Spells extends Component {
   render() {
-    console.log(this.props.spellsList)
     return (
       <div>
         <h3>Spells List</h3>

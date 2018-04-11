@@ -5,11 +5,6 @@ import {
   ProficiencyBonus 
 } from '../pages/generator/utils';
 
-// Mock Database
-import { 
-  weaponDB
-} from '../pages/db.js';
-
 /**
  * selectors
 **/
@@ -147,13 +142,14 @@ export const selectSkillsFilter = createSelector(
 export const selectWeaponProficiency = createSelector(
   selectClassObj,
   selectRaceObj,
-  (classObj, raceObj) => {
+  state => state.generator.weaponAll,
+  (classObj, raceObj, weaponAll) => {
     const raceList = [].concat(
-        ...raceObj.weapons.map(v => weaponDB.filter(j => j.name === v)));
+        ...raceObj.weapons.map(v => weaponAll.filter(j => j.name === v)));
 
     const classCat = [].concat(
       ...classObj.weapons.map(v => 
-        weaponDB.filter(j => j.category === v.name)), 
+        weaponAll.filter(j => j.category === v.name)), 
       ...raceList
     );
 
@@ -161,7 +157,7 @@ export const selectWeaponProficiency = createSelector(
       [ ...v, classObj.weapons.filter(j => j.name === k.name) ], []);
 
     const className = [].concat(
-      ...filtered.map(v => weaponDB.filter(j => j.name === v.name)));
+      ...filtered.map(v => weaponAll.filter(j => j.name === v.name)));
     return [].concat(classCat, className);
   }
 );

@@ -84,6 +84,12 @@ class MyDB{
       res(db.Weapon.find(v => v.name === name))
     }, 200));
   }
+
+  async getWeaponByCategory(category) {
+    return new Promise(res => setTimeout(() => {
+      res(db.Weapon.filter(v => v.category === category))
+    }, 200));
+  }
   /* ---------------------------------------- */
   async getArmors() {
     return new Promise(res => setTimeout(() => {
@@ -98,7 +104,6 @@ class MyDB{
   }
 
   async getArmorByCategory(category) {
-    console.log('line 101', category)
     return new Promise(res => setTimeout(() => {
       res(db.Armor.filter(v => v.category === category))
     }, 200));

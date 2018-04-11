@@ -4,8 +4,8 @@ import '../../../styles.css';
 
 import { connect } from 'react-redux';
 import {
-  selectWeapon,
-  setWeapon
+  removeWeapon,
+  selectWeapon
 } from '../../../../../actions';
 
 class WeaponList extends Component {
@@ -14,7 +14,7 @@ class WeaponList extends Component {
   }
 
   deleteItem = (name, e) => {
-    this.props.setWeapon(this.props.weapon.filter(v => v !== name));
+    this.props.removeWeapon(name);
   }
 
   showDesc = e => {
@@ -49,7 +49,7 @@ const mapStateToProps = state => ({
 });
 
 const boundActions = {
-  setWeapon
+  removeWeapon
 };
 
 export default connect(mapStateToProps, boundActions)(WeaponList);

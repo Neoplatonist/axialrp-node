@@ -5,6 +5,7 @@ import {
   SET_ABILITY_TYPE,
   SET_AC,
   SET_ALIGNMENT,
+  SET_ALIGNMENT_ALL,
   SET_ARMOR,
   SET_ARMOR_ACTIVE,
   SET_ARMOR_ALL,
@@ -22,12 +23,14 @@ import {
   SET_RACE,
   SET_RACE_OBJ,
   SET_SKILLS,
+  SET_SKILLS_ALL,
   SET_SPEED,
   SET_SPELLS_LIST,
   SET_SUBRACE,
   SET_SUBRACE_OBJ,
   SET_WEAPON,
-  SET_WEAPON_ACTIVE
+  SET_WEAPON_ACTIVE,
+  SET_WEAPON_ALL
 } from '../../actions';
 export { 
   SET_ABILITY,
@@ -36,6 +39,7 @@ export {
   SET_ABILITY_TYPE,
   SET_AC,
   SET_ALIGNMENT,
+  SET_ALIGNMENT_ALL,
   SET_ARMOR,
   SET_ARMOR_ACTIVE,
   SET_ARMOR_ALL,
@@ -53,12 +57,14 @@ export {
   SET_RACE,
   SET_RACE_OBJ,
   SET_SKILLS,
+  SET_SKILLS_ALL,
   SET_SPEED,
   SET_SPELLS_LIST,
   SET_SUBRACE,
   SET_SUBRACE_OBJ,
   SET_WEAPON,
-  SET_WEAPON_ACTIVE
+  SET_WEAPON_ACTIVE,
+  SET_WEAPON_ALL
 } from '../../actions';
 // import {...} from './actions';
 
@@ -69,6 +75,7 @@ export const generatorState = {
   abilityType: 'Dice',
   ac: 0,
   alignment: 'Lawful Good',
+  alignmentAll: [],
 
   armor: [],
   armorActive: 'proficiency',
@@ -191,6 +198,7 @@ export const generatorState = {
   savingThrows: [0, 0, 0, 0, 0, 0],
 
   skills: [],
+  skillsAll: [],
 
   allSkills: {
     acrobats: 0,
@@ -243,7 +251,8 @@ export const generatorState = {
   },
 
   weapon: [],
-  weaponActive: 'proficiency'
+  weaponActive: 'proficiency',
+  weaponAll: [],
 };
 
 const generator = (state = generatorState, action) => {
@@ -283,6 +292,12 @@ const generator = (state = generatorState, action) => {
       return {
         ...state,
         alignment: action.payload
+      };
+
+    case SET_ALIGNMENT_ALL:
+      return {
+        ...state,
+        alignmentAll: action.payload
       };
 
     case SET_ARMOR: 
@@ -390,6 +405,12 @@ const generator = (state = generatorState, action) => {
         skills: action.payload
       };
 
+    case SET_SKILLS_ALL:
+      return {
+        ...state,
+        skillsAll: action.payload
+      };
+
     case SET_SPEED: 
       return { 
         ...state,
@@ -415,15 +436,21 @@ const generator = (state = generatorState, action) => {
       };
 
     case SET_WEAPON: 
-      return { 
+      return {
         ...state,
         weapon: action.payload
       };
 
-      case SET_WEAPON_ACTIVE: 
-      return { 
+    case SET_WEAPON_ACTIVE: 
+      return {
         ...state,
         weaponActive: action.payload
+      };
+
+    case SET_WEAPON_ALL:
+      return {
+        ...state,
+        weaponAll: action.payload
       };
   
     default:

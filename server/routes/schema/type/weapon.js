@@ -2,7 +2,8 @@ const {
   GraphQLObjectType,
   GraphQLString,
   GraphQLInt,
-  GraphQLList
+  GraphQLList,
+  GraphQLFloat
 } = require('graphql');
 const { 
   CostType,
@@ -40,7 +41,7 @@ const WeaponType = new GraphQLObjectType({
       })
     })},
 
-    weight: { type: GraphQLInt },
+    weight: { type: GraphQLFloat },
     properties: { type: new GraphQLList(NameListType) },
     throw_atk_range: { type: new GraphQLObjectType({
       name: 'WeaponThrowATKrange',

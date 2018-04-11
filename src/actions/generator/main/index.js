@@ -1,17 +1,31 @@
 import { 
   SET_ABILITY,
   SET_ALIGNMENT, 
+  SET_ALIGNMENT_ALL,
   SET_DICE,
   SET_LANGUAGE, 
   SET_LANGUAGE_LIST, 
   SET_LEVEL
 } from '../../types';
 
+import { alignmentQuery } from '../../../db';
+
 /*
  *  Actions
  */
 export const setAlignment = alignment => {
   return { type: SET_ALIGNMENT, payload: alignment };
+};
+
+export const setAlignmentAll = () => {
+  return async dispatch => {
+    try {
+      const alignments = await alignmentQuery();
+      dispatch({ type: SET_ALIGNMENT_ALL, payload: alignments });
+    } catch (err) {
+      console.log('setAlignmentAll alignmentQuery', err)
+    }
+  };
 };
 
 export const setDice = dice => {

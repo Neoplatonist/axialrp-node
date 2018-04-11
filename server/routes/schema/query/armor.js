@@ -23,7 +23,6 @@ const getArmorByCategory = {
   description: 'GETS all Armor by Category',
 
   resolve(val, args) {
-    console.log(args.category)
     return new Promise(res => setTimeout(() => {
       res(db.getArmorByCategory(args.category));
     }, 200))
