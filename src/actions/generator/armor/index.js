@@ -33,8 +33,7 @@ export const setArmorActive = active => {
 export const setArmorAll = () => {
   return async dispatch => {
     // let load = {
-    //   loading: true,
-    //   expire: 12,
+    //   status: 'failed'
     //   data: []
     // };
 

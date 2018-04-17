@@ -91,7 +91,7 @@ class Generator extends Component {
       const skill = this.props.skillsAll.find(j => j.name === v.name);
       return <Skills 
         key={k} 
-        desc={skill.desc}
+        desc={skill.description}
         name={v.name} 
         mod={skill.ability_score.name} 
         checked={''}/>;
@@ -156,8 +156,8 @@ class Generator extends Component {
             value={this.props.alignment}
           >
             { this.props.alignmentAll.length 
-              ? this.handleAlignment() 
-              : <option value="">...Loading</option> }
+                ? this.handleAlignment() 
+                : <option value="">...Loading</option> }
           </select>
 
           <AbilityList />
