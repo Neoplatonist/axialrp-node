@@ -20,8 +20,12 @@ class Class extends Component {
     classes: []
   }
 
+  componentWillMount() {
+    this.props.setClass('Bard');
+  }
+
   componentDidMount() {
-    this.getClasses()
+    this.getClasses();
   }
 
   getClasses = async () => {

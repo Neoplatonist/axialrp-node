@@ -7,6 +7,17 @@ const {
 
 
 
+const ClassLevel = new GraphQLObjectType({
+  name: 'ClassLevel',
+
+  fields: () => ({
+    features: { type: new GraphQLList(GraphQLString) },
+    proficiency_bonus: { type: GraphQLInt },
+    spells_known: { type: GraphQLInt },
+    type: { type: new GraphQLList(GraphQLInt) }
+  })
+});
+
 const CostType = new GraphQLObjectType({
   name: 'Cost',
 
@@ -83,6 +94,7 @@ const OptionsStringType = new GraphQLObjectType({
 
 
 module.exports = {
+  ClassLevel,
   CostType,
   EquipChoicesType,
   NameDescType,

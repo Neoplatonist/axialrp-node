@@ -5,6 +5,7 @@ const {
   GraphQLList
 } = require('graphql');
 const { 
+  ClassLevel,
   NameDescType,
   NameListType, 
   OptionsStringType 
@@ -23,6 +24,17 @@ const ClassType = new GraphQLObjectType({
     proficiency_choices: { type: new GraphQLList(OptionsStringType) },
     saving_throws: { type: new GraphQLList(NameListType) },
     sub_classes: { type: new GraphQLList(NameDescType) },
+    levels: { type: new GraphQLObjectType({
+      name: 'ClassLevels',
+
+      fields: () => ({
+        _1: { type: ClassLevel, resolve: parent => parent[1] },
+        _2: { type: ClassLevel, resolve: parent => parent[2] },
+        _3: { type: ClassLevel, resolve: parent => parent[3] },
+        _4: { type: ClassLevel, resolve: parent => parent[4] },
+        _5: { type: ClassLevel, resolve: parent => parent[5] },
+      })
+    })},
     spellcasting: { type: new GraphQLObjectType({
       name: 'SpellCasting',
 

@@ -2,12 +2,12 @@ import {
   SET_CLASS, 
   SET_CLASS_OBJ, 
   SET_HP, 
-  SET_SPELLS_LIST 
+  // SET_SPELLS_LIST 
 } from '../../types';
 
 import { 
   classNameQuery, 
-  spellByClassQuery 
+  // spellByClassQuery 
 } from '../../../db';
 
 /*
@@ -22,12 +22,12 @@ export const setClass = char_class => {
       dispatch({ type: SET_CLASS_OBJ, payload: clas });
       dispatch({ type: SET_HP, payload: clas.hit_die });
 
-      try {
-        const list = await spellByClassQuery(char_class);
-        dispatch({ type: SET_SPELLS_LIST, payload: list });
-      } catch (err) {
-        console.log('setClass spellByClassQuery failed', err)
-      }
+      // try {
+      //   const list = await spellByClassQuery(char_class);
+      //   dispatch({ type: SET_SPELLS_LIST, payload: list });
+      // } catch (err) {
+      //   console.log('setClass spellByClassQuery failed', err)
+      // }
     } catch (err) {
       console.log('setClass failed', err)
     }

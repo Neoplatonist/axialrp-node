@@ -2,6 +2,7 @@ import { createSelector } from 'reselect';
 import { 
   AbilityMap, 
   AbilityModifier, 
+  isEmpty,
   ProficiencyBonus 
 } from '../pages/generator/utils';
 
@@ -74,6 +75,16 @@ export const selectAC = createSelector(
   }
 );
 
+export const selectArmorProficiency = createSelector(
+  state => state.generator.armorAll,
+  state => state.generator.classObj,
+  (armor, classObj) => {
+    const list = classObj.armor.map(v => 
+      armor.filter(j => j.category === v.name));
+    return [].concat(...list);
+  }
+);
+
 export const selectHPTotal = createSelector(
   selectAbilityMod,
   state => state.generator.hp,
@@ -122,16 +133,6 @@ export const selectSavingThrows = createSelector(
   }
 );
 
-export const selectArmorProficiency = createSelector(
-  state => state.generator.armorAll,
-  state => state.generator.classObj,
-  (armor, classObj) => {
-    const list = classObj.armor.map(v => 
-      armor.filter(j => j.category === v.name));
-    return [].concat(...list);
-  }
-);
-
 export const selectSkillsFilter = createSelector(
   selectClassObj,
   classObj => {
@@ -139,13 +140,65 @@ export const selectSkillsFilter = createSelector(
   }
 );
 
+  // getAvailableSpells = (playerLevel, character) => Object.keys(character.spells)
+  // .filter(spellLevel => playerLevel >= spellLevel)
+  // .reduce((availableSpells, spellLevel) => {
+  //   return availableSpells.concat(character.spells[spellLevel])
+  // }, [])
+
+export const selectSpellsFilter = createSelector(
+  selectClassObj,
+  selectLevel,
+  state => state.generator.spellsAll,
+  (classObj, level, spellsAll) => {
+    console.log('selectSpellsFilter start')
+    let result = [];
+    if (!isEmpty(classObj.spellcasting)) {
+      // const available = Object.keys(classObj.spellcasting)
+      //   .filter(spellLevel => level >= spellLevel)
+      //   .reduce((avail, spellLevel) => {
+      //     avail[spellLevel] = classObj.spellcasting[spellLevel]
+      //       .map(spell => spellsAll.find(v => v.name === spell));
+      //     return avail;
+      //   }, {});
+
+      const available = Object.keys(classObj.spellcasting)
+        .filter(spellLevel => level >= spellLevel)
+        .reduce((avail, spellLevel) => [
+          ...avail,
+          classObj.spellcasting[spellLevel]
+            .map(spell => spellsAll.find(v => v.name === spell))
+        ], []);
+
+      result = available;
+    }
+
+    console.log('selectSpellsFilter finish')
+    return result;
+  }
+);
+
+// export const selectSpellLevel = createSelector(
+//   selectClassObj,
+//   selectLevel,
+//   (classObj, level) => {
+//     let cl = null;
+//     if (classObj.levels) {
+//       cl = classObj.levels['_'+level];
+//       console.log(cl)
+//     }
+
+//     return cl;
+//   }
+// );
+
 export const selectWeaponProficiency = createSelector(
   selectClassObj,
   selectRaceObj,
   state => state.generator.weaponAll,
   (classObj, raceObj, weaponAll) => {
     const raceList = [].concat(
-        ...raceObj.weapons.map(v => weaponAll.filter(j => j.name === v)));
+      ...raceObj.weapons.map(v => weaponAll.filter(j => j.name === v)));
 
     const classCat = [].concat(
       ...classObj.weapons.map(v => 

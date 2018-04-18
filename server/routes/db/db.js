@@ -745,8 +745,112 @@ const classDB = [
         proficiencies: 'tba'
       }
     ],
+    levels: {
+      1: {
+        features: ['Spellcasting', 'Bardic Inspiration(d6)'],
+        proficiency_bonus: 2,
+        spells_known: 4,
+        type: [2, 2]
+      },
+      2: {
+        features: ['Jack of All Trades', 'Song of Rest(d6)'],
+        proficiency_bonus: 2,
+        spells_known: 5,
+        type: [2, 3]
+      },
+      3: {
+        features: ['Bard College', 'Expertise'],
+        proficiency_bonus: 2,
+        spells_known: 6,
+        type: [2, 4, 2]
+      },
+      4: {
+        features: ['Ability Score Improvement'],
+        proficiency_bonus: 2,
+        spells_known: 7,
+        type: [3, 4, 3]
+      },
+      5: {
+        features: ['Bardic Inspiration(d8)', 'Font of Inspiration'],
+        proficiency_bonus: 3,
+        spells_known: 8,
+        type: [2, 4, 3, 2]
+      },
+      6: {
+        features: ['Countercharm', 'Bard College feature'],
+        proficiency_bonus: 3,
+        spells_known: 9,
+        type: [3, 4, 3, 3]
+      },
+      7: {
+        features: [],
+        proficiency_bonus: 3,
+        spells_known: 10,
+        type: [3, 4, 3, 3, 1]
+      },
+      8: {
+        features: ['Ability Score Improvement'],
+        proficiency_bonus: 3,
+        spells_known: 11,
+        type: [3, 4, 3, 3, 2]
+      },
+      9: {
+        features: ['Song of Rest(d8)'],
+        proficiency_bonus: 4,
+        spells_known: 12,
+        type: [3, 4, 3, 3, 3, 1]
+      },
+      10: {
+        features: ['Bardic Inspiration(d10)', 'Expertise', 'Magical Secrets'],
+        proficiency_bonus: 4,
+        spells_known: 14,
+        type: [4, 4, 3, 3, 3, 2]
+      },
+      11: {
+        features: [],
+        proficiency_bonus: 4,
+        spells_known: 15,
+        type: [4, 4, 3, 3, 3, 2, 1]
+      },
+      12: {
+        features: ['Ability Score Improvement'],
+        proficiency_bonus: 4,
+        spells_known: 15,
+        type: [4, 4, 3, 3, 3, 2, 1]
+      },
+      13: {
+        features: ['Song of Rest(d10)'],
+        proficiency_bonus: 5,
+        spells_known: 16,
+        type: [4, 4, 3, 3, 3, 2, 1, 1]
+      },
+      14: {
+        features: ['Magical Secrets', 'Bard College feature'],
+        proficiency_bonus: 5,
+        spells_known: 18,
+        type: [4, 4, 3, 3, 3, 2, 1, 1]
+      },
+      15: {
+        features: ['Bardic Inspiration(d12)'],
+        proficiency_bonus: 5,
+        spells_known: 19,
+        type: [4, 4, 3, 3, 3, 2, 1, 1, 1]
+      },
+      16: {
+        features: ['Ability Score Improvement'],
+        proficiency_bonus: 5,
+        spells_known: 19,
+        type: [4, 4, 3, 3, 3, 2, 1, 1, 1]
+      },
+      16: {
+        features: ['Ability Score Improvement'],
+        proficiency_bonus: 5,
+        spells_known: 19,
+        type: [4, 4, 3, 3, 3, 2, 1, 1, 1]
+      }
+    },
     spellcasting: {
-      0: ['Dancing Lights', 'Light', 'Mage Hand', 'Mending', 'Message', 'Minor Illusion', 'Prestidigitation', 'True Strike', 'Vicious Mockery'],
+      0:  ['Dancing Lights', 'Light', 'Mage Hand', 'Mending', 'Message', 'Minor Illusion', 'Prestidigitation', 'True Strike', 'Vicious Mockery'],
       1: ['Animal Friendship', 'Bane', 'Charm Person', 'Comprehend Languages', 'Cure Wounds', 'Detect Magic', 'Disguise Self', 'Faerie Fire', 'Feather Fall', 'Healing Word', 'Heroism', 'Hideous Laughter', 'Identify', 'Illusory Script', 'Longstrider', 'Silent Image', 'Sleep', 'Speak with Animals', 'Thunderwave', 'Unseen Servant'],
       2: ['Animal Messenger', 'Blindness/Deafness', 'Calm Emotions', 'Detect Thoughts', 'Enhance Ability', 'Enthrall', 'Heat Metal', 'Hold Person', 'Invisibility', 'Knock', 'Lesser Restoration', 'Locate Animals or Plants', 'Locate Object', 'Magic Mouth', 'See Invisbility', 'Shatter', 'Silence', 'Suggestion', 'Zone of Truth'],
       3: ['Bestow Curse', 'Clairvoyance', 'Dispel Magic', 'Fear', 'Glyph of Warding', 'Hypnotic Pattern', 'Major Image', 'Nondetection', 'Plant Growth', 'Sending', 'Speak with Dead', 'Speak with Plants', 'Stinking Cloud', 'Tiny Hut', 'Tongues'],
@@ -17089,6 +17193,38 @@ const spellsDB = [
         name: 'Lore',
       }
     ],
+  },
+  {
+    name: 'Vicious Mockery',
+    description: [
+      'You unleash a string of insults laced with subtle enchantments at a creature you can see within range. If the target can hear you (though it need not understand you), it must succeed on a Wisdom saving throw or take 1d4 psychic damage and have disadvantage on the next attack roll it makes before the end of its next turn.'
+    ],
+    higher_level: [
+      'This spell\'s damage increases by 1d4 when you reach 5th level (2d4), 11th level (3d4), and 17th level (4d4).'
+    ],
+    range: '60 feet',
+    components: [
+      'V'
+    ],
+    ritual: 'no',
+    duration: 'Instantaneous',
+    concentration: 'no',
+    casting_time: '1 action',
+    level: 3,
+    school: 'Bard',
+    // classes: [
+    //   {
+    //     name: 'Warlock'
+    //   },
+    //   {
+    //     name: 'Wizard'
+    //   }
+    // ],
+    // subclasses: [
+    //   {
+    //     name: 'Lore',
+    //   }
+    // ],
   },
   {
     name: 'Wall of Fire',

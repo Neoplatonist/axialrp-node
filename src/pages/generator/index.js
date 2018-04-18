@@ -33,12 +33,14 @@ import {
   selectSavingThrows,
   selectSkills,
   selectSkillsFilter,
+  setSpellsAll
 } from '../../actions';
 
 class Generator extends Component {
   componentWillMount() {
     this.props.setAlignmentAll();
     this.props.setSkillsAll();
+    this.props.setSpellsAll();
   }
 
   handleAlignment = () => {
@@ -93,13 +95,8 @@ class Generator extends Component {
         key={k} 
         desc={skill.description}
         name={v.name} 
-        mod={skill.ability_score.name} 
-        checked={''}/>;
+        mod={skill.ability_score.name}/>;
     });
-  }
-
-  renderSpells = () => {
-    return this.props.spellsList.length > 0 ? <Spells /> : null;
   }
 
   savingThrows = () => {
@@ -178,6 +175,10 @@ class Generator extends Component {
 
           <br/><br/>
 
+          <Spells />
+
+          <br/>
+
           <h3>Skills</h3>
           <h5>Choose {this.props.skillsFilter.choose}</h5>
           <button onClick={this.handleSkillReset} >Reset</button>
@@ -188,10 +189,6 @@ class Generator extends Component {
             : `...Loading` }
 
           <br />
-
-          { this.renderSpells() }
-
-          <br/>
 
           <Armor />
 
@@ -228,7 +225,8 @@ const boundActions = {
   setLanguage,
   setLevel,
   setSkills,
-  setSkillsAll
+  setSkillsAll,
+  setSpellsAll
 };
 
 export default connect(mapStateToProps, boundActions)(Generator);
@@ -240,6 +238,8 @@ export default connect(mapStateToProps, boundActions)(Generator);
  * - GearDB Normalization
  * - KitsDB Normalization
  * - ClassDB Normalization
+ * - Vicious Mockery - spellsDB
+ * - Skill Select by Number to Choose does not work
  */
 
 /*

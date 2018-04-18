@@ -44,5 +44,5 @@ export const setLanguageList = lang => {
 };
 
 export const setLevel = level => {
-  return { type: SET_LEVEL, payload: level || 1 }
+  return { type: SET_LEVEL, payload: level || 1 };
 };

@@ -20,6 +20,38 @@ const classType = `
     name
     description
   }
+  levels {
+    _1 {
+      features
+      proficiency_bonus
+      spells_known
+      type
+    }
+    _2 {
+      features
+      proficiency_bonus
+      spells_known
+      type
+    }
+    _3 {
+      features
+      proficiency_bonus
+      spells_known
+      type
+    }
+    _4 {
+      features
+      proficiency_bonus
+      spells_known
+      type
+    }
+    _5 {
+      features
+      proficiency_bonus
+      spells_known
+      type
+    }
+  }
   spellcasting {
     _0
     _1
@@ -47,7 +79,18 @@ export const classNameQuery = async name => {
           ${classType}
         }
       }
-    `, { className: name }).then(result => result.getClassName);
+    `, { className: name })
+      .then(result => result.getClassName)
+      .then(fix => {
+        const spellcasting = Object.keys(fix.spellcasting)
+          .reduce((a, v) => {
+            a[parseInt(v.substr(1), 10)] = fix.spellcasting[v];
+
+            return a;
+          }, {});
+        
+        return Object.assign(fix, { spellcasting });
+      })
   } catch (err) {
     console.log("failed classNameQuery", err)
   }
@@ -58,6 +101,7 @@ export const classNameQuery = async name => {
 
 export const classQuery = async () => {
   let result;
+  console.log('classquery start')
 
   try {
     result = await client.query(`
@@ -67,6 +111,7 @@ export const classQuery = async () => {
         }
       }
     `).then(result => result.getClasses);
+    console.log('classquery finished')
   } catch (err) {
     console.log("failed classQuery", err)
   }

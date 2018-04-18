@@ -60,6 +60,7 @@ export const spellNameQuery = async name => {
 
 export const spellQuery = async () => {
   let result;
+  console.log('spellquery start')
 
   try {
     result = await client.query(`
@@ -68,7 +69,10 @@ export const spellQuery = async () => {
           ${spellType}
         }
       }
-    `).then(result => result.getSpells);
+    `).then(result => result.getSpells).then(test => {
+      console.log('spellQuery finished')
+      return test;
+    });
   } catch (err) {
     console.log("failed spellQuery", err)
   }
