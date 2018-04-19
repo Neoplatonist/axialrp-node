@@ -40,7 +40,6 @@ import {
 class Generator extends Component {
   componentWillMount() {
     this.props.setAlignmentAll();
-    this.props.setClass('Barbarian');
     this.props.setSkillsAll();
     this.props.setSpellsAll();
   }

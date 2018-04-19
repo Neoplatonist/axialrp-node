@@ -106,7 +106,57 @@ export const generatorState = {
   },
 
   class: 'Barbarian',
-  classObj: { status: 'none', data: {} },
+  classObj: { status: 'success', data: {
+    name: "Barbarian",
+    hit_die: 12,
+    armor: [
+      { name: "Light" },
+      { name: "Medium" },
+      { name: "Shield"}
+    ],
+    proficiency_choices: [
+      {
+        choose: 2,
+        type: "Skill",
+        from: [
+          { name: "Animal Handling" },
+          { name: "Athletics" },
+          { name: "Intimidation" },
+          { name: "Nature" },
+          { name: "Perception" },
+          { name: "Survival" }
+        ]
+      }
+    ],
+    saving_throws: [
+      { name: "Strength" },
+      { name: "Constitution" }
+    ],
+    sub_classes: null,
+    levels: {
+      1: null,
+      2: null,
+      3: null,
+      4: null,
+      5: null
+    },
+    spellcasting: {
+      0: null,
+      1: null,
+      2: null,
+      3: null,
+      4: null,
+      5: null,
+      6: null,
+      7: null,
+      8: null,
+      9: null
+    },
+    weapons: [
+      { name: "Simple" },
+      { name: "Martial" }
+    ]
+  }},
 
   dice: [0, 0, 0, 0, 0, 0],
   hp: { status: 'none', data: 12 },
@@ -239,7 +289,7 @@ export const generatorState = {
 
   weapon: [],
   weaponActive: 'proficiency',
-  weaponAll: [],
+  weaponAll: []
 };
 
 const generator = (state = generatorState, action) => {
