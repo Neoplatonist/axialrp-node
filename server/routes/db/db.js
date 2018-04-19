@@ -680,6 +680,7 @@ const classDB = [
       { name: 'Constitution' }
     ],
     starting_equipment: { class: 'Barbarian' },
+    levels: {},
     spellcasting: {},
     weapons: [
       { name: 'Simple' },
@@ -902,6 +903,7 @@ const classDB = [
         proficiencies: 'tba'
       }
     ],
+    levels: {},
     spellcasting: {
       0: ['Guidance', 'Light', 'Mending', 'Resistance', 'Sacred Flame', 'Spare the Dying', 'Thaumaturgy'],
       1: ['Bane', 'Bless', 'Command', 'Create or Destroy Water', 'Cure Wounds', 'Detect Evil and Good', 'Detect Magic', 'Detect Poison and Disease', 'Guiding Bolt', 'Healing Word', 'Inflict Wounds', 'Protection from Evil and Good', 'Purify Food and Drink', 'Sanctuary', 'Shield of Faith'],
@@ -954,6 +956,7 @@ const classDB = [
         proficiencies: 'tba'
       }
     ],
+    levels: {},
     spellcasting: {
       0: ['Druidcraft', 'Guidance', 'Mending', 'Poison Spray', 'Produce Flame', 'Resistance', 'Shillelagh'],
       1: ['Animal Friendship', 'Charm Person', 'Create or Destroy Water', 'Cure Wounds', 'Detect Magic', 'Detect Poison and Disease', 'Entangle', 'Faerie Fire', 'Fog Cloud', 'Goodberry', 'Healing Word', 'Jump', 'Longstrider', 'Purify Food and Drink', 'Speak with Animals', 'Thunderwave'],
@@ -1017,6 +1020,7 @@ const classDB = [
         proficiencies: 'tba'
       }
     ],
+    levels: {},
     spellcasting: {},
     weapons: [
       { name: 'Simple' },
@@ -1096,6 +1100,7 @@ const classDB = [
         proficiencies: 'tba'
       }
     ],
+    levels: {},
     spellcasting: {},
     weapons: [
       { name: 'Simple' },
@@ -1137,6 +1142,7 @@ const classDB = [
         proficiencies: 'tba'
       }
     ],
+    levels: {},
     spellcasting: {
       0: [],
       1: ['Bless', 'Command', 'Cure Wounds', 'Detect Evil and Good', 'Detect Magic', 'Detect Poison and Disease', 'Divine Favor', 'Heroism', 'Protection from Evil and Good', 'Purify Food and Drink', 'Shield of Faith'],
@@ -1188,6 +1194,7 @@ const classDB = [
         proficiencies: 'tba'
       }
     ],
+    levels: {},
     spellcasting: {
       0: [],
       1: ['Alarm', 'Animal Friendship', 'Cure Wounds', 'Detect Magic', 'Detect Poison and Disease', 'Fog Cloud', 'Goodberry', 'Hunter\'s Mark', 'Jump', 'Longstrider', 'Speak with Animals'],
@@ -1239,6 +1246,7 @@ const classDB = [
         proficiencies: 'tba'
       }
     ],
+    levels: {},
     spellcasting: {},
     weapons: [
       { name: 'Simple' },
@@ -1278,6 +1286,7 @@ const classDB = [
         proficiencies: 'tba'
       }
     ],
+    levels: {},
     spellcasting: {
       0: ['Acid Splash', 'Chill Touch', 'Dancing Lights', 'Fire Bolt', 'Light', 'Mage Hand', 'Mending', 'Message', 'Minor Illusion', 'Poison Spray', 'Prestidigitation', 'Ray of Frost', 'Shocking Grasp', 'True Strike'],
       1: ['Burning Hands', 'Charm Person', 'Color Spray', 'Comprehend Languages', 'Detect Magic', 'Disguise Self', 'Expeditious Retreat', 'False Life', 'Feather Fall', 'Fog Cloud', 'Jump', 'Mage Armor', 'Magic Missile', 'Shield', 'Silent Image', 'Sleep', 'Thunderwave'],
@@ -1327,6 +1336,7 @@ const classDB = [
         proficiencies: 'tba'
       }
     ],
+    levels: {},
     spellcasting: {
       0: ['Chill Touch', 'Eldritch Blast', 'Mage Hand', 'Minor Illusion', 'Poison Spray', 'Prestidigitation', 'True Strike'],
       1: ['Charm Person', 'Comprehend Languages', 'Expeditious Retreat', 'Hellish Rebuke', 'Illusory Script', 'Protection from Evil and Good', 'Unseen Servant'],
@@ -1370,6 +1380,7 @@ const classDB = [
         proficiencies: 'tba'
       }
     ],
+    levels: {},
     spellcasting: {
       0: ['Acid Splash', 'Chill Touch', 'Dancing Lights', 'Fire Bolt', 'Light', 'Mage Hand', 'Mending', 'Message', 'Minor Illusion', 'Poison Spray', 'Prestidigitation', 'Ray of Frost', 'Shocking Grasp', 'True Strike'],
       1: ['Alarm', 'Burning Hands', 'Charm Person', 'Color Spray', 'Comprehend Languages', 'Detect Magic', 'Disguise Self', 'Expeditious Retreat', 'False Life', 'Feather Fall', 'Find Familiar', 'Floating Disk', 'Fog Cloud', 'Grease', 'Hideous Laughter', 'Identify', 'Illusory Script', 'Jump', 'Longstrider', 'Mage Armor', 'Magic Missile', 'Protection from Evil and Good', 'Shield', 'Silent Image', 'Sleep', 'Thunderwave', 'Unseen Servant'],
@@ -16081,6 +16092,30 @@ const spellsDB = [
       {
         name: 'Land',
       }
+    ],
+  },
+  {
+    name: 'Spare the Dying',
+    description: [
+      'You touch a living creature that has 0 hit points. The creature becomes stable. This spell has no effect on undead or constructs.'
+    ],
+    range: 'Touch',
+    components: [
+      'V',
+      'S'
+    ],
+    ritual: 'yes',
+    duration: 'Instantaneous',
+    concentration: 'no',
+    casting_time: '1 action',
+    level: 1,
+    school: 'Divination',
+    classes: [
+      {
+        name: 'Cleric'
+      }
+    ],
+    subclasses: [
     ],
   },
   {

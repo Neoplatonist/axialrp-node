@@ -24,6 +24,7 @@ export default class SpellList extends Component {
   }
 
   render() {
+    // console.log(this.props.list)
     return (
       <div>
         <br />
@@ -32,7 +33,7 @@ export default class SpellList extends Component {
 
         { this.props.list.length 
             ? this.renderList()
-            : `...Loading` }
+            : null }
       </div>
     );
   }

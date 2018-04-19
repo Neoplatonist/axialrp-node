@@ -11,9 +11,13 @@ import {
   SET_ARMOR_ALL,
   SET_CHARACTER,
   SET_CLASS,
-  SET_CLASS_OBJ,
+  SET_CLASS_OBJ_ERROR,
+  SET_CLASS_OBJ_LOADING,
+  SET_CLASS_OBJ_SUCCESS,
   SET_DICE,
-  SET_HP,
+  SET_HP_ERROR,
+  SET_HP_LOADING,
+  SET_HP_SUCCESS,
   SET_INITIATIVE,
   SET_INSPIRATION,
   SET_LANGUAGE,
@@ -25,7 +29,9 @@ import {
   SET_SKILLS,
   SET_SKILLS_ALL,
   SET_SPEED,
-  SET_SPELLS_ALL,
+  SET_SPELLS_ALL_ERROR,
+  SET_SPELLS_ALL_LOADING,
+  SET_SPELLS_ALL_SUCCESS,
   SET_SPELLS_LIST,
   SET_SPELLS_SELECTED,
   SET_SUBRACE,
@@ -47,9 +53,13 @@ export {
   SET_ARMOR_ALL,
   SET_CHARACTER,
   SET_CLASS,
-  SET_CLASS_OBJ,
+  SET_CLASS_OBJ_ERROR,
+  SET_CLASS_OBJ_LOADING,
+  SET_CLASS_OBJ_SUCCESS,
   SET_DICE,
-  SET_HP,
+  SET_HP_ERROR,
+  SET_HP_LOADING,
+  SET_HP_SUCCESS,
   SET_INITIATIVE,
   SET_INSPIRATION,
   SET_LANGUAGE,
@@ -61,7 +71,9 @@ export {
   SET_SKILLS,
   SET_SKILLS_ALL,
   SET_SPEED,
-  SET_SPELLS_ALL,
+  SET_SPELLS_ALL_ERROR,
+  SET_SPELLS_ALL_LOADING,
+  SET_SPELLS_ALL_SUCCESS,
   SET_SPELLS_LIST,
   SET_SPELLS_SELECTED,
   SET_SUBRACE,
@@ -94,42 +106,10 @@ export const generatorState = {
   },
 
   class: 'Barbarian',
-  classObj: {
-    name: 'Barbarian',
-    hit_die: 12,
-    armor: [
-      { name: 'Light' },
-      { name: 'Medium' },
-      { name: 'Shield' }
-    ],
-    proficiency_choices: [
-      {
-        choose: 2,
-        type: 'Skill',
-        from: [
-          { name: 'Animal Handling' },
-          { name: 'Athletics' },
-          { name: 'Intimidation' },
-          { name: 'Nature' },
-          { name: 'Perception' },
-          { name: 'Survival' }
-        ]
-      }
-    ],
-    saving_throws: [
-      { name: 'Strength' },
-      { name: 'Constitution' }
-    ],
-    starting_equipment: { class: 'Barbarian' },
-    spellcasting: false,
-    weapons: [
-      { name: 'Simple' },
-      { name: 'Martial' }
-    ]
-  },
+  classObj: { status: 'none', data: {} },
 
   dice: [0, 0, 0, 0, 0, 0],
-  hp: 12,
+  hp: { status: 'none', data: 12 },
   initiative: 0,
   inspiration: 0,
   language: '',
@@ -226,7 +206,7 @@ export const generatorState = {
   },
 
   speed: 25,
-  spellsAll: [],
+  spellsAll: { status: 'none', data: [] },
   spellsList: [],
   spellsSelected: {},
 
@@ -340,10 +320,28 @@ const generator = (state = generatorState, action) => {
         class: action.payload
       };
     
-    case SET_CLASS_OBJ:
+    case SET_CLASS_OBJ_ERROR:
       return {
         ...state,
-        classObj: action.payload
+        classObj: { 
+          ...action.payload 
+        }
+      };
+
+    case SET_CLASS_OBJ_LOADING:
+      return {
+        ...state,
+        classObj: { 
+          ...action.payload
+        }
+      };
+
+    case SET_CLASS_OBJ_SUCCESS:
+      return {
+        ...state,
+        classObj: { 
+          ...action.payload 
+        }
       };
 
     case SET_DICE: 
@@ -352,10 +350,28 @@ const generator = (state = generatorState, action) => {
         dice: action.payload
       };
 
-    case SET_HP: 
+    case SET_HP_ERROR: 
       return {
         ...state,
-        hp: action.payload
+        hp: {
+          ...action.payload
+        }
+      };
+
+    case SET_HP_LOADING: 
+      return {
+        ...state,
+        hp: {
+          ...action.payload
+        }
+      };
+
+    case SET_HP_SUCCESS: 
+      return {
+        ...state,
+        hp: {
+          ...action.payload
+        }
       };
 
     case SET_INITIATIVE: 
@@ -424,10 +440,28 @@ const generator = (state = generatorState, action) => {
         speed: action.payload
       };
 
-    case SET_SPELLS_ALL:
+    case SET_SPELLS_ALL_ERROR:
       return {
         ...state,
-        spellsAll: action.payload
+        spellsAll: {
+          ...action.payload
+        }
+      };
+
+    case SET_SPELLS_ALL_LOADING:
+      return {
+        ...state,
+        spellsAll: {
+          ...action.payload
+        }
+      };
+
+    case SET_SPELLS_ALL_SUCCESS:
+      return {
+        ...state,
+        spellsAll: {
+          ...action.payload
+        }
       };
 
     case SET_SPELLS_LIST:

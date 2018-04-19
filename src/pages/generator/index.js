@@ -19,7 +19,8 @@ import {
   setAlignment,
   setAlignmentAll,
   selectClass,
-  setHP,
+  setClass,
+  selectClassObj,
   setLanguage,
   selectLanguage,
   selectLanguageList,
@@ -39,6 +40,7 @@ import {
 class Generator extends Component {
   componentWillMount() {
     this.props.setAlignmentAll();
+    this.props.setClass('Barbarian');
     this.props.setSkillsAll();
     this.props.setSpellsAll();
   }
@@ -89,14 +91,22 @@ class Generator extends Component {
   }
 
   renderSkills = e => {
-    return this.props.skillsFilter.from.map((v, k) => {
-      const skill = this.props.skillsAll.find(j => j.name === v.name);
-      return <Skills 
-        key={k} 
-        desc={skill.description}
-        name={v.name} 
-        mod={skill.ability_score.name}/>;
-    });
+    let render;
+
+    try {
+      render = this.props.skillsFilter.data.from.map((v, k) => {
+        const skill = this.props.skillsAll.find(j => j.name === v.name);
+        return <Skills 
+          key={k} 
+          desc={skill.description}
+          name={v.name} 
+          mod={skill.ability_score.name}/>;
+      });
+    } catch (err) {
+      render = `...Loading`;
+    }
+
+    return render;
   }
 
   savingThrows = () => {
@@ -180,13 +190,11 @@ class Generator extends Component {
           <br/>
 
           <h3>Skills</h3>
-          <h5>Choose {this.props.skillsFilter.choose}</h5>
+          <h5>Choose { this.props.skillsFilter.data.choose }</h5>
           <button onClick={this.handleSkillReset} >Reset</button>
           <br/>
 
-          { this.props.skillsAll.length 
-            ? this.renderSkills() 
-            : `...Loading` }
+          { this.renderSkills() }
 
           <br />
 
@@ -205,6 +213,7 @@ const mapStateToProps = state => ({
   alignment: selectAlignment(state),
   alignmentAll: state.generator.alignmentAll,
   class: selectClass(state),
+  classObj: selectClassObj(state),
   language: selectLanguage(state),
   languageList: selectLanguageList(state),
   level: selectLevel(state),
@@ -221,7 +230,7 @@ const mapStateToProps = state => ({
 const boundActions = {
   setAlignment,
   setAlignmentAll,
-  setHP,
+  setClass,
   setLanguage,
   setLevel,
   setSkills,
@@ -239,7 +248,8 @@ export default connect(mapStateToProps, boundActions)(Generator);
  * - KitsDB Normalization
  * - ClassDB Normalization
  * - Vicious Mockery - spellsDB
- * - Skill Select by Number to Choose does not work
+ * - Spare the Dying - spellsDB
+ * - AC in component state needs to be moved elsewhere
  */
 
 /*

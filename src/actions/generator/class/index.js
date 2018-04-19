@@ -1,7 +1,11 @@
 import { 
   SET_CLASS, 
-  SET_CLASS_OBJ, 
-  SET_HP, 
+  SET_CLASS_OBJ_ERROR,
+  SET_CLASS_OBJ_LOADING,
+  SET_CLASS_OBJ_SUCCESS, 
+  SET_HP_ERROR,
+  SET_HP_LOADING,
+  SET_HP_SUCCESS 
   // SET_SPELLS_LIST 
 } from '../../types';
 
@@ -15,25 +19,41 @@ import {
  */
 export const setClass = char_class => {
   return async(dispatch, getState) => {
+    let load = {
+      status: 'none',
+      data: {}
+    };
+
     dispatch({ type: SET_CLASS, payload: char_class });
 
-    try {
-      const clas = await classNameQuery(char_class);
-      dispatch({ type: SET_CLASS_OBJ, payload: clas });
-      dispatch({ type: SET_HP, payload: clas.hit_die });
+    load.status = 'loading';
+    load.data = {};
+    dispatch({ type: SET_CLASS_OBJ_LOADING, payload: load });
 
-      // try {
-      //   const list = await spellByClassQuery(char_class);
-      //   dispatch({ type: SET_SPELLS_LIST, payload: list });
-      // } catch (err) {
-      //   console.log('setClass spellByClassQuery failed', err)
-      // }
+    load.data = 0;
+    dispatch({ type: SET_HP_LOADING, payload: load });
+
+    try {
+      load.data = await classNameQuery(char_class);
+      load.status = 'success';
+      dispatch({ type: SET_CLASS_OBJ_SUCCESS, payload: load });
+
+      try {
+        load.data = load.data.hit_die;
+        load.status = 'success';
+        dispatch({ type: SET_HP_SUCCESS, payload: load });
+      } catch (err) {
+        load.status = 'error';
+        load.data = 0;
+        dispatch({ type: SET_HP_ERROR, payload: load });
+      }
     } catch (err) {
-      console.log('setClass failed', err)
+      load.status = 'error';
+      load.data = {};
+      dispatch({ type: SET_CLASS_OBJ_ERROR, payload: load });
+
+      load.data = 0;
+      dispatch({ type: SET_HP_ERROR, payload: load });
     }
   };
-};
-
-export const setClassObj = clas => {
-  return { type: SET_CLASS_OBJ, payload: clas };
 };

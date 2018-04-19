@@ -5,7 +5,8 @@ import '../../styles.css';
 import { connect } from 'react-redux';
 import {
   selectSkills,
-  setSkills
+  setSkills,
+  selectSkillsFilter
 } from '../../../../actions';
 
 class Skills extends Component {
@@ -47,7 +48,7 @@ class Skills extends Component {
         <input 
           type="checkbox"
           onClick={this.handleInput.bind(this, this.props.name)}
-          disabled={this.props.skills.length > 1}
+          disabled={this.props.skills.length === this.props.skillsFilter.data.choose}
           ref={el => this.checkbox = el}
         />
         <div className="skill-text"> { this.props.name }</div>
@@ -66,7 +67,8 @@ class Skills extends Component {
 }
 
 const mapStateToProps = state => ({
-  skills: selectSkills(state)
+  skills: selectSkills(state),
+  skillsFilter: selectSkillsFilter(state)
 });
 
 const boundActions = {

@@ -80,6 +80,7 @@ export const raceNameQuery = async name => {
     `, { race: name }).then(result => result.getRaceName);
   } catch (err) {
     console.log("failed raceNameQuery", err)
+    result = Promise.reject(err);
   }
 
   return result;
@@ -108,6 +109,7 @@ export const raceQuery = async () => {
     `).then(result => result.getRaces);
   } catch (err) {
     console.log("failed raceQuery", err)
+    result = Promise.reject(err);
   }
 
   return result;

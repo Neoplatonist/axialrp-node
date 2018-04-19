@@ -20,9 +20,9 @@ class Class extends Component {
     classes: []
   }
 
-  componentWillMount() {
-    this.props.setClass('Bard');
-  }
+  // componentWillMount() {
+  //   this.props.setClass('Bard');
+  // }
 
   componentDidMount() {
     this.getClasses();

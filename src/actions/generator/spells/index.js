@@ -1,5 +1,8 @@
 import {
-  SET_SPELLS_ALL,
+  // SET_SPELLS_ALL,
+  SET_SPELLS_ALL_ERROR,
+  SET_SPELLS_ALL_LOADING,
+  SET_SPELLS_ALL_SUCCESS,
   SET_SPELLS_LIST,
   SET_SPELLS_SELECTED
 } from '../../types';
@@ -15,11 +18,22 @@ export const setSpellsList = list => {
 
 export const setSpellsAll = () => {
   return async dispatch => {
+    let load = {
+      status: '',
+      data: []
+    };
+
+    load.status = 'loading';
+    dispatch({ type: SET_SPELLS_ALL_LOADING, payload: load });
+
     try {
-      const spells = await spellQuery();
-      dispatch({ type: SET_SPELLS_ALL, payload: spells });
+      load.data = await spellQuery();
+      load.status = 'success';
+      dispatch({ type: SET_SPELLS_ALL_SUCCESS, payload: load });
     } catch (err) {
-      console.log('setSpellsAll spellQuery', err)
+      load.data = [];
+      load.status = 'Could not load';
+      dispatch({ type: SET_SPELLS_ALL_ERROR, payload: load });
     }
   }
 };

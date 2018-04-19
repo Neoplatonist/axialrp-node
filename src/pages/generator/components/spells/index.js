@@ -11,7 +11,7 @@ import SpellList from './components/spellList';
 
 class Spells extends Component {
   renderSpellLists = () => {
-    return this.props.spellsFilter.map((v, k) => {
+    return this.props.spellsFilter.data.map((v, k) => {
       return <SpellList 
         key={k}
         list={v}
@@ -26,9 +26,9 @@ class Spells extends Component {
         {/* <h5>Choose {this.props.skillsFilter.choose}</h5> */}
         {/* <button onClick={this.handleSkillReset} >Reset</button> */}
 
-        { this.props.spellsFilter.length 
+        { this.props.spellsFilter.status === 'success' 
             ? this.renderSpellLists()
-            : null }
+            : this.props.spellsFilter.status }
 
         {/* { this.props.spellList.length 
             ? this.renderSpells

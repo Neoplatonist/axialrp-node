@@ -91,8 +91,19 @@ export const classNameQuery = async name => {
         
         return Object.assign(fix, { spellcasting });
       })
+      .then(fixed => {
+        const levels = Object.keys(fixed.levels)
+          .reduce((a, v) => {
+            a[parseInt(v.substr(1), 10)] = fixed.levels[v];
+
+            return a;
+          }, {});
+        
+        return Object.assign(fixed, { levels });
+      });
   } catch (err) {
     console.log("failed classNameQuery", err)
+    result = Promise.reject(err);
   }
 
   return result;
@@ -101,7 +112,6 @@ export const classNameQuery = async name => {
 
 export const classQuery = async () => {
   let result;
-  console.log('classquery start')
 
   try {
     result = await client.query(`
@@ -111,9 +121,9 @@ export const classQuery = async () => {
         }
       }
     `).then(result => result.getClasses);
-    console.log('classquery finished')
   } catch (err) {
     console.log("failed classQuery", err)
+    result = Promise.reject(err);
   }
 
   return result;

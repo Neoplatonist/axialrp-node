@@ -24,6 +24,7 @@ export const sub_raceNameQuery = async name => {
     `, { subrace: name }).then(result => result.getSubRaceName);
   } catch (err) {
     console.log("failed sub_raceNameQuery", err)
+    result = Promise.reject(err);
   }
 
   return result;
@@ -43,6 +44,7 @@ export const sub_raceQuery = async () => {
     `).then(result => result.getSubRaces);
   } catch (err) {
     console.log("failed sub_raceQuery", err)
+    result = Promise.reject(err);
   }
 
   return result;

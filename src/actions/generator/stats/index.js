@@ -1,6 +1,6 @@
 import {
   SET_AC,
-  SET_HP,
+  SET_HP_SUCCESS,
   SET_INITIATIVE,
   SET_INSPIRATION,
   SET_PROFICIENCY_BONUS,
@@ -11,7 +11,13 @@ import {
  *  Actions
  */
 export const setHP = hp => {
-  return { type: SET_HP, payload: hp || 0 };
+  let load = {
+    status: 'success',
+    data: 0
+  };
+
+  load.data = hp || 0;
+  return { type: SET_HP_SUCCESS, payload: load };
 };
 
 export const setAC = ac => {

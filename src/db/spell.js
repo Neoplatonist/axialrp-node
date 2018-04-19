@@ -33,7 +33,8 @@ export const spellByClassQuery = async name => {
       }
     `, { name: name }).then(result => result.getSpellByClass);
   } catch (err) {
-    console.log("failed getSpellByClass", err)
+    console.log("failed getSpellByClass", err);
+    result = Promise.reject(err);
   }
 
   return result;
@@ -51,7 +52,8 @@ export const spellNameQuery = async name => {
       }
     `, { spell: name }).then(result => result.getSpellName);
   } catch (err) {
-    console.log("failed spellNameQuery", err)
+    console.log("failed spellNameQuery", err);
+    result = Promise.reject(err);
   }
 
   return result;
@@ -60,7 +62,6 @@ export const spellNameQuery = async name => {
 
 export const spellQuery = async () => {
   let result;
-  console.log('spellquery start')
 
   try {
     result = await client.query(`
@@ -69,12 +70,10 @@ export const spellQuery = async () => {
           ${spellType}
         }
       }
-    `).then(result => result.getSpells).then(test => {
-      console.log('spellQuery finished')
-      return test;
-    });
-  } catch (err) {
-    console.log("failed spellQuery", err)
+    `).then(result => result.getSpells);
+  } catch(err) {
+    console.log('spellQuery error')
+    result = Promise.reject(err);
   }
 
   return result;

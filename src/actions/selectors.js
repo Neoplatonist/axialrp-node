@@ -2,7 +2,6 @@ import { createSelector } from 'reselect';
 import { 
   AbilityMap, 
   AbilityModifier, 
-  isEmpty,
   ProficiencyBonus 
 } from '../pages/generator/utils';
 
@@ -25,6 +24,7 @@ export const selectRace = state => state.generator.race;
 export const selectRaceObj = state => state.generator.raceObj;
 export const selectSkills = state => state.generator.skills;
 export const selectSpeed = state => state.generator.speed;
+export const selectSpellsAll = state => state.generator.spellsAll;
 export const selectSubRace = state => state.generator.subrace;
 export const selectSubRaceObj = state => state.generator.subraceObj;
 export const selectWeapon = state => state.generator.weapon;
@@ -77,20 +77,28 @@ export const selectAC = createSelector(
 
 export const selectArmorProficiency = createSelector(
   state => state.generator.armorAll,
-  state => state.generator.classObj,
+  selectClassObj,
   (armor, classObj) => {
-    const list = classObj.armor.map(v => 
-      armor.filter(j => j.category === v.name));
-    return [].concat(...list);
+    let result;
+
+    try {
+      const list = classObj.armor.map(v => 
+        armor.filter(j => j.category === v.name));
+      result = [].concat(...list);
+    } catch (err) {
+      result = [];
+    }
+
+    return result;
   }
 );
 
 export const selectHPTotal = createSelector(
   selectAbilityMod,
-  state => state.generator.hp,
+  selectHP,
   (abilityMod, hp) => {
-    if (isNaN(hp)) hp = 0;
-    return abilityMod[2] + parseInt(hp, 10);
+    if (isNaN(hp.data)) hp.data = 0;
+    return abilityMod[2] + parseInt(hp.data, 10);
   }
 );
 
@@ -124,93 +132,108 @@ export const selectSavingThrows = createSelector(
   selectAbilityMod,
   selectClassObj,
   (abilityMod, classObj) => {
-    return AbilityMap.reduce((v, k, i) => 
-      [
-        ...v,
-        classObj.saving_throws.some(s => s.name === k) ? 
-          abilityMod[i] : 0
-      ], []);
+    let result;
+
+    try {
+      result = AbilityMap.reduce((v, k, i) => 
+        [
+          ...v,
+          classObj.data.saving_throws.some(s => s.name === k) ? 
+            abilityMod[i] : 0
+        ], []);
+    } catch (err) {
+      result = [];
+    }
+
+    return result;
   }
 );
 
 export const selectSkillsFilter = createSelector(
   selectClassObj,
   classObj => {
-    return classObj.proficiency_choices.find(v => v.type === 'Skill');
-  }
-);
+    let result = {
+      status: 'loading',
+      data: []
+    };
 
-  // getAvailableSpells = (playerLevel, character) => Object.keys(character.spells)
-  // .filter(spellLevel => playerLevel >= spellLevel)
-  // .reduce((availableSpells, spellLevel) => {
-  //   return availableSpells.concat(character.spells[spellLevel])
-  // }, [])
-
-export const selectSpellsFilter = createSelector(
-  selectClassObj,
-  selectLevel,
-  state => state.generator.spellsAll,
-  (classObj, level, spellsAll) => {
-    console.log('selectSpellsFilter start')
-    let result = [];
-    if (!isEmpty(classObj.spellcasting)) {
-      // const available = Object.keys(classObj.spellcasting)
-      //   .filter(spellLevel => level >= spellLevel)
-      //   .reduce((avail, spellLevel) => {
-      //     avail[spellLevel] = classObj.spellcasting[spellLevel]
-      //       .map(spell => spellsAll.find(v => v.name === spell));
-      //     return avail;
-      //   }, {});
-
-      const available = Object.keys(classObj.spellcasting)
-        .filter(spellLevel => level >= spellLevel)
-        .reduce((avail, spellLevel) => [
-          ...avail,
-          classObj.spellcasting[spellLevel]
-            .map(spell => spellsAll.find(v => v.name === spell))
-        ], []);
-
-      result = available;
+    try {
+      result.data = classObj.data.proficiency_choices.find(v => v.type === 'Skill');
+      result.status = 'success';
+    } catch (err) {
+      result.status = 'error';
+      result.data = [];
     }
 
-    console.log('selectSpellsFilter finish')
     return result;
   }
 );
 
-// export const selectSpellLevel = createSelector(
-//   selectClassObj,
-//   selectLevel,
-//   (classObj, level) => {
-//     let cl = null;
-//     if (classObj.levels) {
-//       cl = classObj.levels['_'+level];
-//       console.log(cl)
-//     }
+export const selectSpellsFilter = createSelector(
+  selectClassObj,
+  selectLevel,
+  selectSpellsAll,
+  (classObj, level, spellsAll) => {
+    let result = {
+      status: 'loading',
+      data: []
+    };
 
-//     return cl;
-//   }
-// );
+    if (spellsAll.status === 'success' && classObj.status === 'success') {
+      if (classObj.data.spellcasting[1] !== null) {
+        try {
+          // Code below create new array of objects
+          result.data = Object.keys(classObj.data.spellcasting)
+            .filter(spellLevel => level >= spellLevel)
+            .reduce((avail, spellLevel) => [
+              ...avail,
+              classObj.data.spellcasting[spellLevel]
+                .map(spell => spellsAll.data.find(v => v.name === spell))
+            ], []);
+  
+          result.status = 'success';
+        } catch (err) {
+          // console.log(err)
+          result.status = 'error loading';
+          result.data = [];
+        }
+      } else {
+        result.status = 'none';
+        result.data = [];
+      }
+    }
+
+    return result;
+  }
+);
 
 export const selectWeaponProficiency = createSelector(
   selectClassObj,
   selectRaceObj,
   state => state.generator.weaponAll,
   (classObj, raceObj, weaponAll) => {
-    const raceList = [].concat(
-      ...raceObj.weapons.map(v => weaponAll.filter(j => j.name === v)));
+    let result;
 
-    const classCat = [].concat(
-      ...classObj.weapons.map(v => 
-        weaponAll.filter(j => j.category === v.name)), 
-      ...raceList
-    );
+    try {
+      const raceList = [].concat(
+        ...raceObj.weapons.map(v => weaponAll.filter(j => j.name === v)));
+  
+      const classCat = [].concat(
+        ...classObj.weapons.map(v => 
+          weaponAll.filter(j => j.category === v.name)), 
+        ...raceList
+      );
+  
+      const filtered = classCat.reduce((v, k) =>
+        [ ...v, classObj.weapons.filter(j => j.name === k.name) ], []);
+  
+      const className = [].concat(
+        ...filtered.map(v => weaponAll.filter(j => j.name === v.name)));
+      result = [].concat(classCat, className);
+    } catch (err) {
+      result = [];
+    }
 
-    const filtered = classCat.reduce((v, k) =>
-      [ ...v, classObj.weapons.filter(j => j.name === k.name) ], []);
-
-    const className = [].concat(
-      ...filtered.map(v => weaponAll.filter(j => j.name === v.name)));
-    return [].concat(classCat, className);
+    return result;
   }
 );
