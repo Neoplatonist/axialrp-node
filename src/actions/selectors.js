@@ -79,14 +79,18 @@ export const selectArmorProficiency = createSelector(
   state => state.generator.armorAll,
   selectClassObj,
   (armor, classObj) => {
-    let result;
+    let result = {
+      status: 'loading',
+      data: []
+    };
 
     try {
-      const list = classObj.armor.map(v => 
+      const list = classObj.data.armor.map(v => 
         armor.filter(j => j.category === v.name));
-      result = [].concat(...list);
+      result.data = [].concat(...list);
     } catch (err) {
-      result = [];
+      result.status = 'error';
+      result.data = [];
     }
 
     return result;
