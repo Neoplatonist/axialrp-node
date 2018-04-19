@@ -216,26 +216,31 @@ export const selectWeaponProficiency = createSelector(
   selectRaceObj,
   state => state.generator.weaponAll,
   (classObj, raceObj, weaponAll) => {
-    let result;
+    let result = {
+      status: 'loading',
+      data: []
+    };
 
     try {
       const raceList = [].concat(
         ...raceObj.weapons.map(v => weaponAll.filter(j => j.name === v)));
   
       const classCat = [].concat(
-        ...classObj.weapons.map(v => 
+        ...classObj.data.weapons.map(v => 
           weaponAll.filter(j => j.category === v.name)), 
         ...raceList
       );
   
       const filtered = classCat.reduce((v, k) =>
-        [ ...v, classObj.weapons.filter(j => j.name === k.name) ], []);
+        [ ...v, classObj.data.weapons.filter(j => j.name === k.name) ], []);
   
       const className = [].concat(
         ...filtered.map(v => weaponAll.filter(j => j.name === v.name)));
-      result = [].concat(classCat, className);
+      result.status = 'success';
+      result.data = [].concat(classCat, className);
     } catch (err) {
-      result = [];
+      result.status = 'error';
+      result.data = [];
     }
 
     return result;
