@@ -30,13 +30,11 @@ class Weapon extends Component {
 
   handleWeapon = () => {
     if (this.props.weaponActive === 'proficiency') {
-      const weaponProficiency = [{}, ...this.props.weaponProficiency.data];
-      return weaponProficiency.map((v, k) => {
+      return [{}, ...this.props.weaponProficiency.data].map((v, k) => {
         return <Option key={k} {...v} />;
       });
     } else {
-      const weaponProficiency = [{}, ...this.props.weaponAll];
-      return weaponProficiency.map((v, k) => {
+      return [{}, ...this.props.weaponAll.data].map((v, k) => {
         return <Option key={k} {...v} />;
       });
     }
