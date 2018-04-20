@@ -19,22 +19,6 @@ import {
 } from '../../../../actions';
 
 class Stats extends Component {
-  state = {
-    ac: 0
-  }
-
-  async componentWillUpdate(props, state) {
-    let p = await props.ac;
-    if (p !== state.ac) {
-      this.getAc();
-    }
-  }
-
-  getAc = async () => {
-    let p = await this.props.ac;
-    this.setState({ ac: p });
-  }
-
   render() {
     return (
       <div>
@@ -59,7 +43,7 @@ class Stats extends Component {
           type="number" 
           min="0"
           onChange={e => this.props.setAC(e.target.value)}
-          value={this.state.ac}/>
+          value={this.props.ac.data}/>
 
         <div className="statsContainer">
           <label htmlFor="initiative">Initiative (+DEX): </label>

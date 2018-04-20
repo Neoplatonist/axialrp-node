@@ -105,14 +105,27 @@ export const selectAbilityMod = createSelector(
 
 export const selectAC = createSelector(
   state => state.generator.ac,
-  state => state.generator.armor,
-  state => state.generator.abilityMod,
-  async(ac, armor, abilityMod) => {
-    if (isNaN(ac)) ac = 0;
-    return armor.reduce((v, k) =>
-      v + k.armor_class.base +  
-      (k.armor_class.max_bonus || 0) + 
-      (k.armor_class.max_bonus ? abilityMod[1] : 0), ac);
+  selectArmor,
+  selectAbilityMod,
+  (ac, armor, abilityMod) => {
+    let result = {
+      status: 'loading',
+      data: 0
+    };
+
+    try {
+      if (isNaN(ac)) ac = 0;
+      result.data = armor.reduce((v, k) =>
+        v + k.armor_class.base +  
+        (k.armor_class.max_bonus || 0) + 
+        (k.armor_class.max_bonus ? abilityMod.data[1] : 0), ac);
+      result.status = 'success';
+    } catch (err) {
+      result.data = 0;
+      result.status = 'error';
+    }
+
+    return result;
   }
 );
 
