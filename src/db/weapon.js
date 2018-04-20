@@ -39,7 +39,7 @@ export const weaponByCategoryQuery = async name => {
       }
     `, { weapon: name }).then(result => result.getWeaponByCategory);
   } catch (err) {
-    console.log("failed getWeaponByCategory", err)
+    result = Promise.reject(err);
   }
 
   return result;
@@ -57,7 +57,7 @@ export const weaponNameQuery = async name => {
       }
     `, { weapon: name }).then(result => result.getWeaponName);
   } catch (err) {
-    console.log("failed weaponNameQuery", err)
+    result = Promise.reject(err);
   }
 
   return result;
@@ -76,19 +76,8 @@ export const weaponQuery = async () => {
       }
     `).then(result => result.getWeapons);
   } catch (err) {
-    console.log("failed weaponQuery", err)
+    result = Promise.reject(err);
   }
 
   return result;
 };
-
-// export const weaponQuery = () => 
-//   client.query(`
-//     {
-//       getWeapons {
-//         ${weaponType}
-//       }
-//     }
-//   `)
-//   .then(result => result.getWeapons)
-//   .catch(err => console.log(err));

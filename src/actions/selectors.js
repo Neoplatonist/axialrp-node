@@ -13,6 +13,7 @@ export const selectAbilityPoints = state => state.generator.abilityPoints;
 export const selectAlignment = state => state.generator.alignment;
 export const selectArmor = state => state.generator.armor;
 export const selectArmorActive = state => state.generator.armorActive;
+export const selectArmorAll = state => state.generator.armorAll;
 export const selectClass = state => state.generator.class;
 export const selectClassNameList = state => state.generator.classNameList;
 export const selectClassObj = state => state.generator.classObj;
@@ -131,7 +132,7 @@ export const selectAC = createSelector(
 );
 
 export const selectArmorProficiency = createSelector(
-  state => state.generator.armorAll,
+  selectArmorAll,
   selectClassObj,
   (armor, classObj) => {
     let result = {
@@ -141,8 +142,9 @@ export const selectArmorProficiency = createSelector(
 
     try {
       const list = classObj.data.armor.map(v => 
-        armor.filter(j => j.category === v.name));
+        armor.data.filter(j => j.category === v.name));
       result.data = [].concat(...list);
+      result.status = result.data.length ? 'success' : 'loading';
     } catch (err) {
       result.status = 'error';
       result.data = [];
@@ -328,7 +330,7 @@ export const selectWeaponProficiency = createSelector(
         ...filtered.map(v => weaponAll.data.filter(j => j.name === v.name)));
 
       result.data = [].concat(classCat, className);
-      result.status = 'success';
+      result.status = result.data.length ? 'success' : 'loading';
     } catch (err) {
       result.data = [];
       result.status = 'error';

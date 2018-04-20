@@ -20,7 +20,6 @@ export const skillNameQuery = async name => {
       }
     `, { skill: name }).then(result => result.getSkillName);
   } catch (err) {
-    console.log("failed skillNameQuery", err)
     result = Promise.reject(err);
   }
 
@@ -40,7 +39,6 @@ export const skillQuery = async () => {
       }
     `).then(result => result.getSkills);
   } catch (err) {
-    console.log("failed skillQuery", err)
     result = Promise.reject(err);
   }
 

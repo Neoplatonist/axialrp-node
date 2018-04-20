@@ -102,7 +102,6 @@ export const classNameQuery = async name => {
         return Object.assign(fixed, { levels });
       });
   } catch (err) {
-    console.log("failed classNameQuery", err)
     result = Promise.reject(err);
   }
 
@@ -121,7 +120,6 @@ export const classAllNamesQuery = async () => {
       }
     `).then(result => result.getClasses);
   } catch (err) {
-    console.log("failed classQuery", err)
     result = Promise.reject(err);
   }
 
@@ -141,7 +139,6 @@ export const classQuery = async () => {
       }
     `).then(result => result.getClasses);
   } catch (err) {
-    console.log("failed classQuery", err)
     result = Promise.reject(err);
   }
 

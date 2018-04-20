@@ -16,7 +16,7 @@ import {
 export const addArmor = armor => {
   return (dispatch, getState) => {
     const list = [...getState().generator.armor].filter(v => v.name !== armor.target.value);
-    const item = getState().generator.armorAll.find(v => v.name === armor.target.value);
+    const item = getState().generator.armorAll.data.find(v => v.name === armor.target.value);
     dispatch({ type: SET_ARMOR, payload: [...list, item] });
   };
 };

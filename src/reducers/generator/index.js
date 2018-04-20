@@ -127,7 +127,7 @@ export const generatorState = {
 
   armor: [],
   armorActive: 'proficiency',
-  armorAll: [],
+  armorAll: { status: 'loading', data: [] },
 
   character: {
     name: '',

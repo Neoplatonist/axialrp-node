@@ -79,22 +79,12 @@ export const raceNameQuery = async name => {
       }
     `, { race: name }).then(result => result.getRaceName);
   } catch (err) {
-    console.log("failed raceNameQuery", err)
     result = Promise.reject(err);
   }
 
   return result;
 };
 
-// export const raceNameQuery = name => {
-//     return client.query(`
-//       query getRaceNameNow($race: String) {
-//         getRaceName(name: $race) {
-//           ${raceType}
-//         }
-//       }
-//     `, { race: name }).then(result => result.getRaceName);
-// };
 export const raceNameListQuery = async () => {
   let result;
 
@@ -107,7 +97,6 @@ export const raceNameListQuery = async () => {
       }
     `).then(result => result.getRaces);
   } catch (err) {
-    console.log("failed raceQuery", err)
     result = Promise.reject(err);
   }
 
@@ -126,23 +115,8 @@ export const raceQuery = async () => {
       }
     `).then(result => result.getRaces);
   } catch (err) {
-    console.log("failed raceQuery", err)
     result = Promise.reject(err);
   }
 
   return result;
 };
-
-// export const raceQuery = () => {
-//   return new Promise(async(resolve, reject) => {
-//     const query = await client.query(`
-//       {
-//         getRaces {
-//           ${raceType}
-//         }
-//       }
-//     `).then(result => result.getRaces);
-
-//     resolve(query)
-//   });
-// };

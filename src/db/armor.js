@@ -29,7 +29,6 @@ export const armorByCategoryQuery = async name => {
       }
     `, { armor: name }).then(result => result.getArmorByCategory);
   } catch (err) {
-    console.log("failed getArmorByCategory", err)
     result = Promise.reject(err);
   }
 
@@ -48,7 +47,6 @@ export const armorNameQuery = async name => {
       }
     `, { armor: name }).then(result => result.getArmorName);
   } catch (err) {
-    console.log("failed armorNameQuery", err)
     result = Promise.reject(err);
   }
 
@@ -68,20 +66,8 @@ export const armorQuery = async () => {
       }
     `).then(result => result.getArmors);
   } catch (err) {
-    console.log("failed armorQuery", err)
     result = Promise.reject(err);
   }
 
   return result;
 };
-
-// export const armorQuery = () => 
-//   client.query(`
-//     {
-//       getArmors {
-//         ${armorType}
-//       }
-//     }
-//   `)
-//   .then(result => result.getArmors)
-//   .catch(err => console.log(err));

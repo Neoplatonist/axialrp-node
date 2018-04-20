@@ -17,7 +17,6 @@ export const alignmentNameQuery = async name => {
       }
     `, { alignment: name }).then(result => result.getAlignmentName);
   } catch (err) {
-    console.log("failed alignmentNameQuery", err)
     result = Promise.reject(err);
   }
 
@@ -37,7 +36,6 @@ export const alignmentQuery = async () => {
       }
     `).then(result => result.getAlignments);
   } catch (err) {
-    console.log("failed alignmentQuery", err)
     result = Promise.reject(err);
   }
 
