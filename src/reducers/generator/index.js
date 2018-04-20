@@ -28,7 +28,12 @@ import {
   SET_LEVEL,
   SET_PROFICIENCY_BONUS,
   SET_RACE,
-  SET_RACE_OBJ,
+  SET_RACE_NAME_LIST_ERROR,
+  SET_RACE_NAME_LIST_LOADING,
+  SET_RACE_NAME_LIST_SUCCESS,
+  SET_RACE_OBJ_ERROR,
+  SET_RACE_OBJ_LOADING,
+  SET_RACE_OBJ_SUCCESS,
   SET_SKILLS,
   SET_SKILLS_ALL,
   SET_SPEED,
@@ -38,7 +43,9 @@ import {
   SET_SPELLS_LIST,
   SET_SPELLS_SELECTED,
   SET_SUBRACE,
-  SET_SUBRACE_OBJ,
+  SET_SUBRACE_OBJ_ERROR,
+  SET_SUBRACE_OBJ_LOADING,
+  SET_SUBRACE_OBJ_SUCCESS,
   SET_WEAPON,
   SET_WEAPON_ACTIVE,
   SET_WEAPON_ALL
@@ -73,7 +80,12 @@ export {
   SET_LEVEL,
   SET_PROFICIENCY_BONUS,
   SET_RACE,
-  SET_RACE_OBJ,
+  SET_RACE_NAME_LIST_ERROR,
+  SET_RACE_NAME_LIST_LOADING,
+  SET_RACE_NAME_LIST_SUCCESS,
+  SET_RACE_OBJ_ERROR,
+  SET_RACE_OBJ_LOADING,
+  SET_RACE_OBJ_SUCCESS,
   SET_SKILLS,
   SET_SKILLS_ALL,
   SET_SPEED,
@@ -83,7 +95,9 @@ export {
   SET_SPELLS_LIST,
   SET_SPELLS_SELECTED,
   SET_SUBRACE,
-  SET_SUBRACE_OBJ,
+  SET_SUBRACE_OBJ_ERROR,
+  SET_SUBRACE_OBJ_LOADING,
+  SET_SUBRACE_OBJ_SUCCESS,
   SET_WEAPON,
   SET_WEAPON_ACTIVE,
   SET_WEAPON_ALL
@@ -166,7 +180,7 @@ export const generatorState = {
   }},
 
   dice: [0, 0, 0, 0, 0, 0],
-  hp: { status: 'none', data: 12 },
+  hp: { status: 'success', data: 12 },
   initiative: 0,
   inspiration: 0,
   language: '',
@@ -175,7 +189,8 @@ export const generatorState = {
   proficiencyBonus: 0,
 
   race: 'Dwarf',
-  raceObj: {
+  raceNameList: { status: 'loading', data: [] },
+  raceObj: { status: 'success', data: {
     name: 'Dwarf',
     description: 'Your dwarf character has an assortment of inborn abilities, part and parcel of dwarven nature.',
     ability_bonus: [ 0, 0, 2, 0, 0, 0 ],
@@ -234,7 +249,7 @@ export const generatorState = {
       list: ['Smith Tools', 'Brewer Supplies', 'Mason Tools']
     },
     weapons: ['Battleaxe', 'Handaxe', 'Light Hammer', 'Warhammer'],
-  },
+  }},
 
   savingThrows: [0, 0, 0, 0, 0, 0],
 
@@ -268,7 +283,7 @@ export const generatorState = {
   spellsSelected: {},
 
   subrace: 'Hill Dwarf',
-  subraceObj: {
+  subraceObj: { status: 'success', data: {
     name: 'Hill Dwarf',
     description: 'As a hill dwarf, you have keen senses, deep intuition, and remarkable resilience.',
     ability_bonus: [0, 0, 0, 0, 0, 0],
@@ -292,7 +307,7 @@ export const generatorState = {
     skills: {},
     tools: {},
     weapons: []
-  },
+  }},
 
   weapon: [],
   weaponActive: 'proficiency',
@@ -497,11 +512,53 @@ const generator = (state = generatorState, action) => {
         race: action.payload
       };
 
-    case SET_RACE_OBJ:
+    case SET_RACE_NAME_LIST_ERROR:
       return {
         ...state,
-        raceObj: action.payload
-      }
+        raceNameList: {
+          ...action.payload
+        }
+      };
+
+    case SET_RACE_NAME_LIST_LOADING:
+      return {
+        ...state,
+        raceNameList: {
+          ...action.payload
+        }
+      };
+
+    case SET_RACE_NAME_LIST_SUCCESS:
+      return {
+        ...state,
+        raceNameList: {
+          ...action.payload
+        }
+      };
+
+    case SET_RACE_OBJ_ERROR:
+      return {
+        ...state,
+        raceObj: {
+          ...action.payload
+        }
+      };
+
+    case SET_RACE_OBJ_LOADING:
+      return {
+        ...state,
+        raceObj: {
+          ...action.payload
+        }
+      };
+
+    case SET_RACE_OBJ_SUCCESS:
+      return {
+        ...state,
+        raceObj: {
+          ...action.payload
+        }
+      };
 
     case SET_SKILLS: 
       return {
@@ -563,10 +620,28 @@ const generator = (state = generatorState, action) => {
         subrace: action.payload
       };
 
-    case SET_SUBRACE_OBJ:
+    case SET_SUBRACE_OBJ_ERROR:
       return {
         ...state,
-        subraceObj: action.payload
+        subraceObj: {
+          ...action.payload
+        }
+      };
+
+    case SET_SUBRACE_OBJ_LOADING:
+      return {
+        ...state,
+        subraceObj: {
+          ...action.payload
+        }
+      };
+
+    case SET_SUBRACE_OBJ_SUCCESS:
+      return {
+        ...state,
+        subraceObj: {
+          ...action.payload
+        }
       };
 
     case SET_WEAPON: 

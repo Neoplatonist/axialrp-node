@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { isEmpty, Option } from '../../utils';
+import { Option } from '../../utils';
 import '../../styles.css';
 
 import { connect } from 'react-redux';
@@ -8,88 +8,42 @@ import {
   selectRace,
   setRace,
   setSpeed,
+  selectRaceNameList,
+  setRaceNameList,
   selectRaceObj,
   selectSubRace,
   setSubRace,
-  selectSubRaceObj,
-  setSubRaceObj
+  selectSubRaceObj
 } from '../../../../actions';
 
-// graphQL Queries
-import {
-  raceQuery,
-  raceNameQuery,
-  sub_raceNameQuery
-} from '../../../../db';
-
 class Race extends Component {
-  state = {
-    race: []
-  };
-
-  componentDidMount() {
-    this.getRace()
-  }
-
-  getRace = async () => {
-    const race = await raceQuery();
-    this.setState({ race: race });
+  componentWillMount() {
+    this.props.setRaceNameList();
   }
 
   getSubRace = e => {
-    const subraces = this.props.raceObj.sub_races || [];
+    const subraces = this.props.raceObj.data.sub_races || [{ name: '' }];
     return subraces.map((v, k) => {
-      return <Option key={k} {...v} />;
+      return <Option key={k} {...v || {}} />;
     });
   }
 
-  onRaceChange = async e => {
+  onRaceChange = e => {
     this.props.setRace(e.target.value);
-
-    let r;
-    try {
-      r = await raceNameQuery(e.target.value);
-
-      if (isEmpty(r.sub_races)) {
-        this.props.setSubRace('')
-      } else {
-        this.props.setSubRace(r.sub_races[0].name);
-  
-        let subrace;
-        try {
-          subrace = await sub_raceNameQuery(r.sub_races[0].name);
-          this.props.setSubRaceObj(subrace);
-        } catch (err) {
-          console.warn(err)
-          this.props.setSubRaceObj({});
-        }
-      }
-    } catch (err) {
-      console.warn(err)
-    } 
   }
 
   onSubRaceChange = async e => {
     this.props.setSubRace(e.target.value);
-
-    let subrace;
-    try {
-      subrace = await sub_raceNameQuery(e.target.value);
-      this.props.setSubRaceObj(subrace);
-    } catch (err) {
-      console.warn(err)
-      subrace = [];
-    }
   }
 
   renderRace = () => {
-    return this.state.race.map((v, k) => {
+    return this.props.raceNameList.data.map((v, k) => {
       return <Option key={k} {...v} />;
     });
   }
 
   renderSubRaceSelect = () => {
-    return this.props.subrace ?
+    return this.props.raceObj.data.sub_races ?
       (
         <select
           name="sub-races"
@@ -97,7 +51,7 @@ class Race extends Component {
           onChange={this.onSubRaceChange}
           value={this.props.subrace}
         >
-          { this.state.race.length 
+          { this.props.raceNameList.data.length 
             ? this.getSubRace() 
             : <option value="">...Loading</option> }
         </select>
@@ -115,7 +69,7 @@ class Race extends Component {
           onChange={this.onRaceChange}
           value={this.props.race}
         >
-          { this.state.race.length 
+          { this.props.raceNameList.data.length 
             ? this.renderRace() 
             : <option value="">...Loading</option> }
         </select>
@@ -131,6 +85,7 @@ class Race extends Component {
 
 const mapStateToProps = state => ({
   race: selectRace(state),
+  raceNameList: selectRaceNameList(state),
   raceObj: selectRaceObj(state),
   subrace: selectSubRace(state),
   subraceObj: selectSubRaceObj(state)
@@ -139,9 +94,9 @@ const mapStateToProps = state => ({
 const boundActions = {
   setAlignment,
   setRace,
+  setRaceNameList,
   setSpeed,
-  setSubRace,
-  setSubRaceObj
+  setSubRace
 };
 
 export default connect(mapStateToProps, boundActions)(Race);

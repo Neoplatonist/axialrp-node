@@ -60,7 +60,7 @@ class Generator extends Component {
 
   renderLanguages = () => {
     this.renderLanguageOptions();
-    return this.props.languageList.map((v, k) => {
+    return this.props.languageList.data.map((v, k) => {
       return <li key={k}>{v}</li>;
     });
   }
@@ -71,21 +71,28 @@ class Generator extends Component {
     });
   }
 
+  // FIXME: Needs proper error handling
   renderLanguageOptions = () => {
-    if (this.props.raceObj.languages.options.choose) {
-      return (
-        <div>
-          <select 
-            name="lang" 
-            className="input"
-            onChange={ e => this.props.setLanguage(e.target.value)}
-            value={this.props.language} 
-          >
-            { 'Choose: ' + JSON.stringify(this.props.raceObj.languages.options.choose) }
-            { this.renderLO() }
-          </select>
-        </div>
-      )
+    try {
+      if (this.props.raceObj.data.languages.options.choose) {
+        return (
+          <div>
+            <select 
+              name="lang" 
+              className="input"
+              onChange={ e => this.props.setLanguage(e.target.value)}
+              value={this.props.language} 
+            >
+              { 'Choose: ' + JSON.stringify(this.props.raceObj.data.languages.options.choose) }
+              { this.renderLO() }
+            </select>
+          </div>
+        )
+      } else {
+        return null;
+      }
+    } catch (err) {
+      return null;
     }
   }
 
@@ -110,7 +117,7 @@ class Generator extends Component {
 
   savingThrows = () => {
     return AbilityMap.map((v, k) => {
-      return <SavingThrows key={k} label={v} mod={this.props.savingThrows[k]} />
+      return <SavingThrows key={k} label={v} mod={this.props.savingThrows.data[k]} />
     });
   }
 

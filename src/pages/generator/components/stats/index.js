@@ -48,8 +48,8 @@ class Stats extends Component {
             onChange={e => this.props.setHP(e.target.value)}
             value={this.props.hp.data}/>
 
-          <div className="stats-append">{this.props.abilityMod[2]}</div>
-          <div className="stats-append">{'= ' + this.props.hpTotal}</div>
+          <div className="stats-append">{this.props.abilityMod.data[2]}</div>
+          <div className="stats-append">{'= ' + this.props.hpTotal.data}</div>
         </div>
 
         <label htmlFor="ac">Armor Class: </label>
@@ -71,8 +71,8 @@ class Stats extends Component {
             onChange={e => this.props.setInitiative(e.target.value)}
             value={this.props.initiative}/>
 
-          <div className="stats-append">{this.props.abilityMod[1]}</div>
-          <div className="stats-append">{'= ' + this.props.initiativeTotal}</div>
+          <div className="stats-append">{this.props.abilityMod.data[1]}</div>
+          <div className="stats-append">{'= ' + this.props.initiativeTotal.data}</div>
         </div>
 
         <label htmlFor="speed">Speed: </label>

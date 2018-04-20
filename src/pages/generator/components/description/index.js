@@ -59,7 +59,7 @@ class Description extends Component {
           ref={ el => this.ageDesc = el } 
           className="ageDesc"
         >
-          {raceObj.age.description}
+          { raceObj.data.age ? raceObj.data.age.description : null }
         </div>
 
         <label className="desc" htmlFor="height">Height
@@ -78,7 +78,7 @@ class Description extends Component {
           ref={ el => this.heightDesc = el } 
           className="heightDesc"
         >
-          {raceObj.size.description}
+          { raceObj.data.size ? raceObj.data.size.description : null }
         </div>
 
         <label className="desc" htmlFor="xp">XP: </label>

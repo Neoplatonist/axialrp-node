@@ -22,6 +22,7 @@ export const selectInitiative = state => state.generator.initiative;
 export const selectLanguage = state => state.generator.language;
 export const selectLevel = state => state.generator.level;
 export const selectRace = state => state.generator.race;
+export const selectRaceNameList = state => state.generator.raceNameList;
 export const selectRaceObj = state => state.generator.raceObj;
 export const selectSkills = state => state.generator.skills;
 export const selectSpeed = state => state.generator.speed;
@@ -34,9 +35,22 @@ export const selectWeaponActive = state => state.generator.weaponActive;
 
 
 export const selectAbilityRaceMod = createSelector(
-  selectRaceObj,
+  state => state.generator.raceObj,
   raceObj => {
-    return raceObj.ability_bonus;
+    let result = {
+      status: 'loading',
+      data: [0, 0, 0, 0, 0, 0]
+    };
+
+    try {
+      result.data = raceObj.data.ability_bonus || [0, 0, 0, 0, 0, 0];
+      result.status = 'success';
+    } catch (err) {
+      result.data = [0, 0, 0, 0, 0, 0];
+      result.status = raceObj.status;
+    }
+
+    return result;
   }
 );
 
@@ -52,14 +66,40 @@ export const selectAbilityTotal = createSelector(
   selectAbilityRaceMod,
   selectAbilitySubRaceMod,
   (ability, race, subrace) => {
-    return ability.map((v, k) => v + race[k] + subrace[k]);
+    let result = {
+      status: 'loading',
+      data: [0, 0, 0, 0, 0, 0]
+    };
+
+    try {
+      result.data = ability.map((v, k) => v + race.data[k] + subrace[k]);
+      result.status = 'success';
+    } catch (err) {
+      result = [0, 0, 0, 0, 0, 0];
+      result.status = 'error';
+    }
+
+    return result;
   }
 );
 
 export const selectAbilityMod = createSelector(
   selectAbilityTotal,
   ability => {
-    return ability.map((v, k) => AbilityModifier(v));
+    let result = {
+      status: 'loading',
+      data: [0, 0, 0, 0, 0, 0]
+    };
+
+    try {
+      result.data = ability.data.map(v => AbilityModifier(v));
+      result.status = 'success';
+    } catch (err) {
+      result.data = [0, 0, 0, 0, 0, 0];
+      result.status = ability.status;
+    }
+
+    return result;
   }
 );
 
@@ -102,8 +142,21 @@ export const selectHPTotal = createSelector(
   selectAbilityMod,
   selectHP,
   (abilityMod, hp) => {
-    if (isNaN(hp.data)) hp.data = 0;
-    return abilityMod[2] + parseInt(hp.data, 10);
+    let result = {
+      status: 'loading',
+      data: 0
+    };
+
+    try {
+      if (isNaN(hp.data)) hp.data = 0;
+      result.data = abilityMod.data[2] + parseInt(hp.data, 10);
+      result.status = 'success';
+    } catch (err) {
+      result.data = 0;
+      result.status = 'error';
+    }
+
+    return result;
   }
 );
 
@@ -111,8 +164,21 @@ export const selectInitiativeTotal = createSelector(
   selectAbilityMod,
   state => state.generator.initiative,
   (abilityMod, initiative) => {
-    if (isNaN(initiative)) initiative = 0;
-    return abilityMod[1] + parseInt(initiative, 10);
+    let result = {
+      status: 'loading',
+      data: 0
+    };
+
+    try {
+      if (isNaN(initiative)) initiative = 0;
+      result.data = abilityMod.data[1] + parseInt(initiative, 10);
+      result.status = 'success';
+    } catch (err) {
+      result.data = 0;
+      result.status = 'error';
+    }
+
+    return result;
   }
 );
 
@@ -120,9 +186,22 @@ export const selectLanguageList = createSelector(
   selectRaceObj,
   state => state.generator.language,
   (raceObj, lang) => {
-    const list = raceObj.languages.type.map(v => v.name);
-    const filter = list.filter(v => v !== lang && v !== '');
-    return [...filter, lang];
+    let result = {
+      status: 'loading',
+      data: []
+    };
+
+    try {
+      const list = raceObj.data.languages.type.map(v => v.name);
+      const filter = list.filter(v => v !== lang && v !== '');
+      result.data = [...filter, lang];
+      result.status = 'success';
+    } catch (err) {
+      result.data = [];
+      result.status = raceObj.status;
+    }
+
+    return result;
   }
 );
 
@@ -137,17 +216,22 @@ export const selectSavingThrows = createSelector(
   selectAbilityMod,
   selectClassObj,
   (abilityMod, classObj) => {
-    let result;
+    let result = {
+      status: 'loading',
+      data: [0, 0, 0, 0, 0, 0,]
+    };
 
     try {
-      result = AbilityMap.reduce((v, k, i) => 
+      result.data = AbilityMap.reduce((v, k, i) => 
         [
           ...v,
           classObj.data.saving_throws.some(s => s.name === k) ? 
-            abilityMod[i] : 0
+            abilityMod.data[i] : 0
         ], []);
+      result.status = 'success';
     } catch (err) {
-      result = [];
+      result.data = [0, 0, 0, 0, 0, 0,];
+      result.status = 'error';
     }
 
     return result;
@@ -166,8 +250,8 @@ export const selectSkillsFilter = createSelector(
       result.data = classObj.data.proficiency_choices.find(v => v.type === 'Skill');
       result.status = 'success';
     } catch (err) {
-      result.status = 'error';
       result.data = [];
+      result.status = classObj.status;
     }
 
     return result;
@@ -198,13 +282,12 @@ export const selectSpellsFilter = createSelector(
   
           result.status = 'success';
         } catch (err) {
-          // console.log(err)
-          result.status = 'error loading';
           result.data = [];
+          result.status = 'error loading';
         }
       } else {
-        result.status = 'none';
         result.data = [];
+        result.status = 'none';
       }
     }
 
@@ -224,7 +307,7 @@ export const selectWeaponProficiency = createSelector(
 
     try {
       const raceList = [].concat(
-        ...raceObj.weapons.map(v => weaponAll.filter(j => j.name === v)));
+        ...raceObj.data.weapons.map(v => weaponAll.filter(j => j.name === v)));
   
       const classCat = [].concat(
         ...classObj.data.weapons.map(v => 
@@ -237,11 +320,12 @@ export const selectWeaponProficiency = createSelector(
   
       const className = [].concat(
         ...filtered.map(v => weaponAll.filter(j => j.name === v.name)));
-      result.status = 'success';
+
       result.data = [].concat(classCat, className);
+      result.status = 'success';
     } catch (err) {
-      result.status = 'error';
       result.data = [];
+      result.status = 'error';
     }
 
     return result;

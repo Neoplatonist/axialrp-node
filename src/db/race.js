@@ -95,6 +95,24 @@ export const raceNameQuery = async name => {
 //       }
 //     `, { race: name }).then(result => result.getRaceName);
 // };
+export const raceNameListQuery = async () => {
+  let result;
+
+  try {
+    result = await client.query(`
+      {
+        getRaces {
+          name
+        }
+      }
+    `).then(result => result.getRaces);
+  } catch (err) {
+    console.log("failed raceQuery", err)
+    result = Promise.reject(err);
+  }
+
+  return result;
+};
 
 export const raceQuery = async () => {
   let result;

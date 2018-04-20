@@ -22,11 +22,11 @@ class AbilityScores extends Component {
           id={v}
           key={k}
           index={k}
-          race={this.props.abilityRaceMod[k]}
+          race={this.props.abilityRaceMod.data[k]}
           subrace={this.props.abilitySubRaceMod[k]}
-          total={this.props.abilityTotal[k]}
+          total={this.props.abilityTotal.data[k]}
           value={this.props.ability[k]}
-          mod={this.props.abilityMod[k]} />
+          mod={this.props.abilityMod.data[k]} />
       );
     });
   }
