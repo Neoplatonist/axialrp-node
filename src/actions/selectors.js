@@ -14,6 +14,7 @@ export const selectAlignment = state => state.generator.alignment;
 export const selectArmor = state => state.generator.armor;
 export const selectArmorActive = state => state.generator.armorActive;
 export const selectClass = state => state.generator.class;
+export const selectClassNameList = state => state.generator.classNameList;
 export const selectClassObj = state => state.generator.classObj;
 export const selectDice = state => state.generator.dice;
 export const selectHP = state => state.generator.hp;

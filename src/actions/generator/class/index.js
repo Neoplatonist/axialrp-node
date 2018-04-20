@@ -1,5 +1,8 @@
 import { 
   SET_CLASS, 
+  SET_CLASS_NAME_LIST_ERROR,
+  SET_CLASS_NAME_LIST_LOADING,
+  SET_CLASS_NAME_LIST_SUCCESS,
   SET_CLASS_OBJ_ERROR,
   SET_CLASS_OBJ_LOADING,
   SET_CLASS_OBJ_SUCCESS, 
@@ -10,15 +13,15 @@ import {
 } from '../../types';
 
 import { 
-  classNameQuery, 
-  // spellByClassQuery 
+  classAllNamesQuery,
+  classNameQuery
 } from '../../../db';
 
 /*
  *  Actions
  */
 export const setClass = char_class => {
-  return async(dispatch, getState) => {
+  return async dispatch => {
     let load = {
       status: 'none',
       data: {}
@@ -54,6 +57,27 @@ export const setClass = char_class => {
 
       load.data = 0;
       dispatch({ type: SET_HP_ERROR, payload: load });
+    }
+  };
+};
+
+export const setClassNameList = () => {
+  return async dispatch => {
+    let load = {
+      status: 'loading',
+      data: []
+    };
+
+    dispatch({ type: SET_CLASS_NAME_LIST_LOADING, payload: load });
+
+    try {
+      load.data = await classAllNamesQuery();
+      load.status = 'success';
+      dispatch({ type: SET_CLASS_NAME_LIST_SUCCESS, payload: load });
+    } catch (err) {
+      load.data = [];
+      load.status = 'error';
+      dispatch({ type: SET_CLASS_NAME_LIST_ERROR, payload: load });
     }
   };
 };

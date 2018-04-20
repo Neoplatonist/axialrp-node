@@ -4,47 +4,25 @@ import '../../styles.css';
 
 import { connect } from 'react-redux';
 import { 
-  selectAbilityMod, 
   selectClass, 
   setClass,
-  setHP 
+  selectClassNameList,
+  setClassNameList,
 } from '../../../../actions';
 
-// graphQL Queries
-import {
-  classQuery
-} from '../../../../db';
-
 class Class extends Component {
-  state = {
-    classes: []
-  }
-
-  // componentWillMount() {
-  //   this.props.setClass('Bard');
-  // }
-
-  componentDidMount() {
-    this.getClasses();
-  }
-
-  getClasses = async () => {
-    const classes = await classQuery();
-    this.setState({ classes: classes });
+  componentWillMount() {
+    this.props.setClassNameList();
   }
 
   handleClass = e => {
-    return this.state.classes.map((v, k) => {
+    return this.props.classNameList.data.map((v, k) => {
       return <Option key={k} {...v} />;
     })
   }
 
   onClassChange = e => {
     this.props.setClass(e.target.value);
-    const hit_die = this.state.classes
-      .find(v => v.name === e.target.value).hit_die;
-
-    this.props.setHP(hit_die + this.props.abilityMod[2]);
   }
 
   render() {
@@ -57,7 +35,7 @@ class Class extends Component {
           onChange={this.onClassChange}
           value={this.props.class}
         >
-          { this.state.classes.length 
+          { this.props.classNameList.data.length 
             ? this.handleClass() 
             : <option value="">...Loading</option> }
         </select>
@@ -68,12 +46,12 @@ class Class extends Component {
 
 const mapStateToProps = state => ({
   class: selectClass(state),
-  abilityMod: selectAbilityMod(state)
+  classNameList: selectClassNameList(state)
 });
 
 const boundActions = {
   setClass,
-  setHP
+  setClassNameList,
 };
 
 export default connect(mapStateToProps, boundActions)(Class);

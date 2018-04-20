@@ -257,4 +257,5 @@ export default connect(mapStateToProps, boundActions)(Generator);
  * - Level up characters
  * - Calculate startin money for characters
  * - In Classes: Constitution is for level 1 only.
+ * - Create fallback for class db calls failing
  */

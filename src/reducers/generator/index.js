@@ -11,6 +11,9 @@ import {
   SET_ARMOR_ALL,
   SET_CHARACTER,
   SET_CLASS,
+  SET_CLASS_NAME_LIST_ERROR,
+  SET_CLASS_NAME_LIST_LOADING,
+  SET_CLASS_NAME_LIST_SUCCESS,
   SET_CLASS_OBJ_ERROR,
   SET_CLASS_OBJ_LOADING,
   SET_CLASS_OBJ_SUCCESS,
@@ -53,6 +56,9 @@ export {
   SET_ARMOR_ALL,
   SET_CHARACTER,
   SET_CLASS,
+  SET_CLASS_NAME_LIST_ERROR,
+  SET_CLASS_NAME_LIST_LOADING,
+  SET_CLASS_NAME_LIST_SUCCESS,
   SET_CLASS_OBJ_ERROR,
   SET_CLASS_OBJ_LOADING,
   SET_CLASS_OBJ_SUCCESS,
@@ -106,6 +112,7 @@ export const generatorState = {
   },
 
   class: 'Barbarian',
+  classNameList: { status: 'loading', data: [] },
   classObj: { status: 'success', data: {
     name: "Barbarian",
     hit_die: 12,
@@ -368,6 +375,30 @@ const generator = (state = generatorState, action) => {
       return {
         ...state,
         class: action.payload
+      };
+
+    case SET_CLASS_NAME_LIST_ERROR: 
+      return {
+        ...state,
+        classNameList: {
+          ...action.payload
+        }
+      };
+
+    case SET_CLASS_NAME_LIST_LOADING: 
+      return {
+        ...state,
+        classNameList: {
+          ...action.payload
+        }
+      };
+
+    case SET_CLASS_NAME_LIST_SUCCESS: 
+      return {
+        ...state,
+        classNameList: {
+          ...action.payload
+        }
       };
     
     case SET_CLASS_OBJ_ERROR:

@@ -109,6 +109,25 @@ export const classNameQuery = async name => {
   return result;
 };
 
+export const classAllNamesQuery = async () => {
+  let result;
+
+  try {
+    result = await client.query(`
+      {
+        getClasses {
+          name
+        }
+      }
+    `).then(result => result.getClasses);
+  } catch (err) {
+    console.log("failed classQuery", err)
+    result = Promise.reject(err);
+  }
+
+  return result;
+};
+
 
 export const classQuery = async () => {
   let result;
