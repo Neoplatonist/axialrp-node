@@ -13,7 +13,7 @@ export const setAbility = (index, ability) => {
   return (dispatch, getState) => {
     const state = [...getState().generator.ability];
     state[index] = ability || 0;
-    return dispatch({ type: SET_ABILITY, payload: state });
+    dispatch({ type: SET_ABILITY, payload: state });
   };
 };
 

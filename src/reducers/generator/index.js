@@ -5,10 +5,14 @@ import {
   SET_ABILITY_TYPE,
   SET_AC,
   SET_ALIGNMENT,
-  SET_ALIGNMENT_ALL,
+  SET_ALIGNMENT_ALL_ERROR,
+  SET_ALIGNMENT_ALL_LOADING,
+  SET_ALIGNMENT_ALL_SUCCESS,
   SET_ARMOR,
   SET_ARMOR_ACTIVE,
-  SET_ARMOR_ALL,
+  SET_ARMOR_ALL_ERROR,
+  SET_ARMOR_ALL_LOADING,
+  SET_ARMOR_ALL_SUCCESS,
   SET_CHARACTER,
   SET_CLASS,
   SET_CLASS_NAME_LIST_ERROR,
@@ -18,9 +22,7 @@ import {
   SET_CLASS_OBJ_LOADING,
   SET_CLASS_OBJ_SUCCESS,
   SET_DICE,
-  SET_HP_ERROR,
-  SET_HP_LOADING,
-  SET_HP_SUCCESS,
+  SET_HP,
   SET_INITIATIVE,
   SET_INSPIRATION,
   SET_LANGUAGE,
@@ -35,7 +37,9 @@ import {
   SET_RACE_OBJ_LOADING,
   SET_RACE_OBJ_SUCCESS,
   SET_SKILLS,
-  SET_SKILLS_ALL,
+  SET_SKILLS_ALL_ERROR,
+  SET_SKILLS_ALL_LOADING,
+  SET_SKILLS_ALL_SUCCESS,
   SET_SPEED,
   SET_SPELLS_ALL_ERROR,
   SET_SPELLS_ALL_LOADING,
@@ -48,7 +52,9 @@ import {
   SET_SUBRACE_OBJ_SUCCESS,
   SET_WEAPON,
   SET_WEAPON_ACTIVE,
-  SET_WEAPON_ALL
+  SET_WEAPON_ALL_ERROR,
+  SET_WEAPON_ALL_LOADING,
+  SET_WEAPON_ALL_SUCCESS
 } from '../../actions';
 export { 
   SET_ABILITY,
@@ -57,10 +63,14 @@ export {
   SET_ABILITY_TYPE,
   SET_AC,
   SET_ALIGNMENT,
-  SET_ALIGNMENT_ALL,
+  SET_ALIGNMENT_ALL_ERROR,
+  SET_ALIGNMENT_ALL_LOADING,
+  SET_ALIGNMENT_ALL_SUCCESS,
   SET_ARMOR,
   SET_ARMOR_ACTIVE,
-  SET_ARMOR_ALL,
+  SET_ARMOR_ALL_ERROR,
+  SET_ARMOR_ALL_LOADING,
+  SET_ARMOR_ALL_SUCCESS,
   SET_CHARACTER,
   SET_CLASS,
   SET_CLASS_NAME_LIST_ERROR,
@@ -70,9 +80,7 @@ export {
   SET_CLASS_OBJ_LOADING,
   SET_CLASS_OBJ_SUCCESS,
   SET_DICE,
-  SET_HP_ERROR,
-  SET_HP_LOADING,
-  SET_HP_SUCCESS,
+  SET_HP,
   SET_INITIATIVE,
   SET_INSPIRATION,
   SET_LANGUAGE,
@@ -87,7 +95,9 @@ export {
   SET_RACE_OBJ_LOADING,
   SET_RACE_OBJ_SUCCESS,
   SET_SKILLS,
-  SET_SKILLS_ALL,
+  SET_SKILLS_ALL_ERROR,
+  SET_SKILLS_ALL_LOADING,
+  SET_SKILLS_ALL_SUCCESS,
   SET_SPEED,
   SET_SPELLS_ALL_ERROR,
   SET_SPELLS_ALL_LOADING,
@@ -100,7 +110,9 @@ export {
   SET_SUBRACE_OBJ_SUCCESS,
   SET_WEAPON,
   SET_WEAPON_ACTIVE,
-  SET_WEAPON_ALL
+  SET_WEAPON_ALL_ERROR,
+  SET_WEAPON_ALL_LOADING,
+  SET_WEAPON_ALL_SUCCESS
 } from '../../actions';
 // import {...} from './actions';
 
@@ -111,7 +123,7 @@ export const generatorState = {
   abilityType: 'Dice',
   ac: 0,
   alignment: 'Lawful Good',
-  alignmentAll: [],
+  alignmentAll: { status: 'loading', data: [] },
 
   armor: [],
   armorActive: 'proficiency',
@@ -180,7 +192,7 @@ export const generatorState = {
   }},
 
   dice: [0, 0, 0, 0, 0, 0],
-  hp: { status: 'success', data: 12 },
+  hp: 12,
   initiative: 0,
   inspiration: 0,
   language: '',
@@ -254,7 +266,7 @@ export const generatorState = {
   savingThrows: [0, 0, 0, 0, 0, 0],
 
   skills: [],
-  skillsAll: [],
+  skillsAll: { status: 'loading', data: [] },
 
   allSkills: {
     acrobats: 0,
@@ -311,7 +323,7 @@ export const generatorState = {
 
   weapon: [],
   weaponActive: 'proficiency',
-  weaponAll: []
+  weaponAll: { status: 'loading', data: [] }
 };
 
 const generator = (state = generatorState, action) => {
@@ -353,10 +365,28 @@ const generator = (state = generatorState, action) => {
         alignment: action.payload
       };
 
-    case SET_ALIGNMENT_ALL:
+    case SET_ALIGNMENT_ALL_ERROR:
       return {
         ...state,
-        alignmentAll: action.payload
+        alignmentAll: {
+          ...action.payload
+        }
+      };
+
+    case SET_ALIGNMENT_ALL_LOADING:
+      return {
+        ...state,
+        alignmentAll: {
+          ...action.payload
+        }
+      };
+
+    case SET_ALIGNMENT_ALL_SUCCESS:
+      return {
+        ...state,
+        alignmentAll: {
+          ...action.payload
+        }
       };
 
     case SET_ARMOR: 
@@ -371,10 +401,28 @@ const generator = (state = generatorState, action) => {
         armorActive: action.payload
       };
 
-    case SET_ARMOR_ALL:
+    case SET_ARMOR_ALL_ERROR:
       return {
         ...state,
-        armorAll: action.payload
+        armorAll: {
+          ...action.payload
+        }
+      };
+
+    case SET_ARMOR_ALL_LOADING:
+      return {
+        ...state,
+        armorAll: {
+          ...action.payload
+        }
+      };
+
+    case SET_ARMOR_ALL_SUCCESS:
+      return {
+        ...state,
+        armorAll: {
+          ...action.payload
+        }
       };
 
     case SET_CHARACTER: 
@@ -446,28 +494,10 @@ const generator = (state = generatorState, action) => {
         dice: action.payload
       };
 
-    case SET_HP_ERROR: 
+    case SET_HP: 
       return {
         ...state,
-        hp: {
-          ...action.payload
-        }
-      };
-
-    case SET_HP_LOADING: 
-      return {
-        ...state,
-        hp: {
-          ...action.payload
-        }
-      };
-
-    case SET_HP_SUCCESS: 
-      return {
-        ...state,
-        hp: {
-          ...action.payload
-        }
+        hp: action.payload
       };
 
     case SET_INITIATIVE: 
@@ -566,10 +596,28 @@ const generator = (state = generatorState, action) => {
         skills: action.payload
       };
 
-    case SET_SKILLS_ALL:
+    case SET_SKILLS_ALL_ERROR:
       return {
         ...state,
-        skillsAll: action.payload
+        skillsAll: {
+          ...action.payload
+        }
+      };
+
+    case SET_SKILLS_ALL_LOADING:
+      return {
+        ...state,
+        skillsAll: {
+          ...action.payload
+        }
+      };
+
+    case SET_SKILLS_ALL_SUCCESS:
+      return {
+        ...state,
+        skillsAll: {
+          ...action.payload
+        }
       };
 
     case SET_SPEED: 
@@ -656,10 +704,28 @@ const generator = (state = generatorState, action) => {
         weaponActive: action.payload
       };
 
-    case SET_WEAPON_ALL:
+    case SET_WEAPON_ALL_ERROR:
       return {
         ...state,
-        weaponAll: action.payload
+        weaponAll: {
+          ...action.payload
+        }
+      };
+
+    case SET_WEAPON_ALL_LOADING:
+      return {
+        ...state,
+        weaponAll: {
+          ...action.payload
+        }
+      };
+
+    case SET_WEAPON_ALL_SUCCESS:
+      return {
+        ...state,
+        weaponAll: {
+          ...action.payload
+        }
       };
   
     default:

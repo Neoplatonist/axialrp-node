@@ -32,7 +32,7 @@ class Race extends Component {
     this.props.setRace(e.target.value);
   }
 
-  onSubRaceChange = async e => {
+  onSubRaceChange = e => {
     this.props.setSubRace(e.target.value);
   }
 
@@ -43,7 +43,7 @@ class Race extends Component {
   }
 
   renderSubRaceSelect = () => {
-    return this.props.raceObj.data.sub_races ?
+    return this.props.subrace ?
       (
         <select
           name="sub-races"

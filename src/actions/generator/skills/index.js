@@ -1,4 +1,9 @@
-import { SET_SKILLS, SET_SKILLS_ALL } from '../../types';
+import { 
+  SET_SKILLS, 
+  SET_SKILLS_ALL_ERROR,
+  SET_SKILLS_ALL_LOADING,
+  SET_SKILLS_ALL_SUCCESS 
+} from '../../types';
 import { skillQuery } from '../../../db';
 
 /*
@@ -10,11 +15,21 @@ export const setSkills = skills => {
 
 export const setSkillsAll = () => {
   return async dispatch => {
+    let load = {
+      status: 'loading',
+      data: []
+    };
+
+    dispatch({ type: SET_SKILLS_ALL_LOADING, payload: load });
+
     try {
-      const skills = await skillQuery();
-      dispatch({ type: SET_SKILLS_ALL, payload: skills });
+      load.data = await skillQuery();
+      load.status = 'success';
+      dispatch({ type: SET_SKILLS_ALL_SUCCESS, payload: load });
     } catch (err) {
-      console.log('setSkillsAll skillQuery', err)
+      load.data = [];
+      load.status = 'error';
+      dispatch({ type: SET_SKILLS_ALL_ERROR, payload: load });
     }
   }
 };

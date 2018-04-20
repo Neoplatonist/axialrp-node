@@ -1,4 +1,4 @@
-import {SET_CHARACTER} from '../../types';
+import { SET_CHARACTER } from '../../types';
 
 /*
  *  Actions

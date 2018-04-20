@@ -30,7 +30,7 @@ class Stats extends Component {
             type="number"
             min="0"
             onChange={e => this.props.setHP(e.target.value)}
-            value={this.props.hp.data}/>
+            value={this.props.hp}/>
 
           <div className="stats-append">{this.props.abilityMod.data[2]}</div>
           <div className="stats-append">{'= ' + this.props.hpTotal.data}</div>

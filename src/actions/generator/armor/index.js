@@ -1,7 +1,9 @@
 import { 
   SET_ARMOR, 
   SET_ARMOR_ACTIVE,
-  SET_ARMOR_ALL
+  SET_ARMOR_ALL_ERROR,
+  SET_ARMOR_ALL_LOADING,
+  SET_ARMOR_ALL_SUCCESS
 } from '../../types';
 
 import {
@@ -32,20 +34,21 @@ export const setArmorActive = active => {
 
 export const setArmorAll = () => {
   return async dispatch => {
-    // let load = {
-    //   status: 'failed'
-    //   data: []
-    // };
+    let load = {
+      status: 'loading',
+      data: []
+    };
 
-    // dispatch({ type: SET_ARMOR_ALL_LOADING, payload: load })
+    dispatch({ type: SET_ARMOR_ALL_LOADING, payload: load });
 
     try {
-      const armor = await armorQuery();
-      // load = {...load, loading: false, data: armor}
-      // console.log(load)
-      dispatch({ type: SET_ARMOR_ALL, payload: armor });
+      load.data = await armorQuery();
+      load.status = 'success';
+      dispatch({ type: SET_ARMOR_ALL_SUCCESS, payload: load });
     } catch (err) {
-      console.log('setArmorAll armorQuery', err)
+      load.data = [];
+      load.status = 'error';
+      dispatch({ type: SET_ARMOR_ALL_ERROR, payload: load });
     }
   };
 };

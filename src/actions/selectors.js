@@ -31,6 +31,7 @@ export const selectSubRace = state => state.generator.subrace;
 export const selectSubRaceObj = state => state.generator.subraceObj;
 export const selectWeapon = state => state.generator.weapon;
 export const selectWeaponActive = state => state.generator.weaponActive;
+export const selectWeaponAll = state => state.generator.weaponAll;
 
 
 
@@ -281,27 +282,19 @@ export const selectSpellsFilter = createSelector(
       data: []
     };
 
-    if (spellsAll.status === 'success' && classObj.status === 'success') {
-      if (classObj.data.spellcasting[1] !== null) {
-        try {
-          // Code below create new array of objects
-          result.data = Object.keys(classObj.data.spellcasting)
-            .filter(spellLevel => level >= spellLevel)
-            .reduce((avail, spellLevel) => [
-              ...avail,
-              classObj.data.spellcasting[spellLevel]
-                .map(spell => spellsAll.data.find(v => v.name === spell))
-            ], []);
-  
-          result.status = 'success';
-        } catch (err) {
-          result.data = [];
-          result.status = 'error loading';
-        }
-      } else {
-        result.data = [];
-        result.status = 'none';
-      }
+    try {
+      result.data = Object.keys(classObj.data.spellcasting)
+        .filter(spellLevel => level >= spellLevel)
+        .reduce((avail, spellLevel) => [
+          ...avail,
+          classObj.data.spellcasting[spellLevel]
+            .map(spell => spellsAll.data.find(v => v.name === spell))
+        ], []);
+
+      result.status = 'success';
+    } catch (err) {
+      result.data = [];
+      result.status = 'none';
     }
 
     return result;
@@ -311,7 +304,7 @@ export const selectSpellsFilter = createSelector(
 export const selectWeaponProficiency = createSelector(
   selectClassObj,
   selectRaceObj,
-  state => state.generator.weaponAll,
+  selectWeaponAll,
   (classObj, raceObj, weaponAll) => {
     let result = {
       status: 'loading',
@@ -320,11 +313,11 @@ export const selectWeaponProficiency = createSelector(
 
     try {
       const raceList = [].concat(
-        ...raceObj.data.weapons.map(v => weaponAll.filter(j => j.name === v)));
+        ...raceObj.data.weapons.map(v => weaponAll.data.filter(j => j.name === v)));
   
       const classCat = [].concat(
         ...classObj.data.weapons.map(v => 
-          weaponAll.filter(j => j.category === v.name)), 
+          weaponAll.data.filter(j => j.category === v.name)), 
         ...raceList
       );
   
@@ -332,7 +325,7 @@ export const selectWeaponProficiency = createSelector(
         [ ...v, classObj.data.weapons.filter(j => j.name === k.name) ], []);
   
       const className = [].concat(
-        ...filtered.map(v => weaponAll.filter(j => j.name === v.name)));
+        ...filtered.map(v => weaponAll.data.filter(j => j.name === v.name)));
 
       result.data = [].concat(classCat, className);
       result.status = 'success';

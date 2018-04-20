@@ -1,7 +1,9 @@
 import { 
   SET_WEAPON, 
   SET_WEAPON_ACTIVE,
-  SET_WEAPON_ALL
+  SET_WEAPON_ALL_ERROR,
+  SET_WEAPON_ALL_LOADING,
+  SET_WEAPON_ALL_SUCCESS
 } from '../../types';
 
 import {
@@ -14,7 +16,7 @@ import {
 export const addWeapon = weapon => {
   return (dispatch, getState) => {
     const list = [...getState().generator.weapon].filter(v => v.name !== weapon.target.value);
-    const item = getState().generator.weaponAll.find(v => v.name === weapon.target.value);
+    const item = getState().generator.weaponAll.data.find(v => v.name === weapon.target.value);
     dispatch({ type: SET_WEAPON, payload: [...list, item] });
   };
 };
@@ -32,21 +34,21 @@ export const setWeaponActive = active => {
 
 export const setWeaponAll = () => {
   return async dispatch => {
-    // let load = {
-    //   loading: true,
-    //   expire: 12,
-    //   data: []
-    // };
+    let load = {
+      status: 'loading',
+      data: []
+    };
 
-    // dispatch({ type: SET_WEAPON_ALL_LOADING, payload: load })
+    dispatch({ type: SET_WEAPON_ALL_LOADING, payload: load })
 
     try {
-      const weapon = await weaponQuery();
-      // load = {...load, loading: false, data: weapon}
-      // console.log(load)
-      dispatch({ type: SET_WEAPON_ALL, payload: weapon });
+      load.data = await weaponQuery();
+      load.status = 'success';
+      dispatch({ type: SET_WEAPON_ALL_SUCCESS, payload: load });
     } catch (err) {
-      console.log('setWeaponAll weaponQuery', err)
+      load.data = await weaponQuery();
+      load.status = 'error';
+      dispatch({ type: SET_WEAPON_ALL_ERROR, payload: load });
     }
   };
 };

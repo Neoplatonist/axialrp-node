@@ -1,8 +1,4 @@
 import {
-  SET_ALIGNMENT, 
-  SET_CHARACTER,
-  SET_LANGUAGE, 
-  SET_LANGUAGE_LIST,
   SET_RACE,
   SET_RACE_OBJ_ERROR,
   SET_RACE_OBJ_LOADING,
@@ -15,39 +11,23 @@ import {
   SET_SUBRACE_OBJ_LOADING,
   SET_SUBRACE_OBJ_SUCCESS
 } from '../../types';
+
 import { 
   raceNameQuery, 
   raceNameListQuery, 
   sub_raceNameQuery 
 } from '../../../db';
 
+import { 
+  setAlignment, 
+  setCharacter, 
+  setLanguage, 
+  setLanguageList 
+} from '../../index';
+
 /*
  *  Actions
  */
-
-// let r;
-// try {
-//   r = await raceNameQuery(e.target.value);
-
-//   if (isEmpty(r.sub_races)) {
-//     this.props.setSubRace('')
-//   } else {
-//     this.props.setSubRace(r.sub_races[0].name);
-
-//     let subrace;
-//     try {
-//       subrace = await sub_raceNameQuery(r.sub_races[0].name);
-//       this.props.setSubRaceObj(subrace);
-//     } catch (err) {
-//       console.warn(err)
-//       this.props.setSubRaceObj({});
-//     }
-//   }
-// } catch (err) {
-//   console.warn(err)
-// } 
-
-// FIXME: Update subrace error handling
 export const setRace = race => {
   return async (dispatch, getState) => {
     let load = {
@@ -64,29 +44,34 @@ export const setRace = race => {
 
       dispatch({ type: SET_RACE_OBJ_SUCCESS, payload: load });
 
-      dispatch(setSubRace(load.data.sub_races[0].name));
+      let subrace = '';
+      if (load.data.sub_races !== null && load.data.sub_races.length)
+        subrace = load.data.sub_races[0].name;
 
-      dispatch({ type: SET_ALIGNMENT, payload: load.data.alignment.main });
-      dispatch({ type: SET_LANGUAGE, payload: '' })
-      dispatch({ 
-        type: SET_LANGUAGE_LIST,
-        payload: load.data.languages.type.map(v => v.name) 
-      });
+      dispatch(setSubRace(subrace));
+      dispatch(setAlignment(load.data.alignment.main));
+
+      dispatch(setLanguage(''))
+      dispatch(setLanguageList(load.data.languages.type.map(v => v.name)));
   
-      const char = getState().generator.character;
-      dispatch({ 
-        type: SET_CHARACTER, 
-        payload: {
-          ...char, 
-          age: load.data.age.adult, 
-          height: JSON.stringify(load.data.size.height.min) + 'ft'
-        } 
-      });
+      const char = {
+        ...getState().generator.character,
+        age: load.data.age.adult, 
+        height: JSON.stringify(load.data.size.height.min) + 'ft'
+      };
+      dispatch(setCharacter(char));
     } catch (err) {
       console.log(err.message);
       load.data = [];
       load.status = 'error';
       dispatch({ type: SET_RACE_OBJ_ERROR, payload: load });
+
+      const char = {
+        ...getState().generator.character,
+        age: 0, 
+        height: '0ft'
+      };
+      dispatch(setCharacter(char));
     };
   };
 };

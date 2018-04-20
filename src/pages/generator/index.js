@@ -45,7 +45,7 @@ class Generator extends Component {
   }
 
   handleAlignment = () => {
-    return this.props.alignmentAll.map((v, k) => {
+    return this.props.alignmentAll.data.map((v, k) => {
       return <Option key={k} {...v} />;
     });
   }
@@ -66,12 +66,11 @@ class Generator extends Component {
   }
 
   renderLO = () => {
-    return this.props.raceObj.languages.options.from.map((v, k) => {
+    return this.props.raceObj.data.languages.options.from.map((v, k) => {
       return <Option key={k} {...v} />;
     });
   }
 
-  // FIXME: Needs proper error handling
   renderLanguageOptions = () => {
     try {
       if (this.props.raceObj.data.languages.options.choose) {
@@ -88,8 +87,6 @@ class Generator extends Component {
             </select>
           </div>
         )
-      } else {
-        return null;
       }
     } catch (err) {
       return null;
@@ -101,7 +98,7 @@ class Generator extends Component {
 
     try {
       render = this.props.skillsFilter.data.from.map((v, k) => {
-        const skill = this.props.skillsAll.find(j => j.name === v.name);
+        const skill = this.props.skillsAll.data.find(j => j.name === v.name);
         return <Skills 
           key={k} 
           desc={skill.description}
@@ -168,7 +165,7 @@ class Generator extends Component {
             onChange={ e => this.props.setAlignment(e.target.value) }
             value={this.props.alignment}
           >
-            { this.props.alignmentAll.length 
+            { this.props.alignmentAll.data.length 
                 ? this.handleAlignment() 
                 : <option value="">...Loading</option> }
           </select>
@@ -255,7 +252,6 @@ export default connect(mapStateToProps, boundActions)(Generator);
  * - ClassDB Normalization
  * - Vicious Mockery - spellsDB
  * - Spare the Dying - spellsDB
- * - AC in component state needs to be moved elsewhere
  */
 
 /*
