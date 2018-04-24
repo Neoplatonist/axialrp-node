@@ -2,13 +2,20 @@ import React, { Component } from 'react';
 
 import SpellItem from './components/spellItem';
 
-export default class SpellList extends Component {
+import { connect } from 'react-redux';
+import {
+  selectClassObj
+} from '../../../../../../actions';
+
+class SpellList extends Component {
   renderList = () => {
     return this.props.list.map((v, k) => {
-      return <SpellItem 
-        key={k}
-        spell={v} />
-    })
+      if (v !== undefined) {
+        return <SpellItem 
+          key={k}
+          spell={v} />;
+      }
+    });
   }
 
   renderTitle = () => {
@@ -24,17 +31,26 @@ export default class SpellList extends Component {
   }
 
   render() {
-    // console.log(this.props.list)
     return (
       <div>
         <br />
 
-        <h5>{ this.renderTitle() }</h5>
+        <h5>{ this.renderTitle() } ({this.props.choose})</h5>
 
-        { this.props.list.length 
-            ? this.renderList()
-            : null }
+        { this.props.list.length
+          ? this.renderList()
+          : `...Loading` }
       </div>
     );
   }
 }
+
+const mapStateToProps = state => ({
+  classObj: selectClassObj(state)
+});
+
+const boundActions = {
+
+};
+
+export default connect(mapStateToProps, boundActions)(SpellList);

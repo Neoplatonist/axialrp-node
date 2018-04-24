@@ -680,7 +680,14 @@ const classDB = [
       { name: 'Constitution' }
     ],
     starting_equipment: { class: 'Barbarian' },
-    levels: {},
+    levels: {
+      1: {
+        features: ['Spellcasting', 'Bardic Inspiration(d6)'],
+        proficiency_bonus: 2,
+        spells_known: 4,
+        type: [2, 2]
+      },  
+    },
     spellcasting: {},
     weapons: [
       { name: 'Simple' },

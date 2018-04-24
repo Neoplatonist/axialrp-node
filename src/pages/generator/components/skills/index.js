@@ -21,16 +21,20 @@ class Skills extends Component {
   }
 
   handleInput = (name, e) => {
-    this.checkbox.checked ? this.checkbox.checked = name : this.checkbox.checked = '';
+    this.checkbox.checked 
+      ? this.checkbox.checked = name 
+      : this.checkbox.checked = '';
 
     let list = [...this.props.skills];
 
-    !this.checkbox.checked ?
-      list = list.filter(v => v !== name) :
-      list.push(name)
+    !this.checkbox.checked 
+      ? list = list.filter(v => v !== name) 
+      : list.push(name)
 
     if (list.length > 1) {
-      list = list.map(v => list.filter(j => v !== j)).filter(v => v.length);
+      list = list.map(v => 
+        list.filter(j => v !== j))
+          .filter(v => v.length);
     }
 
     this.props.setSkills(list);

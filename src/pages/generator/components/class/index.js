@@ -13,6 +13,7 @@ import {
 class Class extends Component {
   componentWillMount() {
     this.props.setClassNameList();
+    this.props.setClass('Bard');
   }
 
   handleClass = e => {

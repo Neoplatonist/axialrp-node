@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 import { connect } from 'react-redux';
 import {
+  selectClassObj,
+  selectLevel,
   // selectSpells,
   // setSpells
   selectSpellsFilter
@@ -12,19 +14,40 @@ import SpellList from './components/spellList';
 class Spells extends Component {
   renderSpellLists = () => {
     return this.props.spellsFilter.data.map((v, k) => {
-      return <SpellList 
+      return <SpellList
         key={k}
         list={v}
-        name={k}/>
+        name={k}
+        choose={this.props.classObj.data.levels[this.props.level].type[k]}
+        />
     });
+  }
+
+  // TODO: Add proper error handling and 
+  // see how to add barbarian rage instead of spells
+  renderSpellChoose = () => {
+    let result;
+
+    try {
+      result = 'Choose ' + this.props.classObj.data
+        .levels[this.props.level].spells_known
+    } catch (err) {
+      result = 'nuthin'
+    }
+
+    return result;
+  }
+
+  resetSpells = e => {
+    console.log(e.target)
   }
 
   render() {
     return (
       <div>
         <h3>Spells</h3>
-        {/* <h5>Choose {this.props.skillsFilter.choose}</h5> */}
-        {/* <button onClick={this.handleSkillReset} >Reset</button> */}
+        <h4>{ this.renderSpellChoose() }</h4>
+        <button onClick={this.resetSpells}>Reset</button>
 
         { this.props.spellsFilter.status === 'success' 
             ? this.renderSpellLists()
@@ -39,6 +62,8 @@ class Spells extends Component {
 }
 
 const mapStateToProps = state => ({
+  classObj: selectClassObj(state),
+  level: selectLevel(state),
   // spell: selectSpells(state)
   // spellFilter: selectSpellLevel(state)
   spellsFilter: selectSpellsFilter(state)

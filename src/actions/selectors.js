@@ -293,7 +293,10 @@ export const selectSpellsFilter = createSelector(
             .map(spell => spellsAll.data.find(v => v.name === spell))
         ], []);
 
-      result.status = 'success';
+      result.data === undefined || result.data === []
+        ? result.status = 'loading'
+        : result.status = 'success';
+
     } catch (err) {
       result.data = [];
       result.status = 'none';
