@@ -316,16 +316,16 @@ export const selectWeaponProficiency = createSelector(
     try {
       const raceList = [].concat(
         ...raceObj.data.weapons.map(v => weaponAll.data.filter(j => j.name === v)));
-  
+
       const classCat = [].concat(
         ...classObj.data.weapons.map(v => 
           weaponAll.data.filter(j => j.category === v.name)), 
         ...raceList
       );
-  
+
       const filtered = classCat.reduce((v, k) =>
         [ ...v, classObj.data.weapons.filter(j => j.name === k.name) ], []);
-  
+
       const className = [].concat(
         ...filtered.map(v => weaponAll.data.filter(j => j.name === v.name)));
 

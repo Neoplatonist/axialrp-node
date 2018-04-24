@@ -9,6 +9,7 @@ import {
   selectArmor,
   selectArmorActive,
   setArmorActive,
+  selectArmorAll,
   setArmorAll,
   selectArmorProficiency
 } from '../../../../actions';
@@ -64,6 +65,7 @@ class Armor extends Component {
             onClick={this.selectProficiency}>
             <span className="tab-link">Proficiency</span>
           </li>
+
           <li 
             ref={el => this.armorAll = el}
             className="tab-item" 
@@ -92,7 +94,7 @@ class Armor extends Component {
 const mapStateToProps = state => ({
   armor: selectArmor(state),
   armorActive: selectArmorActive(state),
-  armorAll: state.generator.armorAll,
+  armorAll: selectArmorAll(state),
   armorProficiency: selectArmorProficiency(state)
 });
 

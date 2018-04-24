@@ -83,14 +83,6 @@ class Ability extends Component {
   }
 
   render() {
-    // const { 
-    //   id, index, mod, 
-    //   race, subrace, total, value, 
-    //   abilityType, setAbility, 
-    //   setAbilityPoints, setAbilitySwitch, 
-    //   ...other 
-    // } = this.props;
-
     return (
       <div className="abilityContainer">
         <div className="ability-prepend">

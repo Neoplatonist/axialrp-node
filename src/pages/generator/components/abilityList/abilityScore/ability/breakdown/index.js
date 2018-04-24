@@ -26,10 +26,10 @@ export default class Breakdown extends Component {
   }
 
   render() {
+    const {base, race, subrace, total, mod} = this.props;
     return (
       <section id="modal">
         {/* Just a modal off-click catcher */}
-
         <aside ref={this.setWrapperRef}>
           <span onClick={this.handleClose}>
             <i className="exit fas fa-times"></i>
@@ -37,26 +37,25 @@ export default class Breakdown extends Component {
 
           <div className="modal-stats">
             <div className="modal-stat">
-                {'Base: ' + this.props.base}
+                {'Base: ' + base}
             </div>
 
             <div className="modal-stat">
-              {'Race: ' + this.props.race}
+              {'Race: ' + race}
             </div>
 
             <div className="modal-stat">
-              {'SubRace: ' + this.props.subrace}
+              {'SubRace: ' + subrace}
             </div>
 
             <div className="modal-stat">
-              {'Total: ' + this.props.total}
+              {'Total: ' + total}
             </div>
 
             <div className="modal-stat">
-              {'Mod: ' + this.props.mod}
+              {'Mod: ' + mod}
             </div>
           </div>
-
         </aside>  
       </section>
     );

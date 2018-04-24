@@ -24,20 +24,26 @@ class ArmorList extends Component {
   }
 
   render() {
+    const { desc } = this.props;
     return (
       <li className="input armorContainer"> 
-        <div className="armor-text"> { this.props.desc.name }</div>
-        <span className="armor-append" onClick={this.showDesc}> info <i className="fas fa-angle-down"></i></span>
+        <div className="armor-text"> { desc.name }</div>
+        <span 
+          className="armor-append" 
+          onClick={this.showDesc}
+          > info <i className="fas fa-angle-down"></i>
+        </span>
 
-        <span onClick={this.deleteItem.bind(this, this.props.desc.name)}><i className="fas fa-times"></i></span>
-        
+        <span onClick={this.deleteItem.bind(this, desc.name)}>
+          <i className="fas fa-times"></i>
+        </span>
 
         <div 
           ref={ el => this.armorDesc = el } 
           className="armorDesc"
         >
           {/* will add more info in future */}
-          { this.props.desc.weight }
+          { desc.weight }
         </div>
       </li>
     );
