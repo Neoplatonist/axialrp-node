@@ -285,11 +285,13 @@ export const selectSpellsFilter = createSelector(
     };
 
     try {
+      const spellLevel = classObj.data.levels[level].type;
+
       result.data = Object.keys(classObj.data.spellcasting)
-        .filter(spellLevel => level >= spellLevel)
-        .reduce((avail, spellLevel) => [
+        .filter(spellLvl => spellLevel.length > spellLvl)
+        .reduce((avail, spellLvl) => [
           ...avail,
-          classObj.data.spellcasting[spellLevel]
+          classObj.data.spellcasting[spellLvl]
             .map(spell => spellsAll.data.find(v => v.name === spell))
         ], []);
 
@@ -300,6 +302,47 @@ export const selectSpellsFilter = createSelector(
     } catch (err) {
       result.data = [];
       result.status = 'none';
+    }
+
+    return result;
+  }
+);
+
+export const selectSpellsLock = createSelector(
+  selectClassObj,
+  selectLevel,
+  state => state.generator.spellsSelected,
+  (classObj, level, selected) => {
+    let result;
+
+    try {
+      const levelObj = classObj.data.levels[level];
+      const list = Object.keys(selected).reduce((p, c, k) => {
+        p[k] = selected[c].length;
+        return p;
+      }, {});
+
+      const listBool = Object.keys(selected).reduce((p, c, k) => {
+        p[k] = selected[c].length >= levelObj.type[k];
+        return p;
+      }, {});
+
+      const accum = Object.keys(list).reduce((p, c) => p + list[c], 0);
+
+      result = {
+        total: accum >= levelObj.spells_known,
+        ...listBool
+      };
+    } catch (err) {
+      let list = {};
+      for (let i = 0; i <= level; i++) {
+        list[i] = false;
+      }
+
+      result = {
+        total: false,
+        ...list
+      };
     }
 
     return result;

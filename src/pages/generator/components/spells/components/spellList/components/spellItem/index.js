@@ -1,31 +1,42 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
-export default class SpellItem extends Component {
+import { connect } from 'react-redux';
+import { 
+  selectSpellsLock,
+  setSpellsSelected 
+} from '../../../../../../../../actions';
+
+class SpellItem extends Component {
   state = {
     showDesc: false
   }
 
   componentDidUpdate() {
-    if (this.props.spell.length === 0) {
+    if (this.props.spellsSelected[this.props.level].length === 0) {
       this.checkbox.checked = '';
     }
   }
 
   handleInput = e => {
-    // this.checkbox.checked ? this.checkbox.checked = name : this.checkbox.checked = '';
+    let selected = {...this.props.spellsSelected};
+    let list = [...selected[this.props.level]];
 
-    // let list = [...this.props.spell];
+    !this.checkbox.checked 
+      ? list = list.filter(v => v.name !== this.props.spell.name) 
+      : list.push(this.props.spell);
 
-    // !this.checkbox.checked ?
-    //   list = list.filter(v => v !== name) :
-    //   list.push(name)
+    selected[this.props.level] = list;
+    this.props.setSpellsSelected(selected);
+  }
 
-    // if (list.length > 1) {
-    //   list = list.map(v => list.filter(j => v !== j)).filter(v => v.length);
-    // }
-
-    // this.props.setSpells(list);
+  lock = () => {
+    if (this.props.spellLock.total === true 
+      || this.props.spellLock[this.props.level] === true) {
+      return true;
+    } else {
+      return false;
+    }
   }
 
   showDesc = e => {
@@ -37,12 +48,12 @@ export default class SpellItem extends Component {
   render() {
     const { spell } = this.props;
     return (
-      <div>
+      <div> 
         <li className="input skillContainer"> 
           <input 
             type="checkbox"
-            onClick={this.handleInput.bind(this, spell.name)}
-            // disabled={this.props.spell.length > 1}
+            onClick={this.handleInput}
+            disabled={this.lock()}
             ref={el => this.checkbox = el}
           />
           <div className="skill-text"> { spell !== undefined 
@@ -62,3 +73,14 @@ export default class SpellItem extends Component {
     );
   }
 }
+
+const mapStateToProps = state => ({
+  spellLock: selectSpellsLock(state),
+  spellsSelected: state.generator.spellsSelected
+});
+
+const boundActions = {
+  setSpellsSelected
+};
+
+export default connect(mapStateToProps, boundActions)(SpellItem);

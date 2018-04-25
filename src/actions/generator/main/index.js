@@ -12,6 +12,7 @@ import {
 } from '../../types';
 
 import { alignmentQuery } from '../../../db';
+import { setSpellsSelected } from '../../index';
 
 /*
  *  Actions
@@ -62,5 +63,8 @@ export const setLanguageList = list => {
 };
 
 export const setLevel = level => {
-  return { type: SET_LEVEL, payload: level || 1 };
+  return dispatch => {
+    dispatch({ type: SET_LEVEL, payload: level || 1 });
+    dispatch(setSpellsSelected());
+  };
 };

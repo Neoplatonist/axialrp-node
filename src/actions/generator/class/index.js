@@ -13,7 +13,7 @@ import {
   classNameQuery
 } from '../../../db';
 
-import { setHP } from '../../index';
+import { setHP, setSpellsSelected } from '../../index';
 
 /*
  *  Actions
@@ -37,6 +37,7 @@ export const setClass = char_class => {
       dispatch({ type: SET_CLASS_OBJ_SUCCESS, payload: load });
 
       dispatch(setHP(load.data.hit_die));
+      dispatch(setSpellsSelected());
     } catch (err) {
       load.status = 'error';
       load.data = {};

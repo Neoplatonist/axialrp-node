@@ -39,5 +39,19 @@ export const setSpellsAll = () => {
 };
 
 export const setSpellsSelected = list => {
-  return { type: SET_SPELLS_SELECTED, payload: list };
+  return (dispatch, getState) => {
+    if (list == undefined) {
+      const level = getState().generator.level;
+      const classLevels = getState().generator.classObj.data.levels[level];
+
+      if (classLevels.spells_known != null) {
+        list = {};
+        for (var i = 0; i < classLevels.type.length; i++) {
+          list[i] = [];
+        } 
+      }
+    }
+
+    dispatch({ type: SET_SPELLS_SELECTED, payload: list });
+  };
 };

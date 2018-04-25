@@ -140,54 +140,76 @@ export const generatorState = {
   class: 'Barbarian',
   classNameList: { status: 'loading', data: [] },
   classObj: { status: 'success', data: {
-    name: "Barbarian",
+    name: 'Barbarian',
     hit_die: 12,
     armor: [
-      { name: "Light" },
-      { name: "Medium" },
-      { name: "Shield"}
+      { name: 'Light' },
+      { name: 'Medium' },
+      { name: 'Shield' }
     ],
     proficiency_choices: [
       {
         choose: 2,
-        type: "Skill",
+        type: 'Skill',
         from: [
-          { name: "Animal Handling" },
-          { name: "Athletics" },
-          { name: "Intimidation" },
-          { name: "Nature" },
-          { name: "Perception" },
-          { name: "Survival" }
+          { name: 'Animal Handling' },
+          { name: 'Athletics' },
+          { name: 'Intimidation' },
+          { name: 'Nature' },
+          { name: 'Perception' },
+          { name: 'Survival' }
         ]
       }
     ],
     saving_throws: [
-      { name: "Strength" },
-      { name: "Constitution" }
+      { name: 'Strength' },
+      { name: 'Constitution' }
     ],
-    sub_classes: null,
+    starting_equipment: { class: 'Barbarian' },
     levels: {
-      1: null,
-      2: null,
-      3: null,
-      4: null,
-      5: null
+      1: {
+        features: ['Rage', 'Unamormed Defense'],
+        proficiency_bonus: 2,
+        rages: 2,
+        rage_damage: 2
+      },
+      2: {
+        features: ['Reckless Attack', 'Danger Sense'],
+        proficiency_bonus: 2,
+        rages: 2,
+        rage_damage: 2,
+        spells_known: 0,
+        type: []
+      },
+      3: {
+        features: ['Primal Path'],
+        proficiency_bonus: 2,
+        rages: 3,
+        rage_damage: 2,
+        spells_known: 0,
+        type: []
+      },
+      4: {
+        features: ['Ability Score Improvement'],
+        proficiency_bonus: 2,
+        rages: 3,
+        rage_damage: 2,
+        spells_known: 0,
+        type: []
+      },
+      5: {
+        features: ['Extra Attack', 'Fast Movement'],
+        proficiency_bonus: 3,
+        rages: 3,
+        rage_damage: 2,
+        spells_known: 0,
+        type: []
+      }
     },
-    spellcasting: {
-      0: null,
-      1: null,
-      2: null,
-      3: null,
-      4: null,
-      5: null,
-      6: null,
-      7: null,
-      8: null,
-      9: null
-    },
+    spellcasting: {},
     weapons: [
-      { name: "Simple" },
-      { name: "Martial" }
+      { name: 'Simple' },
+      { name: 'Martial' }
     ]
   }},
 

@@ -4,7 +4,8 @@ import SpellItem from './components/spellItem';
 
 import { connect } from 'react-redux';
 import {
-  selectClassObj
+  selectClassObj,
+  selectSpellsLock
 } from '../../../../../../actions';
 
 class SpellList extends Component {
@@ -13,7 +14,10 @@ class SpellList extends Component {
       if (v !== undefined) {
         return <SpellItem 
           key={k}
-          spell={v} />;
+          spell={v} 
+          level={this.props.name}
+          choose={this.props.choose}
+        />;
       }
     });
   }
@@ -46,7 +50,8 @@ class SpellList extends Component {
 }
 
 const mapStateToProps = state => ({
-  classObj: selectClassObj(state)
+  classObj: selectClassObj(state),
+  spellLock: selectSpellsLock(state),
 });
 
 const boundActions = {

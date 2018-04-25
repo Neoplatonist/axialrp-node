@@ -682,11 +682,115 @@ const classDB = [
     starting_equipment: { class: 'Barbarian' },
     levels: {
       1: {
-        features: ['Spellcasting', 'Bardic Inspiration(d6)'],
+        features: ['Rage', 'Unamormed Defense'],
         proficiency_bonus: 2,
-        spells_known: 4,
-        type: [2, 2]
-      },  
+        rages: 2,
+        rage_damage: 2
+      },
+      2: {
+        features: ['Reckless Attack', 'Danger Sense'],
+        proficiency_bonus: 2,
+        rages: 2,
+        rage_damage: 2,
+        spells_known: 0,
+        type: []
+      },
+      3: {
+        features: ['Primal Path'],
+        proficiency_bonus: 2,
+        rages: 3,
+        rage_damage: 2,
+        spells_known: 0,
+        type: []
+      },
+      4: {
+        features: ['Ability Score Improvement'],
+        proficiency_bonus: 2,
+        rages: 3,
+        rage_damage: 2,
+        spells_known: 0,
+        type: []
+      },
+      5: {
+        features: ['Extra Attack', 'Fast Movement'],
+        proficiency_bonus: 3,
+        rages: 3,
+        rage_damage: 2,
+        spells_known: 0,
+        type: []
+      },
+      // 6: {
+      //   features: ['Countercharm', 'Bard College feature'],
+      //   proficiency_bonus: 3,
+      //   spells_known: 9,
+      //   type: [3, 4, 3, 3]
+      // },
+      // 7: {
+      //   features: [],
+      //   proficiency_bonus: 3,
+      //   spells_known: 10,
+      //   type: [3, 4, 3, 3, 1]
+      // },
+      // 8: {
+      //   features: ['Ability Score Improvement'],
+      //   proficiency_bonus: 3,
+      //   spells_known: 11,
+      //   type: [3, 4, 3, 3, 2]
+      // },
+      // 9: {
+      //   features: ['Song of Rest(d8)'],
+      //   proficiency_bonus: 4,
+      //   spells_known: 12,
+      //   type: [3, 4, 3, 3, 3, 1]
+      // },
+      // 10: {
+      //   features: ['Bardic Inspiration(d10)', 'Expertise', 'Magical Secrets'],
+      //   proficiency_bonus: 4,
+      //   spells_known: 14,
+      //   type: [4, 4, 3, 3, 3, 2]
+      // },
+      // 11: {
+      //   features: [],
+      //   proficiency_bonus: 4,
+      //   spells_known: 15,
+      //   type: [4, 4, 3, 3, 3, 2, 1]
+      // },
+      // 12: {
+      //   features: ['Ability Score Improvement'],
+      //   proficiency_bonus: 4,
+      //   spells_known: 15,
+      //   type: [4, 4, 3, 3, 3, 2, 1]
+      // },
+      // 13: {
+      //   features: ['Song of Rest(d10)'],
+      //   proficiency_bonus: 5,
+      //   spells_known: 16,
+      //   type: [4, 4, 3, 3, 3, 2, 1, 1]
+      // },
+      // 14: {
+      //   features: ['Magical Secrets', 'Bard College feature'],
+      //   proficiency_bonus: 5,
+      //   spells_known: 18,
+      //   type: [4, 4, 3, 3, 3, 2, 1, 1]
+      // },
+      // 15: {
+      //   features: ['Bardic Inspiration(d12)'],
+      //   proficiency_bonus: 5,
+      //   spells_known: 19,
+      //   type: [4, 4, 3, 3, 3, 2, 1, 1, 1]
+      // },
+      // 16: {
+      //   features: ['Ability Score Improvement'],
+      //   proficiency_bonus: 5,
+      //   spells_known: 19,
+      //   type: [4, 4, 3, 3, 3, 2, 1, 1, 1]
+      // },
+      // 16: {
+      //   features: ['Ability Score Improvement'],
+      //   proficiency_bonus: 5,
+      //   spells_known: 19,
+      //   type: [4, 4, 3, 3, 3, 2, 1, 1, 1]
+      // }
     },
     spellcasting: {},
     weapons: [

@@ -34,12 +34,14 @@ import {
   selectSavingThrows,
   selectSkills,
   selectSkillsFilter,
-  setSpellsAll
+  setSpellsAll,
+  selectSpellsFilter
 } from '../../actions';
 
 class Generator extends Component {
   componentWillMount() {
     this.props.setAlignmentAll();
+    this.props.setLevel(1);
     this.props.setSkillsAll();
     this.props.setSpellsAll();
   }
@@ -48,10 +50,6 @@ class Generator extends Component {
     return this.props.alignmentAll.data.map((v, k) => {
       return <Option key={k} {...v} />;
     });
-  }
-
-  handleLevel = e => {
-    this.props.setAlignment(parseInt(e.target.value, 10));
   }
 
   handleSkillReset = e => {
@@ -188,7 +186,9 @@ class Generator extends Component {
 
           <br/><br/>
 
-          <Spells />
+          { this.props.spellsFilter.data.length
+            ? <Spells />
+            : null }
 
           <br/>
 
@@ -226,6 +226,7 @@ const mapStateToProps = state => ({
   skillsAll: state.generator.skillsAll,
   skillsFilter: selectSkillsFilter(state),
   savingThrows: selectSavingThrows(state),
+  spellsFilter: selectSpellsFilter(state),
   spellsList: state.generator.spellsList,
   subrace: selectSubRace(state)
 });

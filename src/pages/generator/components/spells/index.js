@@ -6,7 +6,8 @@ import {
   selectLevel,
   // selectSpells,
   // setSpells
-  selectSpellsFilter
+  selectSpellsFilter,
+  setSpellsSelected
 } from '../../../../actions';
 
 import SpellList from './components/spellList';
@@ -32,14 +33,14 @@ class Spells extends Component {
       result = 'Choose ' + this.props.classObj.data
         .levels[this.props.level].spells_known
     } catch (err) {
-      result = 'nuthin'
+      result = '...Loading'
     }
 
     return result;
   }
 
   resetSpells = e => {
-    console.log(e.target)
+    this.props.setSpellsSelected()
   }
 
   render() {
@@ -66,11 +67,12 @@ const mapStateToProps = state => ({
   level: selectLevel(state),
   // spell: selectSpells(state)
   // spellFilter: selectSpellLevel(state)
-  spellsFilter: selectSpellsFilter(state)
+  spellsFilter: selectSpellsFilter(state),
+  spellsSelected: state.generator.spellsSelected
 });
 
 const boundActions = {
-  // setSpells
+  setSpellsSelected
 };
 
 export default connect(mapStateToProps, boundActions)(Spells);
