@@ -177,34 +177,116 @@ export const generatorState = {
         features: ['Reckless Attack', 'Danger Sense'],
         proficiency_bonus: 2,
         rages: 2,
-        rage_damage: 2,
-        spells_known: 0,
-        type: []
+        rage_damage: 2
       },
       3: {
         features: ['Primal Path'],
         proficiency_bonus: 2,
         rages: 3,
-        rage_damage: 2,
-        spells_known: 0,
-        type: []
+        rage_damage: 2
       },
       4: {
         features: ['Ability Score Improvement'],
         proficiency_bonus: 2,
         rages: 3,
-        rage_damage: 2,
-        spells_known: 0,
-        type: []
+        rage_damage: 2
       },
       5: {
         features: ['Extra Attack', 'Fast Movement'],
         proficiency_bonus: 3,
         rages: 3,
-        rage_damage: 2,
-        spells_known: 0,
-        type: []
-      }
+        rage_damage: 2
+      },
+      6: {
+        features: ['Path Feature'],
+        proficiency_bonus: 3,
+        rages: 4,
+        rage_damage: 2
+      },
+      7: {
+        features: ['Feral Instinct'],
+        proficiency_bonus: 3,
+        rages: 4,
+        rage_damage: 2
+      },
+      8: {
+        features: ['Ability Score Improvement'],
+        proficiency_bonus: 3,
+        rages: 4,
+        rage_damage: 2
+      },
+      9: {
+        features: ['Brutal Critical (1 dice)'],
+        proficiency_bonus: 4,
+        rages: 4,
+        rage_damage: 3
+      },
+      10: {
+        features: ['Path Feature'],
+        proficiency_bonus: 4,
+        rages: 4,
+        rage_damage: 3
+      },
+      11: {
+        features: ['Relentless Rage'],
+        proficiency_bonus: 4,
+        rages: 4,
+        rage_damage: 3
+      },
+      12: {
+        features: ['Ability Score Improvement'],
+        proficiency_bonus: 4,
+        rages: 5,
+        rage_damage: 3
+      },
+      13: {
+        features: ['Brutal Critical (2 dice)'],
+        proficiency_bonus: 5,
+        rages: 5,
+        rage_damage: 3
+      },
+      14: {
+        features: ['Path Feature'],
+        proficiency_bonus: 5,
+        rages: 5,
+        rage_damage: 3
+      },
+      15: {
+        features: ['Persistent Rage'],
+        proficiency_bonus: 5,
+        rages: 5,
+        rage_damage: 3
+      },
+      16: {
+        features: ['Ability Score Improvement'],
+        proficiency_bonus: 5,
+        rages: 5,
+        rage_damage: 4
+      },
+      17: {
+        features: ['Brutal Critical (3 dice)'],
+        proficiency_bonus: 6,
+        rages: 6,
+        rage_damage: 4
+      },
+      18: {
+        features: ['Indomitable Might'],
+        proficiency_bonus: 6,
+        rages: 6,
+        rage_damage: 4
+      },
+      19: {
+        features: ['Ability Score Improvement'],
+        proficiency_bonus: 6,
+        rages: 6,
+        rage_damage: 4
+      },
+      20: {
+        features: ['Primal Champion'],
+        proficiency_bonus: 6,
+        rages: 'unlimited',
+        rage_damage: 4
+      },
     },
     spellcasting: {},
     weapons: [

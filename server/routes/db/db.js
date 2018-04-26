@@ -691,106 +691,116 @@ const classDB = [
         features: ['Reckless Attack', 'Danger Sense'],
         proficiency_bonus: 2,
         rages: 2,
-        rage_damage: 2,
-        spells_known: 0,
-        type: []
+        rage_damage: 2
       },
       3: {
         features: ['Primal Path'],
         proficiency_bonus: 2,
         rages: 3,
-        rage_damage: 2,
-        spells_known: 0,
-        type: []
+        rage_damage: 2
       },
       4: {
         features: ['Ability Score Improvement'],
         proficiency_bonus: 2,
         rages: 3,
-        rage_damage: 2,
-        spells_known: 0,
-        type: []
+        rage_damage: 2
       },
       5: {
         features: ['Extra Attack', 'Fast Movement'],
         proficiency_bonus: 3,
         rages: 3,
-        rage_damage: 2,
-        spells_known: 0,
-        type: []
+        rage_damage: 2
       },
-      // 6: {
-      //   features: ['Countercharm', 'Bard College feature'],
-      //   proficiency_bonus: 3,
-      //   spells_known: 9,
-      //   type: [3, 4, 3, 3]
-      // },
-      // 7: {
-      //   features: [],
-      //   proficiency_bonus: 3,
-      //   spells_known: 10,
-      //   type: [3, 4, 3, 3, 1]
-      // },
-      // 8: {
-      //   features: ['Ability Score Improvement'],
-      //   proficiency_bonus: 3,
-      //   spells_known: 11,
-      //   type: [3, 4, 3, 3, 2]
-      // },
-      // 9: {
-      //   features: ['Song of Rest(d8)'],
-      //   proficiency_bonus: 4,
-      //   spells_known: 12,
-      //   type: [3, 4, 3, 3, 3, 1]
-      // },
-      // 10: {
-      //   features: ['Bardic Inspiration(d10)', 'Expertise', 'Magical Secrets'],
-      //   proficiency_bonus: 4,
-      //   spells_known: 14,
-      //   type: [4, 4, 3, 3, 3, 2]
-      // },
-      // 11: {
-      //   features: [],
-      //   proficiency_bonus: 4,
-      //   spells_known: 15,
-      //   type: [4, 4, 3, 3, 3, 2, 1]
-      // },
-      // 12: {
-      //   features: ['Ability Score Improvement'],
-      //   proficiency_bonus: 4,
-      //   spells_known: 15,
-      //   type: [4, 4, 3, 3, 3, 2, 1]
-      // },
-      // 13: {
-      //   features: ['Song of Rest(d10)'],
-      //   proficiency_bonus: 5,
-      //   spells_known: 16,
-      //   type: [4, 4, 3, 3, 3, 2, 1, 1]
-      // },
-      // 14: {
-      //   features: ['Magical Secrets', 'Bard College feature'],
-      //   proficiency_bonus: 5,
-      //   spells_known: 18,
-      //   type: [4, 4, 3, 3, 3, 2, 1, 1]
-      // },
-      // 15: {
-      //   features: ['Bardic Inspiration(d12)'],
-      //   proficiency_bonus: 5,
-      //   spells_known: 19,
-      //   type: [4, 4, 3, 3, 3, 2, 1, 1, 1]
-      // },
-      // 16: {
-      //   features: ['Ability Score Improvement'],
-      //   proficiency_bonus: 5,
-      //   spells_known: 19,
-      //   type: [4, 4, 3, 3, 3, 2, 1, 1, 1]
-      // },
-      // 16: {
-      //   features: ['Ability Score Improvement'],
-      //   proficiency_bonus: 5,
-      //   spells_known: 19,
-      //   type: [4, 4, 3, 3, 3, 2, 1, 1, 1]
-      // }
+      6: {
+        features: ['Path Feature'],
+        proficiency_bonus: 3,
+        rages: 4,
+        rage_damage: 2
+      },
+      7: {
+        features: ['Feral Instinct'],
+        proficiency_bonus: 3,
+        rages: 4,
+        rage_damage: 2
+      },
+      8: {
+        features: ['Ability Score Improvement'],
+        proficiency_bonus: 3,
+        rages: 4,
+        rage_damage: 2
+      },
+      9: {
+        features: ['Brutal Critical (1 dice)'],
+        proficiency_bonus: 4,
+        rages: 4,
+        rage_damage: 3
+      },
+      10: {
+        features: ['Path Feature'],
+        proficiency_bonus: 4,
+        rages: 4,
+        rage_damage: 3
+      },
+      11: {
+        features: ['Relentless Rage'],
+        proficiency_bonus: 4,
+        rages: 4,
+        rage_damage: 3
+      },
+      12: {
+        features: ['Ability Score Improvement'],
+        proficiency_bonus: 4,
+        rages: 5,
+        rage_damage: 3
+      },
+      13: {
+        features: ['Brutal Critical (2 dice)'],
+        proficiency_bonus: 5,
+        rages: 5,
+        rage_damage: 3
+      },
+      14: {
+        features: ['Path Feature'],
+        proficiency_bonus: 5,
+        rages: 5,
+        rage_damage: 3
+      },
+      15: {
+        features: ['Persistent Rage'],
+        proficiency_bonus: 5,
+        rages: 5,
+        rage_damage: 3
+      },
+      16: {
+        features: ['Ability Score Improvement'],
+        proficiency_bonus: 5,
+        rages: 5,
+        rage_damage: 4
+      },
+      17: {
+        features: ['Brutal Critical (3 dice)'],
+        proficiency_bonus: 6,
+        rages: 6,
+        rage_damage: 4
+      },
+      18: {
+        features: ['Indomitable Might'],
+        proficiency_bonus: 6,
+        rages: 6,
+        rage_damage: 4
+      },
+      19: {
+        features: ['Ability Score Improvement'],
+        proficiency_bonus: 6,
+        rages: 6,
+        rage_damage: 4
+      },
+      20: {
+        features: ['Primal Champion'],
+        proficiency_bonus: 6,
+        rages: 'unlimited',
+        rage_damage: 4
+      },
     },
     spellcasting: {},
     weapons: [
@@ -959,7 +969,31 @@ const classDB = [
         proficiency_bonus: 5,
         spells_known: 19,
         type: [4, 4, 3, 3, 3, 2, 1, 1, 1]
-      }
+      },
+      17: {
+        features: ['Song of Rest (d12)'],
+        proficiency_bonus: 6,
+        spells_known: 20,
+        type: [4, 4, 3, 3, 3, 2, 1, 1, 1, 1]
+      },
+      18: {
+        features: ['Magical Secrets'],
+        proficiency_bonus: 6,
+        spells_known: 22,
+        type: [4, 4, 3, 3, 3, 3, 1, 1, 1, 1]
+      },
+      19: {
+        features: ['Ability Score Improvement'],
+        proficiency_bonus: 6,
+        spells_known: 22,
+        type: [4, 4, 3, 3, 3, 3, 2, 1, 1, 1]
+      },
+      20: {
+        features: ['Superior Inspiration'],
+        proficiency_bonus: 6,
+        spells_known: 22,
+        type: [4, 4, 3, 3, 3, 3, 2, 2, 1, 1]
+      },
     },
     spellcasting: {
       0:  ['Dancing Lights', 'Light', 'Mage Hand', 'Mending', 'Message', 'Minor Illusion', 'Prestidigitation', 'True Strike', 'Vicious Mockery'],
@@ -1014,7 +1048,38 @@ const classDB = [
         proficiencies: 'tba'
       }
     ],
-    levels: {},
+    levels: {
+      1: {
+        features: ['Spellcasting', 'Divine Domain'],
+        proficiency_bonus: 2,
+        spells_known: 0,
+        type: [3, 2]
+      },
+      2: {
+        features: ['Channel Divinity (1/rest)', 'Divine Domain Feature'],
+        proficiency_bonus: 2,
+        spells_known: 0,
+        type: [3, 3]
+      },
+      3: {
+        features: [],
+        proficiency_bonus: 2,
+        spells_known: 0,
+        type: [3, 4, 2]
+      },
+      4: {
+        features: ['Ability Score Improvement'],
+        proficiency_bonus: 2,
+        spells_known: 0,
+        type: [4, 4, 3]
+      },
+      5: {
+        features: ['Destroy Undead (CR 1/2)'],
+        proficiency_bonus: 3,
+        spells_known: 0,
+        type: [4, 4, 3, 2]
+      },
+    },
     spellcasting: {
       0: ['Guidance', 'Light', 'Mending', 'Resistance', 'Sacred Flame', 'Spare the Dying', 'Thaumaturgy'],
       1: ['Bane', 'Bless', 'Command', 'Create or Destroy Water', 'Cure Wounds', 'Detect Evil and Good', 'Detect Magic', 'Detect Poison and Disease', 'Guiding Bolt', 'Healing Word', 'Inflict Wounds', 'Protection from Evil and Good', 'Purify Food and Drink', 'Sanctuary', 'Shield of Faith'],
@@ -1067,7 +1132,38 @@ const classDB = [
         proficiencies: 'tba'
       }
     ],
-    levels: {},
+    levels: {
+      1: {
+        features: ['Druidic', 'Spellcasting'],
+        proficiency_bonus: 2,
+        spells_known: 0,
+        type: [2, 2]
+      },
+      2: {
+        features: ['Wild Shape', 'Duidic Circle'],
+        proficiency_bonus: 2,
+        spells_known: 0,
+        type: [2, 3]
+      },
+      3: {
+        features: [],
+        proficiency_bonus: 2,
+        spells_known: 0,
+        type: [2, 4, 2]
+      },
+      4: {
+        features: ['Wild Shape Improvement', ' Ability Score Improvement'],
+        proficiency_bonus: 2,
+        spells_known: 0,
+        type: [2, 4, 3]
+      },
+      5: {
+        features: [],
+        proficiency_bonus: 3,
+        spells_known: 0,
+        type: [2, 4, 3, 2]
+      },
+    },
     spellcasting: {
       0: ['Druidcraft', 'Guidance', 'Mending', 'Poison Spray', 'Produce Flame', 'Resistance', 'Shillelagh'],
       1: ['Animal Friendship', 'Charm Person', 'Create or Destroy Water', 'Cure Wounds', 'Detect Magic', 'Detect Poison and Disease', 'Entangle', 'Faerie Fire', 'Fog Cloud', 'Goodberry', 'Healing Word', 'Jump', 'Longstrider', 'Purify Food and Drink', 'Speak with Animals', 'Thunderwave'],
@@ -1131,7 +1227,28 @@ const classDB = [
         proficiencies: 'tba'
       }
     ],
-    levels: {},
+    levels: {
+      1: {
+        features: ['Fighting Style', 'Second Wind'],
+        proficiency_bonus: 2
+      },
+      2: {
+        features: ['Action Surge (one use)'],
+        proficiency_bonus: 2
+      },
+      3: {
+        features: ['Martial Archetype'],
+        proficiency_bonus: 2
+      },
+      4: {
+        features: ['Ability Score Improvement'],
+        proficiency_bonus: 2
+      },
+      5: {
+        features: ['Extra Attack'],
+        proficiency_bonus: 3
+      },
+    },
     spellcasting: {},
     weapons: [
       { name: 'Simple' },
@@ -1253,7 +1370,38 @@ const classDB = [
         proficiencies: 'tba'
       }
     ],
-    levels: {},
+    levels: {
+      1: {
+        features: ['Divine Sense', 'Lay on Hands'],
+        proficiency_bonus: 2,
+        spells_known: 0,
+        type: []
+      },
+      2: {
+        features: ['Fighting Style', 'Spellcasting', 'Divine Smite'],
+        proficiency_bonus: 2,
+        spells_known: 0,
+        type: [2]
+      },
+      3: {
+        features: ['Divine Health', 'Saacred Oath'],
+        proficiency_bonus: 2,
+        spells_known: 0,
+        type: [3]
+      },
+      4: {
+        features: ['Ability Score Improvement'],
+        proficiency_bonus: 2,
+        spells_known: 0,
+        type: [3]
+      },
+      5: {
+        features: ['Extra Attack'],
+        proficiency_bonus: 3,
+        spells_known: 0,
+        type: [4, 2]
+      }
+    },
     spellcasting: {
       0: [],
       1: ['Bless', 'Command', 'Cure Wounds', 'Detect Evil and Good', 'Detect Magic', 'Detect Poison and Disease', 'Divine Favor', 'Heroism', 'Protection from Evil and Good', 'Purify Food and Drink', 'Shield of Faith'],
@@ -1305,7 +1453,38 @@ const classDB = [
         proficiencies: 'tba'
       }
     ],
-    levels: {},
+    levels: {
+      1: {
+        features: ['Favored Enemy', 'Natural Explorer'],
+        proficiency_bonus: 2,
+        spells_known: 0,
+        type: []
+      },
+      2: {
+        features: ['Fighting Style', 'Spellcasting'],
+        proficiency_bonus: 2,
+        spells_known: 2,
+        type: [2]
+      },
+      3: {
+        features: ['Ranger Archetype', 'Primeval Awareness'],
+        proficiency_bonus: 2,
+        spells_known: 3,
+        type: [3]
+      },
+      4: {
+        features: ['Ability Score Improvement'],
+        proficiency_bonus: 2,
+        spells_known: 3,
+        type: [3]
+      },
+      5: {
+        features: ['Extra Attack'],
+        proficiency_bonus: 3,
+        spells_known: 4,
+        type: [4, 2]
+      }
+    },
     spellcasting: {
       0: [],
       1: ['Alarm', 'Animal Friendship', 'Cure Wounds', 'Detect Magic', 'Detect Poison and Disease', 'Fog Cloud', 'Goodberry', 'Hunter\'s Mark', 'Jump', 'Longstrider', 'Speak with Animals'],
@@ -1397,7 +1576,43 @@ const classDB = [
         proficiencies: 'tba'
       }
     ],
-    levels: {},
+    levels: {
+      1: {
+        features: ['Spellcasting', 'Sorcerous Origin'],
+        proficiency_bonus: 2,
+        sorcery_points: 0,
+        spells_known: 2,
+        type: [4, 2]
+      },
+      2: {
+        features: ['Font of Magic'],
+        proficiency_bonus: 2,
+        sorcery_points: 2,
+        spells_known: 3,
+        type: [4, 3]
+      },
+      3: {
+        features: ['Metamagic'],
+        proficiency_bonus: 2,
+        sorcery_points: 3,
+        spells_known: 4,
+        type: [4, 4, 2]
+      },
+      4: {
+        features: ['Ability Score Improvement'],
+        proficiency_bonus: 2,
+        sorcery_points: 4,
+        spells_known: 5,
+        type: [5, 4, 3]
+      },
+      5: {
+        features: [],
+        proficiency_bonus: 3,
+        sorcery_points: 5,
+        spells_known: 6,
+        type: [5, 4, 3, 2]
+      }
+    },
     spellcasting: {
       0: ['Acid Splash', 'Chill Touch', 'Dancing Lights', 'Fire Bolt', 'Light', 'Mage Hand', 'Mending', 'Message', 'Minor Illusion', 'Poison Spray', 'Prestidigitation', 'Ray of Frost', 'Shocking Grasp', 'True Strike'],
       1: ['Burning Hands', 'Charm Person', 'Color Spray', 'Comprehend Languages', 'Detect Magic', 'Disguise Self', 'Expeditious Retreat', 'False Life', 'Feather Fall', 'Fog Cloud', 'Jump', 'Mage Armor', 'Magic Missile', 'Shield', 'Silent Image', 'Sleep', 'Thunderwave'],
@@ -1447,7 +1662,43 @@ const classDB = [
         proficiencies: 'tba'
       }
     ],
-    levels: {},
+    levels: {
+      1: {
+        features: ['Otherworldly Patron', 'Pact Magic'],
+        proficiency_bonus: 2,
+        spells_known: 2,
+        type: [2, 1],
+        invocations_known: 0
+      },
+      2: {
+        features: ['Eldritch Invocations'],
+        proficiency_bonus: 2,
+        spells_known: 3,
+        type: [2, 2],
+        invocations_known: 2
+      },
+      3: {
+        features: ['Pact Boon'],
+        proficiency_bonus: 2,
+        spells_known: 4,
+        type: [2, 2, 2],
+        invocations_known: 2
+      },
+      4: {
+        features: ['Ability Score Improvement'],
+        proficiency_bonus: 2,
+        spells_known: 5,
+        type: [3, 2, 2],
+        invocations_known: 2
+      },
+      5: {
+        features: [],
+        proficiency_bonus: 3,
+        spells_known: 6,
+        type: [3, 2, 2, 2],
+        invocations_known: 3
+      }
+    },
     spellcasting: {
       0: ['Chill Touch', 'Eldritch Blast', 'Mage Hand', 'Minor Illusion', 'Poison Spray', 'Prestidigitation', 'True Strike'],
       1: ['Charm Person', 'Comprehend Languages', 'Expeditious Retreat', 'Hellish Rebuke', 'Illusory Script', 'Protection from Evil and Good', 'Unseen Servant'],
@@ -1491,7 +1742,38 @@ const classDB = [
         proficiencies: 'tba'
       }
     ],
-    levels: {},
+    levels: {
+      1: {
+        features: ['Spellcasting', 'Arcane Recovery'],
+        proficiency_bonus: 2,
+        spells_known: 0,
+        type: [3, 2]
+      },
+      2: {
+        features: ['Arcane Tradition'],
+        proficiency_bonus: 2,
+        spells_known: 0,
+        type: [3, 3]
+      },
+      3: {
+        features: [],
+        proficiency_bonus: 2,
+        spells_known: 0,
+        type: [3, 4, 2]
+      },
+      4: {
+        features: ['Ability Score Improvement'],
+        proficiency_bonus: 2,
+        spells_known: 0,
+        type: [4, 4, 3]
+      },
+      5: {
+        features: [],
+        proficiency_bonus: 3,
+        spells_known: 0,
+        type: [4, 4, 3, 2]
+      }
+    },
     spellcasting: {
       0: ['Acid Splash', 'Chill Touch', 'Dancing Lights', 'Fire Bolt', 'Light', 'Mage Hand', 'Mending', 'Message', 'Minor Illusion', 'Poison Spray', 'Prestidigitation', 'Ray of Frost', 'Shocking Grasp', 'True Strike'],
       1: ['Alarm', 'Burning Hands', 'Charm Person', 'Color Spray', 'Comprehend Languages', 'Detect Magic', 'Disguise Self', 'Expeditious Retreat', 'False Life', 'Feather Fall', 'Find Familiar', 'Floating Disk', 'Fog Cloud', 'Grease', 'Hideous Laughter', 'Identify', 'Illusory Script', 'Jump', 'Longstrider', 'Mage Armor', 'Magic Missile', 'Protection from Evil and Good', 'Shield', 'Silent Image', 'Sleep', 'Thunderwave', 'Unseen Servant'],
