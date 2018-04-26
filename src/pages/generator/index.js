@@ -254,6 +254,7 @@ export default connect(mapStateToProps, boundActions)(Generator);
  * - Vicious Mockery - spellsDB
  * - Spare the Dying - spellsDB
  * - Ability Score point buy subtraction conditional
+ * - class.levels finish adding to db
  */
 
 /*
