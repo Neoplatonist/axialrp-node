@@ -253,6 +253,7 @@ export default connect(mapStateToProps, boundActions)(Generator);
  * - ClassDB Normalization
  * - Vicious Mockery - spellsDB
  * - Spare the Dying - spellsDB
+ * - Ability Score point buy subtraction conditional
  */
 
 /*
@@ -262,4 +263,5 @@ export default connect(mapStateToProps, boundActions)(Generator);
  * - Calculate startin money for characters
  * - In Classes: Constitution is for level 1 only.
  * - Create fallback for class db calls failing
+ * - fantasynamegenerators for names
  */
