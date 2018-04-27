@@ -4,7 +4,9 @@ import {
   SET_SKILLS_ALL_LOADING,
   SET_SKILLS_ALL_SUCCESS 
 } from '../../types';
+
 import { skillQuery } from '../../../db';
+import { cache } from '../../../utils';
 
 /*
  *  Actions
@@ -23,7 +25,7 @@ export const setSkillsAll = () => {
     dispatch({ type: SET_SKILLS_ALL_LOADING, payload: load });
 
     try {
-      load.data = await skillQuery();
+      load.data = await cache('skillList', skillQuery);
       load.status = 'success';
       dispatch({ type: SET_SKILLS_ALL_SUCCESS, payload: load });
     } catch (err) {

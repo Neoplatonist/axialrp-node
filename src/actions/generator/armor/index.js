@@ -10,6 +10,8 @@ import {
   armorQuery
 } from '../../../db';
 
+import { cache } from '../../../utils';
+
 /*
  *  Actions
  */
@@ -42,7 +44,7 @@ export const setArmorAll = () => {
     dispatch({ type: SET_ARMOR_ALL_LOADING, payload: load });
 
     try {
-      load.data = await armorQuery();
+      load.data = await cache('armorList', armorQuery);
       load.status = 'success';
       dispatch({ type: SET_ARMOR_ALL_SUCCESS, payload: load });
     } catch (err) {

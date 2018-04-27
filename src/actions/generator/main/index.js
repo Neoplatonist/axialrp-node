@@ -13,6 +13,7 @@ import {
 
 import { alignmentQuery } from '../../../db';
 import { setSpellsSelected } from '../../index';
+import { cache } from '../../../utils';
 
 /*
  *  Actions
@@ -31,7 +32,7 @@ export const setAlignmentAll = () => {
     dispatch({ type: SET_ALIGNMENT_ALL_LOADING, payload: load });
 
     try {
-      load.data = await alignmentQuery();
+      load.data = await cache('alignmentList', alignmentQuery);
       load.status = 'success';
       dispatch({ type: SET_ALIGNMENT_ALL_SUCCESS, payload: load });
     } catch (err) {

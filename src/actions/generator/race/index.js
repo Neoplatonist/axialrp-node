@@ -25,6 +25,8 @@ import {
   setLanguageList 
 } from '../../index';
 
+import { cache } from '../../../utils';
+
 /*
  *  Actions
  */
@@ -39,7 +41,7 @@ export const setRace = race => {
     dispatch({ type: SET_RACE_OBJ_LOADING, payload: load });
 
     try {
-      load.data = await raceNameQuery(race);
+      load.data = await cache('raceList', raceNameQuery, race);
       load.status = 'success';
 
       dispatch({ type: SET_RACE_OBJ_SUCCESS, payload: load });
@@ -86,7 +88,7 @@ export const setRaceNameList = () => {
     dispatch({ type: SET_RACE_NAME_LIST_LOADING, payload: load });
 
     try {
-      load.data = await raceNameListQuery();
+      load.data = await cache('raceNameList', raceNameListQuery);
       load.status = 'success';
       dispatch({ type: SET_RACE_NAME_LIST_SUCCESS, payload: load });
     } catch (err) {
@@ -108,7 +110,7 @@ export const setSubRace = name => {
     dispatch({ type: SET_SUBRACE_OBJ_LOADING, payload: load });
 
     try {
-      load.data = await sub_raceNameQuery(name);
+      load.data = await cache('subraceList', sub_raceNameQuery, name);
       load.status = 'success';
       dispatch({ type: SET_SUBRACE_OBJ_SUCCESS, payload: load });
     } catch (err) {

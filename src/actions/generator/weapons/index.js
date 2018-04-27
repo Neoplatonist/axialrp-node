@@ -10,6 +10,8 @@ import {
   weaponQuery
 } from '../../../db';
 
+import { cache } from '../../../utils';
+
 /*
  *  Actions
  */
@@ -42,7 +44,7 @@ export const setWeaponAll = () => {
     dispatch({ type: SET_WEAPON_ALL_LOADING, payload: load })
 
     try {
-      load.data = await weaponQuery();
+      load.data = await cache('weaponList', weaponQuery);
       load.status = 'success';
       dispatch({ type: SET_WEAPON_ALL_SUCCESS, payload: load });
     } catch (err) {

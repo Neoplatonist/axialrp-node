@@ -8,6 +8,7 @@ import {
 } from '../../types';
 
 import { spellQuery } from '../../../db';
+import { cache } from '../../../utils';
 
 /*
  *  Actions
@@ -27,7 +28,7 @@ export const setSpellsAll = () => {
     dispatch({ type: SET_SPELLS_ALL_LOADING, payload: load });
 
     try {
-      load.data = await spellQuery();
+      load.data = await cache('spellList', spellQuery);
       load.status = 'success';
       dispatch({ type: SET_SPELLS_ALL_SUCCESS, payload: load });
     } catch (err) {

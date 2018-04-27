@@ -15,6 +15,8 @@ import {
 
 import { setHP, setSpellsSelected } from '../../index';
 
+import { cache } from '../../../utils';
+
 /*
  *  Actions
  */
@@ -32,7 +34,7 @@ export const setClass = char_class => {
     dispatch({ type: SET_CLASS_OBJ_LOADING, payload: load });
 
     try {
-      load.data = await classNameQuery(char_class);
+      load.data = await cache('classObjList', classNameQuery, char_class);
       load.status = 'success';
       dispatch({ type: SET_CLASS_OBJ_SUCCESS, payload: load });
 
@@ -58,10 +60,11 @@ export const setClassNameList = () => {
     dispatch({ type: SET_CLASS_NAME_LIST_LOADING, payload: load });
 
     try {
-      load.data = await classAllNamesQuery();
+      load.data = await cache('classNameList', classAllNamesQuery);
       load.status = 'success';
       dispatch({ type: SET_CLASS_NAME_LIST_SUCCESS, payload: load });
     } catch (err) {
+      console.log(err.message)
       load.data = [];
       load.status = 'error';
       dispatch({ type: SET_CLASS_NAME_LIST_ERROR, payload: load });

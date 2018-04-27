@@ -18,21 +18,31 @@ const store = (key, value) => {
 export const cache = async (key, query, input) => {
   let {data, err} = check(key);
   if (err) {
-    console.log('cache error:', err);
-    data = await query(input);
-    store(key, [data]);
+    if (input) {
+      data = await query(input);
+      store(key, [data]);
+      return data;
+    } else {
+      data = await query();
+      store(key, data);
+      return data;
+    }
   }
 
-  const item = data.find(v => v.name === input);
+  if (input != undefined) {
+    const item = data.find(v => v.name === input);
 
-  if (!err && item == undefined) {
-    const queryInput = await query(input)
-    data.push(queryInput);
-    store(key, data);
-    data = queryInput;
-  } else {
-    data = item;
+    if (item == undefined) {
+      const queryInput = await query(input);
+
+      data.push(queryInput);
+      store(key, data);
+      return queryInput;
+    }
+
+    return item;
   }
 
   return data;
 };
+
