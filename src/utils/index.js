@@ -1,4 +1,9 @@
-const localStorage = window.localStorage;
+const isBrowser = typeof window !== 'undefined';
+let localStorage;
+isBrowser 
+  ? localStorage = window.localStorage 
+  : localStorage = storageMock();
+
 
 const check = key => {
   const data = JSON.parse(localStorage.getItem(key));
@@ -46,3 +51,30 @@ export const cache = async (key, query, input) => {
   return data;
 };
 
+ // Storage Mock
+function storageMock() {
+  const storage = {};
+
+  return {
+    setItem: (key, value) => {
+      storage[key] = value || '';
+    },
+
+    getItem: key => {
+      return key in storage ? storage[key] : null;
+    },
+
+    removeItem: key => {
+      delete storage[key];
+    },
+
+    get length() {
+      return Object.keys(storage).length;
+    },
+
+    key: i => {
+      const keys = Object.keys(storage);
+      return keys[i] || null;
+    }
+  };
+}
