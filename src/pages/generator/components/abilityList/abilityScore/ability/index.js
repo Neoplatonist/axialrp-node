@@ -14,7 +14,7 @@ import {
 
 class Ability extends Component {
   state = {
-    downLock: false,
+    downLock: true,
     upLock: false
   }
 
@@ -30,7 +30,8 @@ class Ability extends Component {
         this.props.setAbility(this.props.index, score);
 
         const points = Math.min(
-          27, this.props.abilityPoints + Math.abs(AbilityPointMap[score+1] - AbilityPointMap[score]));
+          27, this.props.abilityPoints 
+            + Math.abs(AbilityPointMap[score+1] - AbilityPointMap[score]));
         this.props.setAbilityPoints(points);
 
         if (abilityItem === 9) {
@@ -54,7 +55,8 @@ class Ability extends Component {
         this.props.setAbility(this.props.index, score);
 
         const points = Math.max(
-          0, this.props.abilityPoints - (AbilityPointMap[score] - AbilityPointMap[score-1]));
+          0, this.props.abilityPoints 
+            - (AbilityPointMap[score] - AbilityPointMap[score-1]));
         this.props.setAbilityPoints(points);
         
         if (abilityItem === 14) {
@@ -106,7 +108,11 @@ class Ability extends Component {
           value={this.props.value}
           type="number"
           onChange={ e => 
-            this.props.setAbility(this.props.index, parseInt(e.target.value, 10)) }
+            this.props.setAbility(
+              this.props.index,
+              parseInt(e.target.value, 10)
+            )
+          }
         />
 
         <button 

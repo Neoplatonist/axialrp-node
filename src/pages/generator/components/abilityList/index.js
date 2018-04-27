@@ -68,7 +68,8 @@ class AbilityList extends Component {
 
   rollDice = e => {
     const dice = this.props.dice.map(v => {
-      return Dice(6, 4).sort((a, b) => a - b).slice(1).reduce((p, c) => p + c, 0);
+      return Dice(6, 4).sort((a, b) => a - b)
+        .slice(1).reduce((p, c) => p + c, 0);
     });
 
     this.props.setDice(dice);
@@ -85,12 +86,14 @@ class AbilityList extends Component {
               onClick={this.abilityDice}>
               <span className="tab-link">Dice</span>
             </li>
+
             <li 
               ref={el => this.abilityBuyRef = el}
               className="tab-item" 
               onClick={this.abilityBuy}>
               <span className="tab-link">Points</span>
             </li>
+
             <li 
               ref={el => this.abilityQuickRef = el}
               className="tab-item" 
