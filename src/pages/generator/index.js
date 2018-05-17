@@ -257,6 +257,7 @@ export default connect(mapStateToProps, boundActions)(Generator);
  * - ClassDB Normalization
  * - Vicious Mockery - spellsDB
  * - Spare the Dying - spellsDB
+ * - Warlock spells list doesn't work
  */
 
 /*

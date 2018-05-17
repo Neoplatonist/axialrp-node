@@ -39,11 +39,13 @@ class SpellList extends Component {
       <div>
         <br />
 
-        <h5>{ this.renderTitle() } ({this.props.choose})</h5>
+        { this.props.list.length 
+          ? <h5>{ this.renderTitle() } ({this.props.choose})</h5> 
+          : '' }
 
         { this.props.list.length
           ? this.renderList()
-          : `...Loading` }
+          : '' }
       </div>
     );
   }
