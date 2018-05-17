@@ -257,8 +257,6 @@ export default connect(mapStateToProps, boundActions)(Generator);
  * - ClassDB Normalization
  * - Vicious Mockery - spellsDB
  * - Spare the Dying - spellsDB
- * - class.levels finish adding to db
- * - fix selectHPTotal hp.data to hp
  */
 
 /*
