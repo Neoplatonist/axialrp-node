@@ -164,8 +164,8 @@ export const selectHPTotal = createSelector(
     };
 
     try {
-      if (isNaN(hp.data)) hp.data = 0;
-      result.data = abilityMod.data[2] + parseInt(hp.data, 10);
+      if (isNaN(hp)) hp = 0;
+      result.data = abilityMod.data[2] + parseInt(hp, 10);
       result.status = 'success';
     } catch (err) {
       result.data = 0;
