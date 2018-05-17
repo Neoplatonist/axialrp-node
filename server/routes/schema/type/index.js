@@ -9,12 +9,24 @@ const {
 
 const ClassLevel = new GraphQLObjectType({
   name: 'ClassLevel',
+  description: 'Traits gained in a particular class when leveling up.',
 
   fields: () => ({
+    cantrips: { type: GraphQLInt },
     features: { type: new GraphQLList(GraphQLString) },
+    invocations_known: { type: GraphQLInt },
+    ki_points: { type: GraphQLInt },
+    martial_arts: { type: GraphQLString },
     proficiency_bonus: { type: GraphQLInt },
+    rages: { type: GraphQLInt },
+    rage_damage: { type: GraphQLInt },
+    sneak_attack: { type: GraphQLString },
+    sorcery_points: { type: GraphQLInt },
+    slot_level: { type: GraphQLInt },
     spells_known: { type: GraphQLInt },
-    type: { type: new GraphQLList(GraphQLInt) }
+    spell_slots: { type: GraphQLInt },
+    type: { type: new GraphQLList(GraphQLInt) },
+    unarmored_movement: { type: GraphQLString },
   })
 });
 

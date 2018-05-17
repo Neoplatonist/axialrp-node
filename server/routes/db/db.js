@@ -593,7 +593,7 @@ const subracesDB = [
     tools: {},
     weapons: [],
   }
-]
+];
 
 
 
@@ -1079,6 +1079,96 @@ const classDB = [
         spells_known: 0,
         type: [4, 4, 3, 2]
       },
+      6: {
+        features: ['Channel Divinity (2/rest)', 'Divine Domain feature'],
+        proficiency_bonus: 3,
+        spells_known: 0,
+        type: [4, 4, 3, 3]
+      },
+      7: {
+        features: [],
+        proficiency_bonus: 3,
+        spells_known: 0,
+        type: [4, 4, 3, 3, 1]
+      },
+      8: {
+        features: ['Ability Score Improvement',  'Destroy Undead (CR 1)', 'Divine Domain feature'],
+        proficiency_bonus: 3,
+        spells_known: 0,
+        type: [4, 4, 3, 3, 2]
+      },
+      9: {
+        features: [],
+        proficiency_bonus: 4,
+        spells_known: 0,
+        type: [4, 4, 3, 3, 3, 1]
+      },
+      10: {
+        features: ['Divine Intervention'],
+        proficiency_bonus: 4,
+        spells_known: 0,
+        type: [5, 4, 3, 3, 3, 2]
+      },
+      11: {
+        features: ['Destroy Undead (CR 2)'],
+        proficiency_bonus: 4,
+        spells_known: 0,
+        type: [5, 4, 3, 3, 3, 2, 1]
+      },
+      12: {
+        features: ['Ability Score Improvement'],
+        proficiency_bonus: 4,
+        spells_known: 0,
+        type: [5, 4, 3, 3, 3, 2, 1]
+      },
+      13: {
+        features: [],
+        proficiency_bonus: 5,
+        spells_known: 0,
+        type: [5, 4, 3, 3, 3, 2, 1, 1]
+      },
+      14: {
+        features: ['Destroy Undead (CR 3)'],
+        proficiency_bonus: 5,
+        spells_known: 0,
+        type: [5, 4, 3, 3, 3, 2, 1, 1]
+      },
+      15: {
+        features: [],
+        proficiency_bonus: 5,
+        spells_known: 0,
+        type: [5, 4, 3, 3, 3, 2, 1, 1, 1]
+      },
+      16: {
+        features: ['Ability Score Improvement'],
+        proficiency_bonus: 5,
+        spells_known: 0,
+        type: [5, 4, 3, 3, 3, 2, 1, 1, 1]
+      },
+      17: {
+        features: ['Destroy Undead (CR 4)', 'Divine Domain feature'],
+        proficiency_bonus: 6,
+        spells_known: 0,
+        type: [5, 4, 3, 3, 3, 2, 1, 1, 1, 1]
+      },
+      18: {
+        features: ['Channel Divinity (3/rest)'],
+        proficiency_bonus: 6,
+        spells_known: 0,
+        type: [5, 4, 3, 3, 3, 2, 1, 1, 1, 1]
+      },
+      19: {
+        features: ['Ability Score Improvement'],
+        proficiency_bonus: 6,
+        spells_known: 0,
+        type: [5, 4, 3, 3, 3, 2, 2, 1, 1, 1]
+      },
+      20: {
+        features: ['Divine Intervention Improvement'],
+        proficiency_bonus: 6,
+        spells_known: 0,
+        type: [5, 4, 3, 3, 3, 2, 2, 2, 1, 1]
+      }
     },
     spellcasting: {
       0: ['Guidance', 'Light', 'Mending', 'Resistance', 'Sacred Flame', 'Spare the Dying', 'Thaumaturgy'],
@@ -1155,14 +1245,104 @@ const classDB = [
         features: ['Wild Shape Improvement', ' Ability Score Improvement'],
         proficiency_bonus: 2,
         spells_known: 0,
-        type: [2, 4, 3]
+        type: [3, 4, 3]
       },
       5: {
         features: [],
         proficiency_bonus: 3,
         spells_known: 0,
-        type: [2, 4, 3, 2]
+        type: [3, 4, 3, 2]
       },
+      6: {
+        features: ['Druid Circle Feature'],
+        proficiency_bonus: 3,
+        spells_known: 0,
+        type: [3, 4, 3, 3]
+      },
+      7: {
+        features: [],
+        proficiency_bonus: 3,
+        spells_known: 0,
+        type: [3, 4, 3, 3, 1]
+      },
+      8: {
+        features: ['Wild Shape Improvement', 'Ability Score Improvement'],
+        proficiency_bonus: 3,
+        spells_known: 0,
+        type: [3, 4, 3, 3, 2]
+      },
+      9: {
+        features: [],
+        proficiency_bonus: 4,
+        spells_known: 0,
+        type: [3, 4, 3, 3, 3, 1]
+      },
+      10: {
+        features: ['Druid Circle Feature'],
+        proficiency_bonus: 4,
+        spells_known: 0,
+        type: [4, 4, 3, 3, 3, 2]
+      },
+      11: {
+        features: [],
+        proficiency_bonus: 4,
+        spells_known: 0,
+        type: [4, 4, 3, 3, 3, 2, 1]
+      },
+      12: {
+        features: ['Ability Score Improvement'],
+        proficiency_bonus: 4,
+        spells_known: 0,
+        type: [4, 4, 3, 3, 3, 2, 1]
+      },
+      13: {
+        features: [],
+        proficiency_bonus: 5,
+        spells_known: 0,
+        type: [4, 4, 3, 3, 3, 2, 1, 1]
+      },
+      14: {
+        features: ['Druid Circle Feature'],
+        proficiency_bonus: 5,
+        spells_known: 0,
+        type: [4, 4, 3, 3, 3, 2, 1, 1]
+      },
+      15: {
+        features: [],
+        proficiency_bonus: 5,
+        spells_known: 0,
+        type: [4, 4, 3, 3, 3, 2, 1, 1, 1]
+      },
+      16: {
+        features: ['Ability Score Improvement'],
+        proficiency_bonus: 5,
+        spells_known: 0,
+        type: [4, 4, 3, 3, 3, 2, 1, 1, 1]
+      },
+      17: {
+        features: [],
+        proficiency_bonus: 6,
+        spells_known: 0,
+        type: [4, 4, 3, 3, 3, 2, 1, 1, 1, 1]
+      },
+      18: {
+        features: ['Timeless Body', 'Beast Spells'],
+        proficiency_bonus: 6,
+        spells_known: 0,
+        type: [4, 4, 3, 3, 3, 3, 1, 1, 1, 1]
+      },
+      19: {
+        features: ['Ability Score Improvement'],
+        proficiency_bonus: 6,
+        spells_known: 0,
+        type: [4, 4, 3, 3, 3, 3, 2, 1, 1, 1]
+      },
+      20: {
+        features: ['Archdruid'],
+        proficiency_bonus: 6,
+        spells_known: 0,
+        type: [4, 4, 3, 3, 3, 3, 2, 2, 1, 1]
+      }
     },
     spellcasting: {
       0: ['Druidcraft', 'Guidance', 'Mending', 'Poison Spray', 'Produce Flame', 'Resistance', 'Shillelagh'],
@@ -1248,6 +1428,66 @@ const classDB = [
         features: ['Extra Attack'],
         proficiency_bonus: 3
       },
+      6: {
+        features: ['Ability Score Improvement'],
+        proficiency_bonus: 3
+      },
+      7: {
+        features: ['Martial Archetype feature'],
+        proficiency_bonus: 3
+      },
+      8: {
+        features: ['Ability Score Improvement'],
+        proficiency_bonus: 3
+      },
+      9: {
+        features: ['Indomitable (one use)'],
+        proficiency_bonus: 4
+      },
+      10: {
+        features: ['Martial Archetype feature'],
+        proficiency_bonus: 4
+      },
+      11: {
+        features: ['Extra Attack (2)'],
+        proficiency_bonus: 4
+      },
+      12: {
+        features: ['Ability Score Improvement'],
+        proficiency_bonus: 4
+      },
+      13: {
+        features: ['Indomitable (two uses)'],
+        proficiency_bonus: 5
+      },
+      14: {
+        features: ['Ability Score Improvement'],
+        proficiency_bonus: 5
+      },
+      15: {
+        features: ['Martial Archetype feature'],
+        proficiency_bonus: 5
+      },
+      16: {
+        features: ['Ability Score Improvement'],
+        proficiency_bonus: 5
+      },
+      17: {
+        features: ['Action Surge (two uses)', 'Indomitable (three uses)'],
+        proficiency_bonus: 6
+      },
+      18: {
+        features: ['Martial Archetype feature'],
+        proficiency_bonus: 6
+      },
+      19: {
+        features: ['Ability Score Improvement'],
+        proficiency_bonus: 6
+      },
+      20: {
+        features: ['Extra Attack (3)'],
+        proficiency_bonus: 6
+      }
     },
     spellcasting: {},
     weapons: [
@@ -1328,7 +1568,148 @@ const classDB = [
         proficiencies: 'tba'
       }
     ],
-    levels: {},
+    levels: {
+      1: {
+        features: ['Unarmored Defense', 'Martial Arts'],
+        proficiency_bonus: 2,
+        martial_arts: '1d4',
+        ki_points: 0,
+        unarmored_movement: ''
+      },
+      2: {
+        features: ['Ki', 'Unarmored Movement'],
+        proficiency_bonus: 2,
+        martial_arts: '1d4',
+        ki_points: 2,
+        unarmored_movement: '+10 ft.'
+      },
+      3: {
+        features: ['Monastic Tradition', 'Deflect Missiles'],
+        proficiency_bonus: 2,
+        martial_arts: '1d4',
+        ki_points: 3,
+        unarmored_movement: '+10 ft.'
+      },
+      4: {
+        features: ['Ability Score Improvement', 'Slow Fall'],
+        proficiency_bonus: 2,
+        martial_arts: '1d4',
+        ki_points: 4,
+        unarmored_movement: '+10 ft.'
+      },
+      5: {
+        features: ['Extra Attack', 'Stunning Strike'],
+        proficiency_bonus: 3,
+        martial_arts: '1d6',
+        ki_points: 5,
+        unarmored_movement: '+10 ft.'
+      },
+      6: {
+        features: ['Ki-Empowered Strikes', 'Monastic Tradition feature'],
+        proficiency_bonus: 3,
+        martial_arts: '1d6',
+        ki_points: 6,
+        unarmored_movement: '+15 ft.'
+      },
+      7: {
+        features: ['Evasion', 'Stillness of Mind'],
+        proficiency_bonus: 3,
+        martial_arts: '1d6',
+        ki_points: 7,
+        unarmored_movement: '+15 ft.'
+      },
+      8: {
+        features: ['Ability Score Improvement'],
+        proficiency_bonus: 3,
+        martial_arts: '1d6',
+        ki_points: 8,
+        unarmored_movement: '+15 ft.'
+      },
+      9: {
+        features: ['Unarmored Movement improvement'],
+        proficiency_bonus: 4,
+        martial_arts: '1d6',
+        ki_points: 9,
+        unarmored_movement: '+15 ft.'
+      },
+      10: {
+        features: ['Purity of Body'],
+        proficiency_bonus: 4,
+        martial_arts: '1d6',
+        ki_points: 10,
+        unarmored_movement: '+20 ft.'
+      },
+      11: {
+        features: ['Monastic Tradion feature'],
+        proficiency_bonus: 4,
+        martial_arts: '1d8',
+        ki_points: 11,
+        unarmored_movement: '+20 ft.'
+      },
+      12: {
+        features: ['Ability Score Improvement'],
+        proficiency_bonus: 4,
+        martial_arts: '1d8',
+        ki_points: 12,
+        unarmored_movement: '+20 ft.'
+      },
+      13: {
+        features: ['Tongue of the Sun and Moon'],
+        proficiency_bonus: 5,
+        martial_arts: '1d8',
+        ki_points: 13,
+        unarmored_movement: '+20 ft.'
+      },
+      14: {
+        features: ['Diamond Soul'],
+        proficiency_bonus: 5,
+        martial_arts: '1d8',
+        ki_points: 14,
+        unarmored_movement: '+25 ft.'
+      },
+      15: {
+        features: ['Timeless Body'],
+        proficiency_bonus: 5,
+        martial_arts: '1d8',
+        ki_points: 15,
+        unarmored_movement: '+25 ft.'
+      },
+      16: {
+        features: ['Ability Score Improvement'],
+        proficiency_bonus: 5,
+        martial_arts: '1d8',
+        ki_points: 16,
+        unarmored_movement: '+25 ft.'
+      },
+      17: {
+        features: ['Monastic Tradition feature'],
+        proficiency_bonus: 6,
+        martial_arts: '1d10',
+        ki_points: 17,
+        unarmored_movement: '+25 ft.'
+      },
+      18: {
+        features: ['Empty Body'],
+        proficiency_bonus: 6,
+        martial_arts: '1d10',
+        ki_points: 18,
+        unarmored_movement: '+30 ft.'
+      },
+      19: {
+        features: ['Ability Score Improvement'],
+        proficiency_bonus: 6,
+        martial_arts: '1d10',
+        ki_points: 19,
+        unarmored_movement: '+30 ft.'
+      },
+      20: {
+        features: ['Perfect Self'],
+        proficiency_bonus: 6,
+        martial_arts: '1d10',
+        ki_points: 20,
+        unarmored_movement: '+30 ft.'
+      }
+    },
     spellcasting: {},
     weapons: [
       { name: 'Simple' },
@@ -1400,6 +1781,96 @@ const classDB = [
         proficiency_bonus: 3,
         spells_known: 0,
         type: [4, 2]
+      },
+      6: {
+        features: ['Aura of Protection'],
+        proficiency_bonus: 3,
+        spells_known: 0,
+        type: [4, 2]
+      },
+      7: {
+        features: ['Sacred Oath feature'],
+        proficiency_bonus: 3,
+        spells_known: 0,
+        type: [4, 3]
+      },
+      8: {
+        features: ['Ability Score Improvement'],
+        proficiency_bonus: 3,
+        spells_known: 0,
+        type: [4, 3]
+      },
+      9: {
+        features: [],
+        proficiency_bonus: 4,
+        spells_known: 0,
+        type: [4, 3]
+      },
+      10: {
+        features: ['Aura of Courage'],
+        proficiency_bonus: 4,
+        spells_known: 0,
+        type: [4, 3, 2]
+      },
+      11: {
+        features: ['Improved Divine SMite'],
+        proficiency_bonus: 4,
+        spells_known: 0,
+        type: [4, 3, 3]
+      },
+      12: {
+        features: ['Ability Score Improvement'],
+        proficiency_bonus: 4,
+        spells_known: 0,
+        type: [4, 3, 3]
+      },
+      13: {
+        features: [],
+        proficiency_bonus: 5,
+        spells_known: 0,
+        type: [4, 3, 3, 1]
+      },
+      14: {
+        features: ['Cleansing Touch'],
+        proficiency_bonus: 5,
+        spells_known: 0,
+        type: [4, 3, 3, 1]
+      },
+      15: {
+        features: ['Sacred Oath feature'],
+        proficiency_bonus: 5,
+        spells_known: 0,
+        type: [4, 3, 3, 2]
+      },
+      16: {
+        features: ['Ability Score Improvement'],
+        proficiency_bonus: 5,
+        spells_known: 0,
+        type: [4, 3, 3, 2]
+      },
+      17: {
+        features: [],
+        proficiency_bonus: 6,
+        spells_known: 0,
+        type: [4, 3, 3, 3, 1]
+      },
+      18: {
+        features: ['Aura Improvments'],
+        proficiency_bonus: 6,
+        spells_known: 0,
+        type: [4, 3, 3, 3, 1]
+      },
+      19: {
+        features: ['Ability Score Improvement'],
+        proficiency_bonus: 6,
+        spells_known: 0,
+        type: [4, 3, 3, 3, 2]
+      },
+      20: {
+        features: ['Sacred Oath feature'],
+        proficiency_bonus: 6,
+        spells_known: 0,
+        type: [4, 3, 3, 3, 2]
       }
     },
     spellcasting: {
@@ -1483,6 +1954,96 @@ const classDB = [
         proficiency_bonus: 3,
         spells_known: 4,
         type: [4, 2]
+      },
+      6: {
+        features: ['Favored Enemy and Natural Explorer Improvements'],
+        proficiency_bonus: 3,
+        spells_known: 4,
+        type: [4, 2]
+      },
+      7: {
+        features: ['Ranger Archetype feature'],
+        proficiency_bonus: 3,
+        spells_known: 5,
+        type: [4, 3]
+      },
+      8: {
+        features: ['Ability Score Improvement', 'Land\'s Stride'],
+        proficiency_bonus: 3,
+        spells_known: 5,
+        type: [4, 3]
+      },
+      9: {
+        features: [],
+        proficiency_bonus: 4,
+        spells_known: 6,
+        type: [4, 3, 2]
+      },
+      10: {
+        features: ['Natural Explorer Improvement', 'Hide in Plain Sight'],
+        proficiency_bonus: 4,
+        spells_known: 6,
+        type: [4, 3, 2]
+      },
+      11: {
+        features: ['Ranger Archetype feature'],
+        proficiency_bonus: 4,
+        spells_known: 7,
+        type: [4, 3, 3]
+      },
+      12: {
+        features: ['Ability Score Improvement'],
+        proficiency_bonus: 4,
+        spells_known: 7,
+        type: [4, 3, 3]
+      },
+      13: {
+        features: [],
+        proficiency_bonus: 5,
+        spells_known: 8,
+        type: [4, 3, 3, 1]
+      },
+      14: {
+        features: ['Favored Enemy Improvement', 'Vanish'],
+        proficiency_bonus: 5,
+        spells_known: 8,
+        type: [4, 3, 3, 1]
+      },
+      15: {
+        features: ['Ranger Archetype feature'],
+        proficiency_bonus: 5,
+        spells_known: 9,
+        type: [4, 3, 3, 2]
+      },
+      16: {
+        features: ['Ability Score Improvement'],
+        proficiency_bonus: 5,
+        spells_known: 9,
+        type: [4, 3, 3, 2]
+      },
+      17: {
+        features: [],
+        proficiency_bonus: 6,
+        spells_known: 10,
+        type: [4, 3, 3, 3, 1]
+      },
+      18: {
+        features: ['Feral Senses'],
+        proficiency_bonus: 6,
+        spells_known: 10,
+        type: [4, 3, 3, 3, 1]
+      },
+      19: {
+        features: ['Ability Score Improvement'],
+        proficiency_bonus: 6,
+        spells_known: 11,
+        type: [4, 3, 3, 3, 2]
+      },
+      20: {
+        features: ['Foe Slayer'],
+        proficiency_bonus: 6,
+        spells_known: 11,
+        type: [4, 3, 3, 3, 2]
       }
     },
     spellcasting: {
@@ -1536,7 +2097,108 @@ const classDB = [
         proficiencies: 'tba'
       }
     ],
-    levels: {},
+    levels: {
+      1: {
+        features: ['Expertise', 'Sneak Attack', 'Thieves\' Cant'],
+        proficiency_bonus: 2,
+        sneak_attack: '1d6'
+      },
+      2: {
+        features: ['Cunning Action'],
+        proficiency_bonus: 2,
+        sneak_attack: '1d6'
+      },
+      3: {
+        features: ['Roguish Archetype'],
+        proficiency_bonus: 2,
+        sneak_attack: '2d6'
+      },
+      4: {
+        features: ['Ability Score Improvement'],
+        proficiency_bonus: 2,
+        sneak_attack: '2d6'
+      },
+      5: {
+        features: ['Uncanny Dodge'],
+        proficiency_bonus: 3,
+        sneak_attack: '3d6'
+      },
+      6: {
+        features: ['Expertise'],
+        proficiency_bonus: 3,
+        sneak_attack: '3d6'
+      },
+      7: {
+        features: ['Evasion'],
+        proficiency_bonus: 3,
+        sneak_attack: '4d6'
+      },
+      8: {
+        features: ['Ability Score Improvement'],
+        proficiency_bonus: 3,
+        sneak_attack: '4d6'
+      },
+      9: {
+        features: ['Roguish Archetype feature'],
+        proficiency_bonus: 4,
+        sneak_attack: '5d6'
+      },
+      10: {
+        features: ['Ability Score Improvement'],
+        proficiency_bonus: 4,
+        sneak_attack: '5d6'
+      },
+      11: {
+        features: ['Reliable Talent'],
+        proficiency_bonus: 4,
+        sneak_attack: '6d6'
+      },
+      12: {
+        features: ['Ability Score Improvement'],
+        proficiency_bonus: 4,
+        sneak_attack: '6d6'
+      },
+      13: {
+        features: ['Roguish Archetype feature'],
+        proficiency_bonus: 5,
+        sneak_attack: '7d6'
+      },
+      14: {
+        features: ['Blindsense'],
+        proficiency_bonus: 5,
+        sneak_attack: '7d6'
+      },
+      15: {
+        features: ['Slippery Mind'],
+        proficiency_bonus: 5,
+        sneak_attack: '8d6'
+      },
+      16: {
+        features: ['Ability Score Improvement'],
+        proficiency_bonus: 5,
+        sneak_attack: '8d6'
+      },
+      17: {
+        features: ['Roguish Archetype feature'],
+        proficiency_bonus: 6,
+        sneak_attack: '9d6'
+      },
+      18: {
+        features: ['Elusive'],
+        proficiency_bonus: 6,
+        sneak_attack: '9d6'
+      },
+      19: {
+        features: ['Ability Score Improvement'],
+        proficiency_bonus: 6,
+        sneak_attack: '10d6'
+      },
+      20: {
+        features: ['Stroke of Luck'],
+        proficiency_bonus: 6,
+        sneak_attack: '10d6'
+      }
+    },
     spellcasting: {},
     weapons: [
       { name: 'Simple' },
@@ -1611,6 +2273,111 @@ const classDB = [
         sorcery_points: 5,
         spells_known: 6,
         type: [5, 4, 3, 2]
+      },
+      6: {
+        features: ['Sorcerous Origin feature'],
+        proficiency_bonus: 3,
+        sorcery_points: 6,
+        spells_known: 7,
+        type: [5, 4, 3, 3]
+      },
+      7: {
+        features: [],
+        proficiency_bonus: 3,
+        sorcery_points: 7,
+        spells_known: 8,
+        type: [5, 4, 3, 3, 1]
+      },
+      8: {
+        features: ['Ability Score Improvement'],
+        proficiency_bonus: 3,
+        sorcery_points: 8,
+        spells_known: 9,
+        type: [5, 4, 3, 3, 2]
+      },
+      9: {
+        features: [],
+        proficiency_bonus: 4,
+        sorcery_points: 9,
+        spells_known: 10,
+        type: [5, 4, 3, 3, 3, 1]
+      },
+      10: {
+        features: ['Metamagic'],
+        proficiency_bonus: 4,
+        sorcery_points: 10,
+        spells_known: 11,
+        type: [6, 4, 3, 3, 3, 2]
+      },
+      11: {
+        features: [],
+        proficiency_bonus: 4,
+        sorcery_points: 11,
+        spells_known: 12,
+        type: [6, 4, 3, 3, 3, 2, 1]
+      },
+      12: {
+        features: ['Ability Score Improvement'],
+        proficiency_bonus: 4,
+        sorcery_points: 12,
+        spells_known: 12,
+        type: [6, 4, 3, 3, 3, 2, 1]
+      },
+      13: {
+        features: [],
+        proficiency_bonus: 5,
+        sorcery_points: 13,
+        spells_known: 13,
+        type: [6, 4, 3, 3, 3, 2, 1, 1]
+      },
+      14: {
+        features: ['Sorcerous Origin feature'],
+        proficiency_bonus: 5,
+        sorcery_points: 14,
+        spells_known: 13,
+        type: [6, 4, 3, 3, 3, 2, 1, 1]
+      },
+      15: {
+        features: [],
+        proficiency_bonus: 5,
+        sorcery_points: 15,
+        spells_known: 14,
+        type: [6, 4, 3, 3, 3, 2, 1, 1, 1]
+      },
+      16: {
+        features: ['Ability Score Improvement'],
+        proficiency_bonus: 5,
+        sorcery_points: 16,
+        spells_known: 14,
+        type: [6, 4, 3, 3, 3, 2, 1, 1, 1]
+      },
+      17: {
+        features: ['Metamagic'],
+        proficiency_bonus: 6,
+        sorcery_points: 18,
+        spells_known: 15,
+        type: [6, 4, 3, 3, 3, 2, 1, 1, 1, 1]
+      },
+      18: {
+        features: ['Sourcerous Origin feature'],
+        proficiency_bonus: 6,
+        sorcery_points: 18,
+        spells_known: 15,
+        type: [6, 4, 3, 3, 3, 3, 1, 1, 1, 1]
+      },
+      19: {
+        features: ['Ability Score Improvement'],
+        proficiency_bonus: 6,
+        sorcery_points: 19,
+        spells_known: 15,
+        type: [6, 4, 3, 3, 3, 3, 2, 1, 1, 1]
+      },
+      20: {
+        features: ['Sorcerous Restoration'],
+        proficiency_bonus: 6,
+        sorcery_points: 20,
+        spells_known: 15,
+        type: [6, 4, 3, 3, 3, 3, 2, 2, 1, 1]
       }
     },
     spellcasting: {
@@ -1666,37 +2433,182 @@ const classDB = [
       1: {
         features: ['Otherworldly Patron', 'Pact Magic'],
         proficiency_bonus: 2,
+        cantrips: 2,
         spells_known: 2,
-        type: [2, 1],
+        spell_slots: 1,
+        slot_level: 1,
         invocations_known: 0
       },
       2: {
         features: ['Eldritch Invocations'],
         proficiency_bonus: 2,
+        cantrips: 2,
         spells_known: 3,
-        type: [2, 2],
+        spell_slots: 2,
+        slot_level: 1,
         invocations_known: 2
       },
       3: {
         features: ['Pact Boon'],
         proficiency_bonus: 2,
-        spells_known: 4,
-        type: [2, 2, 2],
+        cantrips: 2,
+        spells_known: 5,
+        spell_slots: 2,
+        slot_level: 2,
         invocations_known: 2
       },
       4: {
         features: ['Ability Score Improvement'],
         proficiency_bonus: 2,
+        cantrips: 3,
         spells_known: 5,
-        type: [3, 2, 2],
+        spell_slots: 2,
+        slot_level: 2,
         invocations_known: 2
       },
       5: {
         features: [],
         proficiency_bonus: 3,
+        cantrips: 3,
         spells_known: 6,
-        type: [3, 2, 2, 2],
+        spell_slots: 2,
+        slot_level: 3,
         invocations_known: 3
+      },
+      6: {
+        features: ['Otherwordly Patron feature'],
+        proficiency_bonus: 3,
+        cantrips: 3,
+        spells_known: 7,
+        spell_slots: 2,
+        slot_level: 3,
+        invocations_known: 3
+      },
+      7: {
+        features: [],
+        proficiency_bonus: 3,
+        cantrips: 3,
+        spells_known: 8,
+        spell_slots: 2,
+        slot_level: 4,
+        invocations_known: 4
+      },
+      8: {
+        features: ['Ability Score Improvement'],
+        proficiency_bonus: 3,
+        cantrips: 3,
+        spells_known: 9,
+        spell_slots: 2,
+        slot_level: 4,
+        invocations_known: 4
+      },
+      9: {
+        features: [],
+        proficiency_bonus: 4,
+        cantrips: 3,
+        spells_known: 10,
+        spell_slots: 2,
+        slot_level: 5,
+        invocations_known: 5
+      },
+      10: {
+        features: ['Otherwordly Patron feature'],
+        proficiency_bonus: 4,
+        cantrips: 4,
+        spells_known: 10,
+        spell_slots: 2,
+        slot_level: 5,
+        invocations_known: 5
+      },
+      11: {
+        features: ['Mystic Arcanum (6th level)'],
+        proficiency_bonus: 4,
+        cantrips: 4,
+        spells_known: 11,
+        spell_slots: 3,
+        slot_level: 5,
+        invocations_known: 5
+      },
+      12: {
+        features: ['Ability Score Improvement'],
+        proficiency_bonus: 4,
+        cantrips: 4,
+        spells_known: 11,
+        spell_slots: 3,
+        slot_level: 5,
+        invocations_known: 6
+      },
+      13: {
+        features: ['Mystic Arcanum (7th level)'],
+        proficiency_bonus: 5,
+        cantrips: 4,
+        spells_known: 12,
+        spell_slots: 3,
+        slot_level: 5,
+        invocations_known: 6
+      },
+      14: {
+        features: ['Otherwordly Patron feature'],
+        proficiency_bonus: 5,
+        cantrips: 4,
+        spells_known: 12,
+        spell_slots: 3,
+        slot_level: 5,
+        invocations_known: 6
+      },
+      15: {
+        features: ['Mystic Acanum (8th level)'],
+        proficiency_bonus: 5,
+        cantrips: 4,
+        spells_known: 13,
+        spell_slots: 3,
+        slot_level: 5,
+        invocations_known: 7
+      },
+      16: {
+        features: ['Ability Score Improvement'],
+        proficiency_bonus: 5,
+        cantrips: 4,
+        spells_known: 13,
+        spell_slots: 3,
+        slot_level: 5,
+        invocations_known: 7
+      },
+      17: {
+        features: ['Mystic Acanum (9th level)'],
+        proficiency_bonus: 6,
+        cantrips: 4,
+        spells_known: 14,
+        spell_slots: 4,
+        slot_level: 5,
+        invocations_known: 7
+      },
+      18: {
+        features: [],
+        proficiency_bonus: 6,
+        cantrips: 4,
+        spells_known: 14,
+        spell_slots: 4,
+        slot_level: 5,
+        invocations_known: 8
+      },
+      19: {
+        features: ['Ability Score Improvement'],
+        proficiency_bonus: 6,
+        cantrips: 4,
+        spells_known: 15,
+        spell_slots: 4,
+        slot_level: 5,
+        invocations_known: 8
+      },
+      20: {
+        features: ['Eldritch Master'],
+        proficiency_bonus: 6,
+        cantrips: 4,
+        spells_known: 15,
+        spell_slots: 4,
+        slot_level: 5,
+        invocations_known: 8
       }
     },
     spellcasting: {
@@ -1772,6 +2684,96 @@ const classDB = [
         proficiency_bonus: 3,
         spells_known: 0,
         type: [4, 4, 3, 2]
+      },
+      6: {
+        features: ['Arcane Tradition feature'],
+        proficiency_bonus: 3,
+        spells_known: 0,
+        type: [4, 4, 3, 3]
+      },
+      7: {
+        features: [],
+        proficiency_bonus: 3,
+        spells_known: 0,
+        type: [4, 4, 3, 3, 1]
+      },
+      8: {
+        features: ['Ability Score Improvement'],
+        proficiency_bonus: 3,
+        spells_known: 0,
+        type: [4, 4, 3, 3, 2]
+      },
+      9: {
+        features: [],
+        proficiency_bonus: 4,
+        spells_known: 0,
+        type: [4, 4, 3, 3, 3, 1]
+      },
+      10: {
+        features: ['Arcane Tradition feature'],
+        proficiency_bonus: 4,
+        spells_known: 0,
+        type: [5, 4, 3, 3, 3, 2]
+      },
+      11: {
+        features: [],
+        proficiency_bonus: 4,
+        spells_known: 0,
+        type: [5, 4, 3, 3, 3, 2, 1]
+      },
+      12: {
+        features: ['Ability Score Improvement'],
+        proficiency_bonus: 4,
+        spells_known: 0,
+        type: [5, 4, 3, 3, 3, 2, 1]
+      },
+      13: {
+        features: [],
+        proficiency_bonus: 5,
+        spells_known: 0,
+        type: [5, 4, 3, 3, 3, 2, 1, 1]
+      },
+      14: {
+        features: ['Arcane Tradition feature'],
+        proficiency_bonus: 5,
+        spells_known: 0,
+        type: [5, 4, 3, 3, 3, 2, 1, 1]
+      },
+      15: {
+        features: [],
+        proficiency_bonus: 5,
+        spells_known: 0,
+        type: [5, 4, 3, 3, 3, 2, 1, 1, 1]
+      },
+      16: {
+        features: ['Ability Score Improvement'],
+        proficiency_bonus: 5,
+        spells_known: 0,
+        type: [5, 4, 3, 3, 3, 2, 1, 1, 1]
+      },
+      17: {
+        features: [],
+        proficiency_bonus: 6,
+        spells_known: 0,
+        type: [5, 4, 3, 3, 3, 2, 1, 1, 1, 1]
+      },
+      18: {
+        features: ['Spell Mastery'],
+        proficiency_bonus: 6,
+        spells_known: 0,
+        type: [5, 4, 3, 3, 3, 3, 1, 1, 1, 1]
+      },
+      19: {
+        features: ['Ability Score Improvement'],
+        proficiency_bonus: 6,
+        spells_known: 0,
+        type: [5, 4, 3, 3, 3, 3, 2, 1, 1, 1]
+      },
+      20: {
+        features: ['Signature Spell'],
+        proficiency_bonus: 6,
+        spells_known: 0,
+        type: [5, 4, 3, 3, 3, 3, 2, 2, 1, 1]
       }
     },
     spellcasting: {
@@ -1793,6 +2795,18 @@ const classDB = [
       { name: 'Sling' }
     ]
   }
+];
+
+
+
+
+
+
+
+
+
+const classFeaturesDB = [
+
 ];
 
 
@@ -18155,6 +19169,7 @@ module.exports = {
   Alignment: alignmentDB,
   Armor: armorDB,
   Class: classDB,
+  ClassFeature: classFeaturesDB,
   Feat: featsDB,
   Gear: gearDB,
   Kit: kitsDB,

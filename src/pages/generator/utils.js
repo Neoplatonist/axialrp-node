@@ -36,7 +36,7 @@ export const AbilityPointMap = {
   14: 7,
   15: 9,
   16: 0
-}
+};
 
 export const Option = ({ name = '' } = {}) => 
   <option value={name}>{name || '---'}</option>;
@@ -46,6 +46,7 @@ export const ProficiencyBonus = level => Math.ceil(level / 4) + 1;
 export const getCheck = (obj, ...props) => {
   const val = obj[props[0]];
   if (props.length === 1 || !val) return val;
+
   const rest = props.slice(1);
   return getCheck.apply(null, [val, ...rest]);
 };
@@ -56,4 +57,4 @@ export const isEmpty = obj => {
   }
   
   return true;
-}
+};

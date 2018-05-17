@@ -1,19 +1,72 @@
 const { GraphQLObjectType } = require('graphql');
-const { getAlignments, getAlignmentName } = require('./alignment.js');
-const { getArmors, getArmorByCategory, getArmorName } = require('./armor.js');
-const { getClasses, getClassName } = require('./class.js');
-const { getFeats, getFeatName } = require('./feat.js');
-const { getGears, getGearName } = require('./gear.js');
-const { getKits, getKitName } = require('./kit.js');
-const { getMounts, getMountName } = require('./mount.js');
-const { getRaces, getRaceName } = require('./race.js');
-const { getSchoOfMags, getSchoOfMagName } = require('./schoOfMag.js');
-const { getSkills, getSkillName } = require('./skill.js');
-const { getSpells, getSpellByClass, getSpellName } = require('./spell.js');
-const { getStartEquips, getStartEquipName } = require('./startEquip.js');
-const { getSubRaces, getSubRaceName } = require('./subrace.js');
-const { getTools, getToolName } = require('./tool.js');
-const { getWeapons, getWeaponByCategory, getWeaponName } = require('./weapon.js');
+const { 
+  getAlignments, 
+  getAlignmentName 
+} = require('./alignment.js');
+const { 
+  getArmors, 
+  getArmorByCategory, 
+  getArmorName 
+} = require('./armor.js');
+const { 
+  getClasses, 
+  getClassName 
+} = require('./class.js');
+const { 
+  getClassFeatures,
+  getClassFeatureName,
+  getClassFeatureClass 
+} = require('./classFeature');
+const { 
+  getFeats, 
+  getFeatName 
+} = require('./feat.js');
+const { 
+  getGears, 
+  getGearName 
+} = require('./gear.js');
+const { 
+  getKits, 
+  getKitName 
+} = require('./kit.js');
+const { 
+  getMounts, 
+  getMountName 
+} = require('./mount.js');
+const { 
+  getRaces, 
+  getRaceName 
+} = require('./race.js');
+const { 
+  getSchoOfMags, 
+  getSchoOfMagName 
+} = require('./schoOfMag.js');
+const { 
+  getSkills, 
+  getSkillName 
+} = require('./skill.js');
+const { 
+  getSpells, 
+  getSpellByClass, 
+  getSpellName 
+} = require('./spell.js');
+const { 
+  getStartEquips, 
+  getStartEquipName 
+} = require('./startEquip.js');
+const { 
+  getSubRaces, 
+  getSubRaceName 
+} = require('./subrace.js');
+const { 
+  getTools, 
+  getToolName 
+} = require('./tool.js');
+const { 
+  getWeapons, 
+  getWeaponByCategory, 
+  getWeaponName 
+} = require('./weapon.js');
 
 
 
@@ -29,6 +82,9 @@ const RootQuery = new GraphQLObjectType({
     getArmorName,
     getClasses,
     getClassName,
+    getClassFeatures, 
+    getClassFeatureName,
+    getClassFeatureClass,
     getFeats,
     getFeatName,
     getGears,

@@ -112,7 +112,11 @@ class Generator extends Component {
 
   savingThrows = () => {
     return AbilityMap.map((v, k) => {
-      return <SavingThrows key={k} label={v} mod={this.props.savingThrows.data[k]} />
+      return <SavingThrows 
+        key={k} 
+        label={v}
+        mod={this.props.savingThrows.data[k]}
+      />
     });
   }
 
@@ -194,7 +198,7 @@ class Generator extends Component {
 
           <h3>Skills</h3>
           <h5>Choose { this.props.skillsFilter.data.choose }</h5>
-          <button onClick={this.handleSkillReset} >Reset</button>
+          <button onClick={this.handleSkillReset}>Reset</button>
           <br/>
 
           { this.renderSkills() }
@@ -254,6 +258,7 @@ export default connect(mapStateToProps, boundActions)(Generator);
  * - Vicious Mockery - spellsDB
  * - Spare the Dying - spellsDB
  * - class.levels finish adding to db
+ * - fix selectHPTotal hp.data to hp
  */
 
 /*
@@ -262,6 +267,5 @@ export default connect(mapStateToProps, boundActions)(Generator);
  * - Level up characters
  * - Calculate startin money for characters
  * - In Classes: Constitution is for level 1 only.
- * - Create fallback for class db calls failing
  * - fantasynamegenerators for names
  */

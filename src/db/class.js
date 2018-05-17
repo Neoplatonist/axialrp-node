@@ -1,5 +1,23 @@
 import { client } from './index';
 
+const classLevels = `
+  cantrips
+  features
+  invocations_known
+  ki_points
+  martial_arts
+  proficiency_bonus
+  rages
+  rage_damage
+  sneak_attack
+  sorcery_points
+  slot_level
+  spells_known
+  spell_slots
+  type
+  unarmored_movement
+`;
+
 const classType = `
   name
   hit_die
@@ -22,34 +40,64 @@ const classType = `
   }
   levels {
     _1 {
-      features
-      proficiency_bonus
-      spells_known
-      type
+      ${classLevels}
     }
     _2 {
-      features
-      proficiency_bonus
-      spells_known
-      type
+      ${classLevels}
     }
     _3 {
-      features
-      proficiency_bonus
-      spells_known
-      type
+      ${classLevels}
     }
     _4 {
-      features
-      proficiency_bonus
-      spells_known
-      type
+      ${classLevels}
     }
     _5 {
-      features
-      proficiency_bonus
-      spells_known
-      type
+      ${classLevels}
+    }
+    _6 {
+      ${classLevels}
+    }
+    _7 {
+      ${classLevels}
+    }
+    _8 {
+      ${classLevels}
+    }
+    _9 {
+      ${classLevels}
+    }
+    _10 {
+      ${classLevels}
+    }
+    _11 {
+      ${classLevels}
+    }
+    _12 {
+      ${classLevels}
+    }
+    _13 {
+      ${classLevels}
+    }
+    _14 {
+      ${classLevels}
+    }
+    _15 {
+      ${classLevels}
+    }
+    _16 {
+      ${classLevels}
+    }
+    _17 {
+      ${classLevels}
+    }
+    _18 {
+      ${classLevels}
+    }
+    _19 {
+      ${classLevels}
+    }
+    _20 {
+      ${classLevels}
     }
   }
   spellcasting {

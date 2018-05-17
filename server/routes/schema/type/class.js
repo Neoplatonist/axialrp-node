@@ -26,6 +26,7 @@ const ClassType = new GraphQLObjectType({
     sub_classes: { type: new GraphQLList(NameDescType) },
     levels: { type: new GraphQLObjectType({
       name: 'ClassLevels',
+      description: 'List of levels per each class.',
 
       fields: () => ({
         _1: { type: ClassLevel, resolve: parent => parent[1] },
@@ -33,10 +34,27 @@ const ClassType = new GraphQLObjectType({
         _3: { type: ClassLevel, resolve: parent => parent[3] },
         _4: { type: ClassLevel, resolve: parent => parent[4] },
         _5: { type: ClassLevel, resolve: parent => parent[5] },
+        _6: { type: ClassLevel, resolve: parent => parent[6] },
+        _7: { type: ClassLevel, resolve: parent => parent[7] },
+        _8: { type: ClassLevel, resolve: parent => parent[8] },
+        _9: { type: ClassLevel, resolve: parent => parent[9] },
+        _10: { type: ClassLevel, resolve: parent => parent[10] },
+        _11: { type: ClassLevel, resolve: parent => parent[11] },
+        _12: { type: ClassLevel, resolve: parent => parent[12] },
+        _13: { type: ClassLevel, resolve: parent => parent[13] },
+        _14: { type: ClassLevel, resolve: parent => parent[14] },
+        _15: { type: ClassLevel, resolve: parent => parent[15] },
+        _16: { type: ClassLevel, resolve: parent => parent[16] },
+        _17: { type: ClassLevel, resolve: parent => parent[17] },
+        _18: { type: ClassLevel, resolve: parent => parent[18] },
+        _19: { type: ClassLevel, resolve: parent => parent[19] },
+        _20: { type: ClassLevel, resolve: parent => parent[20] }
       })
     })},
+
     spellcasting: { type: new GraphQLObjectType({
       name: 'SpellCasting',
+      description: 'List of spells learned per each spell level.',
 
       fields: () => ({
         _0: { type: new GraphQLList(GraphQLString), resolve: parent => parent[0] },
@@ -48,7 +66,7 @@ const ClassType = new GraphQLObjectType({
         _6: { type: new GraphQLList(GraphQLString), resolve: parent => parent[6] },
         _7: { type: new GraphQLList(GraphQLString), resolve: parent => parent[7] },
         _8: { type: new GraphQLList(GraphQLString), resolve: parent => parent[8] },
-        _9: { type: new GraphQLList(GraphQLString), resolve: parent => parent[9] },
+        _9: { type: new GraphQLList(GraphQLString), resolve: parent => parent[9] }
       })
     })},
     weapons: { type: new GraphQLList(NameListType) }
