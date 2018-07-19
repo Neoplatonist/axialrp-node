@@ -221,6 +221,24 @@ export const selectLanguageList = createSelector(
   }
 );
 
+export const selectLevelObj = createSelector(
+  selectClassObj,
+  selectLevel,
+  (classObj, level) => {
+    let result = {
+      status: 'loading',
+      data: {}
+    };
+
+    if (classObj.status === 'success') {
+      result.data = classObj.data.levels[level];
+      result.status = 'success';
+    }
+
+    return result;
+  }
+);
+
 export const selectProficiency = createSelector(
   selectLevel,
   level => {
@@ -295,7 +313,7 @@ export const selectSpellsFilter = createSelector(
             .map(spell => spellsAll.data.find(v => v.name === spell))
         ], []);
 
-      result.data === undefined || result.data === []
+      result.data == undefined || result.data === []
         ? result.status = 'loading'
         : result.status = 'success';
 

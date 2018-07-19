@@ -18,7 +18,7 @@ const ClassLevel = new GraphQLObjectType({
     ki_points: { type: GraphQLInt },
     martial_arts: { type: GraphQLString },
     proficiency_bonus: { type: GraphQLInt },
-    rages: { type: GraphQLInt },
+    rages: { type: GraphQLString },
     rage_damage: { type: GraphQLInt },
     sneak_attack: { type: GraphQLString },
     sorcery_points: { type: GraphQLInt },

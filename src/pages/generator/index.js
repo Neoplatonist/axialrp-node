@@ -6,6 +6,7 @@ import AbilityList from './components/abilityList';
 import Armor from './components/armor';
 import Class from './components/class';
 import Description from './components/description';
+import LevelFeatures from './components/levelFeatures';
 import Race from './components/race';
 import SavingThrows from './components/savingThrows';
 import Skills from './components/skills';
@@ -44,6 +45,7 @@ class Generator extends Component {
     this.props.setLevel(1);
     this.props.setSkillsAll();
     this.props.setSpellsAll();
+    this.props.setClass('Bard');
   }
 
   handleAlignment = () => {
@@ -172,6 +174,10 @@ class Generator extends Component {
                 : <option value="">...Loading</option> }
           </select>
 
+          <LevelFeatures />
+
+          <br/><br/>
+
           <AbilityList />
 
           <br/><br/>
@@ -257,11 +263,13 @@ export default connect(mapStateToProps, boundActions)(Generator);
  * - ClassDB Normalization
  * - Vicious Mockery - spellsDB
  * - Spare the Dying - spellsDB
- * - Warlock spells list doesn't work
+ * - Warlock spells now work...but not sure if correct
+ * - Cleric Destroy Undead feature ??
  */
 
 /*
  * TODO:
+ * - fix proficiency bonus on changing classes and leveling
  * - Setup proper error handling
  * - Level up characters
  * - Calculate startin money for characters

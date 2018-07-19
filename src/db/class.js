@@ -129,7 +129,17 @@ export const classNameQuery = async name => {
       }
     `, { className: name })
       .then(result => result.getClassName)
-      .then(fix => {
+      .then(fixed => { // Fixes levels _1-_20 to 1-20
+        const levels = Object.keys(fixed.levels)
+          .reduce((a, v) => {
+            a[parseInt(v.substr(1), 10)] = fixed.levels[v];
+
+            return a;
+          }, {});
+
+        return Object.assign(fixed, { levels });
+      })
+      .then(fix => { // Fixes spellcasting _1-_9 to 1-9
         const spellcasting = Object.keys(fix.spellcasting)
           .reduce((a, v) => {
             a[parseInt(v.substr(1), 10)] = fix.spellcasting[v];
@@ -138,16 +148,6 @@ export const classNameQuery = async name => {
           }, {});
         
         return Object.assign(fix, { spellcasting });
-      })
-      .then(fixed => {
-        const levels = Object.keys(fixed.levels)
-          .reduce((a, v) => {
-            a[parseInt(v.substr(1), 10)] = fixed.levels[v];
-
-            return a;
-          }, {});
-        
-        return Object.assign(fixed, { levels });
       });
   } catch (err) {
     result = Promise.reject(err);

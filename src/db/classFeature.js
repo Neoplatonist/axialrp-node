@@ -4,6 +4,13 @@ const classFeatureType = `
   name
   classes
   description
+  choices {
+    choose
+    options {
+      name
+      description
+    }
+  }
 `;
 
 export const classFeatureNameQuery = async name => {
@@ -42,7 +49,6 @@ export const classFeatureAllQuery = async () => {
 
   return result;
 };
-
 
 export const classFeatureClassQuery = async name => {
   let result;

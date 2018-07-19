@@ -28,6 +28,10 @@ import {
   SET_LANGUAGE,
   SET_LANGUAGE_LIST,
   SET_LEVEL,
+  SET_LEVEL_FEATURES_ERROR,
+  SET_LEVEL_FEATURES_LOADING,
+  SET_LEVEL_FEATURES_SUCCESS,
+  SET_LEVEL_FEATURES_SELECTED,
   SET_PROFICIENCY_BONUS,
   SET_RACE,
   SET_RACE_NAME_LIST_ERROR,
@@ -86,6 +90,10 @@ export {
   SET_LANGUAGE,
   SET_LANGUAGE_LIST,
   SET_LEVEL,
+  SET_LEVEL_FEATURES_ERROR,
+  SET_LEVEL_FEATURES_LOADING,
+  SET_LEVEL_FEATURES_SUCCESS,
+  SET_LEVEL_FEATURES_SELECTED,
   SET_PROFICIENCY_BONUS,
   SET_RACE,
   SET_RACE_NAME_LIST_ERROR,
@@ -168,7 +176,7 @@ export const generatorState = {
     starting_equipment: { class: 'Barbarian' },
     levels: {
       1: {
-        features: ['Rage', 'Unamormed Defense'],
+        features: ['Rage', 'Unarmored Defense'],
         proficiency_bonus: 2,
         rages: 2,
         rage_damage: 2
@@ -302,6 +310,8 @@ export const generatorState = {
   language: '',
   languageList: ['Common', 'Dwarvish'],
   level: 1,
+  levelFeatures: { status: 'loading', data: [] },
+  levelFeaturesSelected: [],
   proficiencyBonus: 0,
 
   race: 'Dwarf',
@@ -372,26 +382,26 @@ export const generatorState = {
   skills: [],
   skillsAll: { status: 'loading', data: [] },
 
-  allSkills: {
-    acrobats: 0,
-    animalHandling: 0,
-    arcana: 0,
-    athletics: 0,
-    deception: 0,
-    history: 0,
-    insight: 0,
-    intimidation: 0,
-    investigation: 0,
-    medicine: 0,
-    nature: 0,
-    perception: 0,
-    performance: 0,
-    persuasion: 0,
-    religion: 0,
-    sleightOfHand: 0,
-    stealth: 0,
-    survival: 0
-  },
+  // allSkills: {
+  //   acrobats: 0,
+  //   animalHandling: 0,
+  //   arcana: 0,
+  //   athletics: 0,
+  //   deception: 0,
+  //   history: 0,
+  //   insight: 0,
+  //   intimidation: 0,
+  //   investigation: 0,
+  //   medicine: 0,
+  //   nature: 0,
+  //   perception: 0,
+  //   performance: 0,
+  //   persuasion: 0,
+  //   religion: 0,
+  //   sleightOfHand: 0,
+  //   stealth: 0,
+  //   survival: 0
+  // },
 
   speed: 25,
   spellsAll: { status: 'none', data: [] },
@@ -632,6 +642,36 @@ const generator = (state = generatorState, action) => {
       return {
         ...state,
         level: action.payload
+      };
+
+    case SET_LEVEL_FEATURES_ERROR: 
+      return {
+        ...state,
+        levelFeatures: {
+          ...action.payload
+        }
+      };
+  
+    case SET_LEVEL_FEATURES_LOADING:
+      return {
+        ...state,
+        levelFeatures: {
+          ...action.payload
+        }
+      };
+  
+    case SET_LEVEL_FEATURES_SUCCESS:
+      return {
+        ...state,
+        levelFeatures: {
+          ...action.payload
+        }
+      };
+
+    case SET_LEVEL_FEATURES_SELECTED:
+      return {
+        ...state,
+        levelFeaturesSelected: action.payload
       };
 
     case SET_PROFICIENCY_BONUS: 

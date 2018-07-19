@@ -83,6 +83,15 @@
     flex: 1 1 auto;
   }
 
+  .choice {
+    width: 100%;
+    margin-left: 5%;
+  }
+
+  .feature {
+    border: 1px solid black;
+    padding: 1.5%;
+  }
 
   .skillContainer, .armorContainer {
     display: flex;
@@ -102,6 +111,10 @@
     width: 3rem;
     justify-content: center;
     align-items: center;
+  }
+
+  .skill-append, .armor-append {
+    cursor: pointer;
   }
 
   .skill-text, .armor-text {
