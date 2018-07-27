@@ -1,9 +1,11 @@
 const { GraphQLList, GraphQLString } = require('graphql');
 const { NameDescType } = require('../type');
-const { MyDB } = require('../../db');
+// const { MyDB } = require('../../db');
 
-// Fake DB initializing
-const db = new MyDB();
+// // Fake DB initializing
+// const db = new MyDB();
+
+const { getAlignments, getAlignmentName } = require('../../db')
 
 // Alignment Query
 const getAlignments = {
