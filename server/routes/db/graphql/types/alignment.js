@@ -11,7 +11,7 @@ module.exports = `
   }
 
   type Mutation {
-    addAlignment(name: String! description: String!): Alignment!
+    addAlignment(name: String!, description: String!): Alignment!
     removeAlignment(id: ID!): ID!
   }
 `
