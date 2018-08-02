@@ -2,10 +2,12 @@ const mongoose = require('mongoose')
 
 const AlignmentService = require('./alignment')
 const ArmorService = require('./armor')
+const ClassService = require('./class')
 
 const { 
   alignmentDB,
-  armorDB
+  armorDB,
+  classDB,
 } = require('../data')
 
 class DatabaseService {
@@ -23,7 +25,7 @@ class DatabaseService {
     let db
     try {
       db = await mongoose.connect(
-        "mongodb://192.168.9.23:27017/axialrp",
+        "mongodb://192.168.9.23:27018/axialrp",
         {
           promiseLibrary: global.Promise,
           useNewUrlParser: true
@@ -51,6 +53,10 @@ class DatabaseService {
   get Armor() {
     return ArmorService
   }
+
+  get Class() {
+    return ClassService
+  }
 }
 
 function fillDB(db) {
@@ -60,6 +66,10 @@ function fillDB(db) {
 
   db.model('armor').insertMany(armorDB, (err, docs) => {
     console.log("inserted armorDB")
+  })
+
+  db.model('class').insertMany(classDB, (err, docs) => {
+    console.log("inserted classDB")
   })
 }
 

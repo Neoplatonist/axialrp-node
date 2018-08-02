@@ -6,8 +6,8 @@ module.exports = `
   }
 
   type Query {
-    alignments: [Alignment]!
-    alignment(name: String!): Alignment!
+    getAlignments: [Alignment]!
+    getAlignmentByName(name: String!): Alignment!
   }
 
   type Mutation {

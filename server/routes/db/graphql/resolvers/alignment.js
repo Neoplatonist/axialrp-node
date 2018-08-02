@@ -1,7 +1,7 @@
 module.exports = {
   Query: {
-    alignments: (_, __, { db }) => db.Alignment.getAlignments(),
-    alignment: (_, { name }, { db }) => db.Alignment.getAlignmentByName(name)
+    getAlignments: (_, __, { db }) => db.Alignment.getAlignments(),
+    getAlignmentByName: (_, { name }, { db }) => db.Alignment.getAlignmentByName(name)
   },
 
   Mutation: {
