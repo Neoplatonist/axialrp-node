@@ -3,11 +3,13 @@ const mongoose = require('mongoose')
 const AlignmentService = require('./alignment')
 const ArmorService = require('./armor')
 const ClassService = require('./class')
+const ClassFeatureService = require('./classFeature')
 
 const { 
   alignmentDB,
   armorDB,
   classDB,
+  classFeatureDB,
 } = require('../data')
 
 class DatabaseService {
@@ -57,6 +59,10 @@ class DatabaseService {
   get Class() {
     return ClassService
   }
+
+  get ClassFeature() {
+    return ClassFeatureService
+  }
 }
 
 function fillDB(db) {
@@ -70,6 +76,10 @@ function fillDB(db) {
 
   db.model('class').insertMany(classDB, (err, docs) => {
     console.log("inserted classDB")
+  })
+
+  db.model('classFeature').insertMany(classFeatureDB, (err, docs) => {
+    console.log("inserted classFeatureDB")
   })
 }
 
