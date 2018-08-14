@@ -1,4 +1,14 @@
 module.exports = `
+  type Cost {
+    quantity: Int!
+    unit: String!
+  }
+
+  input CostInput {
+    quantity: Int!
+    unit: String!
+  }
+
   type NameList {
     name: String!
   }

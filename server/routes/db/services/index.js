@@ -6,6 +6,7 @@ const ClassService = require('./class')
 const ClassFeatureService = require('./classFeature')
 const FeatService = require('./feat')
 const GearService = require('./gear')
+const KitService = require('./kit')
 
 const { 
   alignmentDB,
@@ -13,13 +14,14 @@ const {
   classDB,
   classFeatureDB,
   featDB,
-  gearDB
+  gearDB,
+  kitDB,
 } = require('../data')
 
 class DatabaseService {
   constructor() {
     this.connected = false
-    this.fillDB = false
+    this.fillDB = true
     this.db = this.connect()
   }
 
@@ -75,31 +77,39 @@ class DatabaseService {
   get Gear() {
     return GearService
   }
+
+  get Kit() {
+    return KitService
+  }
 }
 
 function fillDB(db) {
-  db.model('alignment').insertMany(alignmentDB, (err, docs) => {
-    console.log("inserted alignmentDB")
-  })
+  // db.model('alignment').insertMany(alignmentDB, (err, docs) => {
+  //   console.log("inserted alignmentDB")
+  // })
 
-  db.model('armor').insertMany(armorDB, (err, docs) => {
-    console.log("inserted armorDB")
-  })
+  // db.model('armor').insertMany(armorDB, (err, docs) => {
+  //   console.log("inserted armorDB")
+  // })
 
-  db.model('class').insertMany(classDB, (err, docs) => {
-    console.log("inserted classDB")
-  })
+  // db.model('class').insertMany(classDB, (err, docs) => {
+  //   console.log("inserted classDB")
+  // })
 
-  db.model('classFeature').insertMany(classFeatureDB, (err, docs) => {
-    console.log("inserted classFeatureDB")
-  })
+  // db.model('classFeature').insertMany(classFeatureDB, (err, docs) => {
+  //   console.log("inserted classFeatureDB")
+  // })
 
-  db.model('feat').insertMany(featDB, (err, docs) => {
-    console.log("inserted featDB")
-  })
+  // db.model('feat').insertMany(featDB, (err, docs) => {
+  //   console.log("inserted featDB")
+  // })
 
-  db.model('gear').insertMany(gearDB, (err, docs) => {
-    console.log("inserted gearDB")
+  // db.model('gear').insertMany(gearDB, (err, docs) => {
+  //   console.log("inserted gearDB")
+  // })
+
+  db.model('kit').insertMany(kitDB, (err, docs) => {
+    console.log("inserted kitDB")
   })
 }
 

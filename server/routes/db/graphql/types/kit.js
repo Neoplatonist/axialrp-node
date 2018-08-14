@@ -1,27 +1,29 @@
 module.exports = `
-  type Gear {
+  type Kit {
     id: ID!
     name: String!
     category: String!
     cost: Cost!
     weight: Int!
+    description: [String!]!
   }
 
-  input GearInput {
+  input KitInput {
     id: ID!
     name: String!
     category: String!
     cost: CostInput!
     weight: Int!
+    description: [String!]!
   }
 
   type Query {
-    getGear: [Gear!]!
-    getGearByName(name: String!): Gear!
+    getKits: [Kit!]!
+    getKitByName(name: String!): Kit!
   }
 
   type Mutation {
-    addGear(gear: GearInput!): Gear!
-    removeGear(id: ID!): ID!
+    addKit(kit: KitInput!): Kit!
+    removeKit(id: ID!): ID!
   }
 `

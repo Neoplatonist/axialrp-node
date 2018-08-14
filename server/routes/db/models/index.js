@@ -4,6 +4,7 @@ const Class = require('./class')
 const ClassFeature = require('./classFeature')
 const Feat = require('./feat')
 const Gear = require('./gear')
+const Kit = require('./kit')
 
 module.exports = {
   Alignment,
@@ -11,5 +12,6 @@ module.exports = {
   Class,
   ClassFeature,
   Feat,
-  Gear
+  Gear,
+  Kit
 }
