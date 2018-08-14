@@ -1,11 +1,15 @@
 const Alignment = require('./alignment')
 const Armor = require('./armor')
 const Class = require('./class')
-const classFeature = require('./classFeature')
+const ClassFeature = require('./classFeature')
+const Feat =  require('./feat')
+const Gear = require('./gear')
 
 module.exports = {
   alignmentDB: Alignment,
   armorDB: Armor,
   classDB: Class,
-  classFeatureDB: classFeature,
+  classFeatureDB: ClassFeature,
+  featDB: Feat,
+  gearDB: Gear,
 }
