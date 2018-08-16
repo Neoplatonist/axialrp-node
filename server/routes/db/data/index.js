@@ -5,6 +5,11 @@ const ClassFeature = require('./classFeature')
 const Feat =  require('./feat')
 const Gear = require('./gear')
 const Kit = require('./kit')
+// Not implemented - see mount.js for details
+const Mount = require('./mount')
+
+// Need to consolidate
+const Race = require('./race')
 
 module.exports = {
   alignmentDB: Alignment,
@@ -14,4 +19,5 @@ module.exports = {
   featDB: Feat,
   gearDB: Gear,
   kitDB: Kit,
+  raceDB: Race,
 }

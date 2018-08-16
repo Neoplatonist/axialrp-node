@@ -7,6 +7,7 @@ const ClassFeatureService = require('./classFeature')
 const FeatService = require('./feat')
 const GearService = require('./gear')
 const KitService = require('./kit')
+const RaceService = require('./race')
 
 const { 
   alignmentDB,
@@ -16,6 +17,7 @@ const {
   featDB,
   gearDB,
   kitDB,
+  raceDB
 } = require('../data')
 
 class DatabaseService {
@@ -81,6 +83,10 @@ class DatabaseService {
   get Kit() {
     return KitService
   }
+
+  get Race() {
+    return RaceService
+  }
 }
 
 function fillDB(db) {
@@ -108,8 +114,12 @@ function fillDB(db) {
   //   console.log("inserted gearDB")
   // })
 
-  db.model('kit').insertMany(kitDB, (err, docs) => {
-    console.log("inserted kitDB")
+  // db.model('kit').insertMany(kitDB, (err, docs) => {
+  //   console.log("inserted kitDB")
+  // })
+
+  db.model('race').insertMany(raceDB, (err, docs) => {
+    console.log("inserted raceDB")
   })
 }
 

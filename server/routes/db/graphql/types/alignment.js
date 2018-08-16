@@ -6,7 +6,7 @@ module.exports = `
   }
 
   type Query {
-    getAlignments: [Alignment]!
+    getAlignments: [Alignment!]!
     getAlignmentByName(name: String!): Alignment!
   }
 

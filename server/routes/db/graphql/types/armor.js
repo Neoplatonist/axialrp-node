@@ -43,7 +43,7 @@ module.exports = `
   }
 
   type Query {
-    getArmor: [Armor]!
+    getArmor: [Armor!]!
     getArmorByName(name: String!): Armor!
     getArmorByCategory(category: String!): [Armor]!
   }

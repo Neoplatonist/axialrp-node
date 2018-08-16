@@ -7,7 +7,7 @@ module.exports = `
   }
 
   type Query {
-    getClassFeatures: [ClassFeature]!
+    getClassFeatures: [ClassFeature!]!
     getClassFeatureByName(name: String!): ClassFeature!
   }
 
@@ -19,7 +19,6 @@ module.exports = `
 
   type Mutation {
     addClassFeature(feature: ClassFeatureInput!): ClassFeature!
-
     removeClassFeature(id: ID!): ID!
   }
 `
