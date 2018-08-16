@@ -15,7 +15,7 @@ module.exports = [
     'size': {
       'description': 'Dwarves stand between 4 and 5 feet tall and average about 150 pounds. Your size is Medium.',
       'height': {
-      '  min': 4,
+        'min': 4,
         'max': 5
       },
       'size': 'Medium'
@@ -76,7 +76,7 @@ module.exports = [
     'size': {
       'description': 'Elves range from under 5 to over 6 feet tall and have slender builds. Your size is Medium.',
       'height': {
-      '  min': 5,
+        'min': 5,
         'max': 6
       },
       'size': 'Medium'
@@ -137,7 +137,7 @@ module.exports = [
     'size': {
       'description': 'Halflings average about 3 feet tall and weigh about 40 pounds. Your size is Small.',
       'height': {
-      '  min': 3,
+        'min': 3,
         'max': 3
       },
       'size': 'Small'
@@ -189,7 +189,7 @@ module.exports = [
     'size': {
       'description': 'Humans vary widely in height and build, from barely 5 feet to well over 6 feet tall. Regardless of your position in that range, your size is Medium.',
       'height': {
-      '  min': 5,
+        'min': 5,
         'max': 6
       },
       'size': 'Medium'
@@ -254,7 +254,7 @@ module.exports = [
     'size': {
       'description': 'Dragonborn are taller and heavier than humans, standing well over 6 feet tall and averaging almost 250 pounds. Your size is Medium.',
       'height': {
-      '  min': 6,
+        'min': 6,
         'max': 7
       },
       'size': 'Medium'
@@ -313,7 +313,7 @@ module.exports = [
     'size': {
       'description': 'Gnomes are between 3 and 4 feet tall and average about 40 pounds. Your size is Small.',
       'height': {
-      '  min': 3,
+        'min': 3,
         'max': 4
       },
       'size': 'Small'
@@ -356,7 +356,7 @@ module.exports = [
     'size': {
       'description': 'Half-elves are about the same size as humans, ranging from 5 to 6 feet tall. Your size is Medium.',
       'height': {
-      '  min': 5,
+        'min': 5,
         'max': 6
       },
       'size': 'Medium'
@@ -420,7 +420,7 @@ module.exports = [
     'size': {
       'description': 'Half-orcs are somewhat larger and bulkier than humans, and they range from 5 to well over 6 feet tall. Your size is Medium.',
       'height': {
-      '  min': 5,
+        'min': 5,
         'max': 6
       },
       'size': 'Medium'
@@ -464,7 +464,7 @@ module.exports = [
     'size': {
       'description': 'Half-orcs are somewhat larger and bulkier than humans, and they range from 5 to well over 6 feet tall. Your size is Medium.',
       'height': {
-      '  min': 5,
+        'min': 5,
         'max': 6
       },
       'size': 'Medium'
