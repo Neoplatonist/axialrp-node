@@ -7,6 +7,7 @@ const Gear = require('./gear')
 const Kit = require('./kit')
 const Race = require('./race')
 const SchoolOfMagic = require('./schoolOfMagic')
+const Skill = require('./skill')
 
 module.exports = {
   Alignment,
@@ -18,4 +19,5 @@ module.exports = {
   Kit,
   Race,
   SchoolOfMagic,
+  Skill,
 }

@@ -11,6 +11,7 @@ const Mount = require('./mount')
 // Need to consolidate
 const Race = require('./race')
 const SchoolOfMagic = require('./schoolOfMagic')
+const Skill = require('./skill')
 
 module.exports = {
   alignmentDB: Alignment,
@@ -22,4 +23,5 @@ module.exports = {
   kitDB: Kit,
   raceDB: Race,
   schoolOfMagicDB: SchoolOfMagic,
+  skillDB: Skill,
 }

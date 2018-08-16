@@ -9,6 +9,7 @@ const GearService = require('./gear')
 const KitService = require('./kit')
 const RaceService = require('./race')
 const SchoolOfMagicService = require('./schoolOfMagic')
+const SkillService = require('./skill')
 
 const { 
   alignmentDB,
@@ -20,6 +21,7 @@ const {
   kitDB,
   raceDB,
   schoolOfMagicDB,
+  skillDB,
 } = require('../data')
 
 class DatabaseService {
@@ -93,6 +95,10 @@ class DatabaseService {
   get SchoolOfMagic() {
     return SchoolOfMagicService
   }
+
+  get Skill() {
+    return SkillService
+  }
 }
 
 function fillDB(db) {
@@ -130,6 +136,10 @@ function fillDB(db) {
 
   db.model('schoolOfMagic').insertMany(schoolOfMagicDB, (err, docs) => {
     console.log("inserted schoolOfMagicDB")
+  })
+  
+  db.model('skill').insertMany(skillDB, (err, docs) => {
+    console.log("inserted skillDB")
   })
 }
 
