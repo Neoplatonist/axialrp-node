@@ -9,6 +9,7 @@ const Race = require('./race')
 const SchoolOfMagic = require('./schoolOfMagic')
 const Skill = require('./skill')
 const Spell = require('./spell')
+const StartingEquipment = require('./startingEquipment')
 
 module.exports = {
   Alignment,
@@ -22,4 +23,5 @@ module.exports = {
   SchoolOfMagic,
   Skill,
   Spell,
+  StartingEquipment,
 }

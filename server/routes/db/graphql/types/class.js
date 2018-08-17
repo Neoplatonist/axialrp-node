@@ -107,11 +107,11 @@ module.exports = `
     _9: [String]
   }
 
-  type StartingEquipment {
+  type ClassStartEquip {
     class: String
   }
 
-  input StartingEquipmentInput {
+  input ClassStartEquipInput {
     class: String
   }
 
@@ -123,7 +123,7 @@ module.exports = `
     proficiencyChoices: [OptionsString!]!
     savingThrows: [NameList!]!
     subClasses: [NameDescList]
-    startingEquipment: StartingEquipment!
+    startingEquipment: ClassStartEquip!
     levels: Level!
     spellcasting: SpellCasting
     weapons: [NameList!]!
@@ -136,7 +136,7 @@ module.exports = `
     proficiencyChoices: [OptionsStringInput!]!
     savingThrows: [NameListInput!]!
     subClasses: [NameDescListInput]
-    startingEquipment: StartingEquipmentInput!
+    startingEquipment: ClassStartEquipInput!
     levels: LevelInput!
     spellcasting: SpellCastingInput
     weapons: [NameListInput!]!

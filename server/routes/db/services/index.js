@@ -11,6 +11,7 @@ const RaceService = require('./race')
 const SchoolOfMagicService = require('./schoolOfMagic')
 const SkillService = require('./skill')
 const SpellService = require('./spell')
+const StartingEquipmentService = require('./startingEquipment')
 
 const { 
   alignmentDB,
@@ -24,6 +25,7 @@ const {
   schoolOfMagicDB,
   skillDB,
   spellDB,
+  startingEquipmentDB,
 } = require('../data')
 
 class DatabaseService {
@@ -105,51 +107,59 @@ class DatabaseService {
   get Spell() {
     return SpellService
   }
+
+  get StartingEquipment() {
+    return StartingEquipmentService
+  }
 }
 
 function fillDB(db) {
-  // db.model('alignment').insertMany(alignmentDB, (err, docs) => {
-  //   console.log("inserted alignmentDB")
-  // })
+  db.model('alignment').insertMany(alignmentDB, (err, docs) => {
+    console.log("inserted alignmentDB")
+  })
 
-  // db.model('armor').insertMany(armorDB, (err, docs) => {
-  //   console.log("inserted armorDB")
-  // })
+  db.model('armor').insertMany(armorDB, (err, docs) => {
+    console.log("inserted armorDB")
+  })
 
-  // db.model('class').insertMany(classDB, (err, docs) => {
-  //   console.log("inserted classDB")
-  // })
+  db.model('class').insertMany(classDB, (err, docs) => {
+    console.log("inserted classDB")
+  })
 
-  // db.model('classFeature').insertMany(classFeatureDB, (err, docs) => {
-  //   console.log("inserted classFeatureDB")
-  // })
+  db.model('classFeature').insertMany(classFeatureDB, (err, docs) => {
+    console.log("inserted classFeatureDB")
+  })
 
-  // db.model('feat').insertMany(featDB, (err, docs) => {
-  //   console.log("inserted featDB")
-  // })
+  db.model('feat').insertMany(featDB, (err, docs) => {
+    console.log("inserted featDB")
+  })
 
-  // db.model('gear').insertMany(gearDB, (err, docs) => {
-  //   console.log("inserted gearDB")
-  // })
+  db.model('gear').insertMany(gearDB, (err, docs) => {
+    console.log("inserted gearDB")
+  })
 
-  // db.model('kit').insertMany(kitDB, (err, docs) => {
-  //   console.log("inserted kitDB")
-  // })
+  db.model('kit').insertMany(kitDB, (err, docs) => {
+    console.log("inserted kitDB")
+  })
 
-  // db.model('race').insertMany(raceDB, (err, docs) => {
-  //   console.log("inserted raceDB")
-  // })
+  db.model('race').insertMany(raceDB, (err, docs) => {
+    console.log("inserted raceDB")
+  })
 
-  // db.model('schoolOfMagic').insertMany(schoolOfMagicDB, (err, docs) => {
-  //   console.log("inserted schoolOfMagicDB")
-  // })
+  db.model('schoolOfMagic').insertMany(schoolOfMagicDB, (err, docs) => {
+    console.log("inserted schoolOfMagicDB")
+  })
   
-  // db.model('skill').insertMany(skillDB, (err, docs) => {
-  //   console.log("inserted skillDB")
-  // })
+  db.model('skill').insertMany(skillDB, (err, docs) => {
+    console.log("inserted skillDB")
+  })
 
   db.model('spell').insertMany(spellDB, (err, docs) => {
     console.log("inserted spellDB")
+  })
+
+  db.model('startingEquipment').insertMany(startingEquipmentDB, (err, docs) => {
+    console.log("inserted startingEquipmentDB")
   })
 }
 
