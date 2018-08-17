@@ -30,8 +30,8 @@ module.exports = `
     castingTime: String!
     level: Int!
     school: String!
-    classes: [NameList!]!
-    subclasses: [NameList!]!
+    classes: [NameListInput!]!
+    subclasses: [NameListInput!]!
   }
 
   type Query {
