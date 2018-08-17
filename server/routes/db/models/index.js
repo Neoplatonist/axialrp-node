@@ -8,6 +8,7 @@ const Kit = require('./kit')
 const Race = require('./race')
 const SchoolOfMagic = require('./schoolOfMagic')
 const Skill = require('./skill')
+const Spell = require('./spell')
 
 module.exports = {
   Alignment,
@@ -20,4 +21,5 @@ module.exports = {
   Race,
   SchoolOfMagic,
   Skill,
+  Spell,
 }

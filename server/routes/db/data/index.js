@@ -12,6 +12,7 @@ const Mount = require('./mount')
 const Race = require('./race')
 const SchoolOfMagic = require('./schoolOfMagic')
 const Skill = require('./skill')
+const Spell = require('./spell')
 
 module.exports = {
   alignmentDB: Alignment,
@@ -24,4 +25,5 @@ module.exports = {
   raceDB: Race,
   schoolOfMagicDB: SchoolOfMagic,
   skillDB: Skill,
+  spellDB: Spell,
 }
