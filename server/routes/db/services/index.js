@@ -33,7 +33,7 @@ const {
 class DatabaseService {
   constructor() {
     this.connected = false
-    this.fillDB = true
+    this.fillDB = false
     this.db = this.connect()
   }
 
