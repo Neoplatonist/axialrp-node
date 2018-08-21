@@ -1,11 +1,11 @@
 module.exports = `
-  type Age {
+  type RaceAge {
     adult: Int!
     description: String!
     max: Int!
   }
 
-  input AgeInput {
+  input RaceAgeInput {
     adult: Int!
     description: String!
     max: Int!
@@ -88,7 +88,7 @@ module.exports = `
     name: String!
     description: String!
     abilityBonus: [Int!]!
-    age: Age!
+    age: RaceAge!
     alignment: RaceAlignment!
     size: RaceSize!
     speed: RaceSpeed!
@@ -105,7 +105,7 @@ module.exports = `
     name: String!
     description: String!
     abilityBonus: [Int!]!
-    age: AgeInput!
+    age: RaceAgeInput!
     alignment: RaceAlignmentInput!
     size: RaceSizeInput!
     speed: RaceSpeedInput!

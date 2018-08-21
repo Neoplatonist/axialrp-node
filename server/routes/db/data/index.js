@@ -14,6 +14,7 @@ const SchoolOfMagic = require('./schoolOfMagic')
 const Skill = require('./skill')
 const Spell = require('./spell')
 const StartingEquipment = require('./startingEquipment')
+const Subrace = require('./subrace')
 
 module.exports = {
   alignmentDB: Alignment,
@@ -28,4 +29,5 @@ module.exports = {
   skillDB: Skill,
   spellDB: Spell,
   startingEquipmentDB: StartingEquipment,
+  subraceDB: Subrace,
 }

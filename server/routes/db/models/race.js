@@ -33,7 +33,7 @@ const RaceSchema = new Schema({
   alignment: {
     description: String,
     main: String
-  },
+  }, 
   size: {
     description: String,
     height: {
