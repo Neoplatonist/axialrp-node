@@ -11,6 +11,7 @@ const Skill = require('./skill')
 const Spell = require('./spell')
 const StartingEquipment = require('./startingEquipment')
 const Subrace = require('./subrace')
+const Tool = require('./tool')
 
 module.exports = {
   Alignment,
@@ -26,4 +27,5 @@ module.exports = {
   Spell,
   StartingEquipment,
   Subrace,
+  Tool,
 }
