@@ -5,30 +5,13 @@ module.exports = `
     description: String!
     abilityBonus: [Int!]!
     hitPoints: Int
-    age: RaceAge
-    size: RaceSize
-    speed: RaceSpeed
-    languages: RaceLanguages
-    traits: [NameDescList]
-    savingThrows: RaceSavingThrows
-    tools: OptionsString
-    weapons: [String]
   }
 
   input SubraceInput {
-    id: ID!
     name: String!
     description: String!
     abilityBonus: [Int!]!
     hitPoints: Int
-    age: RaceAgeInput
-    size: RaceSizeInput
-    speed: RaceSpeedInput
-    languages: RaceLanguagesInput
-    traits: [NameDescListInput]
-    savingThrows: RaceSavingThrowsInput
-    tools: OptionsStringInput
-    weapons: [String]
   }
 
   type Query {
