@@ -16,6 +16,7 @@ const Spell = require('./spell')
 const StartingEquipment = require('./startingEquipment')
 const Subrace = require('./subrace')
 const Tool = require('./tool')
+const Weapon = require('./weapon')
 
 module.exports = {
   alignmentDB: Alignment,
@@ -32,4 +33,5 @@ module.exports = {
   startingEquipmentDB: StartingEquipment,
   subraceDB: Subrace,
   toolDB: Tool,
+  weaponDB: Weapon,
 }

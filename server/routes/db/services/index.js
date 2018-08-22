@@ -14,6 +14,7 @@ const SpellService = require('./spell')
 const StartingEquipmentService = require('./startingEquipment')
 const SubraceService = require('./subrace')
 const ToolService = require('./tool')
+const WeaponService = require('./weapon')
 
 const { 
   alignmentDB,
@@ -30,12 +31,13 @@ const {
   startingEquipmentDB,
   subraceDB,
   toolDB,
+  weaponDB,
 } = require('../data')
 
 class DatabaseService {
   constructor() {
     this.connected = false
-    this.fillDB = false
+    this.fillDB = true
     this.db = this.connect()
   }
 
@@ -123,6 +125,10 @@ class DatabaseService {
   get Tool() {
     return ToolService
   }
+
+  get Weapon() {
+    return WeaponService
+  }
 }
 
 function fillDB(db) {
@@ -178,8 +184,12 @@ function fillDB(db) {
   //   console.log("inserted subraceDB")
   // })
 
-  db.model('tool').insertMany(toolDB, (err, docs) => {
-    console.log("inserted toolDB")
+  // db.model('tool').insertMany(toolDB, (err, docs) => {
+  //   console.log("inserted toolDB")
+  // })
+
+  db.model('weapon').insertMany(weaponDB, (err, docs) => {
+    console.log("inserted weaponDB")
   })
 }
 
