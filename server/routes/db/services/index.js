@@ -7,6 +7,7 @@ const ClassFeatureService = require('./classFeature')
 const FeatService = require('./feat')
 const GearService = require('./gear')
 const KitService = require('./kit')
+const MountService = require('./mount')
 const RaceService = require('./race')
 const SchoolOfMagicService = require('./schoolOfMagic')
 const SkillService = require('./skill')
@@ -24,6 +25,7 @@ const {
   featDB,
   gearDB,
   kitDB,
+  mountDB,
   raceDB,
   schoolOfMagicDB,
   skillDB,
@@ -37,7 +39,7 @@ const {
 class DatabaseService {
   constructor() {
     this.connected = false
-    this.fillDB = false
+    this.fillDB = true
     this.db = this.connect()
   }
 
@@ -70,65 +72,22 @@ class DatabaseService {
     return db
   }
 
-  get Alignment() {
-    return AlignmentService
-  }
-
-  get Armor() {
-    return ArmorService
-  }
-
-  get Class() {
-    return ClassService
-  }
-
-  get ClassFeature() {
-    return ClassFeatureService
-  }
-
-  get Feat() {
-    return FeatService
-  }
-
-  get Gear() {
-    return GearService
-  }
-
-  get Kit() {
-    return KitService
-  }
-
-  get Race() {
-    return RaceService
-  }
-
-  get SchoolOfMagic() {
-    return SchoolOfMagicService
-  }
-
-  get Skill() {
-    return SkillService
-  }
-
-  get Spell() {
-    return SpellService
-  }
-
-  get StartingEquipment() {
-    return StartingEquipmentService
-  }
-
-  get Subrace() {
-    return SubraceService
-  }
-
-  get Tool() {
-    return ToolService
-  }
-
-  get Weapon() {
-    return WeaponService
-  }
+  get Alignment() { return AlignmentService }
+  get Armor() { return ArmorService }
+  get Class() { return ClassService }
+  get ClassFeature() { return ClassFeatureService }
+  get Feat() { return FeatService }
+  get Gear() { return GearService }
+  get Kit() { return KitService }
+  get Mount() { return MountService }
+  get Race() { return RaceService }
+  get SchoolOfMagic() { return SchoolOfMagicService }
+  get Skill() { return SkillService }
+  get Spell() { return SpellService }
+  get StartingEquipment() { return StartingEquipmentService }
+  get Subrace() { return SubraceService }
+  get Tool() { return ToolService }
+  get Weapon() { return WeaponService }
 }
 
 function fillDB(db) {
@@ -160,6 +119,10 @@ function fillDB(db) {
   //   console.log("inserted kitDB")
   // })
 
+  db.model('mount').insertMany(mountDB, (err, docs) => {
+    console.log("inserted mountDB")
+  })
+
   // db.model('race').insertMany(raceDB, (err, docs) => {
   //   console.log("inserted raceDB")
   // })
@@ -188,9 +151,9 @@ function fillDB(db) {
   //   console.log("inserted toolDB")
   // })
 
-  db.model('weapon').insertMany(weaponDB, (err, docs) => {
-    console.log("inserted weaponDB")
-  })
+  // db.model('weapon').insertMany(weaponDB, (err, docs) => {
+  //   console.log("inserted weaponDB")
+  // })
 }
 
 module.exports = new DatabaseService()

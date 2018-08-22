@@ -5,14 +5,15 @@ module.exports = `
     category: String!
     cost: Cost!
     weight: Int!
+    description: [String]
   }
 
   input GearInput {
-    id: ID!
     name: String!
     category: String!
     cost: CostInput!
     weight: Int!
+    description: [String]
   }
 
   type Query {

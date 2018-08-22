@@ -9,7 +9,6 @@ module.exports = `
   }
 
   input KitInput {
-    id: ID!
     name: String!
     category: String!
     cost: CostInput!

@@ -1,15 +1,18 @@
 const mongoose = require('mongoose')
 const { Schema } = mongoose
 
-const GearSchema = new Schema({
+const MountSchema = new Schema({
   name: String,
   category: String,
   cost: {
     quantity: Number,
     unit: String
   },
-  weight: Number,
-  description: [String]
+  speed: {
+    quantity: Number,
+    unit: String
+  },
+  capacity: String
 })
 
-module.exports = mongoose.model('gear', GearSchema)
+module.exports = mongoose.model('mount', MountSchema)

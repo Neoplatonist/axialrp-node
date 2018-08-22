@@ -101,7 +101,6 @@ module.exports = `
   }
 
   input RaceInput {
-    id: ID!
     name: String!
     description: String!
     abilityBonus: [Int!]!

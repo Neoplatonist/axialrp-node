@@ -5,6 +5,7 @@ const ClassFeature = require('./classFeature')
 const Feat = require('./feat')
 const Gear = require('./gear')
 const Kit = require('./kit')
+const Mount = require('./mount')
 const Race = require('./race')
 const SchoolOfMagic = require('./schoolOfMagic')
 const Skill = require('./skill')
@@ -22,6 +23,7 @@ module.exports = {
   Feat,
   Gear,
   Kit,
+  Mount,
   Race,
   SchoolOfMagic,
   Skill,

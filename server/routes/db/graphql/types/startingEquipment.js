@@ -37,7 +37,6 @@ module.exports = `
   }
 
   input StartingEquipmentInput {
-    id: ID!
     class: String!
     startingEquipment: [SENameQuantInput!]!
     choices: [StartingEquipChoicesInput!]!

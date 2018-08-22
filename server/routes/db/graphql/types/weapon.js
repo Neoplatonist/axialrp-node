@@ -47,11 +47,10 @@ module.exports = `
   }
 
   input WeaponInput {
-    id: ID!
     name: String!
     category: String!
     range: WeaponRangeInput!
-    cost: Cost!
+    cost: CostInput!
     damage: [WeaponDamageInput!]!
     weight: Int!
     properties: [NameListInput!]!
