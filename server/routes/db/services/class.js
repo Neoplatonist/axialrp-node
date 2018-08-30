@@ -5,7 +5,7 @@ module.exports = {
     return Class.find({})
   },
 
-  getClassByName: (name) => {
+  getClassesByName: (name) => {
     return Class.findOne({ name })
   },
 

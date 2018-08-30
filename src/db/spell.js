@@ -3,14 +3,14 @@ import { client } from './index';
 const spellType = `
   name
   description
-  higher_level
+  higherLevel
   range
   components
   material
   ritual
   duration
   concentration
-  casting_time
+  castingTime
   level
   school
   classes {

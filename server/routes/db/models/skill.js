@@ -5,7 +5,7 @@ const { NameList } = require('./generics')
 const SkillSchema = new Schema({
   name: String,
   description: String,
-  // abilityScore: NameList
+  abilityScore: NameList
 })
 
 module.exports = mongoose.model('skill', SkillSchema)

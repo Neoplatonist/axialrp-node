@@ -1,24 +1,24 @@
 module.exports = `
   type WeaponRangeType {
-    type: String!
-    normal: Int!
-    Long: Int
+    type: String
+    normal: Int
+    long: Int
   }
 
   input WeaponRangeTypeInput {
-    type: String!
-    normal: Int!
-    Long: Int
+    type: String
+    normal: Int
+    long: Int
   }
 
   type WeaponRange {
-    name: String!
-    rangeType: [WeaponRangeType!]!
+    name: String
+    rangeType: [WeaponRangeType]
   }
 
   input WeaponRangeInput {
-    name: String!
-    rangeType: [WeaponRangeTypeInput!]!
+    name: String
+    rangeType: [WeaponRangeTypeInput]
   }
 
   type WeaponDamage {
@@ -39,20 +39,20 @@ module.exports = `
     id: ID!
     name: String!
     category: String!
-    range: WeaponRange!
+    range: WeaponRange
     cost: Cost!
     damage: [WeaponDamage!]!
-    weight: Int!
+    weight: String!
     properties: [NameList!]!
   }
 
   input WeaponInput {
     name: String!
     category: String!
-    range: WeaponRangeInput!
+    range: WeaponRangeInput
     cost: CostInput!
     damage: [WeaponDamageInput!]!
-    weight: Int!
+    weight: String!
     properties: [NameListInput!]!
   }
 

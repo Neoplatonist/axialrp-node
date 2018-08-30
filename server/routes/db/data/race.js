@@ -57,7 +57,7 @@ module.exports = [
     'tools': {
       'choose': 1,
       'type': 'Artisan',
-      'from': ['Smith Tools', 'Brewer Supplies', 'Mason Tools']
+      'from': [{'name': 'Smith Tools'}, {'name': 'Brewer Supplies'}, {'name': 'Mason Tools'}]
     },
     'weapons': ['Battleaxe', 'Handaxe', 'Light Hammer', 'Warhammer']
   }, {
@@ -118,7 +118,7 @@ module.exports = [
     'tools': {
       'choose': 1,
       'type': 'Artisan',
-      'from': ['Smith Tools', 'Brewer Supplies', 'Mason Tools']
+      'from': [{'name': 'Smith Tools'}, {'name': 'Brewer Supplies'}, {'name': 'Mason Tools'}]
     },
     'weapons': ['Longsword', 'Shortsword', 'Shortbow', 'Longbow']
   }, {
@@ -227,7 +227,6 @@ module.exports = [
       'options': {},
       'type': []
     },
-    'subRaces': [],
     'savingThrows': {
       'against': 'Poison',
       'description': 'You have advantage on saving throws against poison, and you have resistance against poison damage.'
@@ -235,7 +234,7 @@ module.exports = [
     'tools': {
       'choose': 1,
       'type': 'Artisan',
-      'from': ['Smith Tools', 'Brewer Supplies', 'Mason Tools']
+      'from': [{'name': 'Smith Tools'}, {'name': 'Brewer Supplies'}, {'name': 'Mason Tools'}]
     },
     'weapons': ['Longsword', 'Shortsword', 'Shortbow', 'Longbow']
   }, {
@@ -294,7 +293,6 @@ module.exports = [
         { 'name': 'Damage Resistance (Dragonborn)' }
       ]
     },
-    'subraces': [],
     'tools': {},
     'weapons': []
   }, {
@@ -337,7 +335,6 @@ module.exports = [
         { 'name': 'Gnome Cunning' }
       ]
     },
-    'subraces': [],
     'tools': {},
     'weapons': []
   }, {
@@ -401,7 +398,6 @@ module.exports = [
         { 'name': 'Skill Versatility' }
       ]
     },
-    'subraces': [],
     'tools': {},
     'weapons': []
   },  {
@@ -445,7 +441,6 @@ module.exports = [
         { 'name': 'Restless Endurance' }
       ]
     },
-    'subraces': [],
     'tools': {},
     'weapons': []
   }, {
@@ -489,7 +484,6 @@ module.exports = [
         { 'name': 'Infernal Legacy' }
       ]
     },
-    'subraces': [],
     'tools': {},
     'weapons': []
   }

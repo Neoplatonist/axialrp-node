@@ -53,24 +53,24 @@ module.exports = `
 
   type RaceLanguages {
     description: String!
-    options: OptionsString!
-    type: [NameList!]!
+    options: OptionsString
+    type: [NameList]
   }
 
   input RaceLanguagesInput {
     description: String!
     options: OptionsStringInput!
-    type: [NameListInput!]!
+    type: [NameListInput]
   }
 
   type RaceTraits {
     options: OptionsString
-    type: [NameList]
+    type: [NameDescList]
   }
 
   input RaceTraitsInput {
     options: OptionsStringInput
-    type: [NameListInput]
+    type: [NameDescListInput]
   }
 
   type RaceSavingThrows {
@@ -96,7 +96,7 @@ module.exports = `
     traits: RaceTraits
     subRaces: [NameList]
     savingThrows: RaceSavingThrows!
-    tools: OptionsString!
+    tools: OptionsString
     weapons: [String!]!
   }
 
@@ -112,7 +112,7 @@ module.exports = `
     traits: RaceTraitsInput
     subRaces: [NameListInput]
     savingThrows: RaceSavingThrowsInput!
-    tools: OptionsStringInput!
+    tools: OptionsStringInput
     weapons: [String!]!
   }
 

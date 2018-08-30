@@ -103,7 +103,7 @@ class Generator extends Component {
           key={k} 
           desc={skill.description}
           name={v.name} 
-          mod={skill.ability_score.name}/>;
+          mod={skill.abilityScore.name}/>;
       });
     } catch (err) {
       render = `...Loading`;

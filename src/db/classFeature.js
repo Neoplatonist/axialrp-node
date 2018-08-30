@@ -4,13 +4,6 @@ const classFeatureType = `
   name
   classes
   description
-  choices {
-    choose
-    options {
-      name
-      description
-    }
-  }
 `;
 
 export const classFeatureNameQuery = async name => {
@@ -18,13 +11,13 @@ export const classFeatureNameQuery = async name => {
 
   try {
     result = await client.query(`
-      query getClassFeatureNameNow($featureName: String) {
-        getClassFeatureName(name: $featureName) {
+      query getClassFeatureNameNow($featureName: String!) {
+        getClassFeatureByName(name: $featureName) {
           ${classFeatureType}
         }
       }
     `, { featureName: name })
-      .then(result => result.getClassFeatureName);
+      .then(result => result.getClassFeatureByName);
   } catch (err) {
     result = Promise.reject(err);
   }

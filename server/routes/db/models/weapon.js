@@ -28,6 +28,7 @@ const WeaponSchema = new Schema({
     unit: String
   },
   damage: [WeaponDamage],
+  weight: String,
   properties: [NameList]
 })
 

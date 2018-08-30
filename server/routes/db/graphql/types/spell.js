@@ -6,7 +6,7 @@ module.exports = `
     higherLevel: [String!]!
     range: String!
     components: [String!]!
-    material: String!
+    material: String
     ritual: Boolean!
     duration: String!
     concentration: Boolean!
@@ -23,7 +23,7 @@ module.exports = `
     higherLevel: [String!]!
     range: String!
     components: [String!]!
-    material: String!
+    material: String
     ritual: Boolean!
     duration: String!
     concentration: Boolean!

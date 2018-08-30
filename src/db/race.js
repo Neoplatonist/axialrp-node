@@ -3,7 +3,7 @@ import { client } from './index';
 const raceType = `
   name
   description
-  ability_bonus
+  abilityBonus
   age {
     adult
     description
@@ -50,10 +50,10 @@ const raceType = `
       description
     }
   }
-  sub_races {
+  subRaces {
     name
   }
-  saving_throws {
+  savingThrows {
     against
     description
   }
@@ -67,18 +67,19 @@ const raceType = `
   weapons
 `;
 
-export const raceNameQuery = async name => {
+export const raceNameQuery = async(name) => {
   let result;
 
   try {
     result = await client.query(`
-      query getRaceNameNow($race: String) {
-        getRaceName(name: $race) {
+      query getRaceNameNow($race: String!) {
+        getRaceByName(name: $race) {
           ${raceType}
         }
       }
-    `, { race: name }).then(result => result.getRaceName);
+    `, { race: name }).then(result => result.getRaceByName)
   } catch (err) {
+    console.log(err)
     result = Promise.reject(err);
   }
 

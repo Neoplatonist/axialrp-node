@@ -3,29 +3,29 @@ import { client } from './index';
 const weaponType = `
   name
   category
-  range
+  range {
+    name
+    rangeType {
+      type
+      normal
+      long
+    }
+  }
   cost {
     quantity
     unit
   }
   damage {
-    dice_count
-    dice_value
+    name
+    diceCount
+    diceValue
     type
-  }
-  atk_range {
-    normal
-    long
   }
   weight
   properties {
     name
   }
-  throw_atk_range {
-    normal
-    long
-  }
-`;
+`
 
 export const weaponByCategoryQuery = async name => {
   let result;

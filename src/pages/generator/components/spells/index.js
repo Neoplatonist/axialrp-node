@@ -31,7 +31,7 @@ class Spells extends Component {
 
     try {
       result = 'Choose ' + this.props.classObj.data
-        .levels[this.props.level].spells_known
+        .levels[this.props.level].spellsKnown
     } catch (err) {
       result = '...Loading'
     }

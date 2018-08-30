@@ -2,7 +2,7 @@ module.exports = `
   type ArmorClass {
     base: Int!
     dexBonus: Int!
-    maxBonus: Int!
+    maxBonus: Int
   }
 
   input ArmorClassInput {

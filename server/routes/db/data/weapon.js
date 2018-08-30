@@ -24,7 +24,7 @@ module.exports = [
         'type': 'Bludgeoning'
       }
     ],
-    'weight': 2,
+    'weight': '2',
     'properties': [
       {
         'name': 'Light'
@@ -59,7 +59,7 @@ module.exports = [
         'type': 'Piercing'
       }
     ],
-    'weight': 1,
+    'weight': '1',
     'properties': [
       {
         'name': 'Finesse'
@@ -94,7 +94,7 @@ module.exports = [
         'type': 'Bludgeoning'
       }
     ],
-    'weight': 10,
+    'weight': '10',
     'properties': [
       {
         'name': 'Two-Handed'
@@ -129,7 +129,7 @@ module.exports = [
         'type': 'Slashing'
       }
     ],
-    'weight': 2,
+    'weight': '2',
     'properties': [
       {
         'name': 'Light'
@@ -168,7 +168,7 @@ module.exports = [
         'type': 'Piercing'
       }
     ],
-    'weight': 2,
+    'weight': '2',
     'properties': [
       {
         'name': 'Thrown'
@@ -203,7 +203,7 @@ module.exports = [
         'type': 'Bludgeoning'
       }
     ],
-    'weight': 2,
+    'weight': '2',
     'properties': [
       {
         'name': 'Light'
@@ -238,7 +238,7 @@ module.exports = [
         'type': 'Bludgeoning'
       }
     ],
-    'weight': 4,
+    'weight': '4',
     'properties': [
       {
         'name': 'Monk'
@@ -274,7 +274,7 @@ module.exports = [
         'type': 'Bludgeoning'
       },
     ],
-    'weight': 4,
+    'weight': '4',
     'properties': [
       {
         'name': 'Versatile'
@@ -305,7 +305,7 @@ module.exports = [
         'type': 'Slashing'
       }
     ],
-    'weight': 2,
+    'weight': '2',
     'properties': [
       {
         'name': 'Light'
@@ -345,7 +345,7 @@ module.exports = [
         'type': 'Piercing'
       }
     ],
-    'weight': 3,
+    'weight': '3',
     'properties': [
       {
         'name': 'Thrown'
@@ -380,7 +380,7 @@ module.exports = [
         'type': 'Piercing'
       }
     ],
-    'weight': 5,
+    'weight': '5',
     'properties': [
       {
         'name': 'Ammunition'
@@ -419,7 +419,7 @@ module.exports = [
         'type': 'Piercing'
       }
     ],
-    'weight': 0.25,
+    'weight': '0.25',
     'properties': [
       {
         'name': 'Finesse'
@@ -453,7 +453,7 @@ module.exports = [
         'type': 'Piercing'
       }
     ],
-    'weight': 2,
+    'weight': '2',
     'properties': [
       {
         'name': 'Ammunition'
@@ -486,7 +486,7 @@ module.exports = [
         'type': 'Bludgeoning'
       }
     ],
-    'weight': 0,
+    'weight': '0',
     'properties': [
       {
         'name': 'Ammunition'
@@ -516,13 +516,13 @@ module.exports = [
         'diceValue': 8,
         'type': 'Slashing'
       }, {
-        'name': 'twoHandsDamage',
+        'name': 'two handed',
         'diceCount': 1,
         'diceValue': 10,
         'type': 'Slashing'
       }
     ],
-    'weight': 4,
+    'weight': '4',
     'properties': [
       {
         'name': 'Versatile'
@@ -553,7 +553,7 @@ module.exports = [
         'type': 'Bludgeoning'
       }
     ],
-    'weight': 2,
+    'weight': '2',
     'properties': [] 
   }, {
     'name': 'Glaive',
@@ -580,7 +580,7 @@ module.exports = [
         'type': 'Slashing'
       }
     ],
-    'weight': 6,
+    'weight': '6',
     'properties': [
       {
         'name': 'Heavy'
@@ -615,7 +615,7 @@ module.exports = [
         'type': 'Slashing'
       }
     ],
-    'weight': 7,
+    'weight': '7',
     'properties': [
       {
         'name': 'Heavy'
@@ -648,7 +648,7 @@ module.exports = [
         'type': 'Slashing'
       }
     ],
-    'weight': 6,
+    'weight': '6',
     'properties': [
       {
         'name': 'Heavy'
@@ -681,7 +681,7 @@ module.exports = [
         'type': 'Slashing'
       }
     ],
-    'weight': 6,
+    'weight': '6',
     'properties': [
       {
         'name': 'Heavy'
@@ -716,7 +716,7 @@ module.exports = [
         'type': 'Piercing'
       }
     ],
-    'weight': 6,
+    'weight': '6',
     'properties': [
       {
         'name': 'Reach'
@@ -755,7 +755,7 @@ module.exports = [
         'type': 'Slashing'
       }
     ],
-    'weight': 3,
+    'weight': '3',
     'properties': [
       {
         'name': 'Versatile'
@@ -778,12 +778,15 @@ module.exports = [
       'quantity': 10,
       'unit': 'gp'
     },
-    'damage': {
-      'diceCount': 2,
-      'diceValue': 6,
-      'type': 'Bludgeoning'
-    },
-    'weight': 10,
+    'damage': [
+      {
+        'name': 'standard',
+        'diceCount': 2,
+        'diceValue': 6,
+        'type': 'Bludgeoning'
+      }
+    ],
+    'weight': '10',
     'properties': [
       {
         'name': 'Heavy'
@@ -816,7 +819,7 @@ module.exports = [
         'type': 'Piercing'
       }
     ],
-    'weight': 4,
+    'weight': '4',
     'properties': [] 
   }, {
     'name': 'Pike',
@@ -843,7 +846,7 @@ module.exports = [
         'type': 'Piercing'
       }
     ],
-    'weight': 18,
+    'weight': '18',
     'properties': [
       {
         'name': 'Heavy'
@@ -878,7 +881,7 @@ module.exports = [
         'type': 'Piercing'
       }
     ],
-    'weight': 2,
+    'weight': '2',
     'properties': [
       {
         'name': 'Finesse'
@@ -901,12 +904,15 @@ module.exports = [
       'quantity': 25,
       'unit': 'gp'
     },
-    'damage': {
-      'diceCount': 1,
-      'diceValue': 6,
-      'type': 'Slashing'
-    },
-    'weight': 3,
+    'damage': [
+      {
+        'name': 'standard',
+        'diceCount': 1,
+        'diceValue': 6,
+        'type': 'Slashing'
+      }
+    ],
+    'weight': '3',
     'properties': [
       {
         'name': 'Finesse'
@@ -931,12 +937,15 @@ module.exports = [
       'quantity': 10,
       'unit': 'gp'
     },
-    'damage': {
-      'diceCount': 1,
-      'diceValue': 6,
-      'type': 'Piercing'
-    },
-    'weight': 2,
+    'damage': [
+      {
+        'name': 'standard',
+        'diceCount': 1,
+        'diceValue': 6,
+        'type': 'Piercing'
+      }
+    ],
+    'weight': '2',
     'properties': [
       {
         'name': 'Finesse'
@@ -956,6 +965,11 @@ module.exports = [
           'type': 'attack',
           'normal': 5,
           'long': null
+        },
+        {
+          'name': 'throw attack',
+          'normal': 20,
+          'long': 60
         }
       ],
     },
@@ -963,12 +977,15 @@ module.exports = [
       'quantity': 5,
       'unit': 'gp'
     },
-    'damage': {
-      'diceCount': 1,
-      'diceValue': 6,
-      'type': 'Slashing'
-    },
-    'weight': 4,
+    'damage': [
+      {
+        'name': 'standard',
+        'diceCount': 1,
+        'diceValue': 6,
+        'type': 'Slashing'
+      }
+    ],
+    'weight': '4',
     'properties': [
       {
         'name': 'Thrown'
@@ -976,10 +993,6 @@ module.exports = [
         'name': 'Versatile'
       }
     ],
-    'throwAtkRange': {
-      'normal': 20,
-      'long': 60
-    }
   }, {
     'name': 'War pick',
     'category': 'Martial',
@@ -1005,7 +1018,7 @@ module.exports = [
         'type': 'Piercing'
       }
     ],
-    'weight': 2,
+    'weight': '2',
     'properties': [] 
   }, {
     'name': 'Warhammer',
@@ -1024,22 +1037,26 @@ module.exports = [
       'quantity': 15,
       'unit': 'gp'
     },
-    'damage': {
-      'diceCount': 1,
-      'diceValue': 8,
-      'type': 'Bludgeoning'
-    },
-    'weight': 2,
+    'damage': [
+      {
+        'name': 'standard',
+        'diceCount': 1,
+        'diceValue': 8,
+        'type': 'Bludgeoning'
+      },
+      {
+        'name': 'two handed',
+        'diceCount': 1,
+        'diceValue': 10,
+        'type': 'Bludgeoning'
+      }
+    ],
+    'weight': '2',
     'properties': [
       {
         'name': 'Versatile'
       }
-    ],
-    'twoHandsDamage': {
-      'diceCount': 1,
-      'diceValue': 10,
-      'type': 'Bludgeoning'
-    }
+    ]
   }, {
     'name': 'Whip',
     'category': 'Martial',
@@ -1057,12 +1074,15 @@ module.exports = [
       'quantity': 2,
       'unit': 'gp'
     },
-    'damage': {
-      'diceCount': 1,
-      'diceValue': 4,
-      'type': 'Slashing'
-    },
-    'weight': 3,
+    'damage': [
+      {
+        'name': 'standard',
+        'diceCount': 1,
+        'diceValue': 4,
+        'type': 'Slashing'
+      }
+    ],
+    'weight': '3',
     'properties': [
       {
         'name': 'Finesse'
@@ -1078,12 +1098,15 @@ module.exports = [
       'quantity': 10,
       'unit': 'gp'
     },
-    'damage': {
-      'diceCount': 1,
-      'diceValue': 1,
-      'type': 'Piercing'
-    },
-    'weight': 1,
+    'damage': [
+      {
+        'name': 'standard',
+        'diceCount': 1,
+        'diceValue': 1,
+        'type': 'Piercing'
+      }
+    ],
+    'weight': '1',
     'properties': [
       {
         'name': 'Ammunition',
@@ -1099,12 +1122,15 @@ module.exports = [
       'quantity': 75,
       'unit': 'gp'
     },
-    'damage': {
-      'diceCount': 1,
-      'diceValue': 6,
-      'type': 'Piercing'
-    },
-    'weight': 3,
+    'damage': [
+      {
+        'name': 'standard',
+        'diceCount': 1,
+        'diceValue': 6,
+        'type': 'Piercing'
+      }
+    ],
+    'weight': '3',
     'properties': [
       {
         'name': 'Ammunition',
@@ -1130,7 +1156,7 @@ module.exports = [
         'type': 'Piercing'
       }
     ],
-    'weight': 18,
+    'weight': '18',
     'properties': [
       {
         'name': 'Ammunition',
@@ -1158,7 +1184,7 @@ module.exports = [
         'type': 'Piercing'
       }
     ],
-    'weight': 2,
+    'weight': '2',
     'properties': [
       {
         'name': 'Ammunition',
@@ -1184,7 +1210,7 @@ module.exports = [
         'type': 'Slashing'
       }
     ],
-    'weight': 3,
+    'weight': '3',
     'properties': [
       {
         'name': 'Thrown'

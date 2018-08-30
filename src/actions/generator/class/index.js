@@ -38,7 +38,7 @@ export const setClass = char_class => {
       load.status = 'success';
       dispatch({ type: SET_CLASS_OBJ_SUCCESS, payload: load });
 
-      dispatch(setHP(load.data.hit_die));
+      dispatch(setHP(load.data.hitDie));
       dispatch(setLevelFeatures());
       dispatch(setSpellsSelected());
     } catch (err) {

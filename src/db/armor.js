@@ -3,13 +3,13 @@ import { client } from './index';
 const armorType = `
   name
   category
-  armor_class {
+  armorClass {
     base
-    dex_bonus
-    max_bonus
+    dexBonus
+    maxBonus
   }
-  str_minimum
-  stealth_disadvantage
+  strMinimum
+  stealthDisadvantage
   weight
   cost {
     quantity
@@ -60,12 +60,13 @@ export const armorQuery = async () => {
   try {
     result = await client.query(`
       {
-        getArmors {
+        getArmor {
           ${armorType}
         }
       }
-    `).then(result => result.getArmors);
+    `).then(result => result.getArmor);
   } catch (err) {
+    console.log(err)
     result = Promise.reject(err);
   }
 

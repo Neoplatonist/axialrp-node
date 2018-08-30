@@ -39,7 +39,7 @@ const {
 class DatabaseService {
   constructor() {
     this.connected = false
-    this.fillDB = true
+    this.fillDB = false
     this.db = this.connect()
   }
 
@@ -119,9 +119,9 @@ function fillDB(db) {
   //   console.log("inserted kitDB")
   // })
 
-  db.model('mount').insertMany(mountDB, (err, docs) => {
-    console.log("inserted mountDB")
-  })
+  // db.model('mount').insertMany(mountDB, (err, docs) => {
+  //   console.log("inserted mountDB")
+  // })
 
   // db.model('race').insertMany(raceDB, (err, docs) => {
   //   console.log("inserted raceDB")
@@ -151,9 +151,9 @@ function fillDB(db) {
   //   console.log("inserted toolDB")
   // })
 
-  // db.model('weapon').insertMany(weaponDB, (err, docs) => {
-  //   console.log("inserted weaponDB")
-  // })
+  db.model('weapon').insertMany(weaponDB, (err, docs) => {
+    console.log("inserted weaponDB")
+  })
 }
 
 module.exports = new DatabaseService()

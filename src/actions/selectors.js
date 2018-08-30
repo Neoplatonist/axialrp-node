@@ -45,7 +45,7 @@ export const selectAbilityRaceMod = createSelector(
     };
 
     try {
-      result.data = raceObj.data.ability_bonus || [0, 0, 0, 0, 0, 0];
+      result.data = raceObj.data.abilityBonus || [0, 0, 0, 0, 0, 0];
       result.status = 'success';
     } catch (err) {
       result.data = [0, 0, 0, 0, 0, 0];
@@ -59,7 +59,7 @@ export const selectAbilityRaceMod = createSelector(
 export const selectAbilitySubRaceMod = createSelector(
   selectSubRaceObj,
   subraceObj => {
-    return subraceObj.ability_bonus || [0, 0, 0, 0, 0, 0];
+    return subraceObj.abilityBonus || [0, 0, 0, 0, 0, 0];
   }
 );
 
@@ -118,9 +118,9 @@ export const selectAC = createSelector(
     try {
       if (isNaN(ac)) ac = 0;
       result.data = armor.reduce((v, k) =>
-        v + k.armor_class.base +  
-        (k.armor_class.max_bonus || 0) + 
-        (k.armor_class.max_bonus ? abilityMod.data[1] : 0), ac);
+        v + k.armorClass.base +  
+        (k.armorClass.maxBonus || 0) + 
+        (k.armorClass.maxBonus ? abilityMod.data[1] : 0), ac);
       result.status = 'success';
     } catch (err) {
       result.data = 0;
@@ -259,7 +259,7 @@ export const selectSavingThrows = createSelector(
       result.data = AbilityMap.reduce((v, k, i) => 
         [
           ...v,
-          classObj.data.saving_throws.some(s => s.name === k) ? 
+          classObj.data.savingThrows.some(s => s.name === k) ? 
             abilityMod.data[i] : 0
         ], []);
       result.status = 'success';
@@ -281,7 +281,7 @@ export const selectSkillsFilter = createSelector(
     };
 
     try {
-      result.data = classObj.data.proficiency_choices.find(v => v.type === 'Skill');
+      result.data = classObj.data.proficiencyChoices.find(v => v.type === 'Skill');
       result.status = 'success';
     } catch (err) {
       result.data = [];
@@ -348,7 +348,7 @@ export const selectSpellsLock = createSelector(
       const accum = Object.keys(list).reduce((p, c) => p + list[c], 0);
 
       result = {
-        total: accum >= levelObj.spells_known,
+        total: accum >= levelObj.spellsKnown,
         ...listBool
       };
     } catch (err) {

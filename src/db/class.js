@@ -3,40 +3,43 @@ import { client } from './index';
 const classLevels = `
   cantrips
   features
-  invocations_known
-  ki_points
-  martial_arts
-  proficiency_bonus
+  invocationsKnown
+  kiPoints
+  martialArts
+  proficiencyBonus
   rages
-  rage_damage
-  sneak_attack
-  sorcery_points
-  slot_level
-  spells_known
-  spell_slots
+  rageDamage
+  sneakAttack
+  sorceryPoints
+  slotLevel
+  spellsKnown
+  spellSlots
   type
-  unarmored_movement
+  unarmoredMovement
 `;
 
 const classType = `
   name
-  hit_die
+  hitDie
   armor {
     name
   }
-  proficiency_choices {
+  proficiencyChoices {
     choose
     type
     from {
       name
     }
   }
-  saving_throws {
+  savingThrows {
     name
   }
-  sub_classes {
+  subClasses {
     name
     description
+  }
+  startingEquipment {
+    class
   }
   levels {
     _1 {
@@ -122,13 +125,13 @@ export const classNameQuery = async name => {
 
   try {
     result = await client.query(`
-      query getClassNameNow($className: String) {
-        getClassName(name: $className) {
+      query getClassNameNow($className: String!) {
+        getClassesByName(name: $className) {
           ${classType}
         }
       }
     `, { className: name })
-      .then(result => result.getClassName)
+      .then(result => result.getClassesByName)
       .then(fixed => { // Fixes levels _1-_20 to 1-20
         const levels = Object.keys(fixed.levels)
           .reduce((a, v) => {
@@ -150,6 +153,7 @@ export const classNameQuery = async name => {
         return Object.assign(fix, { spellcasting });
       });
   } catch (err) {
+    console.log(err)
     result = Promise.reject(err);
   }
 

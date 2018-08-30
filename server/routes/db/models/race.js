@@ -56,7 +56,7 @@ const RaceSchema = new Schema({
   tools: {
     choose: Number,
     type: {type: String},
-    from: [String]
+    from: [NameList]
   },
   weapons: [String]
 })
