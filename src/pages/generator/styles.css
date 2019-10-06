@@ -97,6 +97,8 @@
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 0.5rem;
+    align-items: center;
+    justify-content: flex-start;
   }
 
   .skillContainer > input {
@@ -121,7 +123,7 @@
     white-space: nowrap;
     display: flex;
     padding-left: 1rem;
-    width: 9rem;
+    width: 15rem;
     align-items: center;
   }
 
