@@ -17,7 +17,7 @@ const SubraceService = require('./subrace')
 const ToolService = require('./tool')
 const WeaponService = require('./weapon')
 
-const { 
+const {
   alignmentDB,
   armorDB,
   classDB,
@@ -130,7 +130,7 @@ function fillDB(db) {
   // db.model('schoolOfMagic').insertMany(schoolOfMagicDB, (err, docs) => {
   //   console.log("inserted schoolOfMagicDB")
   // })
-  
+
   // db.model('skill').insertMany(skillDB, (err, docs) => {
   //   console.log("inserted skillDB")
   // })
@@ -151,9 +151,9 @@ function fillDB(db) {
   //   console.log("inserted toolDB")
   // })
 
-  db.model('weapon').insertMany(weaponDB, (err, docs) => {
-    console.log("inserted weaponDB")
-  })
+  // db.model('weapon').insertMany(weaponDB, (err, docs) => {
+  //   console.log("inserted weaponDB")
+  // })
 }
 
 module.exports = new DatabaseService()

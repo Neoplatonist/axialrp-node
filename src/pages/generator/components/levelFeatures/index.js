@@ -8,13 +8,13 @@ import Feature from './components/feature';
 
 class LevelFeatures extends Component {
   renderFeature = () => {
-    const filteredFeatures = 
+    const filteredFeatures =
       this.props.levelFeatures.data.filter(v => v != null);
 
     return filteredFeatures.map((v, k) => {
-      return <Feature 
-        key={'levelFeature'+k} 
-        feature={v} 
+      return <Feature
+        key={'levelFeature'+k}
+        feature={v}
         levelObj={this.props.levelObj.data}
         setLevelFeaturesSelected={this.props.setLevelFeaturesSelected}/>;
     });
@@ -27,8 +27,8 @@ class LevelFeatures extends Component {
       <div>
         <h3>Class Features</h3>
 
-        { levelFeatures.status === 'success' 
-          && levelFeatures.data.length 
+        { levelFeatures.status === 'success'
+          && levelFeatures.data.length
           && levelObj.status === 'success'
             ? this.renderFeature()
             : 'Loading...' }
