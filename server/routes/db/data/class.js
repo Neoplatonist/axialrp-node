@@ -397,7 +397,7 @@ module.exports = [
     ],
     "levels": {
       1: {
-        "features": ['Spellcasting: Cleric', 'Divine Domain', 'Divine Domain Spells'],
+        "features": ['Spellcasting: Cleric', 'Divine Domain'],
         "proficiencyBonus": 2,
         "spellsKnown": 5,
         "type": [3, 2]
@@ -843,8 +843,8 @@ module.exports = [
     ]
   },
   {
-    // Beginning at 1st level, while you are wearing no armor 
-    // and not wielding a shield, your 
+    // Beginning at 1st level, while you are wearing no armor
+    // and not wielding a shield, your
     // AC equals 10 + Dexterity modifier + Wisdom modifier
     "name": 'Monk',
     "hitDie": 8,

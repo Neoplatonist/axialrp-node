@@ -2,8 +2,15 @@ import { client } from './index';
 
 const classFeatureType = `
   name
-  classes
   description
+  classes
+  choices {
+    choose
+    options {
+      name
+      description
+    }
+  }
 `;
 
 export const classFeatureNameQuery = async name => {
