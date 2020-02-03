@@ -1,27 +1,23 @@
 import { client } from './index';
 
-const sub_raceType = `
+const subraceType = `
   name
   description
-  ability_bonus
-  hit_points
-  traits {
-    name
-    description
-  }
+  abilityBonus
+  hitPoints
 `;
 
-export const sub_raceNameQuery = async name => {
+export const subRaceNameQuery = async name => {
   let result;
 
   try {
     result = await client.query(`
-      query getSubRaceNameNow($subrace: String) {
-        getSubRaceName(name: $subrace) {
-          ${sub_raceType}
+      query getSubRaceNameNow($subrace: String!) {
+        getSubraceByName(name: $subrace) {
+          ${subraceType}
         }
       }
-    `, { subrace: name }).then(result => result.getSubRaceName);
+    `, { subrace: name }).then(result => result.getSubraceByName)
   } catch (err) {
     result = Promise.reject(err);
   }
@@ -30,14 +26,14 @@ export const sub_raceNameQuery = async name => {
 };
 
 
-export const sub_raceQuery = async () => {
+export const subRaceQuery = async () => {
   let result;
 
   try {
     result = await client.query(`
       {
         getSubRaces {
-          ${sub_raceType}
+          ${subraceType}
         }
       }
     `).then(result => result.getSubRaces);

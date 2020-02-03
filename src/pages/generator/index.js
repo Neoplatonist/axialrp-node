@@ -6,6 +6,7 @@ import AbilityList from './components/abilityList';
 import Armor from './components/armor';
 import Class from './components/class';
 import Description from './components/description';
+import LevelFeatures from './components/levelFeatures';
 import Race from './components/race';
 import SavingThrows from './components/savingThrows';
 import Skills from './components/skills';
@@ -44,6 +45,7 @@ class Generator extends Component {
     this.props.setLevel(1);
     this.props.setSkillsAll();
     this.props.setSpellsAll();
+    this.props.setClass('Cleric');
   }
 
   handleAlignment = () => {
@@ -74,11 +76,11 @@ class Generator extends Component {
       if (this.props.raceObj.data.languages.options.choose) {
         return (
           <div>
-            <select 
-              name="lang" 
+            <select
+              name="lang"
               className="input"
               onChange={ e => this.props.setLanguage(e.target.value)}
-              value={this.props.language} 
+              value={this.props.language}
             >
               { 'Choose: ' + JSON.stringify(this.props.raceObj.data.languages.options.choose) }
               { this.renderLO() }
@@ -97,11 +99,11 @@ class Generator extends Component {
     try {
       render = this.props.skillsFilter.data.from.map((v, k) => {
         const skill = this.props.skillsAll.data.find(j => j.name === v.name);
-        return <Skills 
-          key={k} 
+        return <Skills
+          key={k}
           desc={skill.description}
-          name={v.name} 
-          mod={skill.ability_score.name}/>;
+          name={v.name}
+          mod={skill.abilityScore.name}/>;
       });
     } catch (err) {
       render = `...Loading`;
@@ -112,8 +114,8 @@ class Generator extends Component {
 
   savingThrows = () => {
     return AbilityMap.map((v, k) => {
-      return <SavingThrows 
-        key={k} 
+      return <SavingThrows
+        key={k}
         label={v}
         mod={this.props.savingThrows.data[k]}
       />
@@ -151,26 +153,30 @@ class Generator extends Component {
 
 
           <label htmlFor="level">Level: </label>
-          <input 
-            name="level" 
-            className="input" 
+          <input
+            name="level"
+            className="input"
             type="number"
             min="1"
-            onChange={ e => 
+            onChange={ e =>
               this.props.setLevel(parseInt(e.target.value, 10))}
             value={this.props.level} />
 
           <label htmlFor="alignment">Alignment: </label>
-          <select 
+          <select
             name="alignment"
             className="input"
             onChange={ e => this.props.setAlignment(e.target.value) }
             value={this.props.alignment}
           >
-            { this.props.alignmentAll.data.length 
-                ? this.handleAlignment() 
+            { this.props.alignmentAll.data.length
+                ? this.handleAlignment()
                 : <option value="">...Loading</option> }
           </select>
+
+          <LevelFeatures />
+
+          <br/><br/>
 
           <AbilityList />
 
@@ -183,7 +189,7 @@ class Generator extends Component {
           <h3>Saving Throws</h3>
 
           <br/>
-          
+
           <ul>
             { this.savingThrows() }
           </ul>
@@ -257,11 +263,13 @@ export default connect(mapStateToProps, boundActions)(Generator);
  * - ClassDB Normalization
  * - Vicious Mockery - spellsDB
  * - Spare the Dying - spellsDB
- * - Warlock spells list doesn't work
+ * - Warlock spells now work...but not sure if correct
+ * - Cleric Destroy Undead feature ??
  */
 
 /*
  * TODO:
+ * - fix proficiency bonus on changing classes and leveling
  * - Setup proper error handling
  * - Level up characters
  * - Calculate startin money for characters

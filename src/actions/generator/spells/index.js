@@ -45,7 +45,7 @@ export const setSpellsSelected = list => {
       const level = getState().generator.level;
       const classLevels = getState().generator.classObj.data.levels[level];
 
-      if (classLevels != null && classLevels.spells_known != null) {
+      if (classLevels != null && classLevels.spellsKnown != null) {
         list = {};
         for (var i = 0; i < classLevels.type.length; i++) {
           list[i] = [];

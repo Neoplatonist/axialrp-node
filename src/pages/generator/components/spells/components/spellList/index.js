@@ -10,15 +10,14 @@ import {
 
 class SpellList extends Component {
   renderList = () => {
-    return this.props.list.map((v, k) => {
-      if (v !== undefined) {
-        return <SpellItem 
-          key={k}
-          spell={v} 
-          level={this.props.name}
-          choose={this.props.choose}
-        />;
-      }
+    const list = this.props.list.filter(v => v !== undefined)
+    return list.map((v, k) => {
+      return <SpellItem 
+        key={k}
+        spell={v} 
+        level={this.props.name}
+        choose={this.props.choose}
+      />;
     });
   }
 

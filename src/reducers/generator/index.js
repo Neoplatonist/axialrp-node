@@ -28,6 +28,10 @@ import {
   SET_LANGUAGE,
   SET_LANGUAGE_LIST,
   SET_LEVEL,
+  SET_LEVEL_FEATURES_ERROR,
+  SET_LEVEL_FEATURES_LOADING,
+  SET_LEVEL_FEATURES_SUCCESS,
+  SET_LEVEL_FEATURES_SELECTED,
   SET_PROFICIENCY_BONUS,
   SET_RACE,
   SET_RACE_NAME_LIST_ERROR,
@@ -86,6 +90,10 @@ export {
   SET_LANGUAGE,
   SET_LANGUAGE_LIST,
   SET_LEVEL,
+  SET_LEVEL_FEATURES_ERROR,
+  SET_LEVEL_FEATURES_LOADING,
+  SET_LEVEL_FEATURES_SUCCESS,
+  SET_LEVEL_FEATURES_SELECTED,
   SET_PROFICIENCY_BONUS,
   SET_RACE,
   SET_RACE_NAME_LIST_ERROR,
@@ -141,13 +149,13 @@ export const generatorState = {
   classNameList: { status: 'loading', data: [] },
   classObj: { status: 'success', data: {
     name: 'Barbarian',
-    hit_die: 12,
+    hitDie: 12,
     armor: [
       { name: 'Light' },
       { name: 'Medium' },
       { name: 'Shield' }
     ],
-    proficiency_choices: [
+    proficiencyChoices: [
       {
         choose: 2,
         type: 'Skill',
@@ -161,131 +169,131 @@ export const generatorState = {
         ]
       }
     ],
-    saving_throws: [
+    savingThrows: [
       { name: 'Strength' },
       { name: 'Constitution' }
     ],
     starting_equipment: { class: 'Barbarian' },
     levels: {
       1: {
-        features: ['Rage', 'Unamormed Defense'],
-        proficiency_bonus: 2,
+        features: ['Rage', 'Unarmored Defense'],
+        proficiencyBonus: 2,
         rages: 2,
-        rage_damage: 2
+        rageDamage: 2
       },
       2: {
         features: ['Reckless Attack', 'Danger Sense'],
-        proficiency_bonus: 2,
+        proficiencyBonus: 2,
         rages: 2,
-        rage_damage: 2
+        rageDamage: 2
       },
       3: {
         features: ['Primal Path'],
-        proficiency_bonus: 2,
+        proficiencyBonus: 2,
         rages: 3,
-        rage_damage: 2
+        rageDamage: 2
       },
       4: {
         features: ['Ability Score Improvement'],
-        proficiency_bonus: 2,
+        proficiencyBonus: 2,
         rages: 3,
-        rage_damage: 2
+        rageDamage: 2
       },
       5: {
         features: ['Extra Attack', 'Fast Movement'],
-        proficiency_bonus: 3,
+        proficiencyBonus: 3,
         rages: 3,
-        rage_damage: 2
+        rageDamage: 2
       },
       6: {
         features: ['Path Feature'],
-        proficiency_bonus: 3,
+        proficiencyBonus: 3,
         rages: 4,
-        rage_damage: 2
+        rageDamage: 2
       },
       7: {
         features: ['Feral Instinct'],
-        proficiency_bonus: 3,
+        proficiencyBonus: 3,
         rages: 4,
-        rage_damage: 2
+        rageDamage: 2
       },
       8: {
         features: ['Ability Score Improvement'],
-        proficiency_bonus: 3,
+        proficiencyBonus: 3,
         rages: 4,
-        rage_damage: 2
+        rageDamage: 2
       },
       9: {
         features: ['Brutal Critical (1 dice)'],
-        proficiency_bonus: 4,
+        proficiencyBonus: 4,
         rages: 4,
-        rage_damage: 3
+        rageDamage: 3
       },
       10: {
         features: ['Path Feature'],
-        proficiency_bonus: 4,
+        proficiencyBonus: 4,
         rages: 4,
-        rage_damage: 3
+        rageDamage: 3
       },
       11: {
         features: ['Relentless Rage'],
-        proficiency_bonus: 4,
+        proficiencyBonus: 4,
         rages: 4,
-        rage_damage: 3
+        rageDamage: 3
       },
       12: {
         features: ['Ability Score Improvement'],
-        proficiency_bonus: 4,
+        proficiencyBonus: 4,
         rages: 5,
-        rage_damage: 3
+        rageDamage: 3
       },
       13: {
         features: ['Brutal Critical (2 dice)'],
-        proficiency_bonus: 5,
+        proficiencyBonus: 5,
         rages: 5,
-        rage_damage: 3
+        rageDamage: 3
       },
       14: {
         features: ['Path Feature'],
-        proficiency_bonus: 5,
+        proficiencyBonus: 5,
         rages: 5,
-        rage_damage: 3
+        rageDamage: 3
       },
       15: {
         features: ['Persistent Rage'],
-        proficiency_bonus: 5,
+        proficiencyBonus: 5,
         rages: 5,
-        rage_damage: 3
+        rageDamage: 3
       },
       16: {
         features: ['Ability Score Improvement'],
-        proficiency_bonus: 5,
+        proficiencyBonus: 5,
         rages: 5,
-        rage_damage: 4
+        rageDamage: 4
       },
       17: {
         features: ['Brutal Critical (3 dice)'],
-        proficiency_bonus: 6,
+        proficiencyBonus: 6,
         rages: 6,
-        rage_damage: 4
+        rageDamage: 4
       },
       18: {
         features: ['Indomitable Might'],
-        proficiency_bonus: 6,
+        proficiencyBonus: 6,
         rages: 6,
-        rage_damage: 4
+        rageDamage: 4
       },
       19: {
         features: ['Ability Score Improvement'],
-        proficiency_bonus: 6,
+        proficiencyBonus: 6,
         rages: 6,
-        rage_damage: 4
+        rageDamage: 4
       },
       20: {
         features: ['Primal Champion'],
-        proficiency_bonus: 6,
+        proficiencyBonus: 6,
         rages: 'unlimited',
-        rage_damage: 4
+        rageDamage: 4
       },
     },
     spellcasting: {},
@@ -302,6 +310,8 @@ export const generatorState = {
   language: '',
   languageList: ['Common', 'Dwarvish'],
   level: 1,
+  levelFeatures: { status: 'loading', data: [] },
+  levelFeaturesSelected: [],
   proficiencyBonus: 0,
 
   race: 'Dwarf',
@@ -309,7 +319,7 @@ export const generatorState = {
   raceObj: { status: 'success', data: {
     name: 'Dwarf',
     description: 'Your dwarf character has an assortment of inborn abilities, part and parcel of dwarven nature.',
-    ability_bonus: [ 0, 0, 2, 0, 0, 0 ],
+    abilityBonus: [ 0, 0, 2, 0, 0, 0 ],
     age: {
       adult: 50,
       description: 'Dwarves mature at the same rate as humans, but theyâ€™re considered young until they reach the age of 50. On average, they live about 350 years.',
@@ -353,8 +363,8 @@ export const generatorState = {
         description: 'Whenever you make an Intelligence (History) check related to the origin of stonework, you are considered proficient in the History skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus.'
       }
     ],
-    sub_races: [ {name: 'Hill Dwarf'} ],
-    saving_throws: {
+    subRaces: [ {name: 'Hill Dwarf'} ],
+    savingThrows: {
       against: 'Poison',
       description: 'You have advantage on saving throws against poison, and you have resistance against poison damage.'
     },
@@ -372,26 +382,26 @@ export const generatorState = {
   skills: [],
   skillsAll: { status: 'loading', data: [] },
 
-  allSkills: {
-    acrobats: 0,
-    animalHandling: 0,
-    arcana: 0,
-    athletics: 0,
-    deception: 0,
-    history: 0,
-    insight: 0,
-    intimidation: 0,
-    investigation: 0,
-    medicine: 0,
-    nature: 0,
-    perception: 0,
-    performance: 0,
-    persuasion: 0,
-    religion: 0,
-    sleightOfHand: 0,
-    stealth: 0,
-    survival: 0
-  },
+  // allSkills: {
+  //   acrobats: 0,
+  //   animalHandling: 0,
+  //   arcana: 0,
+  //   athletics: 0,
+  //   deception: 0,
+  //   history: 0,
+  //   insight: 0,
+  //   intimidation: 0,
+  //   investigation: 0,
+  //   medicine: 0,
+  //   nature: 0,
+  //   perception: 0,
+  //   performance: 0,
+  //   persuasion: 0,
+  //   religion: 0,
+  //   sleightOfHand: 0,
+  //   stealth: 0,
+  //   survival: 0
+  // },
 
   speed: 25,
   spellsAll: { status: 'none', data: [] },
@@ -402,7 +412,7 @@ export const generatorState = {
   subraceObj: { status: 'success', data: {
     name: 'Hill Dwarf',
     description: 'As a hill dwarf, you have keen senses, deep intuition, and remarkable resilience.',
-    ability_bonus: [0, 0, 0, 0, 0, 0],
+    abilityBonus: [0, 0, 0, 0, 0, 0],
     hit_points: 1,
     age: {},
     alignment: {},
@@ -419,7 +429,7 @@ export const generatorState = {
         description: 'Your hit point maximum increases by 1, and it increases by 1 every time you gain a level.'
       }
     ],
-    saving_throws: {},
+    savingThrows: {},
     skills: {},
     tools: {},
     weapons: []
@@ -632,6 +642,36 @@ const generator = (state = generatorState, action) => {
       return {
         ...state,
         level: action.payload
+      };
+
+    case SET_LEVEL_FEATURES_ERROR: 
+      return {
+        ...state,
+        levelFeatures: {
+          ...action.payload
+        }
+      };
+  
+    case SET_LEVEL_FEATURES_LOADING:
+      return {
+        ...state,
+        levelFeatures: {
+          ...action.payload
+        }
+      };
+  
+    case SET_LEVEL_FEATURES_SUCCESS:
+      return {
+        ...state,
+        levelFeatures: {
+          ...action.payload
+        }
+      };
+
+    case SET_LEVEL_FEATURES_SELECTED:
+      return {
+        ...state,
+        levelFeaturesSelected: action.payload
       };
 
     case SET_PROFICIENCY_BONUS: 

@@ -15,7 +15,7 @@ import {
 import { 
   raceNameQuery, 
   raceNameListQuery, 
-  sub_raceNameQuery 
+  subRaceNameQuery 
 } from '../../../db';
 
 import { 
@@ -47,8 +47,8 @@ export const setRace = race => {
       dispatch({ type: SET_RACE_OBJ_SUCCESS, payload: load });
 
       let subrace = '';
-      if (load.data.sub_races !== null && load.data.sub_races.length)
-        subrace = load.data.sub_races[0].name;
+      if (load.data.subRaces !== null && load.data.subRaces.length)
+        subrace = load.data.subRaces[0].name;
 
       dispatch(setSubRace(subrace));
       dispatch(setAlignment(load.data.alignment.main));
@@ -110,7 +110,7 @@ export const setSubRace = name => {
     dispatch({ type: SET_SUBRACE_OBJ_LOADING, payload: load });
 
     try {
-      load.data = await cache('subraceList', sub_raceNameQuery, name);
+      load.data = await cache('subraceList', subRaceNameQuery, name);
       load.status = 'success';
       dispatch({ type: SET_SUBRACE_OBJ_SUCCESS, payload: load });
     } catch (err) {

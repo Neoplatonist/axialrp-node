@@ -13,7 +13,7 @@ import {
   classNameQuery
 } from '../../../db';
 
-import { setHP, setSpellsSelected } from '../../index';
+import { setHP, setLevelFeatures, setSpellsSelected } from '../../index';
 
 import { cache } from '../../../utils';
 
@@ -38,9 +38,11 @@ export const setClass = char_class => {
       load.status = 'success';
       dispatch({ type: SET_CLASS_OBJ_SUCCESS, payload: load });
 
-      dispatch(setHP(load.data.hit_die));
+      dispatch(setHP(load.data.hitDie));
+      dispatch(setLevelFeatures());
       dispatch(setSpellsSelected());
     } catch (err) {
+      console.log(err);
       load.status = 'error';
       load.data = {};
       dispatch({ type: SET_CLASS_OBJ_ERROR, payload: load });
@@ -64,7 +66,6 @@ export const setClassNameList = () => {
       load.status = 'success';
       dispatch({ type: SET_CLASS_NAME_LIST_SUCCESS, payload: load });
     } catch (err) {
-      console.log(err.message)
       load.data = [];
       load.status = 'error';
       dispatch({ type: SET_CLASS_NAME_LIST_ERROR, payload: load });

@@ -31,12 +31,9 @@ register(undefined, (mod, filename) => {
 
 // routes
 const index = require('./routes/index');
-// const api = require('./routes/api')
-const graphqlHTTP = require('express-graphql');
-const { buildSchema } = require('graphql');
-const schema = require('./routes/schema');
 const universalLoader = require('./universal');
 const cors = require('cors');
+const graphqlServer = require('./routes/db');
 
 
 // App setup
@@ -58,11 +55,7 @@ app.use('/', index)
 // Serve static assets
 app.use(express.static(path.resolve(__dirname, '..', 'build')))
 
-// app.use('/api', api)
-app.use('/graphql', graphqlHTTP({
-  schema,
-  graphiql: true
-}))
+graphqlServer.applyMiddleware({ app });
 
 // Always return the main index.html, so react-router render the route in the client
 app.use('/', universalLoader)

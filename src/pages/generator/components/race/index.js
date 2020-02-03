@@ -22,7 +22,7 @@ class Race extends Component {
   }
 
   getSubRace = e => {
-    const subraces = this.props.raceObj.data.sub_races || [{ name: '' }];
+    const subraces = this.props.raceObj.data.subRaces || [{ name: '' }];
     return subraces.map((v, k) => {
       return <Option key={k} {...v || {}} />;
     });

@@ -3,7 +3,7 @@ import { client } from './index';
 const skillType = `
   name
   description
-  ability_score {
+  abilityScore {
     name
   }
 `;
@@ -37,8 +37,10 @@ export const skillQuery = async () => {
           ${skillType}
         }
       }
-    `).then(result => result.getSkills);
+    `)
+    .then(result => result.getSkills);
   } catch (err) {
+    console.log(err)
     result = Promise.reject(err);
   }
 

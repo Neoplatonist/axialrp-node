@@ -1,4 +1,4 @@
-import { 
+import {
   SET_ALIGNMENT,
   SET_ABILITY,
   SET_ALIGNMENT_ALL_ERROR,
@@ -6,12 +6,16 @@ import {
   SET_ALIGNMENT_ALL_SUCCESS,
   SET_DICE,
   SET_HP,
-  SET_LANGUAGE, 
-  SET_LANGUAGE_LIST, 
-  SET_LEVEL
+  SET_LANGUAGE,
+  SET_LANGUAGE_LIST,
+  SET_LEVEL,
+  SET_LEVEL_FEATURES_ERROR,
+  SET_LEVEL_FEATURES_LOADING,
+  SET_LEVEL_FEATURES_SUCCESS,
+  SET_LEVEL_FEATURES_SELECTED
 } from '../../types';
 
-import { alignmentQuery } from '../../../db';
+import { alignmentQuery, classFeatureNameQuery } from '../../../db';
 import { setSpellsSelected } from '../../index';
 import { cache } from '../../../utils';
 
@@ -65,7 +69,43 @@ export const setLanguageList = list => {
 
 export const setLevel = level => {
   return dispatch => {
-    dispatch({ type: SET_LEVEL, payload: level || 1 });
+    level = level || 1
+
+    dispatch({ type: SET_LEVEL, payload: level});
+    dispatch(setLevelFeatures(level));
     dispatch(setSpellsSelected());
   };
+};
+
+export const setLevelFeatures = level => {
+  return async (dispatch, getState) => {
+    level = level || getState().generator.level;
+    let load = {
+      status: 'loading',
+      data: []
+    };
+
+    dispatch({ type: SET_LEVEL_FEATURES_LOADING, payload: load });
+
+    try {
+      const levels = getState().generator.classObj.data.levels;
+      const features = [].concat(...Object.keys(levels)
+        .filter(i => i <= level)
+        .reduce((prev, cur) => [...prev, levels[cur].features], []));
+
+      load.data = await Promise.all(features.map(v => classFeatureNameQuery(v)));
+      load.status = 'success';
+
+      dispatch({ type: SET_LEVEL_FEATURES_SUCCESS, payload: load });
+    } catch (err) {
+      load.data = [];
+      load.status = 'error';
+
+      dispatch({ type: SET_LEVEL_FEATURES_ERROR, payload: load });
+    }
+  };
+};
+
+export const setLevelFeaturesSelected = features => {
+  return { type: SET_LEVEL_FEATURES_SELECTED, payload: features };
 };

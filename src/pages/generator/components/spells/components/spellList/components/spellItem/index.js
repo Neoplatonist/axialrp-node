@@ -48,28 +48,26 @@ class SpellItem extends Component {
   render() {
     const { spell } = this.props;
     return (
-      <div> 
-        <li className="input skillContainer"> 
-          <input 
-            type="checkbox"
-            onClick={this.handleInput}
-            disabled={this.lock()}
-            ref={el => this.checkbox = el}
-          />
-          <div className="skill-text"> { spell !== undefined 
-            ? spell.name
-            : `---redacted---` }</div>
+      <li className="input skillContainer"> 
+        <input 
+          type="checkbox"
+          onClick={this.handleInput}
+          disabled={this.lock()}
+          ref={el => this.checkbox = el}
+        />
+        <div className="skill-text"> { spell !== undefined 
+          ? spell.name
+          : `---redacted---` }</div>
 
-          <span className="skill-append" onClick={this.showDesc}> info <i className="fas fa-angle-down"></i></span>
+        <span className="skill-append" onClick={this.showDesc}> info <i className="fas fa-angle-down"></i></span>
 
-          <div 
-            ref={ el => this.spellDesc = el } 
-            className="skillDesc"
-          >
-            { spell.description }
-          </div>
-        </li> 
-      </div>
+        <div 
+          ref={ el => this.spellDesc = el } 
+          className="skillDesc"
+        >
+          { spell.description }
+        </div>
+      </li> 
     );
   }
 }
